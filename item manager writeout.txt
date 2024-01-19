@@ -1,0 +1,26 @@
+here's what i have so far:
+
+**in regards to where it spawns**
+in 2v2, if there are at least two item spawn locations, the game will pick the leftmost and rightmost ones
+if the leftmost and rightmost are the same, it'll pick a different one deterministically
+if there's only one item spawn location, both items will spawn in it
+(it's also possible to define initial item spawns specifically for teams... which is never done)
+
+*for the rest of the match, picking the spawn location is done like this:*
+shuffle the array of item spawn locations (using the naive (biased) algorithm...).
+the following item spawns will be by the order of the shuffled array.
+for each location (item spawn locations are rectangles), a random point inside is picked.
+once all item spawn locations have been used, the array is reshuffled.
+
+**in regards to what is spawned:**
+gadget and weapon spawning is handled separately.
+the more an item type is currently out, the lower chance for it to be picked (weighted random).
+the amount of players affects how much the item count matters. i THINK the more players the more less-spawned items are likely.
+about-to-explode items like active bombs are not counted.
+
+**in regards to how often it is spawned:**
+the game will not spawn over `playercount+1` weapons
+and over `(playercount/2)+1` gadgets 
+delay between spawns increases the more items are spawned
+and the last possible spawn has an additional delay bonus
+gadgets have larger delays between spawns

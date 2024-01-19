@@ -1,0 +1,90 @@
+unarmed nlight
+unarmed nair
+unarmed dsig
+unarmed nsig
+sword nlight
+sword rec
+sword exrec
+lance nlight
+hammer dair
+blasters nlight
+blasters dlight
+blasters dair
+blaster nair
+bow nlight
+bow gp
+gauntlets dair
+greatsword nlight
+greatsword slight
+
+bodvar hammer nsig
+bodvar sword nsig
+orion spear nsig
+cassidy blasters nsig (release)
+cassidy blasters ssig (release)
+cassidy blasters dsig (release)
+cassidy hammer nsig (release)
+vraxx lance nsig (release)
+vraxx blasters dsig (release)
+nai spear ssig
+nai katars nsig
+nai katars dsig
+hattori sword nsig
+hattori sword ssig
+hattori spear nsig
+hattori spear dsig (release)
+roland lance ssig
+roland lance dsig
+thatch sword ssig
+thatch sword dsig
+thatch blasters dsig
+sentinel hammer ssig
+sentinel katars ssig
+teros axe nsig
+teros axe dsig (release)
+teros hammer nsig (release)
+teros hammer ssig
+teros hammer dsig
+asuri sword nsig
+asuri katars nsig
+asuri katars ssig
+barraza blasters nsig
+diana bow ssig
+diana blasters dsig
+brynn spear dsig (release)
+azoth bow nsig (release)
+azoth bow ssig (release)
+koji sword nsig (release)
+jhala axe ssig
+jhala sword nsig (release)
+jhala sword ssig
+jhala sword dsig (release)
+wu shang gauntlets ssig
+wu shang gauntlets dsig
+val sword ssig
+val sword dsig
+val gauntlets ssig
+ragnir axe nsig
+ragnir axe dsig
+cross blasters ssig
+cross blasters dsig (release)
+cross gauntlets ssig (release)
+nix scythe ssig
+nix blasters ssig
+nix blasters dsig
+mordex gauntlets ssig
+mordex gauntlets dsig
+yumiko bow ssig
+artemis lance ssig
+caspian katars nsig (release)
+caspian katars ssig (release)
+rayman gauntlets dsig
+fait orb nsig (release)
+fait scythe ssig
+kaya bow nsig (release)
+isaiha blasters nsig (release)
+vector bow dsig (release)
+onyx cannon dsig (release)
+jaeyun sword nsig (release)
+munin bow dsig (release)
+loki scythe nsig (release)
