@@ -349,6 +349,7 @@ package
             §_-f3T§ = §_-fj§;
             if(§_-w1O§ != null)
             {
+                //                  Height
                 §_-f3T§ = §_-fj§ - §_-w1O§.§_-24v§ * 0.5;
             }
             var _loc4_:uint = §_-j3§.§_-j26§;
@@ -1509,6 +1510,7 @@ package
             {
                 param2 = param3;
             }
+            //AlwaysArmed
             if(!!§_-w1O§.§_-E2v§ && param2 == null)
             {
                 if(param3 == null)
@@ -2027,6 +2029,7 @@ package
                             }
                             //new! 7.04 does else statement
                             /////////////////
+                            //sticking to a player?
                             if(§_-V3k§ != 0 && §_-71i§)
                             {
                                 §_-u2d§.§_-85y§.get(int(§_-V3k§)).§_-Q3X§(§_-gQ§.§_-22r§);

@@ -299,6 +299,7 @@ package
             _loc1_ = _loc8_.§_-PE§;
             _loc4_ = _loc8_.§_-x35§;
             _loc6_ = §_-l3D§.§_-T1o§.§_-x4F§ == ScoringType.CREWBATTLE;
+            //ForceCrewBattleCycle
             §_-B1y§.§_-C2t§ = (§_-l3D§.§_-T1o§.§_-D4a§ & 512) != 0;
             if(§_-l3D§.§_-231§ != 0)
             {

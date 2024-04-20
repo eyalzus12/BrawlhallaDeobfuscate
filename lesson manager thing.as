@@ -969,6 +969,7 @@ package
             }
         }
         
+        //attack
         public function §_-V31§(param1:uint, param2:uint, param3:uint, param4:Boolean) : void
         {
             var _loc5_:uint = 0;

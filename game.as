@@ -7549,6 +7549,7 @@ package
             }
             if((§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) == 0 && (§_-p2a§ & (uint(1) | uint(8) | uint(4096) | uint(8192))) == 0)
             {
+                //set tutorial item spawns
                 §_-a18§.§_-I3h§();
             }
             _loc3_ = int(§_-l14§.length);
@@ -9453,6 +9454,7 @@ package
             §_-p2a§ = uint(16384);
         }
         
+        //load data from replay
         public function §_-03P§(param1:§_-N4v§) : void
         {
             var _loc4_:int = 0;
@@ -9485,18 +9487,23 @@ package
             §_-52G§ = 0;
             §_-E2m§ = 0;
             §_-13y§ = 0;
+            //level type
             §_-K3B§.§_-i1b§(param1.§_-SZ§);
+            //entites
             var _loc2_:int = 0;
             var _loc3_:int = int(param1.§_-LB§.length);
             while(_loc2_ < _loc3_)
             {
                 _loc4_ = _loc2_++;
+                //entId
                 _loc5_ = uint(param1.§_-LB§[_loc4_]);
+                //hero type
                 _loc6_ = param1.§_-S2Y§[_loc5_];
                 if(_loc6_ != null)
                 {
                     _loc7_ = new §_-Ej§(this,param1.§_-42j§[_loc5_],_loc5_,§_-Ej§.§_-F2T§ | §_-Ej§.§_-51s§,_loc6_);
                     §_-35q§(_loc7_,null);
+                    //bot?
                     if(param1.§_-mi§(_loc5_))
                     {
                         §_-SY§.§_-Q5§(_loc7_);

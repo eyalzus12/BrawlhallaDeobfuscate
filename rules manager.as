@@ -1629,6 +1629,7 @@ package
             }
         }
         
+        //zombie kill
         public function §_-520§(param1:uint, param2:§_-Ej§) : void
         {
             var _loc6_:* = null as §_-Ej§;
@@ -3802,6 +3803,7 @@ package
                     {
                         §_-31a§.mTheDO3D.§_-21f§ = _loc11_;
                         §_-W4U§.mTheDO3D.§_-21f§ = _loc11_;
+                        //wave >= 10
                         §_-C34§.mTheDO3D.§_-21f§ = !!_loc11_ && §_-G2a§.§_-054§ >= 10;
                     }
                 }
@@ -5819,13 +5821,12 @@ package
         {
             //level
             var _loc1_:§_-o4W§ = §_-l3D§.§_-K3B§;
-            //red digit
+            //RedDigitFont
             var _loc2_:GfxType = §_-o2E§(_loc1_.§_-y4A§);
-            //blue digit
+            //BlueDigitFont
             var _loc3_:GfxType = §_-o2E§(_loc1_.§_-62P§);
             //red digit
             §_-X4Y§ = new §_-c4y§(§_-l3D§,_loc2_,false);
-            //add red sprite
             §_-l3D§.§_-Ea§.§_-D3s§(§_-X4Y§.mTheDO3D);
             //red team x
             §_-X4Y§.mTheDO3D.x = _loc1_.§_-R40§;
@@ -5833,15 +5834,12 @@ package
             §_-X4Y§.mTheDO3D.y = _loc1_.§_-z6§;
             //red tens digit
             §_-o1R§ = new §_-c4y§(§_-l3D§,_loc2_,false);
-            //add red tens digit
             §_-l3D§.§_-Ea§.§_-D3s§(§_-o1R§.mTheDO3D);
             //y
             §_-o1R§.mTheDO3D.y = _loc1_.§_-z6§;
-            //don't display
             §_-o1R§.mTheDO3D.§_-21f§ = false;
             //blue digit
             §_-C34§ = new §_-c4y§(§_-l3D§,_loc3_,false);
-            //add blue digit
             §_-l3D§.§_-Ea§.§_-D3s§(§_-C34§.mTheDO3D);
             //blue team x
             §_-C34§.mTheDO3D.x = _loc1_.§_-11G§;
@@ -5849,11 +5847,9 @@ package
             §_-C34§.mTheDO3D.y = _loc1_.§_-z6§;
             //blue tens digit
             §_-W4U§ = new §_-c4y§(§_-l3D§,_loc3_,false);
-            //add blue tens digit
             §_-l3D§.§_-Ea§.§_-D3s§(§_-W4U§.mTheDO3D);
             //y
             §_-W4U§.mTheDO3D.y = _loc1_.§_-z6§;
-            //don't show
             §_-W4U§.mTheDO3D.§_-21f§ = false;
         }
         
@@ -6260,8 +6256,8 @@ package
             §_-h4x§ = 0;
             §_-M1t§ = 0;
             §_-41d§ = new Vector.<ItemType>();
-            §_-41d§.push(ItemType.§_-z4k§);
-            §_-41d§.push(ItemType.§_-523§);
+            §_-41d§.push(ItemType.§_-z4k§);//chair
+            §_-41d§.push(ItemType.§_-523§);//table
             var _loc2_:GfxType = §_-j1F§("a__AnimationRingRope",2,"Animation_GameModes.swf");
             _loc2_.§_-rb§ = false;
             §_-F1Y§ = new §_-c4y§(§_-l3D§,_loc2_,false);
@@ -7521,11 +7517,11 @@ package
             //single digit
             if(param1 < 10)
             {
-                //
                 param3.§_-Q2C§.§_-C2j§(uint(4),"" + param1,true);
                 _loc5_.x = param4;
                 if(_loc6_.§_-21f§)
                 {
+                    //scoreboard y
                     _loc5_.y = §_-l3D§.§_-K3B§.§_-z6§;
                     _loc5_.scaleX = 1;
                     _loc5_.scaleY = 1;
@@ -8265,6 +8261,7 @@ package
                     §_-v2f§(param2,2);
                 }
             }
+            //RotatingHeroes
             if(§_-l3D§.§_-T1o§.§_-x4F§.§_-x10§)
             {
                 _loc9_ = uint(§_-l3D§.§_-T1o§.§_-Y1k§());
@@ -8888,6 +8885,7 @@ package
             }
         }
         
+        //zombie init
         public function §_-w3Q§(param1:§_-Ej§) : void
         {
             param1.§_-E44§ |= §_-Ej§.§_-a2e§ | §_-Ej§.§_-353§ | §_-Ej§.§_-13T§ | §_-Ej§.§_-O4A§ | §_-Ej§.§_-u4l§;
@@ -8895,6 +8893,7 @@ package
             param1.§_-I1y§.§_-35d§.mTheDO3D.§_-i1J§ = 0;
         }
         
+        //target battle init???
         public function §_-g1N§(param1:§_-Ej§) : void
         {
             var _loc5_:* = null as §_-Ej§;
@@ -8909,6 +8908,7 @@ package
             {
                 _loc5_ = _loc4_[_loc3_];
                 _loc3_++;
+                //bot
                 if(_loc5_.§_-F2b§ != null)
                 {
                     _loc5_.§_-F2b§.§_-u1C§(param1,9999,false);
@@ -8937,6 +8937,7 @@ package
             }
         }
         
+        //gruagach init
         public function §_-X5§(param1:§_-Ej§) : void
         {
             var _loc2_:§_-G33§ = §_-G33§.§_-j30§("HordeBossStats");
@@ -9446,7 +9447,7 @@ package
                     mCosmetic_LastGoalFX1 = param1;
                 }
             }
-            //door2 
+            //door2
             else
             {
                 mBaseDamage2 += 10;
@@ -10852,7 +10853,7 @@ package
             {
                 §_-R1V§(param1,param2,param3,param4);
             }
-            //                                  atleast 150 damage              STAMINA_NO_KNOCKBACK
+            //stamina                       atleast 150 damage              STAMINA_NO_KNOCKBACK            stunned and moving above 250
             if(§_-l3D§.§_-T1o§.§_-E9§() && param2.§_-91b§ >= 150 && (§_-l3D§.§_-T1o§.§_-x4F§.§_-55y§ == 5 || !!param2.§_-w2r§ && Number(param2.§_-85C§() * param2.§_-85C§() + param2.§_-W3l§() * param2.§_-W3l§()) > §_-Ej§.§_-L3W§))
             {
                 if(param2.§_-s4y§ == 0)
@@ -13466,7 +13467,7 @@ package
                 _loc3_.§_-R4k§.§_-s32§ = uint(HeroType.§_-e2P§(HeroType.§_-j4s§));
                 _loc3_.§_-R4k§.§_-s2a§ = CostumeType.§_-7W§.§_-s2a§;
             }
-            _loc3_.§_-v2e§ = uint(4);
+            _loc3_.§_-v2e§ = uint(4);//easy bot
             _loc3_.§_-z1e§ = param1;
             var _loc4_:uint = 1;
             if(§_-l3D§.§_-l14§ != null && int(§_-l3D§.§_-l14§.length) > 0)
@@ -13529,6 +13530,7 @@ package
             }
             else if(_loc5_ == ScoringType.HORDE)
             {
+                //this is where horde demon thing is set
                 _loc3_ = HeroType.§_-D4F§;//DEFAULT_CHARACTER
                 _loc2_ = §_-Ej§.§_-51s§ | §_-Ej§.§_-353§ | §_-Ej§.§_-O4A§ | §_-Ej§.§_-13T§ | §_-Ej§.§_-s4N§ | §_-Ej§.§_-D4A§ | §_-Ej§.§_-Q2N§ | §_-Ej§.§_-a2e§ | §_-Ej§.§_-l3B§;
                 _loc9_ = true;

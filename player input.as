@@ -487,7 +487,7 @@ package
                         _loc15_ = true;
                     }
                 }
-                //not fastdodge and (has no item or pickup time < light time)
+                //                   and (has no item or pickup time < light time)
                 else if(!_loc37_ && (!_loc9_ || _loc3_.§_-u31§ < _loc19_))
                 {
                     //         time   input   jump input                  gc    dodge cancel

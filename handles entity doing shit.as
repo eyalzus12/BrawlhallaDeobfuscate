@@ -225,6 +225,7 @@ package
             if(!!§_-F2V§.§_-s4M§ && §_-F2V§.§_-K2O§ != null)
             {
                 _loc8_ = §_-F2V§.§_-Yu§ != 0 ? §_-8m§ / §_-F2V§.§_-Yu§ : Number(0);
+                //find cast?
                 §_-q16§ = int(Math.ceil(_loc8_ * int(§_-F2V§.§_-K2O§.length)));
                 if(§_-q16§ < §_-F2V§.§_-A1c§)
                 {
@@ -232,7 +233,7 @@ package
                 }
             }
             _loc8_ = Number(§_-D2f§.§_-K27§()) < 0 == §_-U2J§ ? Number(Math.abs(Number(§_-D2f§.§_-K27§()))) : Number(0);
-            §_-n1g§ = _loc8_ / 60;
+            §_-n1g§ = _loc8_ / 60;//velocityX div 60
             if(§_-n1g§ > 1)
             {
                 §_-n1g§ = 1;
@@ -811,10 +812,10 @@ package
             {
                 §_-63D§(param1);
             }
-            var _loc3_:uint = uint(_loc2_ - §_-G2L§);
+            var _loc3_:uint = uint(_loc2_ - §_-G2L§);//frames spent
             var _loc4_:Number = §_-F2V§.§_-G21§;//MinChargeTime
             var _loc5_:Boolean = false;
-            //                                                                          taunt
+            //             passed min charge     sig                chargeable non sig       taunt
             if(!§_-Ks§ && _loc3_ > _loc4_ && (§_-F2V§.§_-l2j§ || §_-F2V§.§_-W1V§ != 0 || §_-F2V§.§_-51d§))
             {
                 §_-qK§(_loc2_);
@@ -929,7 +930,7 @@ package
                         //AllowHitOnZeroDamage            not GroundCheck
                         if((_loc5_ || §_-F2V§.§_-V2e§) && !§_-F2V§.§_-wY§)
                         {
-                            //                              time    frame   power                            hit index                        groundt?
+                            //                              time    frame   power                            hit index                        groundt?        veloc
                             _loc24_ += uint(_loc14_.§_-A46§(param1,_loc2_,§_-F2V§,this,§_-U3s§,§_-T3m§,_loc22_,§_-U1T§,§_-O1x§,_loc9_,§_-U2J§,§_-k4a§,§_-23D§,§_-n1g§,§_-E4x§,§_-W1N§,_loc16_));
                         }
                         //                 (!IsMultiHit or MinTimeBetweenHits != 0)
@@ -1110,10 +1111,12 @@ package
                     §_-N2C§(true);
                     §_-25N§ = 0;
                     §_-D2f§.§_-y2K§(param1);
+                    //ground check, and touching collision or collision check succ
                     if(§_-F2V§.§_-h14§ == uint(6) && (_loc24_ == uint(2) || _loc24_ == uint(4)))
                     {
                         §_-W2B§ = true;
                     }
+                    //MeteorPound and touching collision or collision check succ
                     else if(§_-F2V§.§_-h14§ == uint(9) && (_loc24_ == uint(2) || _loc24_ == uint(4)))
                     {
                         §_-W2B§ = false;
@@ -1151,8 +1154,10 @@ package
             {
                 §_-o3T§(param1);
             }
+            //never set             started?        aerial
             if(!!§_-F2V§.§_-s3v§ && §_-G2L§ != 0 && Boolean(§_-D2f§.§_-go§()))
             {
+                //release
                 §_-B2§();
             }
             _loc17_ = _loc2_ >= §_-25N§;
@@ -1586,6 +1591,7 @@ package
                 return uint(2);
             }
             var _loc8_:§_-A1T§ = null;
+            //GroundCheckGrabHit/MeteorGrab/MeteorPound/GroundPoundHB/GroundCheck/PBAoEHB
             if(!!§_-F2V§.§_-z2X§ && param4)
             {
                 _loc8_ = §_-L4F§(param2,_loc5_);
@@ -1645,6 +1651,7 @@ package
                 }
                 //Hurtbox
                 §_-p1U§ = §_-F2V§.§_-55I§ != null ? §_-D45§.§_-Y2n§(§_-F2V§.§_-55I§) : null;
+                //starting frame?
                 §_-G2L§ = _loc2_;
                 //startup
                 §_-l26§ = uint(§_-G2L§ + uint(§_-F2V§.§_-K2O§[0]));
@@ -1661,7 +1668,10 @@ package
                 if(§_-8m§ != 0 && §_-F2V§.§_-Y2P§ != 0 && §_-F2V§.§_-b23§ && §_-F2V§.§_-Yu§ != 0)
                 {
                     _loc4_ = §_-8m§ / §_-F2V§.§_-Yu§;
+                    //charge / time * mult * (fixed recover + var recover)
                     §_-25N§ += int(Math.floor(_loc4_ * §_-F2V§.§_-Y2P§ * (§_-F2V§.§_-nt§ + _loc3_)));
+                    
+                    //recover * (1 + charge*mult/length)
                 }
                 //add current startup?
                 if(§_-q16§ != 0)
@@ -1670,6 +1680,7 @@ package
                 }
                 else
                 {
+                    //add total attack length
                     §_-25N§ += §_-F2V§.§_-W42§;
                 }
                 //AntigravTime
@@ -1889,8 +1900,9 @@ package
             {
                 return;
             }
+            //frames spent
             var _loc5_:uint = uint(uint(int(Math.round((uint(param1 - param1 % 16)) / 16))) - §_-G2L§);
-            //                     left side of FixedMinChargeTime                             right side of FixedMinChargeTime
+            //                     passed min charge                             before max charge
             if(§_-G2L§ != 0 && (§_-F2V§.§_-G21§ == 0 || _loc5_ > §_-F2V§.§_-G21§) && (§_-F2V§.§_-jR§ == 0 || _loc5_ < §_-F2V§.§_-jR§))
             {
                 §_-Q23§ = true;
@@ -1903,6 +1915,7 @@ package
             §_-W1N§ = param4;//heavy
         }
         
+        //called with bitneg of input direction
         public function §_-25T§(param1:uint) : void
         {
             §_-23y§ = param1;
@@ -2211,6 +2224,7 @@ package
         public function §_-N2C§(param1:Boolean = false) : void
         {
             var _loc2_:* = null as §_-Y3o§;
+            //CastAnim L
             if(§_-F2V§.§_-Z1z§)
             {
                 _loc2_ = §_-F2V§.§_-SI§ != null ? §_-Y3o§.§_-YP§(§_-F2V§.§_-SI§) : null;
@@ -2520,11 +2534,12 @@ package
             §_-N2C§();
         }
         
+        //min charge time passed
         public function §_-qK§(param1:uint) : void
         {
-            var _loc2_:Boolean = !!§_-F2V§.§_-l2j§ && !§_-U3F§;
-            var _loc3_:Boolean = §_-F2V§.§_-W1V§ != 0 && (§_-23y§ & §_-F2V§.§_-W1V§) == 0;
-            var _loc4_:Boolean = !!§_-F2V§.§_-51d§ && !§_-cF§;
+            var _loc2_:Boolean = !!§_-F2V§.§_-l2j§ && !§_-U3F§;//charging and not released
+            var _loc3_:Boolean = §_-F2V§.§_-W1V§ != 0 && (§_-23y§ & §_-F2V§.§_-W1V§) == 0;//did not release input needed to release thing
+            var _loc4_:Boolean = !!§_-F2V§.§_-51d§ && !§_-cF§;//taunt and not ??
             //not gc
             if((§_-p3j§ & uint(2)) == 0 && (_loc2_ || _loc3_ || _loc4_))
             {
@@ -2548,7 +2563,7 @@ package
             //                      FixedRecoverTime                    RecoverTime * recover mod
             §_-25N§ = uint(uint(param1 + §_-F2V§.§_-nt§) + int(Math.floor(§_-F2V§.§_-D5q§ * §_-G1Y§)));
             §_-N2C§(§_-F2V§.§_-o4U§ == null);//doesn't have ComboOverrideIfRelease
-            var _loc5_:int = uint(param1 - §_-G2L§);
+            var _loc5_:int = uint(param1 - §_-G2L§);//charge time
             if(_loc5_ < 0)
             {
                 _loc5_ = 0;

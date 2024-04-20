@@ -590,7 +590,7 @@ package
                 _loc29_ = _loc7_.§_-I1y§;
                 if(_loc29_ != null && _loc24_ != null && !_loc3_)
                 {
-                    _loc30_ = uint(_loc29_.§_-S2J§());
+                    _loc30_ = uint(_loc29_.§_-S2J§());//sidekick state
                     if(_loc30_ == uint(2) || _loc30_ == uint(3))
                     {
                         _loc31_ = !!_loc15_ ? Number(150) : Number(350);
@@ -714,6 +714,7 @@ package
                 _loc36_ = Number(2080);
                 _loc37_ = Number(1170);
             }
+            //classic
             else if(_loc13_)
             {
                 _loc36_ = Number(Math.max(2100,_loc32_));
@@ -853,6 +854,7 @@ package
                     §_-f2h§.bottom = Number(Math.max(§_-f2h§.bottom,Number(§_-J3O§.bottom + §_-B5J§.§_-W4D§)));
                     _loc45_ = true;
                 }
+                //      action
                 else if(_loc14_ || _loc15_ || _loc16_)
                 {
                     _loc25_ = int(§_-l3D§.§_-J2b§.§_-H4S§.length);

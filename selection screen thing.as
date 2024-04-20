@@ -1577,6 +1577,7 @@ package
                 {
                     _loc8_.SetName("Bot " + (_loc7_ + 1));
                     _loc8_.§_-u1I§ = 3;
+                    //BotStartInSleepMode
                     _loc8_.§_-X4Z§(_loc2_.§_-D2G§ ? 16 : 17);
                     if(_loc2_.§_-i2a§() && _loc4_ < int(_loc2_.§_-G49§.length))
                     {
@@ -2812,7 +2813,7 @@ package
         {
             var _loc2_:* = null as Vector.<LevelType>;
             var _loc3_:int = 0;
-            if(§_-l2V§ == null || §_-l2V§ == LevelType.§_-a1S§)
+            if(§_-l2V§ == null || §_-l2V§ == LevelType.§_-a1S§) //Random
             {
                 _loc2_ = §_-P4S§(param1,§_-b4x§ == 2);
                 if(int(_loc2_.length) > 0)

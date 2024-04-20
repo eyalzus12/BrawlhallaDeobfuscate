@@ -6240,6 +6240,7 @@ package
             return _loc1_;
         }
         
+        //ForceServerPing
         public function §_-B3N§() : void
         {
             var _loc1_:String = "[LinkUpdater] ForceServerPing is changing last time pinged user server from " + §_-g3S§.§_-pl§(§_-N1R§) + " to 0";

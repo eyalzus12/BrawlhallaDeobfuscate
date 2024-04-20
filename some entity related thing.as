@@ -1357,6 +1357,7 @@ package
             }
         }
         
+        //called with bitneg of input direction
         public function §_-S1X§(param1:uint) : void
         {
             if(§_-y44§ != null)
@@ -1514,7 +1515,7 @@ package
             {
                 return null;
             }
-            //origin power OriginPower and ??
+            //origin power VARIABLE and ??
             if(!!param1.§_-r1z§ && §_-t4Y§ != 0)
             {
                 return §_-Y3o§.§_-i4e§[§_-t4Y§];
@@ -1583,11 +1584,13 @@ package
             {
                 _loc9_ = uint(param2 - uint(13));
                 _loc10_ = §_-M4U§.§_-f20§[_loc9_];//get the taunt
+                //                    OwnedIfOwns                RandomPowers
                 if(_loc10_ == null || _loc10_.§_-W3k§ != null || _loc10_.§_-dR§ != null)
                 {
                     _loc11_ = uint(uint(uint(uint(§_-M4U§.§_-j3U§ + int(Math.floor(param1 / 16))) + §_-M4U§.§_-g33§.§_-o38§) + (uint(§_-l3D§.§_-S4N§ >>> 16))) + param2);
                     if(_loc10_ == null)
                     {
+                        //                                             weird array, basically random, DEFAULT
                         _loc12_ = §_-a1W§.§_-u2i§[uint(§_-Z2X§.§_-K43§(§_-M4U§.§_-h1Q§,_loc11_,§_-a1W§.§_-wV§.§_-K1Y§))];
                         if(_loc12_ != null)
                         {
@@ -1602,6 +1605,7 @@ package
                     {
                         _loc6_ = _loc10_.§_-W3k§[_loc11_ % int(_loc10_.§_-W3k§.length)].§_-dT§;
                     }
+                    //RandomPowers
                     else
                     {
                         _loc6_ = _loc10_.§_-dR§[_loc11_ % int(_loc10_.§_-dR§.length)];
@@ -1721,7 +1725,7 @@ package
             return null;
         }
         
-        //                          entity                                      power        hitidx                                                     helddir
+        //                          entity                                      power        hitidx                                     velx           helddir
         public function §_-P1b§(param1:§_-Ej§, param2:Point, param3:Point, param4:§_-Y3o§, param5:uint, param6:Point, param7:Boolean, param8:Number, param9:uint, param10:uint, param11:Point) : Point
         {
             var _loc14_:int = 0;
@@ -2002,7 +2006,7 @@ package
             return _loc4_;
         }
         
-        //                       time         frame          power                                                                          hit index                     charge                                                                                                      helddir           heavy input
+        //                       time         frame          power                                                                          hit index                     charge                                                                                   velx              helddir           heavy input
         public function §_-A46§(param1:uint, param2:uint, param3:§_-Y3o§, param4:§_-th§, param5:Point, param6:Point, param7:Vector.<§_-Ej§>, param8:uint, param9:Array, param10:uint = 0, param11:Boolean = false, param12:uint = 0, param13:Point = undefined, param14:Number = 1, param15:uint = 0, param16:Boolean = false, param17:uint = 0) : uint
         {
             var _loc21_:int = 0;
@@ -2058,7 +2062,7 @@ package
                         _loc28_ = Number(_loc22_.§_-Q2P§());
                         //centerY + hurtbox OffsetY
                         §_-xP§.§_-J3P§.y = Number(_loc28_ + §_-xP§.§_-l1Q§.§_-22Q§);
-                        //              entity                          power  hitidx                         helddir
+                        //              entity                          power  hitidx                 velx    helddir
                         _loc29_ = §_-P1b§(_loc22_,param5,§_-xP§.§_-J3P§,param3,param8,_loc26_,param11,param14,param15,param17,§_-xP§.§_-Y29§);
                         if(_loc29_ == null || _loc29_.length == 0)
                         {
@@ -2953,6 +2957,7 @@ package
                 return;
             }
             var _loc1_:§_-Y3o§ = §_-y44§.§_-F2V§;
+            //AllowLeaveGround or Smash/SmashGrab and not IsAirPower
             §_-i4B§ = _loc1_.§_-i4B§ || _loc1_.§_-h14§ != uint(8) && !_loc1_.§_-qs§;
             §_-v4M§ = true;
             §_-x1U§ = _loc1_.§_-x1U§;

@@ -3356,9 +3356,9 @@ package
             var _loc38_:Number = NaN;
             var _loc39_:* = null as §_-A1T§;
             var _loc40_:uint = 0;
-            //LastPhysPosY
-            §_-K1U§ = Number(§_-p1C§());
             //LastPhysPosX
+            §_-K1U§ = Number(§_-p1C§());
+            //LastPhysPosY
             §_-bI§ = Number(§_-ze§());
             var _loc2_:Number = Number(§_-K27§() * §_-K27§() + §_-75Y§() * §_-75Y§());
             §_-l25§(param1,_loc2_);
@@ -4003,6 +4003,7 @@ package
             {
                 _loc31_ = Number(§_-K27§());
                 _loc32_ = Number(§_-75Y§());
+                //bounce
                 §_-K4r§(param1,§_-C5M§);
                 if(§_-C2u§())
                 {
@@ -4010,6 +4011,7 @@ package
                     _loc34_ = _loc32_ >= Number(§_-75Y§()) ? _loc32_ - §_-75Y§() : §_-75Y§() - _loc32_;
                     if(_loc34_ > 50 || _loc33_ > 50)
                     {
+                        //do camera thing
                         §_-l3D§.§_-f4W§.§_-Q3A§(param1,6);
                     }
                 }
@@ -4284,6 +4286,7 @@ package
                 //set Jumped to false
                 §_-q2c§(false);
             }
+            //landed or got in the air                      no allow leave ground
             if(_loc36_ != Boolean(§_-go§()) && !§_-12Q§() && !§_-p3I§.§_-i4B§ && !(!!§_-p3I§.§_-3E§ && Boolean(§_-go§())) && !(!!§_-p3I§.§_-v4M§ && !§_-go§()))
             {
                 if(§_-p3I§.§_-y44§ != null)
@@ -4954,6 +4957,19 @@ package
             }
             §_-v1w§(param1);
             var _loc2_:uint = §_-Ko§;
+            
+            /*
+            0 - normal
+            1 - ?
+            2 - ?
+            3 - ?
+            4 - ?
+            5 - respawn i frames
+            6 - ?
+            7 - eliminated
+            8 - ?
+            */
+            
             switch(int(_loc2_))
             {
                 case 0:
@@ -5066,6 +5082,7 @@ package
                         §_-85n§ = null;
                         §_-Ko§ = uint(0);
                     }
+                    //Uninterruptable
                     else if(§_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.§_-F2V§.§_-44r§)
                     {
                         §_-p3I§.§_-y44§.§_-s3l§();
@@ -5551,6 +5568,7 @@ package
             var _loc7_:§_-A1T§ = §_-Y22§(Number(Number(§_-p1C§()) + Number(§_-K27§())),Number(Number(§_-ze§()) + Number(§_-75Y§())),param1);
             if(_loc7_ != null)
             {
+                //bounce
                 §_-K4r§(param1,_loc7_);
                 if(Number(Math.abs(_loc7_.§_-a2J§.y)) >= Number(Math.abs(_loc7_.§_-a2J§.x)))
                 {
@@ -8434,6 +8452,7 @@ package
             {
                 return false;
             }
+            //can chase dodge?
             var _loc3_:Boolean = Boolean(§_-6q§(param1,param2));
             var _loc4_:uint = 0;
             var _loc5_:Boolean = false;
@@ -9534,6 +9553,7 @@ package
                 return;
             }
             var _loc3_:Number = §_-b11§;//0.8
+            //bouncing around like in buddy
             if(§_-zH§())
             {
                 _loc3_ = 1;
@@ -9554,8 +9574,8 @@ package
             {
                 _loc3_ = 1.2;
             }
-            var _loc4_:Number = §_-o4h§;
-            var _loc5_:Number = §_-m3y§;
+            var _loc4_:Number = §_-o4h§;//25
+            var _loc5_:Number = §_-m3y§;//25
             //in bubble
             if((§_-E44§ & §_-Ej§.§_-04X§) != 0)
             {

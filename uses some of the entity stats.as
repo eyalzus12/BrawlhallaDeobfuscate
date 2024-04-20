@@ -212,6 +212,7 @@ package
             return _loc6_;
         }
         
+        //param2 is how many frames to simulate?
         public static function §_-es§(param1:uint, param2:int, param3:uint, param4:§_-Ej§, param5:§_-A1T§) : Boolean
         {
             var _loc17_:Number = NaN;
@@ -251,7 +252,7 @@ package
             //def 9 - 9.1494*0.384 = 3.5133696
             //def T - 9.2105*0.384 = 3.5368320
             var _loc15_:Number = param4.§_-V21§ * §_-K1R§.§_-C4I§;
-            //
+            //gravity * 0.384
             var _loc16_:Number = param4.§_-Z12§ * §_-K1R§.§_-C4I§;
             //VelocityX < 0 ? -1 : 1
             var _loc18_:int = Number(param4.§_-K27§()) < 0 ? -1 : 1;
@@ -326,6 +327,7 @@ package
                 _loc30_ = param4.§_-q4Q§() && param1 < _loc20_;
                 //in stun and stun hasn't ended yet
                 _loc31_ = param4.§_-B4B§() && param1 < uint(param4.§_-Y2z§ + param4.§_-T2m§);
+                //dashing and passed 40 frames
                 if(!!_loc22_ && param1 > _loc23_)
                 {
                     _loc22_ = false;
@@ -1596,10 +1598,12 @@ package
             var _loc10_:uint = param1 > param2 ? uint(int(Math.ceil((uint(param1 - param2)) / 16))) : uint(0);
             var _loc11_:uint = Boolean(param6.§_-B4B§()) ? uint(param6.§_-Y2z§ + param6.§_-T2m§) : uint(0);
             var _loc12_:uint = 0;
+            //respawn i frames
             if(param6.§_-Ko§ == uint(5))
             {
                 _loc12_ = param6.§_-n1a§;
             }
+            //dodging
             else if(param6.§_-q4Q§())
             {
                 _loc12_ = uint(param6.§_-13X§ + param6.§_-T4t§);

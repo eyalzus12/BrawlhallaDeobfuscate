@@ -109,7 +109,7 @@ package
         }
         
         //DI calculation
-        //                      knockback       ??          item
+        //                      knockback       ??          power
         public function §_-f23§(param1:Point, param2:uint, param3:§_-Y3o§) : void
         {
             var _loc8_:Number = NaN;
@@ -479,11 +479,11 @@ package
                     //                                                                                                                                      hit idx
                     //                                                                                                                                                      holdtime?
                     //                                                                                                                                                                      item speed
-                    //                                                                                                                                                                                    item air time mult
+                    //                                                                                                                                                                                 item air time mult
                     //                                                                                                                                                                                                   force
                     //                                                                                                                                                                                                                heavy input
                     //                                                                                                                                                                                                                               drop through
-                    //                                                                                                                                                                                                                                                 hitwhenstunned?2:1
+                    //                                                                                                                                                                                                                                            hitwhenstunned?2:1
                     //                                                                                                                                                                                                                                                                  flags
                     //                                                                                                                                                                                                                                                                                                                        item idx
                     §_-Gl§(param1,_loc5_.§_-K1p§,_loc5_.§_-D33§,_loc5_.§_-Rl§,§_-l3D§.§_-GY§(_loc5_.§_-g4R§),§_-l3D§.§_-GY§(_loc5_.§_-p2G§),§_-i11§.§_-t4i§,_loc5_.§_-743§,_loc5_.§_-R4j§,_loc5_.§_-Qn§,_loc5_.§_-p3q§,_loc5_.§_-t4F§,_loc5_.§_-v2H§,_loc5_.§_-J4R§,_loc5_.§_-5s§,_loc5_.§_-o4J§,_loc5_.§_-61M§,_loc5_.§_-X29§,_loc5_.§_-HB§,_loc5_.§_-34u§);
@@ -561,9 +561,9 @@ package
             param2.§_-wi§(true);//stunned to true
             param2.§_-T2m§ = param1;//time of last hit
             param2.§_-Y2z§ = uint(param3);//stun
-            param2.§_-C3R§ = param5;
-            param2.§_-C5R§ = true;
-            param2.§_-82§ = _loc8_.§_-y44§ != null;
+            param2.§_-C3R§ = param5;//softImpulseToPoint
+            param2.§_-C5R§ = true;//hit
+            param2.§_-82§ = _loc8_.§_-y44§ != null;//interrupted
             param2.§_-e1h§ = param2.§_-I4N§() && param4.x < 0 || !param2.§_-I4N§() && param4.x > 0;//some direction thing?
             param2.§_-p4H§(true,param1);
             _loc8_.§_-S2§ = 0;
@@ -572,6 +572,8 @@ package
             param2.§_-d1R§ = 0;//reset cd cancel i frames
             param2.§_-A4o§ = param7;
             param2.§_-w2r§ = param6;
+            //in modern versions, set a player variable to be time
+            
             //not stunned                              out of stun after dodge input
             if(!_loc9_ && Boolean(param2.§_-kf§()) && param2.§_-S2P§ > param2.§_-13X§)
             {
@@ -639,6 +641,7 @@ package
             //                              no on collision power and   no IgnoreStrength
             var _loc6_:Boolean = param1 == null || !param1.§_-933§ && !param1.§_-p3Z§;
             var _loc7_:Number = !!_loc6_ ? param2.§_-RB§ : 1;//if str relevant, use impulse mult. otherwise 1.
+            //not STAMINA_NO_KNOCKBACK
             if(§_-l3D§.§_-T1o§.§_-x4F§.§_-55y§ != 5)
             {
                 //              damage          +  ???          +  damage?
@@ -769,13 +772,13 @@ package
                 //set to min between force and current fixed force
                 _loc34_ = Number(Math.min(param12,_loc34_));
             }
-            //param10 is ground time and param11 is air time???
-            //                              ItemSpeedImpulse
+            //
+            //               item speed * ItemSpeedImpulse * item air time mult * 0.5
             var _loc35_:Number = param10 * param2.§_-p4w§ * param11 * 0.5;
             //AirTimeMultOnly
             if(param2.§_-d4R§)
             {
-                //        ItemSpeedImpulse
+                //      ItemSpeedImpulse * item air time mult * 0.5
                 _loc35_ = param2.§_-p4w§ * param11 * 0.5;
             }
             //SmashRelease
@@ -824,7 +827,7 @@ package
             if(_loc38_)
             {
                 //handle DI
-                //   knockback ???                  item
+                //   knockback input                  power
                 §_-f23§(param7,param6.§_-k4k§.§_-e7§,param2);
             }
             //if CAN di (?) or there's var impulse, and something, multiply force by 0.9

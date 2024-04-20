@@ -599,7 +599,7 @@ package
         public var §_-t1Q§:Boolean;
         
         public var §_-b1M§:uint;
-        //movement during stun or smth
+        //movement during mStun or smth
         public var §_-w2r§:Boolean;
         
         public var §_-r1U§:Boolean;
@@ -610,7 +610,7 @@ package
         
         public var §_-NW§:Boolean;
         //is dashing
-        public var inDash:Boolean;
+        public var mInDash:Boolean;
         
         public var §_-1A§:Boolean;
         
@@ -659,24 +659,24 @@ package
         public var §_-i10§:uint;
         
         public var §_-F46§:uint;
-        //dodge facing direction is left
+        //dodge facing mDirection is left
         public var §_-94F§:Boolean;
         //gc
-        public var gravityCanceling:Boolean;
+        public var mGravityCanceling:Boolean;
         
         public var §_-R15§:Boolean;
         //DoNotBounceOffNoSlideCeiling
         public var §_-A4o§:Boolean;
         
         public var §_-mB§:Boolean;
-        //direction locked in power
-        public var directionLockedInPower:Boolean;
+        //mDirection locked in power
+        public var mDirectionLockedInPower:Boolean;
         //in dash startup
-        public var inDashStartup:Boolean;
+        public var mInDashStartup:Boolean;
         
         public var §_-F1T§:Boolean;
         //dashjumping
-        public var inDashJump:Boolean;
+        public var mInDashJump:Boolean;
         
         public var §_-82§:Boolean;
         
@@ -730,17 +730,17 @@ package
         
         public var §_-s2u§:uint;
         
-        public var §_-M13§:ByteArray;
+        public var mProtectedVariables:ByteArray;
         
         public var §_-Z2k§:§_-a1W§;
         //last hit power id
-        public var lastHitPowerId:uint;
+        public var mLastHitPowerId:uint;
         
         public var §_-22a§:uint;
         //id of last hitter?
-        public var lastHitEntityId:uint;
+        public var mLastHitEntityId:uint;
         //last hit flags
-        public var lastHitPowerFlags:uint;
+        public var mLastHitPowerFlags:uint;
         
         public var §_-9d§:§_-22R§;
         
@@ -748,7 +748,7 @@ package
         
         public var mWeaponSkin1:§_-22R§;
         
-        public var wallDirection:uint;
+        public var mWallDirection:uint;
         
         public var §_-L2h§:uint;
         
@@ -776,41 +776,41 @@ package
         
         public var §_-Ki§:uint;
         
-        public var timeMissedHit:uint;
+        public var mTimeMissedHit:uint;
         
-        public var timeLandedHit:uint;
+        public var mTimeLandedHit:uint;
         //time of land
         public var timeLanded:uint;
         
-        public var timeLandAfterJump:uint;
+        public var mTimeLandAfterJump:uint;
         
         public var timeJumped:uint;
-        //got out of stun time
+        //got out of mStun time
         public var timeStunExited:uint;
         
         public var §_-b2X§:uint;
         
-        public var timeDashed:uint;
-        //dodge input time
-        public var timeDodgeStarted:uint;
-        //dash input time?
-        public var timeDashStarted:uint;
-        //team
-        public var team:uint;
+        public var mTimeDashed:uint;
+        //dodge mInput time
+        public var mTimeDodgeStarted:uint;
+        //dash mInput time?
+        public var mTimeDashStarted:uint;
+        //mTeam
+        public var mTeam:uint;
         
         public var §_-f20§:Vector.<§_-a1W§>;
         
         public var §_-C2w§:uint;
         //time of last hit
-        public var timeLastHit:uint;
-        //stun
-        public var stun:uint;
+        public var mTimeLastHit:uint;
+        //mStun
+        public var mStun:uint;
         //str stat
-        public var strengthStat:uint;
+        public var mStrengthStat:uint;
         //StickyY
-        public var stickyY:Number;
+        public var mStickyY:Number;
         //StickyX
-        public var stickyX:Number;
+        public var mStickyX:Number;
         
         public var §_-b2M§:§_-G33§;
         
@@ -822,7 +822,7 @@ package
         
         public var §_-32s§:uint;
         
-        public var sigRecoverMod:Number;
+        public var mSigRecoverMod:Number;
         
         public var §_-H4w§:§_-H1F§;
         
@@ -830,21 +830,21 @@ package
         
         public var §_-K2x§:uint;
         
-        public var runSpeed:Number;
+        public var mRunSpeed:Number;
         
         public var §_-Fv§:Array;
         
         public var §_-352§:uint;
         
-        public var §_-n1a§:uint;
+        public var mRespawnInvincibilityEnd:uint;
         
         public var §_-g4m§:uint;
         //time of hit + 500
         public var §_-d3q§:uint;
         
-        public var recovery:Number;
+        public var mRecovery:Number;
         //recover mod
-        public var recoverMod:Number;
+        public var mRecoverMod:Number;
         //horde demon component
         public var §_-V2x§:§_-y2E§;
         
@@ -858,7 +858,7 @@ package
         
         public var §_-f1k§;
         
-        public var postDodge:uint;
+        public var mPostDodge:uint;
         
         public var §_-K2L§;
         
@@ -866,7 +866,7 @@ package
         
         public var §_-KM§:§_-W4w§;
         
-        public var playerInput:§_-45O§;
+        public var mPlayerInput:§_-45O§;
         
         public var §_-x36§:IMap;
         
@@ -890,7 +890,7 @@ package
         
         public var §_-j2A§:§_-yz§;
         //min charge mod
-        public var minChargeMod:Number;
+        public var mMinChargeMod:Number;
         
         public var §_-T28§:§_-a1W§;
         
@@ -900,19 +900,19 @@ package
         
         public var §_-vT§:uint;
         //dashjump time
-        public var timeDashJumped:uint;
+        public var mTimeDashJumped:uint;
         //dodge end time
-        public var timeDodgeEnd:uint;
+        public var mTimeDodgeEnd:uint;
         //fast dodge: time + dodge duration + dodge recover
-        public var timeDodgeRecoverEnd:uint;
+        public var mTimeDodgeRecoverEnd:uint;
         
-        public var timeDropped:uint;
+        public var mTimeDropped:uint;
         
         public var §_-S2T§:uint;
         //LastPhysPosX
-        public var lastPhysPosX:Number;
+        public var mLastPhysPosX:Number;
         //LastPhysPosY
-        public var lastPhysPosY:Number;
+        public var mLastPhysPosY:Number;
         
         public var §_-so§:uint;
         
@@ -924,9 +924,9 @@ package
         
         public var §_-i24§:uint;
         
-        public var jumpXImpulse:Number;
+        public var mJumpXImpulse:Number;
         
-        public var wallSlipCount:uint;
+        public var mWallSlipCount:uint;
         
         public var §_-01Y§:uint;
         
@@ -940,7 +940,7 @@ package
         
         public var §_-13W§:Number;
         //impulse mult
-        public var impulseMult:Number;
+        public var mImpulseMult:Number;
         
         public var §_-62X§:uint;
         //force x read pos
@@ -969,7 +969,7 @@ package
         public var §_-A1x§:Number;
         
         //by ItemType, this is Gravity
-        public var gravity:Number;
+        public var mGravity:Number;
         
         public var §_-X2x§:uint;
         
@@ -983,17 +983,17 @@ package
         
         public var §_-N3U§:GameStats;
         
-        public var friction:Number;
+        public var mFriction:Number;
         
         public var §_-m3y§:Number;
         
-        public var state:uint;
+        public var mState:uint;
         
         public var §_-Y3i§:§_-S25§;
         
         public var §_-Y3m§:§_-S25§;
         
-        public var entityId:uint;
+        public var mEntityId:uint;
         
         public var §_-E44§:uint;
         
@@ -1009,23 +1009,23 @@ package
         
         public var §_-s4j§:Number;
         //dodge ID
-        public var dodgeId:uint;
+        public var mDodgeId:uint;
         //dodge recover
-        public var dodgeRecover:uint;
+        public var mDodgeRecover:uint;
         //dodge duration
-        public var dodgeDuration:uint;
-        //dodge direction
-        public var dodgeDirection:uint;
+        public var mDodgeDuration:uint;
+        //dodge mDirection
+        public var mDodgeDirection:uint;
         //time for getting back dodge
-        public var timeDodgeRestored:uint;
+        public var mDodgeLockDuration:uint;
         
         public var §_-bc§:uint;
         
         public var §_-R32§:uint;
         
-        public var jumpType:uint;
+        public var mJumpType:uint;
         
-        public var defenseStat:uint;
+        public var mDefenseStat:uint;
         
         public var §_-Z4u§:MovieClip;
         
@@ -1037,7 +1037,7 @@ package
         
         public var §_-73e§:uint;
         
-        public var dashType:uint;
+        public var mDashType:uint;
         
         public var §_-62Z§:Number;
         
@@ -1045,7 +1045,7 @@ package
         
         public var §_-v3X§:uint;
         
-        public var currentCollision:CollisionLine;
+        public var mCurrentCollision:CollisionLine;
         
         public var §_-C5d§:int;
         
@@ -1054,8 +1054,8 @@ package
         public var §_-c1U§:int;
         
         public var §_-A1M§:uint;
-        //damage
-        public var damage:Number;
+        //mDamage
+        public var mDamage:Number;
         
         public var §_-Y3H§:CollisionLine;
         
@@ -1069,7 +1069,7 @@ package
         
         public var §_-x2s§:Number;
         //last hit force
-        public var lastHitForce:Number;
+        public var mLastHitForce:Number;
         
         public var §_-W1P§:Number;
         
@@ -1105,17 +1105,17 @@ package
         
         public var §_-IE§:§_-W14§;
         
-        public var animSpeed:Number;
+        public var mAnimSpeed:Number;
         
-        public var airRunSpeed:Number;
+        public var mAirRunSpeed:Number;
         
-        public var airRecoverMod:Number;
+        public var mAirRecoverMod:Number;
         
-        public var airFriction:Number;
+        public var mAirFriction:Number;
         
-        public var airAcceleration:Number;
+        public var mAirAcceleration:Number;
         
-        public var acceleration:Number;
+        public var mAcceleration:Number;
         
         public var §_-c1c§:String;
         
@@ -1131,11 +1131,11 @@ package
         
         public var m43AupbUChaff_1:uint;
         
-        public var game:§_-F3e§;
+        public var mGame:§_-F3e§;
         
         public var §_-l2p§:uint;
         
-        //                     game                                         E44
+        //                     mGame                                         E44
         public function Entity(param1:§_-F3e§, param2:String, param3:uint, param4:uint, param5:§_-n2C§, param6:Boolean = false, param7:Boolean = false, param8:uint = 0)
         {
             var _loc10_:int = 0;
@@ -1155,44 +1155,44 @@ package
             var _loc40_:* = null as §_-u3X§;
             var _loc41_:* = null as §_-yr§;
             §_-B4b§ = null;
-            §_-M13§ = new ByteArray();
+            mProtectedVariables = new ByteArray();
             §_-o4h§ = 25;
             §_-m3y§ = 25;
             §_-b11§ = 0.8;
-            gravity = 3.75;
-            jumpXImpulse = Entity.§_-B2E§;
-            airFriction = 1.2;
-            friction = 2.5;
-            airAcceleration = 5.16;
-            acceleration = 4.7;
-            airRunSpeed = Number(30);
-            runSpeed = Number(30);
-            recovery = Number(4);
-            animSpeed = 1;
+            mGravity = 3.75;
+            mJumpXImpulse = Entity.§_-B2E§;
+            mAirFriction = 1.2;
+            mFriction = 2.5;
+            mAirAcceleration = 5.16;
+            mAcceleration = 4.7;
+            mAirRunSpeed = Number(30);
+            mRunSpeed = Number(30);
+            mRecovery = Number(4);
+            mAnimSpeed = 1;
             §_-13W§ = 0;
             §_-Q4T§ = 0;
             §_-A1x§ = 0;
-            minChargeMod = 1;
-            sigRecoverMod = 1;
-            airRecoverMod = 1;
-            recoverMod = 1;
+            mMinChargeMod = 1;
+            mSigRecoverMod = 1;
+            mAirRecoverMod = 1;
+            mRecoverMod = 1;
             §_-62Z§ = 1;
             §_-R3T§ = 1;
-            impulseMult = 1;
+            mImpulseMult = 1;
             §_-P3p§ = uint(5);
             §_-R32§ = uint(5);
-            strengthStat = uint(5);
-            defenseStat = uint(5);
+            mStrengthStat = uint(5);
+            mDefenseStat = uint(5);
             §_-l2p§ = uint(0);
-            timeDashJumped = uint(0);
-            inDashJump = false;
+            mTimeDashJumped = uint(0);
+            mInDashJump = false;
             §_-b2X§ = uint(0);
             §_-F1T§ = false;
-            dashType = uint(0);
-            timeDashed = uint(0);
-            timeDashStarted = uint(0);
-            inDash = false;
-            inDashStartup = false;
+            mDashType = uint(0);
+            mTimeDashed = uint(0);
+            mTimeDashStarted = uint(0);
+            mInDash = false;
+            mInDashStartup = false;
             §_-Ki§ = uint(0);
             §_-6n§ = uint(0);
             §_-C2§ = uint(0);
@@ -1201,7 +1201,7 @@ package
             §_-F4O§ = uint(0);
             §_-316§ = 1;
             §_-s4j§ = 1;
-            game = param1;
+            mGame = param1;
             §_-b3q§ = uint(Math.random.nextInt());//random
             var _loc9_:Vector.<uint> = new Vector.<uint>(uint(32));
             _loc10_ = 0;
@@ -1275,14 +1275,14 @@ package
             _loc12_++;
             §_-rN§ = uint(uint(_loc9_[_loc12_]) * _loc14_);
             _loc12_++;
-            entityId = param3;
+            mEntityId = param3;
             §_-q4h§ = param8;
-            §_-14i§ = entityId;
+            §_-14i§ = mEntityId;
             §_-r43§ = param5.§_-r43§;
             §_-b1I§ = 0;
             §_-Qi§ = new §_-91F§(param2,0);
             GameUtils.§_-a2a§(this);
-            var _loc15_:§_-N2e§ = game.§_-T1o§;
+            var _loc15_:§_-N2e§ = mGame.§_-T1o§;
             var _loc16_:HeroType = HeroType.§_-D4F§;
             _loc12_ = 0;
             var _loc17_:CostumeType = HeroType.§_-D4F§.§_-C2I§;
@@ -1319,7 +1319,7 @@ package
             if(param5 != null)
             {
                 _loc16_ = HeroType.§_-X2B§[param5.§_-R4k§.§_-s32§ & 65535];
-                _loc12_ = param5.team;
+                _loc12_ = param5.mTeam;
                 _loc17_ = CostumeType.§_-b3B§[param5.§_-R4k§.§_-s2a§];
                 _loc18_ = §_-G1R§.§_-GP§[param5.§_-P1l§];
                 _loc13_ = param5.§_-R4k§.§_-K2x§;
@@ -1360,7 +1360,7 @@ package
             }
             if(§_-A3N§.§_-14a§)
             {
-                _loc31_ = uint(game.§_-K3a§.§_-I1M§(_loc12_));
+                _loc31_ = uint(mGame.§_-K3a§.§_-I1M§(_loc12_));
                 if(_loc31_ != 0)
                 {
                     _loc18_ = §_-G1R§.§_-GP§[_loc31_];
@@ -1368,13 +1368,13 @@ package
             }
             if(_loc15_.scoringType == ScoringType.SCRAMBLE)
             {
-                §_-M2x§ = game.rulesManager.§_-u3G§(§_-61V§,param6);
+                §_-M2x§ = mGame.mRulesManager.§_-u3G§(§_-61V§,param6);
             }
             if((param4 & Entity.§_-Q2N§) == 0)
             {
                 if(!_loc20_)
                 {
-                    _loc34_ = game;
+                    _loc34_ = mGame;
                     if((_loc34_.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) == 0)
                     {
                         _loc33_ = (_loc34_.§_-p2a§ & (uint(262144) | uint(524288))) != 0;
@@ -1390,7 +1390,7 @@ package
                 }
                 if(!_loc33_)
                 {
-                    _loc32_ = Boolean(game.§_-n4m§());
+                    _loc32_ = Boolean(mGame.§_-n4m§());
                 }
                 else
                 {
@@ -1407,17 +1407,17 @@ package
             {
                 if((_loc15_.§_-D4a§ & uint(1)) == 0)
                 {
-                    team = param3;
+                    mTeam = param3;
                 }
                 else
                 {
                     _loc35_ = Number((uint(param3 - 1)) / 2 + 1);
-                    team = uint(_loc35_);
+                    mTeam = uint(_loc35_);
                 }
             }
             else
             {
-                team = _loc12_;
+                mTeam = _loc12_;
             }
             §_-E44§ = param4;
             set_PhysPosX(-10000);
@@ -1434,17 +1434,17 @@ package
             set_ImpulseY(0);
             §_-ws§ = 0;
             §_-916§ = 0;
-            lastHitForce = 0;
-            §_-93k§ = new §_-pd§(game,team);
+            mLastHitForce = 0;
+            §_-93k§ = new §_-pd§(mGame,mTeam);
             if((param4 & Entity.BOT) != 0)
             {
                 _loc31_ = 1;
                 _loc10_ = 0;
-                _loc11_ = int(game.§_-l14§.length);
+                _loc11_ = int(mGame.§_-l14§.length);
                 while(_loc10_ < _loc11_)
                 {
                     _loc30_ = _loc10_++;
-                    if((game.§_-l14§[_loc30_].§_-E44§ & Entity.BOT) != 0)
+                    if((mGame.§_-l14§[_loc30_].§_-E44§ & Entity.BOT) != 0)
                     {
                         _loc31_++;
                     }
@@ -1458,7 +1458,7 @@ package
                     §_-c1c§ = "CP" + ("" + _loc31_);
                 }
             }
-            else if(_loc20_ || (game.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0)
+            else if(_loc20_ || (mGame.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0)
             {
                 §_-c1c§ = GameUtils.§_-s4P§(§_-Qi§.§_-WK§);
                 if((param4 & Entity.§_-21o§) != 0)
@@ -1480,11 +1480,11 @@ package
                     {
                         _loc31_ = 1;
                         _loc10_ = 0;
-                        _loc11_ = int(game.§_-l14§.length);
+                        _loc11_ = int(mGame.§_-l14§.length);
                         while(_loc10_ < _loc11_)
                         {
                             _loc30_ = _loc10_++;
-                            _loc38_ = game.§_-l14§[_loc30_];
+                            _loc38_ = mGame.§_-l14§[_loc30_];
                             if(_loc38_.§_-r43§ == §_-r43§ && (_loc38_.§_-E44§ & Entity.§_-21o§) != 0)
                             {
                                 _loc31_++;
@@ -1498,18 +1498,18 @@ package
             {
                 _loc31_ = 1;
                 _loc10_ = 0;
-                _loc11_ = int(game.§_-l14§.length);
+                _loc11_ = int(mGame.§_-l14§.length);
                 while(_loc10_ < _loc11_)
                 {
                     _loc30_ = _loc10_++;
-                    if((game.§_-l14§[_loc30_].§_-E44§ & Entity.BOT) == 0)
+                    if((mGame.§_-l14§[_loc30_].§_-E44§ & Entity.BOT) == 0)
                     {
                         _loc31_++;
                     }
                 }
                 §_-c1c§ = "P" + ("" + _loc31_);
             }
-            state = uint(2);
+            mState = uint(2);
             §_-k1d§ = uint(2);
             if(DevSettings.ContainsDevFlag(uint(9)))
             {
@@ -1518,21 +1518,21 @@ package
             if(DevSettings.ContainsDevFlag(uint(16)) && (param4 & Entity.BOT) != 0)
             {
                 §_-u3u§ = new MovieClip();
-                game.§_-d3e§.addChild(§_-u3u§);
+                mGame.§_-d3e§.addChild(§_-u3u§);
             }
             if(DevSettings.ContainsDevFlag(uint(29)))
             {
                 §_-Z4u§ = new MovieClip();
-                game.§_-d3e§.addChild(§_-Z4u§);
+                mGame.§_-d3e§.addChild(§_-Z4u§);
             }
             if((param4 & (Entity.§_-51s§ | Entity.§_-r2y§ | Entity.§_-21o§)) != 0)
             {
-                playerInput = new §_-45O§(game,this);
+                mPlayerInput = new §_-45O§(mGame,this);
             }
             §_-p3I§ = new §_-xP§(this,_loc20_);
             if((param4 & Entity.BOT) != 0)
             {
-                §_-F2b§ = new §_-83m§(game,this,playerInput,_loc21_);
+                §_-F2b§ = new §_-83m§(mGame,this,mPlayerInput,_loc21_);
                 §_-F2b§.Initialize();
             }
             if(_loc32_)
@@ -1563,7 +1563,7 @@ package
             if((param4 & Entity.§_-13T§) == 0)
             {
                 §_-65d§ = _loc22_ != 0 ? §_-83L§.§_-ol§[_loc22_] : §_-83L§.§_-n3z§;
-                §_-I1y§ = new SpawnBot(game,this,§_-65d§,§_-qy§);
+                §_-I1y§ = new SpawnBot(mGame,this,§_-65d§,§_-qy§);
             }
             if(param7)
             {
@@ -1574,19 +1574,19 @@ package
             §_-c1U§ = !!_loc33_ && Boolean(_loc15_.§_-RE§()) && §_-O2v§.§_-E2f§ != 0 ? int(§_-O2v§.§_-E2f§) : int(_loc15_.§_-O2Y§);
             §_-R3T§ = !!_loc33_ && §_-O2v§.§_-R3T§ != 0 ? §_-O2v§.§_-R3T§ / 100 : 1;
             §_-62Z§ = !!_loc33_ && §_-O2v§.§_-62Z§ != 0 ? §_-O2v§.§_-62Z§ / 100 : 1;
-            damage = uint(0);
+            mDamage = uint(0);
             §_-C5d§ = 0;
             §_-k2C§ = true;
-            if(game.level != null)
+            if(mGame.mLevel != null)
             {
                 if(§_-I1y§ != null)
                 {
                     §_-I1y§.§_-84F§();
                 }
-                if(game.level.§_-X2t§ != null)
+                if(mGame.mLevel.§_-X2t§ != null)
                 {
-                    set_PhysPosX(Number(game.level.§_-X2t§.x + game.level.§_-X2t§.width * 0.5));
-                    set_PhysPosY(game.level.§_-X2t§.y - 200);
+                    set_PhysPosX(Number(mGame.mLevel.§_-X2t§.x + mGame.mLevel.§_-X2t§.width * 0.5));
+                    set_PhysPosY(mGame.mLevel.§_-X2t§.y - 200);
                 }
             }
             §_-N3U§ = new GameStats(param1,this);
@@ -1614,7 +1614,7 @@ package
             }
             if(_loc39_)
             {
-                _loc40_ = game.§_-W45§;
+                _loc40_ = mGame.§_-W45§;
                 _loc10_ = 0;
                 _loc11_ = int(uint(_loc15_.§_-Y1k§()));
                 while(_loc10_ < _loc11_)
@@ -1803,73 +1803,73 @@ package
         //VelocityY
         public function set_VelocityY(param1:Number) : Number
         {
-            §_-M13§.position = m5JCXYSVelocityY_offset;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = m5JCXYSVelocityY_offset;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m5JCXYSVelocityY_offset;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = m5JCXYSVelocityY_offset;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //VelocityX
         public function set_VelocityX(param1:Number) : Number
         {
-            §_-M13§.position = §_-eu§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-eu§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-eu§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-eu§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //PhysPosY
         public function set_PhysPosY(param1:Number) : Number
         {
-            §_-M13§.position = §_-l4§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-l4§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-l4§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-l4§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //PhysPosX
         public function set_PhysPosX(param1:Number) : Number
         {
-            §_-M13§.position = §_-32s§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-32s§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-32s§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-32s§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //PhysCenterY
         public function set_PhysCenterY(param1:Number) : Number
         {
-            §_-M13§.position = m7W7AXlXPhysCenterY_offset;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = m7W7AXlXPhysCenterY_offset;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m7W7AXlXPhysCenterY_offset;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = m7W7AXlXPhysCenterY_offset;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //PhysCenterX
         public function set_PhysCenterX(param1:Number) : Number
         {
-            §_-M13§.position = §_-Zt§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-Zt§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-Zt§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-Zt§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //ImpulseY
         public function set_ImpulseY(param1:Number) : Number
         {
-            §_-M13§.position = §_-I3g§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-I3g§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-I3g§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-I3g§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //ImpulseX
         public function set_ImpulseX(param1:Number) : Number
         {
-            §_-M13§.position = §_-s1w§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-s1w§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-s1w§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-s1w§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //CurrentAerialJumpCount
@@ -1881,150 +1881,150 @@ package
         
         public function set_mChaff9(param1:Number) : Number
         {
-            §_-M13§.position = §_-N1i§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-N1i§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-N1i§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-N1i§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff8(param1:Number) : Number
         {
-            §_-M13§.position = §_-tc§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-tc§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-tc§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-tc§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff7(param1:Number) : Number
         {
-            §_-M13§.position = m8FiY80CChaff_7;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = m8FiY80CChaff_7;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m8FiY80CChaff_7;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = m8FiY80CChaff_7;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff6(param1:Number) : Number
         {
-            §_-M13§.position = §_-C2w§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-C2w§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-C2w§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-C2w§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff5(param1:Number) : Number
         {
-            §_-M13§.position = §_-63f§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-63f§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-63f§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-63f§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff4(param1:Number) : Number
         {
-            §_-M13§.position = §_-K1r§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-K1r§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-K1r§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-K1r§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff3(param1:Number) : Number
         {
-            §_-M13§.position = m7PRj62aChaff_3;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = m7PRj62aChaff_3;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m7PRj62aChaff_3;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = m7PRj62aChaff_3;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff2(param1:Number) : Number
         {
-            §_-M13§.position = §_-X2d§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-X2d§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-X2d§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-X2d§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff14(param1:Number) : Number
         {
-            §_-M13§.position = §_-rN§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-rN§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-rN§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-rN§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff13(param1:Number) : Number
         {
-            §_-M13§.position = §_-n3V§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-n3V§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-n3V§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-n3V§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff12(param1:Number) : Number
         {
-            §_-M13§.position = §_-01Y§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-01Y§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-01Y§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-01Y§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff11(param1:Number) : Number
         {
-            §_-M13§.position = §_-i24§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-i24§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-i24§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-i24§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff10(param1:Number) : Number
         {
-            §_-M13§.position = §_-62X§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-62X§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-62X§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-62X§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function set_mChaff1(param1:Number) : Number
         {
-            §_-M13§.position = m43AupbUChaff_1;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = m43AupbUChaff_1;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m43AupbUChaff_1;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = m43AupbUChaff_1;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //AppearPosY
         public function set_AppearPosY(param1:Number) : Number
         {
-            §_-M13§.position = §_-34x§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-34x§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-34x§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-34x§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //AppearPosX
         public function set_AppearPosX(param1:Number) : Number
         {
-            §_-M13§.position = §_-y3H§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-y3H§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-y3H§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-y3H§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //AppearCenterY
         public function set_AppearCenterY(param1:Number) : Number
         {
-            §_-M13§.position = §_-nT§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-nT§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-nT§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-nT§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //AppearCenterX
         public function set_AppearCenterX(param1:Number) : Number
         {
-            §_-M13§.position = §_-85G§;
-            §_-M13§.writeDouble(param1);
-            §_-M13§.position = §_-85G§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-85G§;
+            mProtectedVariables.writeDouble(param1);
+            mProtectedVariables.position = §_-85G§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //Stunned
@@ -2159,57 +2159,57 @@ package
         //VelocityY
         public function get_VelocityY() : Number
         {
-            §_-M13§.position = m5JCXYSVelocityY_offset;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m5JCXYSVelocityY_offset;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //VelocityX
         public function get_VelocityX() : Number
         {
-            §_-M13§.position = §_-eu§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-eu§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //PhysPosY
         public function get_PhysPosY() : Number
         {
-            §_-M13§.position = §_-l4§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-l4§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //PhysPosX
         public function get_PhysPosX() : Number
         {
-            §_-M13§.position = §_-32s§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-32s§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //PhysCenterY
         public function get_PhysCenterY() : Number
         {
-            §_-M13§.position = m7W7AXlXPhysCenterY_offset;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m7W7AXlXPhysCenterY_offset;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //PhysCenterX
         public function get_PhysCenterX() : Number
         {
-            §_-M13§.position = §_-Zt§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-Zt§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //ImpulseY
         public function get_ImpulseY() : Number
         {
-            §_-M13§.position = §_-I3g§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-I3g§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //ImpulseX
         public function get_ImpulseX() : Number
         {
-            §_-M13§.position = §_-s1w§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-s1w§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //CurrentAerialJumpCount
@@ -2220,114 +2220,114 @@ package
         
         public function get_mChaff9() : Number
         {
-            §_-M13§.position = §_-N1i§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-N1i§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff8() : Number
         {
-            §_-M13§.position = §_-tc§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-tc§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff7() : Number
         {
-            §_-M13§.position = m8FiY80CChaff_7;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m8FiY80CChaff_7;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff6() : Number
         {
-            §_-M13§.position = §_-C2w§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-C2w§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff5() : Number
         {
-            §_-M13§.position = §_-63f§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-63f§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff4() : Number
         {
-            §_-M13§.position = §_-K1r§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-K1r§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff3() : Number
         {
-            §_-M13§.position = m7PRj62aChaff_3;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m7PRj62aChaff_3;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff2() : Number
         {
-            §_-M13§.position = §_-X2d§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-X2d§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff14() : Number
         {
-            §_-M13§.position = §_-rN§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-rN§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff13() : Number
         {
-            §_-M13§.position = §_-n3V§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-n3V§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff12() : Number
         {
-            §_-M13§.position = §_-01Y§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-01Y§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff11() : Number
         {
-            §_-M13§.position = §_-i24§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-i24§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff10() : Number
         {
-            §_-M13§.position = §_-62X§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-62X§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function get_mChaff1() : Number
         {
-            §_-M13§.position = m43AupbUChaff_1;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = m43AupbUChaff_1;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //AppearPosY
         public function get_AppearPosY() : Number
         {
-            §_-M13§.position = §_-34x§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-34x§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //AppearPosX
         public function get_AppearPosX() : Number
         {
-            §_-M13§.position = §_-y3H§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-y3H§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //AppearCenterY
         public function get_AppearCenterY() : Number
         {
-            §_-M13§.position = §_-nT§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-nT§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         //AppearCenterX
         public function get_AppearCenterX() : Number
         {
-            §_-M13§.position = §_-85G§;
-            return Number(Number(§_-M13§.readDouble()));
+            mProtectedVariables.position = §_-85G§;
+            return Number(Number(mProtectedVariables.readDouble()));
         }
         
         public function §_-D1H§() : Boolean
@@ -2338,24 +2338,24 @@ package
         public function §_-NO§() : void
         {
             §_-E0§ = Boolean(get_Running());
-            §_-k1d§ = state;
-            §_-14H§ = wallDirection;
+            §_-k1d§ = mState;
+            §_-14H§ = mWallDirection;
             §_-xH§ = Boolean(get_Airborne());
             §_-741§ = Boolean(get_LeftFacing());
         }
         
         public function §_-L4e§() : void
         {
-            if(wallDirection != 0 && §_-p3I§.§_-y44§ == null)
+            if(mWallDirection != 0 && §_-p3I§.§_-y44§ == null)
             {
                 §_-R48§ = true;
                 set_VelocityX(0);//velocity.x = 0
-                if(wallDirection == 2)
+                if(mWallDirection == 2)
                 {
                     set_ImpulseX(-30);//impulse.x = -30
                     set_Left(true);
                 }
-                else if(wallDirection == 1)
+                else if(mWallDirection == 1)
                 {
                     set_ImpulseX(30);//impulse.x = 30
                     set_Left(false);
@@ -2365,11 +2365,11 @@ package
         
         public function §_-F4a§() : void
         {
-            var _loc1_:uint = int(game.§_-521§.length);
-            var _loc2_:Boolean = (game.§_-T1o§.§_-D4a§ & uint(1)) != 0 && team > 0 && team <= _loc1_;
-            var _loc3_:uint = !!_loc2_ ? uint(team - 1) : uint(0);
-            §_-g4m§ = uint(game.§_-521§[_loc3_]);
-            var _loc4_:Vector.<uint> = game.§_-521§;
+            var _loc1_:uint = int(mGame.§_-521§.length);
+            var _loc2_:Boolean = (mGame.§_-T1o§.§_-D4a§ & uint(1)) != 0 && mTeam > 0 && mTeam <= _loc1_;
+            var _loc3_:uint = !!_loc2_ ? uint(mTeam - 1) : uint(0);
+            §_-g4m§ = uint(mGame.§_-521§[_loc3_]);
+            var _loc4_:Vector.<uint> = mGame.§_-521§;
             ++_loc4_[_loc3_];
         }
         
@@ -2390,13 +2390,13 @@ package
             set_PhysPosY(param2);
             
             §_-t1l§(param1,param2);
-            var _loc4_:uint = (game.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 ? 146 : 146;
+            var _loc4_:uint = (mGame.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 ? 146 : 146;
             var _loc5_:Boolean = §_-kN§ != 0 && param3 != 0 && param3 < uint(§_-kN§ + _loc4_);
             §_-MM§();
             //look at: B5J
-            var _loc6_:Rectangle = game.§_-f4W§.§_-J3O§;
+            var _loc6_:Rectangle = mGame.§_-f4W§.§_-J3O§;
             var _loc7_:uint = 0;
-            if((§_-E44§ & (Entity.§_-w4l§ | Entity.§_-D4A§ | Entity.§_-l3B§ | Entity.§_-JC§)) == 0 && (state == uint(0) || state == uint(5) || _loc5_) && game.§_-q4Y§ == 0)
+            if((§_-E44§ & (Entity.§_-w4l§ | Entity.§_-D4A§ | Entity.§_-l3B§ | Entity.§_-JC§)) == 0 && (mState == uint(0) || mState == uint(5) || _loc5_) && mGame.§_-q4Y§ == 0)
             {
                 if(Number(get_PhysPosX()) < _loc6_.left)
                 {
@@ -2434,7 +2434,7 @@ package
             }
             set_AppearCenterX(Number(get_AppearPosX()));
             set_AppearCenterY(get_AppearPosY() - §_-g33§.§_-W11§ * 0.5);
-            var _loc9_:§_-F3e§ = game;
+            var _loc9_:§_-F3e§ = mGame;
             var _loc11_:uint = uint(32768);
             if(!((_loc9_.§_-p2a§ & _loc11_) != 0 || (_loc9_.§_-p2a§ & uint(32)) != 0 && (_loc9_.§_-pM§ & _loc11_) != 0))
             {
@@ -2482,8 +2482,8 @@ package
             {
                 if((§_-E44§ & Entity.§_-D4A§) != 0)
                 {
-                    §_-35d§.mTheDO3D.x = Number(stickyX + §_-x2s§);
-                    §_-35d§.mTheDO3D.y = Number(stickyY + §_-B3L§);
+                    §_-35d§.mTheDO3D.x = Number(mStickyX + §_-x2s§);
+                    §_-35d§.mTheDO3D.y = Number(mStickyY + §_-B3L§);
                 }
                 else
                 {
@@ -2620,7 +2620,7 @@ package
             var _loc14_:Number = NaN;
             var _loc15_:Number = NaN;
             //ItemsManager ignores these when counting players
-            if(state == uint(7) || state == uint(8))
+            if(mState == uint(7) || mState == uint(8))
             {
                 §_-35d§.mTheDO3D.§_-21f§ = false;
                 return;
@@ -2645,11 +2645,11 @@ package
                     _loc2_.§_-t1J§ = 1;
                 }
             }
-            else if(state == uint(6) && §_-85n§ != null)
+            else if(mState == uint(6) && §_-85n§ != null)
             {
-                if(§_-85n§.§_-F2V§ != null)
+                if(§_-85n§.mPowerType != null)
                 {
-                    _loc2_.§_-t1J§ = §_-85n§.§_-F2V§.§_-M4w§;
+                    _loc2_.§_-t1J§ = §_-85n§.mPowerType.§_-M4w§;
                 }
                 else
                 {
@@ -2666,11 +2666,11 @@ package
                 return;
             }
             var _loc4_:uint = 0;
-            if(state == uint(3))
+            if(mState == uint(3))
             {
                 if(§_-kN§ == 0)
                 {
-                    _loc4_ |= §_-MQ§ || game.§_-T1o§.scoringType.§_-x10§ ? uint(1048576) : uint(262144);
+                    _loc4_ |= §_-MQ§ || mGame.§_-T1o§.scoringType.§_-x10§ ? uint(1048576) : uint(262144);
                 }
                 else
                 {
@@ -2681,7 +2681,7 @@ package
             {
                 _loc4_ |= uint(524288);
             }
-            else if(state == uint(6))
+            else if(mState == uint(6))
             {
                 _loc4_ |= uint(128);
             }
@@ -2690,7 +2690,7 @@ package
                 _loc4_ |= uint(1);
             }
             //              no collision
-            if(get_Dropping() && currentCollision == null && !§_-q1w§)
+            if(get_Dropping() && mCurrentCollision == null && !§_-q1w§)
             {
                 _loc4_ |= uint(4);
             }
@@ -2708,7 +2708,7 @@ package
                 {
                     _loc4_ |= uint(134217728);
                 }
-                else if(wallDirection == 0)
+                else if(mWallDirection == 0)
                 {
                     _loc4_ |= uint(16);
                 }
@@ -2720,7 +2720,7 @@ package
                 {
                     _loc4_ |= uint(2);
                 }
-                else if(state == uint(5))
+                else if(mState == uint(5))
                 {
                     _loc4_ |= uint(4194304);
                 }
@@ -2731,7 +2731,7 @@ package
                 §_-12m§ = false;
                 if(§_-C2u§())
                 {
-                    game.§_-f4W§.§_-Q3A§(param1,4.5);
+                    mGame.§_-f4W§.§_-Q3A§(param1,4.5);
                 }
             }
             else if(§_-e4N§ || §_-xH§)
@@ -2767,21 +2767,21 @@ package
                 _loc4_ |= uint(32);
                 set_FellThroughPlatThisFrame(false);
             }
-            //on wall, direction not locked
-            if(wallDirection != 0 && !directionLockedInPower)
+            //on wall, mDirection not locked
+            if(mWallDirection != 0 && !mDirectionLockedInPower)
             {
                 _loc4_ |= uint(8192);
                 §_-12m§ = false;
                 §_-e4N§ = false;
             }
             //in dodge
-            else if(get_Dodging() && dodgeId != 0)
+            else if(get_Dodging() && mDodgeId != 0)
             {
-                _loc5_ = DodgeType.dodgeList[dodgeId];
+                _loc5_ = DodgeType.sDodgeList[mDodgeId];
                 _loc6_ = uint(_loc5_.startInvuln * 16);//StartInvuln
-                if(param1 >= uint(timeDodgeStarted + _loc6_))//should start i frames
+                if(param1 >= uint(mTimeDodgeStarted + _loc6_))//should start i frames
                 {
-                    if(param1 == uint(timeDodgeStarted + _loc6_))//THE frame to start i frames
+                    if(param1 == uint(mTimeDodgeStarted + _loc6_))//THE frame to start i frames
                     {
                         §_-35d§.§_-Q2C§.§_-C1U§();
                     }
@@ -2789,47 +2789,47 @@ package
                     §_-12m§ = false;
                     §_-e4N§ = false;
                     //spot or down only
-                    if(dodgeDirection == 0 || dodgeDirection == uint(2))
+                    if(mDodgeDirection == 0 || mDodgeDirection == uint(2))
                     {
                         _loc4_ |= uint(4);
                     }
                     //side
-                    else if((dodgeDirection & (uint(4) | uint(8))) != 0)
+                    else if((mDodgeDirection & (uint(4) | uint(8))) != 0)
                     {
                         //up
-                        if((dodgeDirection & uint(1)) != 0)
+                        if((mDodgeDirection & uint(1)) != 0)
                         {
                             _loc4_ |= uint(8388608);
                         }
                         //down
-                        else if((dodgeDirection & uint(2)) != 0)
+                        else if((mDodgeDirection & uint(2)) != 0)
                         {
                             _loc4_ |= uint(512);
                         }
                     }
                     //not side
-                    if((dodgeDirection & (uint(4) | uint(8))) == 0)
+                    if((mDodgeDirection & (uint(4) | uint(8))) == 0)
                     {
                         //up
-                        if((dodgeDirection & uint(1)) != 0)
+                        if((mDodgeDirection & uint(1)) != 0)
                         {
                             _loc4_ |= uint(262144);
                         }
                         //down
-                        else if((dodgeDirection & uint(2)) != 0)
+                        else if((mDodgeDirection & uint(2)) != 0)
                         {
                             _loc4_ |= uint(524288);
                         }
                     }
-                    if(FastDodging() && dodgeDirection != 0)
+                    if(fastDodging() && mDodgeDirection != 0)
                     {
                         _loc4_ |= uint(256);
                     }
                     //i frames start
-                    if(param1 == uint(timeDodgeStarted + _loc6_))
+                    if(param1 == uint(mTimeDodgeStarted + _loc6_))
                     {
                         _loc7_ = uint(8);
-                        if(dodgeDirection == 0)//spot
+                        if(mDodgeDirection == 0)//spot
                         {
                             _loc7_ = uint(9);
                         }
@@ -2841,18 +2841,18 @@ package
                     }
                 }
                 //ground dodge
-                if(_loc5_.airType == uint(1))
+                if(_loc5_.mAirType == uint(1))
                 {
                     _loc4_ &= ~uint(2);
                 }
             }
             else
             {
-                //in dash startup, and inputted dash on current frame
-                if(!!inDashStartup && param1 == timeDashStarted)
+                //in dash startup, and mInputted dash on current frame
+                if(!!mInDashStartup && param1 == mTimeDashStarted)
                 {
                     _loc4_ |= uint(268435456);
-                    if(dashType == uint(3))//backdash. in modern version it can also be 7.
+                    if(mDashType == uint(3))//backdash. in modern version it can also be 7.
                     {
                         _loc4_ |= uint(1024);
                     }
@@ -2861,12 +2861,12 @@ package
                         _loc4_ &= ~uint(1024);
                     }
                 }
-                else if(param1 == timeDashed)
+                else if(param1 == mTimeDashed)
                 {
                     _loc4_ |= uint(536870912);
                 }
                 //holding back during a dash
-                if(!!inDash && Boolean(get_Left()) != Boolean(get_LeftFacing()))
+                if(!!mInDash && Boolean(get_Left()) != Boolean(get_LeftFacing()))
                 {
                     _loc4_ &= ~uint(1);
                     _loc4_ &= ~uint(2048);
@@ -2886,7 +2886,7 @@ package
                 _loc4_ |= uint(2097152);
             }
             //                          not wall                                            not aerial      has air options
-            if(param1 != timeLandAfterJump && wallDirection == 0 && (param1 <= uint(timeLandAfterJump + uint(64)) || !get_Airborne() && uint(get_CurrentAerialJumpCount()) > 0))
+            if(param1 != mTimeLandAfterJump && mWallDirection == 0 && (param1 <= uint(mTimeLandAfterJump + uint(64)) || !get_Airborne() && uint(get_CurrentAerialJumpCount()) > 0))
             {
                 if(§_-35d§.§_-Q2C§.§_-M4M§ == §_-35d§.§_-Q2C§.§_-l39§)
                 {
@@ -2895,15 +2895,15 @@ package
                     _loc4_ |= uint(1);
                 }
             }
-            //stuned
+            //mStuned
             if(get_Stunned())
             {
                 //      aerial      hitforce > 50
-                _loc8_ = get_Airborne() && lastHitForce > 50 && !_loc2_.§_-I10§ && _loc2_.§_-35m§ != uint(7) && Number(get_VelocityX() * get_VelocityX() + get_VelocityY() * get_VelocityY()) > Entity.§_-L3W§;
+                _loc8_ = get_Airborne() && mLastHitForce > 50 && !_loc2_.§_-I10§ && _loc2_.§_-35m§ != uint(7) && Number(get_VelocityX() * get_VelocityX() + get_VelocityY() * get_VelocityY()) > Entity.§_-L3W§;
                 _loc4_ |= !!_loc8_ ? uint(32768) : uint(128);
                 if((_loc2_.§_-D4a§ & uint(32768)) != 0 && !_loc8_ && !§_-C5R§)
                 {
-                    lastHitForce = 0;
+                    mLastHitForce = 0;
                 }
             }
             if(§_-C5R§)
@@ -2911,7 +2911,7 @@ package
                 §_-C5R§ = false;
                 §_-e4N§ = false;
             }
-            if((_loc4_ & uint(32768)) != 0 && !directionLockedInPower && !§_-12Q§() && (§_-E44§ & Entity.§_-w4l§) == 0)
+            if((_loc4_ & uint(32768)) != 0 && !mDirectionLockedInPower && !§_-12Q§() && (§_-E44§ & Entity.§_-w4l§) == 0)
             {
                 _loc9_ = Number(Math.atan2_netsafe(Number(get_VelocityY()),Number(get_VelocityX())));
                 if(!get_Left())//facing right
@@ -2927,7 +2927,7 @@ package
                 §_-35d§.mTheDO3D.x = Number(_loc12_ + §_-x2s§);
                 _loc13_ = Number(get_AppearPosY());
                 §_-35d§.mTheDO3D.y = Number(_loc13_ + §_-B3L§);
-                if((§_-E44§ & Entity.§_-I3S§) == 0 && game.§_-d4a§ == 0)
+                if((§_-E44§ & Entity.§_-I3S§) == 0 && mGame.§_-d4a§ == 0)
                 {
                     _loc14_ = Number(get_VelocityX()) < 0 ? -get_VelocityX() : Number(get_VelocityX());
                     _loc15_ = Number(get_VelocityY()) < 0 ? -get_VelocityY() : Number(get_VelocityY());
@@ -2948,7 +2948,7 @@ package
                     §_-q2h§.§_-E41§();
                 }
             }
-            if(§_-q2h§ != null && (state != uint(5) || (§_-E44§ & Entity.§_-bD§) != 0))
+            if(§_-q2h§ != null && (mState != uint(5) || (§_-E44§ & Entity.§_-bD§) != 0))
             {
                 §_-q2h§.§_-J1d§(param1);
             }
@@ -2977,7 +2977,7 @@ package
         {
             var _loc2_:uint = 0;
             var _loc3_:§_-d2R§ = §_-35d§.§_-Q2C§;
-            if(get_Stunned() || state == uint(6))
+            if(get_Stunned() || mState == uint(6))
             {
                 _loc2_ |= uint(128);
             }
@@ -2990,27 +2990,27 @@ package
                 _loc3_.§_-C2j§(uint(4),"Bounce",false);
             }
             //dash startup, or dashing
-            else if(inDashStartup || inDash)
+            else if(mInDashStartup || mInDash)
             {
                 _loc2_ |= uint(16384) | uint(256);
                 §_-12m§ = false;
                 §_-e4N§ = false;
-                if((dodgeDirection & (uint(4) | uint(8))) != 0)
+                if((mDodgeDirection & (uint(4) | uint(8))) != 0)
                 {
-                    if((dodgeDirection & uint(1)) != 0)
+                    if((mDodgeDirection & uint(1)) != 0)
                     {
                         _loc2_ |= uint(8388608);
                     }
-                    else if((dodgeDirection & uint(2)) != 0)
+                    else if((mDodgeDirection & uint(2)) != 0)
                     {
                         _loc2_ |= uint(512);
                     }
                 }
-                else if(dodgeDirection == uint(1))
+                else if(mDodgeDirection == uint(1))
                 {
                     _loc2_ |= uint(262144);
                 }
-                else if(dodgeDirection == uint(2))
+                else if(mDodgeDirection == uint(2))
                 {
                     _loc2_ |= uint(524288);
                 }
@@ -3035,14 +3035,14 @@ package
                 return;
             }
             timeJumped = 0;
-            //                  stun passed
-            if(!§_-zH§() && uint(timeLastHit + stun) < param1 && param2 <= Entity.§_-L3W§)
+            //                  mStun passed
+            if(!§_-zH§() && uint(mTimeLastHit + mStun) < param1 && param2 <= Entity.§_-L3W§)
             {
                 set_Stunned(false);
                 §_-C3R§ = false;
                 §_-w2r§ = false;
                 timeStunExited = param1;
-                _loc3_ = game;
+                _loc3_ = mGame;
                 _loc5_ = uint(32768);
                 if(!((_loc3_.§_-p2a§ & _loc5_) != 0 || (_loc3_.§_-p2a§ & uint(32)) != 0 && (_loc3_.§_-pM§ & _loc5_) != 0))
                 {
@@ -3076,15 +3076,15 @@ package
                 }
                 if(_loc4_)
                 {
-                    game.§_-w3z§.§_-Y7§(this,param1);
+                    mGame.§_-w3z§.§_-Y7§(this,param1);
                 }
             }
-            jumpType = uint(0);
+            mJumpType = uint(0);
         }
         
         public function §_-n4V§() : void
         {
-            §_-C5d§ = game.§_-T1o§.§_-w2T§() || Boolean(game.§_-T1o§.§_-552§()) ? §_-N3U§.§_-po§ : (Boolean(game.§_-T1o§.§_-B2g§()) ? §_-c1U§ : int(uint(uint(uint(§_-N3U§.§_-n§ * 2) - §_-N3U§.§_-eN§) - uint(uint(§_-N3U§.§_-pS§()) * 2))));
+            §_-C5d§ = mGame.§_-T1o§.§_-w2T§() || Boolean(mGame.§_-T1o§.§_-552§()) ? §_-N3U§.§_-po§ : (Boolean(mGame.§_-T1o§.§_-B2g§()) ? §_-c1U§ : int(uint(uint(uint(§_-N3U§.§_-n§ * 2) - §_-N3U§.§_-eN§) - uint(uint(§_-N3U§.§_-pS§()) * 2))));
         }
         
         public function §_-J1Q§(param1:uint) : void
@@ -3110,12 +3110,12 @@ package
             var _loc23_:int = 0;
             var _loc24_:* = null as StringMap;
             var _loc25_:* = null as §_-r2O§;
-            var _loc2_:§_-F3e§ = game;
+            var _loc2_:§_-F3e§ = mGame;
             if((_loc2_.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0 || (_loc2_.§_-p2a§ & (uint(262144) | uint(524288))) != 0)
             {
                 return;
             }
-            if((§_-E44§ & (Entity.§_-51s§ | Entity.§_-F2T§)) != (Entity.§_-51s§ | Entity.§_-F2T§) || (§_-E44§ & (Entity.BOT | Entity.§_-s4N§)) != 0 || playerInput == null)
+            if((§_-E44§ & (Entity.§_-51s§ | Entity.§_-F2T§)) != (Entity.§_-51s§ | Entity.§_-F2T§) || (§_-E44§ & (Entity.BOT | Entity.§_-s4N§)) != 0 || mPlayerInput == null)
             {
                 if(§_-DG§ != null)
                 {
@@ -3133,9 +3133,9 @@ package
                 }
                 return;
             }
-            var _loc3_:Boolean = playerInput != null && Boolean(playerInput.§_-71H§());
+            var _loc3_:Boolean = mPlayerInput != null && Boolean(mPlayerInput.§_-71H§());
             var _loc4_:§_-g3N§ = null;
-            if(§_-p3I§.§_-y1j§ == null && !get_Stunned() && (state == uint(0) || state == uint(5)))
+            if(§_-p3I§.§_-y1j§ == null && !get_Stunned() && (mState == uint(0) || mState == uint(5)))
             {
                 _loc4_ = §_-p3I§.§_-F4m§(param1,_loc3_);
             }
@@ -3143,21 +3143,21 @@ package
             {
                 _loc4_ = null;
             }
-            if(_loc4_ != null && (playerInput.§_-yD§ || §_-DG§ == null))
+            if(_loc4_ != null && (mPlayerInput.§_-yD§ || §_-DG§ == null))
             {
-                playerInput.§_-yD§ = false;
+                mPlayerInput.§_-yD§ = false;
                 if(§_-DG§ == null)
                 {
                     §_-DG§ = new §_-L4G§(§_-J3S§.§_-Ay§("a_HK_Animation_PickUp","UI_Hotkeys"));
                     _loc5_ = GameUtils.§_-j29§(§_-DG§.§_-ne§,"am_Hotkey_Manual_60");
-                    §_-j3V§ = new §_-mX§(game,_loc5_);
-                    game.§_-Y4A§.addChild(§_-DG§.§_-ne§);
+                    §_-j3V§ = new §_-mX§(mGame,_loc5_);
+                    mGame.§_-Y4A§.addChild(§_-DG§.§_-ne§);
                     §_-DG§.§_-N2H§(false);
                 }
                 _loc6_ = false;
                 if(§_-p32§.§_-x37§)
                 {
-                    _loc10_ = playerInput;
+                    _loc10_ = mPlayerInput;
                     if(_loc10_.§_-S3M§ != uint(3))
                     {
                         _loc9_ = _loc10_.§_-S3M§ == 0;
@@ -3173,7 +3173,7 @@ package
                 }
                 if(_loc9_)
                 {
-                    _loc8_ = playerInput.§_-fw§ != null;
+                    _loc8_ = mPlayerInput.§_-fw§ != null;
                 }
                 else
                 {
@@ -3181,7 +3181,7 @@ package
                 }
                 if(_loc8_)
                 {
-                    _loc7_ = playerInput.§_-fw§.§_-YF§ != null;
+                    _loc7_ = mPlayerInput.§_-fw§.§_-YF§ != null;
                 }
                 else
                 {
@@ -3189,14 +3189,14 @@ package
                 }
                 if(_loc7_)
                 {
-                    if(playerInput.§_-fw§.§_-a49§)
+                    if(mPlayerInput.§_-fw§.§_-a49§)
                     {
                         §_-j3V§.§_-w1o§(!!_loc3_ ? "a_HK_Mouse_Middle" : "a_HK_Mouse_Left","UI_Hotkeys",0,null);
                     }
                     else
                     {
-                        _loc11_ = playerInput.§_-fw§.§_-YF§;
-                        _loc12_ = _loc11_.§_-T2k§(int(_loc11_.§_-g1h§(!!_loc3_ ? int(uint(8)) : int(uint(6)),int(game.§_-i38§),false,false,false)));
+                        _loc11_ = mPlayerInput.§_-fw§.§_-YF§;
+                        _loc12_ = _loc11_.§_-T2k§(int(_loc11_.§_-g1h§(!!_loc3_ ? int(uint(8)) : int(uint(6)),int(mGame.§_-i38§),false,false,false)));
                         _loc13_ = §_-j3V§;
                         _loc13_.§_-w1o§(_loc13_.§_-I34§(_loc12_),"UI_Hotkeys",0,_loc12_);
                     }
@@ -3204,7 +3204,7 @@ package
                 }
                 if(!_loc6_)
                 {
-                    _loc10_ = playerInput;
+                    _loc10_ = mPlayerInput;
                     if(_loc10_.§_-S3M§ != uint(2))
                     {
                         _loc16_ = _loc10_.§_-S3M§ == 0;
@@ -3220,7 +3220,7 @@ package
                 }
                 if(_loc16_)
                 {
-                    _loc15_ = playerInput.§_-o3W§ != null;
+                    _loc15_ = mPlayerInput.§_-o3W§ != null;
                 }
                 else
                 {
@@ -3228,7 +3228,7 @@ package
                 }
                 if(_loc15_)
                 {
-                    _loc14_ = playerInput.§_-o3W§.§_-419§ != null;
+                    _loc14_ = mPlayerInput.§_-o3W§.§_-419§ != null;
                 }
                 else
                 {
@@ -3236,8 +3236,8 @@ package
                 }
                 if(_loc14_)
                 {
-                    _loc17_ = playerInput.§_-o3W§.§_-419§.§_-84d§;
-                    _loc18_ = playerInput.§_-o3W§.§_-419§.§_-t1h§;
+                    _loc17_ = mPlayerInput.§_-o3W§.§_-419§.§_-84d§;
+                    _loc18_ = mPlayerInput.§_-o3W§.§_-419§.§_-t1h§;
                     _loc19_ = _loc18_ != null ? _loc18_.§_-D20§ : null;
                     if(_loc19_ != null && _loc17_ != null)
                     {
@@ -3263,7 +3263,7 @@ package
                 }
                 if(!_loc6_)
                 {
-                    _loc25_ = playerInput.§_-Vr§;
+                    _loc25_ = mPlayerInput.§_-Vr§;
                     if(_loc25_ != null)
                     {
                         if(_loc25_.§_-a49§)
@@ -3274,13 +3274,13 @@ package
                         {
                             if(!_loc3_ && _loc25_.§_-45p§ == null)
                             {
-                                _loc11_ = game.§_-YF§;
-                                _loc25_.§_-45p§ = _loc11_.§_-T2k§(int(_loc11_.§_-g1h§(uint(6),int(game.§_-i38§),false,false,false)));
+                                _loc11_ = mGame.§_-YF§;
+                                _loc25_.§_-45p§ = _loc11_.§_-T2k§(int(_loc11_.§_-g1h§(uint(6),int(mGame.§_-i38§),false,false,false)));
                             }
                             else if(!!_loc3_ && _loc25_.§_-94s§ == null)
                             {
-                                _loc11_ = game.§_-YF§;
-                                _loc25_.§_-94s§ = _loc11_.§_-T2k§(int(_loc11_.§_-g1h§(uint(8),int(game.§_-i38§),false,false,false)));
+                                _loc11_ = mGame.§_-YF§;
+                                _loc25_.§_-94s§ = _loc11_.§_-T2k§(int(_loc11_.§_-g1h§(uint(8),int(mGame.§_-i38§),false,false,false)));
                             }
                             _loc13_ = §_-j3V§;
                             _loc12_ = !!_loc3_ ? _loc25_.§_-94s§ : _loc25_.§_-45p§;
@@ -3343,35 +3343,35 @@ package
             var _loc39_:* = null as CollisionLine;
             var _loc40_:uint = 0;
             //LastPhysPosY
-            lastPhysPosY = Number(get_PhysPosX());
+            mLastPhysPosY = Number(get_PhysPosX());
             //LastPhysPosX
-            lastPhysPosX = Number(get_PhysPosY());
+            mLastPhysPosX = Number(get_PhysPosY());
             var _loc2_:Number = Number(get_VelocityX() * get_VelocityX() + get_VelocityY() * get_VelocityY());
             §_-l25§(param1,_loc2_);
-            //touching collision, not stunned
-            if(currentCollision != null && !get_Stunned() && (§_-E44§ & Entity.§_-w4l§) == 0)
+            //touching collision, not mStunned
+            if(mCurrentCollision != null && !get_Stunned() && (§_-E44§ & Entity.§_-w4l§) == 0)
             {
                 if(!§_-p3I§.§_-x1U§ || Number(get_VelocityY()) > 0)
                 {
                     set_VelocityY(0);
                 }
                 §_-E1H§ = true;
-                _loc3_ = wallSlipCount;
+                _loc3_ = mWallSlipCount;
                 _loc4_ = true;
                 //on wall and wall slipping
-                if(wallDirection != 0 && _loc3_ >= uint(9))
+                if(mWallDirection != 0 && _loc3_ >= uint(9))
                 {
                     _loc4_ = false;
                 }
                 //not on wall/wall sliping. reset air options and wall slip.
                 if(_loc4_)
                 {
-                    §_-p3I§.§_-z3R§();
+                    §_-p3I§.resetAirOptions();
                 }
             }
             _loc4_ = !IsMoveLocked(param1) && Boolean(get_Running()) && !§_-p3I§.§_-a1h§;
-            var _loc5_:Number = !!§_-F1T§ ? runSpeed * §_-p3I§.§_-W3F§ * 1.16 : runSpeed * §_-p3I§.§_-W3F§;
-            var _loc6_:Number = airRunSpeed * §_-p3I§.§_-939§;
+            var _loc5_:Number = !!§_-F1T§ ? mRunSpeed * §_-p3I§.§_-W3F§ * 1.16 : mRunSpeed * §_-p3I§.§_-W3F§;
+            var _loc6_:Number = mAirRunSpeed * §_-p3I§.§_-939§;
             var _loc7_:Number = Boolean(get_Airborne()) ? _loc6_ : _loc5_;
             if(!get_Stunned() && Number(Math.abs(Number(get_VelocityX()))) < _loc7_ && §_-p3I§.§_-y44§ == null)
             {
@@ -3381,7 +3381,7 @@ package
             if(get_Stunned() && _loc2_ >= Entity.§_-81A§ && !§_-NW§)
             {
                 _loc9_ = §_-ws§ * §_-ws§ > Entity.§_-E4h§ || §_-916§ * §_-916§ > Entity.§_-E4h§;
-                _loc10_ = Boolean(§_-zH§()) ? Number(0) : recovery;
+                _loc10_ = Boolean(§_-zH§()) ? Number(0) : mRecovery;
                 if((§_-E44§ & Entity.§_-w4l§) != 0 && !§_-w2r§)
                 {
                     _loc10_ = 8.5548;
@@ -3410,9 +3410,9 @@ package
             else if(!§_-NW§ && (!get_Dodging() || _loc8_))
             {
                 //                                  dashed less than 40 frames ago
-                _loc9_ = timeDashed != 0 && uint(timeDashed + 640) >= param1;
-                //                            airfric   friction
-                _loc10_ = Boolean(get_Airborne()) ? airFriction : friction;
+                _loc9_ = mTimeDashed != 0 && uint(mTimeDashed + 640) >= param1;
+                //                            airfric   mFriction
+                _loc10_ = Boolean(get_Airborne()) ? mAirFriction : mFriction;
                 if(_loc9_)
                 {
                     if(get_Airborne())//aerial
@@ -3431,7 +3431,7 @@ package
                         _loc10_ = 4.013;
                     }
                     //KeepGroundFriction
-                    else if(§_-p3I§.§_-y44§.§_-F2V§ != null && §_-p3I§.§_-y44§.§_-F2V§.§_-42d§)
+                    else if(§_-p3I§.§_-y44§.mPowerType != null && §_-p3I§.§_-y44§.mPowerType.§_-42d§)
                     {
                         if(_loc9_)
                         {
@@ -3439,11 +3439,11 @@ package
                         }
                         else
                         {
-                            _loc10_ = friction;//friction
+                            _loc10_ = mFriction;//mFriction
                         }
                     }
                 }
-                //stunned
+                //mStunned
                 if(get_Stunned())
                 {
                     _loc10_ = 4;
@@ -3451,12 +3451,12 @@ package
                 else if(_loc8_)//grounded spot dodge
                 {
                     //right movement, holding left
-                    if(Number(get_VelocityX()) >= 0 && (playerInput.input & uint(4)) != 0 && (playerInput.input & uint(8)) == 0)
+                    if(Number(get_VelocityX()) >= 0 && (mPlayerInput.mInput & uint(4)) != 0 && (mPlayerInput.mInput & uint(8)) == 0)
                     {
                         _loc10_ = 9;
                     }
                     //left movement, holding right
-                    else if(Number(get_VelocityX()) <= 0 && (playerInput.input & uint(8)) != 0 && (playerInput.input & uint(4)) == 0)
+                    else if(Number(get_VelocityX()) <= 0 && (mPlayerInput.mInput & uint(8)) != 0 && (mPlayerInput.mInput & uint(4)) == 0)
                     {
                         _loc10_ = 9;
                     }
@@ -3467,24 +3467,24 @@ package
                 }
                 //sign(velocity.x)
                 _loc11_ = Number(get_VelocityX()) > 0 ? 1 : -1;
-                //abs(velocity.x) - friction
+                //abs(velocity.x) - mFriction
                 _loc12_ = _loc11_ * get_VelocityX() - _loc10_ * GameUtils.§_-C4I§;
                 if(_loc12_ < 0)
                 {
                     _loc12_ = 0;
                 }
-                set_VelocityX(_loc12_ * _loc11_);//velocity.x.moveTowards(0,friction)
+                set_VelocityX(_loc12_ * _loc11_);//velocity.x.moveTowards(0,mFriction)
             }
             _loc9_ = get_Dropping() && !§_-12Q§() && (!IsMoveLocked(param1) || Boolean(get_Dodging())) || !!§_-Y3w§ && Number(get_ImpulseY()) > 50 || §_-p3I§.§_-M1g§ || !!§_-C3R§ && Boolean(get_Stunned()) && (Number(get_VelocityY()) > 3.75 || Number(get_ImpulseY()) > 0);
-            var _loc14_:PowerType = §_-p3I§.§_-y44§ != null ? §_-p3I§.§_-y44§.§_-F2V§ : null;
+            var _loc14_:PowerType = §_-p3I§.§_-y44§ != null ? §_-p3I§.§_-y44§.mPowerType : null;
             //an air attack that isn't a GroundPoundRecover or MeteorPoundRelease
             //can fall through a platform after it has landed, if down is held within 2 frames of landing
             //                     IsAirPower                                   GroundPoundRecover          MeteorPoundRelease
             if(_loc14_ != null && _loc14_.§_-qs§ && §_-p3I§.§_-y44§.§_-k2C§ && _loc14_.§_-h14§ != uint(7) && _loc14_.§_-h14§ != uint(10))
             {
-                if((playerInput.input & uint(2)) != 0)//holding down?
+                if((mPlayerInput.mInput & uint(2)) != 0)//holding down?
                 {
-                    if(currentCollision != null)//touching collision
+                    if(mCurrentCollision != null)//touching collision
                     {
                         //landed within the last 2 frames
                         _loc9_ = param1 < uint(timeLanded + uint(48));
@@ -3507,28 +3507,27 @@ package
             {
                 _loc3_ = uint(1);
                 //                      soft
-                if(currentCollision != null && currentCollision.type == uint(2))
+                if(mCurrentCollision != null && mCurrentCollision.type == uint(2))
                 {
-                    currentCollision = null;
+                    mCurrentCollision = null;
                     if(get_Dropping())
                     {
-                        timeDropped = param1;
+                        mTimeDropped = param1;
                     }
                     else
                     {
-                        _loc15_ = this;
                         //impulse.y *= 0.8?
-                        _loc15_.set_ImpulseY(_loc15_.get_ImpulseY() * §_-b11§);
+                        set_ImpulseY(_loc15_.get_ImpulseY() * §_-b11§);
                     }
                     //fell through plat this frame!!!
                     set_FellThroughPlatThisFrame(true);
                 }
             }
             //                          air accel                   ground accel
-            _loc10_ = Boolean(get_Airborne()) ? airAcceleration * §_-p3I§.§_-04q§ : acceleration * §_-p3I§.§_-c4n§;
+            _loc10_ = Boolean(get_Airborne()) ? mAirAcceleration * §_-p3I§.§_-04q§ : mAcceleration * §_-p3I§.§_-c4n§;
             var _loc16_:Boolean = false;
             //this is activated when the distance between the entities in buddy is more than 300 units horizontally, and if we're facing our dude
-            if(game.rulesManager.§_-q1u§(param1,this))
+            if(mGame.mRulesManager.§_-q1u§(param1,this))
             {
                 _loc10_ *= 1.25;
                 _loc7_ *= 1.25;
@@ -3555,8 +3554,8 @@ package
                         loc17 = false;
                     }
                     */
-                    //not stunned, aerial,                              attack doesn't have TurnOffDampening
-                    if(!get_Stunned() && Boolean(get_Airborne()) && !_loc17_ && !(§_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.§_-F2V§ != null && §_-p3I§.§_-y44§.§_-F2V§.§_-Z2r§))
+                    //not mStunned, aerial,                              attack doesn't have TurnOffDampening
+                    if(!get_Stunned() && Boolean(get_Airborne()) && !_loc17_ && !(§_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.mPowerType != null && §_-p3I§.§_-y44§.mPowerType.§_-Z2r§))
                     {
                         _loc11_ = get_VelocityX() / 50;
                         if(_loc11_ < 0)
@@ -3576,8 +3575,7 @@ package
                 {
                     if(Number(get_VelocityX()) > -_loc7_)
                     {
-                        _loc15_ = this;
-                        _loc15_.set_VelocityX(_loc15_.get_VelocityX() - _loc10_ * GameUtils.§_-C4I§);
+                        set_VelocityX(_loc15_.get_VelocityX() - _loc10_ * GameUtils.§_-C4I§);
                         if(Number(get_VelocityX()) < -_loc7_)
                         {
                             set_VelocityX(-_loc7_);
@@ -3587,8 +3585,7 @@ package
                 //right
                 else if(Number(get_VelocityX()) < _loc7_)
                 {
-                    _loc15_ = this;
-                    _loc15_.set_VelocityX(Number(Number(_loc15_.get_VelocityX()) + _loc10_ * GameUtils.§_-C4I§));
+                    set_VelocityX(Number(Number(_loc15_.get_VelocityX()) + _loc10_ * GameUtils.§_-C4I§));
                     if(Number(get_VelocityX()) > _loc7_)
                     {
                         set_VelocityX(_loc7_);
@@ -3598,7 +3595,7 @@ package
             §_-s47§(param1,_loc7_);
             §_-V4z§(param1);
             //                                      jumped at least 2 frames ago
-            if(jumpType != uint(0) && param1 >= uint(timeJumped + uint(32)))
+            if(mJumpType != uint(0) && param1 >= uint(timeJumped + uint(32)))
             {
                 §_-X4h§(param1);//this does the jumping
             }
@@ -3638,18 +3635,16 @@ package
                 §_-L3i§.length = 0;
             }
             _loc12_ = get_VelocityX() * GameUtils.§_-C4I§;
-            if(currentCollision != null)
+            if(mCurrentCollision != null)
             {
                 while(_loc12_ > 0 || _loc12_ < 0)
                 {
-                    Entity.§_-e3§.x = currentCollision.§_-a1T§ - currentCollision.startX;//width
-                    Entity.§_-e3§.y = currentCollision.endY - currentCollision.startY;//height
-                    Entity.§_-e3§.normalize(_loc12_);//will be collision direction
-                    _loc18_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-e3§,Entity.zzOutHitLoc2,currentCollision,null,null,_loc3_,0);
-                    _loc15_ = this;
-                    _loc15_.set_PhysPosX(Number(Number(_loc15_.get_PhysPosX()) + Entity.§_-e3§.x));
-                    _loc15_ = this;
-                    _loc15_.set_PhysPosY(Number(Number(_loc15_.get_PhysPosY()) + Entity.§_-e3§.y));
+                    Entity.§_-e3§.x = mCurrentCollision.§_-a1T§ - mCurrentCollision.startX;//width
+                    Entity.§_-e3§.y = mCurrentCollision.endY - mCurrentCollision.startY;//height
+                    Entity.§_-e3§.normalize(_loc12_);//will be collision mDirection
+                    _loc18_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-e3§,Entity.zzOutHitLoc2,mCurrentCollision,null,null,_loc3_,0);
+                    set_PhysPosX(Number(Number(_loc15_.get_PhysPosX()) + Entity.§_-e3§.x));
+                    set_PhysPosY(Number(Number(_loc15_.get_PhysPosY()) + Entity.§_-e3§.y));
                     _loc13_ = Entity.§_-e3§.length;
                     _loc12_ += _loc12_ < 0 ? _loc13_ : -_loc13_;
                     if(_loc18_ == null)
@@ -3658,44 +3653,41 @@ package
                         {
                             Entity.§_-sd§.x = 0;
                             Entity.§_-sd§.y = 50;
-                            _loc19_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-sd§,Entity.zzOutHitLoc2,null,null,null,_loc3_,0);
-                            if(_loc19_ != null && _loc19_ != currentCollision && Entity.§_-sd§.y <= 10)
+                            _loc19_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-sd§,Entity.zzOutHitLoc2,null,null,null,_loc3_,0);
+                            if(_loc19_ != null && _loc19_ != mCurrentCollision && Entity.§_-sd§.y <= 10)
                             {
-                                _loc20_ = _loc19_.startY - currentCollision.startY;
-                                if(_loc19_.startY != _loc19_.endY || currentCollision.startY != currentCollision.endY || _loc20_ >= 1 || _loc20_ <= -1)
+                                _loc20_ = _loc19_.startY - mCurrentCollision.startY;
+                                if(_loc19_.startY != _loc19_.endY || mCurrentCollision.startY != mCurrentCollision.endY || _loc20_ >= 1 || _loc20_ <= -1)
                                 {
-                                    _loc15_ = this;
-                                    _loc15_.set_ImpulseY(Number(Number(_loc15_.get_ImpulseY()) + 50));
+                                    set_ImpulseY(Number(Number(_loc15_.get_ImpulseY()) + 50));
                                 }
                             }
                             break;
                         }
                         break;
                     }
-                    currentCollision = _loc18_;
-                    §_-L3i§.push(currentCollision);
+                    mCurrentCollision = _loc18_;
+                    §_-L3i§.push(mCurrentCollision);
                     Entity.§_-w2A§.x = Entity.§_-e3§.x;
                     Entity.§_-w2A§.y = Entity.§_-e3§.y;
                     Entity.§_-w2A§.normalize(1.01);
-                    _loc15_ = this;
-                    _loc15_.set_PhysPosX(_loc15_.get_PhysPosX() - Entity.§_-w2A§.x);
-                    _loc15_ = this;
-                    _loc15_.set_PhysPosY(_loc15_.get_PhysPosY() - Entity.§_-w2A§.y);
-                    if(currentCollision.startX == currentCollision.§_-a1T§)//vertical
+                    set_PhysPosX(_loc15_.get_PhysPosX() - Entity.§_-w2A§.x);
+                    set_PhysPosY(_loc15_.get_PhysPosY() - Entity.§_-w2A§.y);
+                    if(mCurrentCollision.startX == mCurrentCollision.§_-a1T§)//vertical
                     {
-                        //not stunned
+                        //not mStunned
                         if(!get_Stunned())
                         {
-                            //not (gamemode and gonna bounce)
-                            if((currentCollision.type & GameUtils.gamemodeCollision) == 0 || !§_-G1I§(param1,false))
+                            //not (mGamemode and gonna bounce)
+                            if((mCurrentCollision.type & GameUtils.mGamemodeCollision) == 0 || !§_-G1I§(param1,false))
                             {
                                 set_VelocityX(0);//velocity.x = 0
                             }
                             //pressure plate
-                            else if((currentCollision.type & GameUtils.pressurePlateCollision) != 0)
+                            else if((mCurrentCollision.type & GameUtils.PRESSURE_PLATE_COLLISION) != 0)
                             {
                                 set_VelocityX(0);//velocity.x = 0
-                                game.rulesManager.§_-zY§(param1,this);//activate
+                                mGame.mRulesManager.§_-zY§(param1,this);//activate
                             }
                             _loc12_ = 0;
                         }
@@ -3727,11 +3719,11 @@ package
             }
             _loc13_ = 0;
             //in modern version this line has an or with:
-            //(playerInput.timeDownInputted + 160 > _-W1q) and holding down and param1 >= (_-W1q + 272) and (_-W1q + 480) >= param1
-            //_-Q3E seems to be the fastfall input??
-            _loc17_ = uint(playerInput.timeDownInputted + Entity.§_-i1h§) >= param1;
+            //(mPlayerInput.timeDownInputted + 160 > _-W1q) and holding down and param1 >= (_-W1q + 272) and (_-W1q + 480) >= param1
+            //_-Q3E seems to be the fastfall mInput??
+            _loc17_ = uint(mPlayerInput.timeDownInputted + Entity.§_-i1h§) >= param1;
             //i1h is 80. so 5f.
-            //a requirement hidden in the if state: uint(playerInput.timeDownInputted + uint(48)) <= param1
+            //a requirement hidden in the if mState: uint(mPlayerInput.timeDownInputted + uint(48)) <= param1
             
             //so base req:
             //started holding down at least 2 frames ago
@@ -3739,42 +3731,40 @@ package
             //starting holding down in the last 5 frames
             //started holding down within 9 frames before jumping, jumped atleast 17 frames ago, jumped within the last 30 frames
             
-            //not fastfalling                     not on wall     not in dodge   not stunned     aerial                                no attacking                                                                                     velocity.y >= -38
-            if(!get_Fastfalling() && Boolean(get_Dropping()) && wallDirection == 0 && !get_Dodging() && !get_Stunned() && Boolean(get_Airborne()) && !§_-73X§() && §_-p3I§.§_-y44§ == null && !(timeDropped != 0 && uint(uint(timeDropped + Entity.§_-i1h§) + 16) > param1) && Number(get_VelocityY()) >= Entity.§_-vs§ && _loc17_ && uint(playerInput.timeDownInputted + uint(48)) <= param1)
+            //not fastfalling                     not on wall     not in dodge   not mStunned     aerial                                no attacking                                                                                     velocity.y >= -38
+            if(!get_Fastfalling() && Boolean(get_Dropping()) && mWallDirection == 0 && !get_Dodging() && !get_Stunned() && Boolean(get_Airborne()) && !§_-73X§() && §_-p3I§.§_-y44§ == null && !(mTimeDropped != 0 && uint(uint(mTimeDropped + Entity.§_-i1h§) + 16) > param1) && Number(get_VelocityY()) >= Entity.§_-vs§ && _loc17_ && uint(mPlayerInput.timeDownInputted + uint(48)) <= param1)
             {
                 set_Fastfalling(true);//fastfalling = true
             }
-            //fastfalling                         dodging                 stunned          not aerial                          on a wall           attacking
-            else if(get_Fastfalling() && (!get_Dropping() || Boolean(get_Dodging()) || Boolean(get_Stunned()) || !get_Airborne() || Boolean(§_-73X§()) || wallDirection != 0 || §_-p3I§.§_-y44§ != null))
+            //fastfalling                         dodging                 mStunned          not aerial                          on a wall           attacking
+            else if(get_Fastfalling() && (!get_Dropping() || Boolean(get_Dodging()) || Boolean(get_Stunned()) || !get_Airborne() || Boolean(§_-73X§()) || mWallDirection != 0 || §_-p3I§.§_-y44§ != null))
             {
                 set_Fastfalling(false);//fastfalling = false
             }
-            if(jumpType != uint(0))//jumping
+            if(mJumpType != uint(0))//jumping
             {
                 set_Fastfalling(false);//fastfalling = false
             }
             set_ShowAsFastFalling(false);//show as not fastfalling
             //                     not fastfalling     hold down
-            var _loc21_:Boolean = !get_Fastfalling() && (playerInput.input & uint(2)) != 0 && !IsMoveLocked(param1);
+            var _loc21_:Boolean = !get_Fastfalling() && (mPlayerInput.mInput & uint(2)) != 0 && !IsMoveLocked(param1);
             _loc20_ = 70;
             var _loc22_:Number = 85;
             var _loc23_:Number = get_Fastfalling() || _loc21_ ? _loc22_ : _loc20_;
             //not dodging, and collision is null
-            if(!get_Dodging() && currentCollision == null && !(§_-L2h§ != 0 && §_-L2h§ > param1) && !§_-p3I§.§_-H2O§ && gravity != 0)
+            if(!get_Dodging() && mCurrentCollision == null && !(§_-L2h§ != 0 && §_-L2h§ > param1) && !§_-p3I§.§_-H2O§ && mGravity != 0)
             {
                 if(Number(get_VelocityY()) < _loc23_)//velocity.y < fastfalling?85:70
                 {
-                    _loc15_ = this;
-                    //velocity.y += gravity
-                    _loc15_.set_VelocityY(Number(Number(_loc15_.get_VelocityY()) + gravity * GameUtils.§_-C4I§));
-                    if(!get_Stunned())//not stunned
+                    //velocity.y += mGravity
+                    set_VelocityY(Number(Number(_loc15_.get_VelocityY()) + mGravity * GameUtils.§_-C4I§));
+                    if(!get_Stunned())//not mStunned
                     {
-                        //some extra thing added to velocity.y when not stunned
+                        //some extra thing added to velocity.y when not mStunned
                         _loc13_ = Number(Entity.§_-j2C§(Number(get_VelocityY())));
                         if(_loc13_ != 0)
                         {
-                            _loc15_ = this;
-                            _loc15_.set_VelocityY(Number(Number(_loc15_.get_VelocityY()) + _loc13_ * GameUtils.§_-C4I§));
+                            set_VelocityY(Number(Number(_loc15_.get_VelocityY()) + _loc13_ * GameUtils.§_-C4I§));
                         }
                     }
                 }
@@ -3782,8 +3772,7 @@ package
                 {
                     //velocity.y < 0?0:12
                     _loc24_ = Number(get_VelocityY()) < 0 ? Number(0) : Number(12);
-                    _loc15_ = this;
-                    _loc15_.set_VelocityY(Number(Number(_loc15_.get_VelocityY()) + _loc24_ * GameUtils.§_-C4I§));
+                    set_VelocityY(Number(Number(_loc15_.get_VelocityY()) + _loc24_ * GameUtils.§_-C4I§));
                     if(Number(get_VelocityY()) < 0)
                     {
                         set_VelocityY(0);//if moving up, clamp fastfall
@@ -3807,9 +3796,8 @@ package
                         //not attacking. not fastfalling.
                         else if(!get_Fastfalling() && !_loc21_)
                         {
-                            _loc15_ = this;
                             //velocit.y -= 6*0.384
-                            _loc15_.set_VelocityY(_loc15_.get_VelocityY() - 6 * GameUtils.§_-C4I§);
+                            set_VelocityY(_loc15_.get_VelocityY() - 6 * GameUtils.§_-C4I§);
                             if(Number(get_VelocityY()) < _loc20_)//velocity.y < 70
                             {
                                 set_VelocityY(_loc20_);//velocit.y = 70
@@ -3823,7 +3811,7 @@ package
             Entity.§_-q0§.x = _loc12_;
             _loc24_ = Number(get_VelocityY());
             Entity.§_-q0§.y = _loc24_ * GameUtils.§_-C4I§;
-            if(currentCollision != null)
+            if(mCurrentCollision != null)
             {
                 Entity.§_-q0§.y += 2.02;
             }
@@ -3832,8 +3820,8 @@ package
             Entity.§_-uq§.x = Entity.§_-q0§.x;
             Entity.§_-uq§.y = Entity.§_-q0§.y;
             var _loc25_:Boolean = false;
-            _loc18_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-B5a§,Entity.zzOutHitLoc2,null,null,null,_loc3_,0);
-            _loc19_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-uq§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+            _loc18_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-B5a§,Entity.zzOutHitLoc2,null,null,null,_loc3_,0);
+            _loc19_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-uq§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
             if(_loc19_ != null && Entity.§_-uq§.length < Entity.§_-B5a§.length)
             {
                 Entity.§_-B5a§.x = Entity.§_-uq§.x;
@@ -3842,10 +3830,10 @@ package
                 _loc25_ = true;
             }
             //NoSlideCeilingBuffer not 0
-            if(get_Airborne() && §_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.§_-F2V§.§_-Mf§ != 0)
+            if(get_Airborne() && §_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.mPowerType.§_-Mf§ != 0)
             {
                 Entity.§_-o3V§.setTo(Entity.§_-q0§.x,Entity.§_-q0§.y);
-                _loc26_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),get_PhysPosY() - 120 - §_-p3I§.§_-y44§.§_-F2V§.§_-Mf§,Entity.§_-o3V§,Entity.zzOutHitLoc2,null,null,null,GameUtils.NO_SLIDE_COLLISION,0);
+                _loc26_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),get_PhysPosY() - 120 - §_-p3I§.§_-y44§.mPowerType.§_-Mf§,Entity.§_-o3V§,Entity.zzOutHitLoc2,null,null,null,GameUtils.NO_SLIDE_COLLISION,0);
                 if(_loc26_ != null && _loc26_.collisionNormal.y > 0 && Entity.§_-o3V§.length < Entity.§_-B5a§.length)
                 {
                     Entity.§_-B5a§.setTo(Entity.§_-o3V§.x,Entity.§_-o3V§.y);
@@ -3874,7 +3862,7 @@ package
             }
             Entity.§_-X1F§.x = 0;
             Entity.§_-X1F§.y = -120;
-            _loc26_ = game.§_-J2b§.RayCast(team,_loc27_,_loc28_,Entity.§_-X1F§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+            _loc26_ = mGame.mCollisionManager.Raycast(mTeam,_loc27_,_loc28_,Entity.§_-X1F§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
             if(_loc26_ != null)
             {
                 §_-L3i§.push(_loc26_);
@@ -3883,8 +3871,8 @@ package
                 Entity.§_-uq§.x = 0;
                 Entity.§_-uq§.y = Entity.§_-q0§.y;
                 _loc25_ = false;
-                _loc18_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-B5a§,Entity.zzOutHitLoc2,null,null,null,_loc3_,0);
-                _loc19_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-uq§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+                _loc18_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-B5a§,Entity.zzOutHitLoc2,null,null,null,_loc3_,0);
+                _loc19_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-uq§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
                 if(_loc19_ != null && Entity.§_-uq§.length < Entity.§_-B5a§.length)
                 {
                     Entity.§_-B5a§.y = Entity.§_-uq§.y;
@@ -3892,26 +3880,24 @@ package
                     _loc25_ = true;
                 }
             }
-            _loc15_ = this;
-            _loc15_.set_PhysPosX(Number(Number(_loc15_.get_PhysPosX()) + Entity.§_-B5a§.x));
-            _loc15_ = this;
-            _loc15_.set_PhysPosY(Number(Number(_loc15_.get_PhysPosY()) + Entity.§_-B5a§.y));
-            if(_loc18_ != null && currentCollision == null)//newly touching collision
+            set_PhysPosX(get_PhysPosX() + Entity.§_-B5a§.x);
+            set_PhysPosY(get_PhysPosY() + Entity.§_-B5a§.y);
+            if(_loc18_ != null && mCurrentCollision == null)//newly touching collision
             {
                 //used all air options
-                if(uint(get_CurrentAerialJumpCount()) == uint(game.rulesManager.maxAerialJumpCount()))
+                if(uint(get_CurrentAerialJumpCount()) == uint(mGame.mRulesManager.maxAerialJumpCount()))
                 {
-                    game.§_-I4§.§_-s3A§(param1,this);
+                    mGame.§_-I4§.§_-s3A§(param1,this);
                 }
             }
-            currentCollision = _loc18_;
-            if(currentCollision != null)
+            mCurrentCollision = _loc18_;
+            if(mCurrentCollision != null)
             {
                 //hard
-                if((currentCollision.type & uint(1)) != 0 && Entity.§_-B5a§.x >= -Entity.§_-t4h§ && Entity.§_-B5a§.x <= Entity.§_-t4h§ && Entity.§_-B5a§.y >= -Entity.§_-t4h§ && Entity.§_-B5a§.y <= Entity.§_-t4h§)
+                if((mCurrentCollision.type & uint(1)) != 0 && Entity.§_-B5a§.x >= -Entity.§_-t4h§ && Entity.§_-B5a§.x <= Entity.§_-t4h§ && Entity.§_-B5a§.y >= -Entity.§_-t4h§ && Entity.§_-B5a§.y <= Entity.§_-t4h§)
                 {
-                    Entity.§_-w2A§.x = -currentCollision.collisionNormal.x;
-                    Entity.§_-w2A§.y = -currentCollision.collisionNormal.y;
+                    Entity.§_-w2A§.x = -mCurrentCollision.collisionNormal.x;
+                    Entity.§_-w2A§.y = -mCurrentCollision.collisionNormal.y;
                 }
                 else
                 {
@@ -3919,15 +3905,13 @@ package
                     Entity.§_-w2A§.y = Entity.§_-B5a§.y;
                 }
                 Entity.§_-w2A§.normalize(1.01);
-                _loc15_ = this;
-                _loc15_.set_PhysPosX(_loc15_.get_PhysPosX() - Entity.§_-w2A§.x);
-                _loc15_ = this;
-                _loc15_.set_PhysPosY(_loc15_.get_PhysPosY() - Entity.§_-w2A§.y);
+                set_PhysPosX(get_PhysPosX() - Entity.§_-w2A§.x);
+                set_PhysPosY(get_PhysPosY() - Entity.§_-w2A§.y);
             }
-            var _loc29_:uint = wallDirection;
-            wallDirection = 0;
+            var _loc29_:uint = mWallDirection;
+            mWallDirection = 0;
             var _loc30_:Boolean = false;
-            if(currentCollision == null)
+            if(mCurrentCollision == null)
             {
                 if(!!§_-E1H§ && §_-L2h§ != 0 && §_-L2h§ > param1)
                 {
@@ -3957,44 +3941,44 @@ package
             {
                 _loc31_ = Number(get_VelocityX());
                 _loc32_ = Number(get_VelocityY());
-                §_-K4r§(param1,currentCollision);
+                §_-K4r§(param1,mCurrentCollision);
                 if(§_-C2u§())
                 {
                     _loc33_ = _loc31_ >= Number(get_VelocityX()) ? _loc31_ - get_VelocityX() : get_VelocityX() - _loc31_;
                     _loc34_ = _loc32_ >= Number(get_VelocityY()) ? _loc32_ - get_VelocityY() : get_VelocityY() - _loc32_;
                     if(_loc34_ > 50 || _loc33_ > 50)
                     {
-                        game.§_-f4W§.§_-Q3A§(param1,6);
+                        mGame.§_-f4W§.§_-Q3A§(param1,6);
                     }
                 }
                 //                          entity      zzOutHitLoc2x   zzOutHitLoc2y           col type
-                game.rulesManager.§_-C36§(param1,this,Entity.zzOutHitLoc2.x,Entity.zzOutHitLoc2.y,currentCollision.type);
+                mGame.mRulesManager.§_-C36§(param1,this,Entity.zzOutHitLoc2.x,Entity.zzOutHitLoc2.y,mCurrentCollision.type);
             }
             //                                                                                          no slide
-            else if(!!_loc25_ && (currentCollision.startY == currentCollision.endY || currentCollision.collisionNormal.y > 0 && (currentCollision.type & GameUtils.NO_SLIDE_COLLISION) != 0))
+            else if(!!_loc25_ && (mCurrentCollision.startY == mCurrentCollision.endY || mCurrentCollision.collisionNormal.y > 0 && (mCurrentCollision.type & GameUtils.NO_SLIDE_COLLISION) != 0))
             {
                 if(Number(get_VelocityY()) < 0)
                 {
                     set_VelocityY(0);
                 }
                 //yumiko ball sig thing
-                if(§_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.§_-F2V§.§_-Dw§)
+                if(§_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.mPowerType.§_-Dw§)
                 {
                     §_-p3I§.§_-y44§.§_-24Z§ = true;
                 }
             }
-            else if(!!_loc25_ && currentCollision.startX != currentCollision.§_-a1T§ || currentCollision.§_-E20§)
+            else if(!!_loc25_ && mCurrentCollision.startX != mCurrentCollision.§_-a1T§ || mCurrentCollision.§_-E20§)
             {
                 _loc31_ = Entity.§_-B5a§.y - Entity.§_-q0§.y;
-                if(currentCollision.startY > currentCollision.endY)
+                if(mCurrentCollision.startY > mCurrentCollision.endY)
                 {
-                    Entity.§_-34n§.x = currentCollision.§_-a1T§ - currentCollision.startX;
-                    Entity.§_-34n§.y = currentCollision.endY - currentCollision.startY;
+                    Entity.§_-34n§.x = mCurrentCollision.§_-a1T§ - mCurrentCollision.startX;
+                    Entity.§_-34n§.y = mCurrentCollision.endY - mCurrentCollision.startY;
                 }
                 else
                 {
-                    Entity.§_-34n§.x = currentCollision.startX - currentCollision.§_-a1T§;
-                    Entity.§_-34n§.y = currentCollision.startY - currentCollision.endY;
+                    Entity.§_-34n§.x = mCurrentCollision.startX - mCurrentCollision.§_-a1T§;
+                    Entity.§_-34n§.y = mCurrentCollision.startY - mCurrentCollision.endY;
                 }
                 Entity.§_-34n§.normalize(_loc31_);
                 if(Entity.§_-34n§.x < 0 && Number(get_VelocityX()) > -15)
@@ -4006,53 +3990,49 @@ package
                     set_VelocityX(15);
                 }
                 _loc32_ = !!_loc25_ ? 120 : Number(0);
-                _loc35_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),get_PhysPosY() - _loc32_,Entity.§_-34n§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
-                _loc15_ = this;
-                _loc15_.set_PhysPosX(Number(Number(_loc15_.get_PhysPosX()) + Entity.§_-34n§.x));
-                _loc15_ = this;
-                _loc15_.set_PhysPosY(Number(Number(_loc15_.get_PhysPosY()) + Entity.§_-34n§.y));
+                _loc35_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),get_PhysPosY() - _loc32_,Entity.§_-34n§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+                set_PhysPosX(get_PhysPosX() + Entity.§_-34n§.x);
+                set_PhysPosY(get_PhysPosY() + Entity.§_-34n§.y);
                 if(_loc35_ != null)
                 {
                     Entity.§_-34n§.normalize(1.01);
                     §_-L3i§.push(_loc35_);
-                    _loc15_ = this;
-                    _loc15_.set_PhysPosX(_loc15_.get_PhysPosX() - Entity.§_-34n§.x);
-                    _loc15_ = this;
-                    _loc15_.set_PhysPosY(_loc15_.get_PhysPosY() - Entity.§_-34n§.y);
+                    set_PhysPosX(get_PhysPosX() - Entity.§_-34n§.x);
+                    set_PhysPosY(get_PhysPosY() - Entity.§_-34n§.y);
                 }
-                if(!!_loc25_ && §_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.§_-F2V§.§_-Dw§)
+                if(!!_loc25_ && §_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.mPowerType.§_-Dw§)
                 {
                     §_-p3I§.§_-y44§.§_-24Z§ = true;
                 }
             }
-            //not (gamemode and gonna bounce)
-            else if(!((currentCollision.type & GameUtils.gamemodeCollision) != 0 && Boolean(§_-G1I§(param1,true))))
+            //not (mGamemode and gonna bounce)
+            else if(!((mCurrentCollision.type & GameUtils.mGamemodeCollision) != 0 && Boolean(§_-G1I§(param1,true))))
             {
-                if(currentCollision.startX == currentCollision.§_-a1T§)//vertical
+                if(mCurrentCollision.startX == mCurrentCollision.§_-a1T§)//vertical
                 {
                     _loc36_ = false;
                     //aerial and not no slide
-                    if(get_Airborne() && (currentCollision.type & GameUtils.NO_SLIDE_COLLISION) == 0)
+                    if(get_Airborne() && (mCurrentCollision.type & GameUtils.NO_SLIDE_COLLISION) == 0)
                     {
                         _loc37_ = false;
-                        _loc31_ = currentCollision.startX;
+                        _loc31_ = mCurrentCollision.startX;
                         _loc32_ = Number(get_PhysPosX());
                         Entity.§_-A21§.x = _loc31_ - _loc32_;
                         Entity.§_-A21§.x += Entity.§_-A21§.x < 0 ? -2.02 : 2.02;
-                        _loc35_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-A21§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+                        _loc35_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-A21§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
                         if(_loc35_ != null && _loc35_.startX == _loc35_.§_-a1T§)
                         {
                             _loc37_ = true;
                         }
                         //top point y
-                        _loc33_ = currentCollision.startY < currentCollision.endY ? currentCollision.startY : currentCollision.endY;
+                        _loc33_ = mCurrentCollision.startY < mCurrentCollision.endY ? mCurrentCollision.startY : mCurrentCollision.endY;
                         if(!_loc37_ && get_PhysPosY() - Entity.§_-D1g§ < _loc33_ && Number(get_VelocityY()) > Entity.§_-Q3d§)
                         {
                             _loc34_ = _loc33_ - 5;
-                            _loc38_ = Number(get_PhysPosX()) <= currentCollision.startX ? 2.02 : -2.02;
+                            _loc38_ = Number(get_PhysPosX()) <= mCurrentCollision.startX ? 2.02 : -2.02;
                             Entity.§_-93§.x = _loc38_;
                             Entity.§_-93§.y = 6;
-                            _loc39_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),_loc34_,Entity.§_-93§,Entity.§_-L1b§,null,null,null,uint(1),0);
+                            _loc39_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),_loc34_,Entity.§_-93§,Entity.§_-L1b§,null,null,null,uint(1),0);
                             §_-L3i§.push(_loc39_);
                             //one of those angle walls thing
                             if(_loc39_ != null && _loc39_.startX != _loc39_.§_-a1T§ && !_loc39_.§_-E20§)
@@ -4069,21 +4049,21 @@ package
                             _loc30_ = true;
                             if((_loc37_ || _loc29_ != 0) && !_loc36_)
                             {
-                                //decide wall direction
+                                //decide wall mDirection
                                 //1 - right. 2 - left. ?.
-                                wallDirection = currentCollision.startX <= Number(get_PhysPosX()) ? uint(1) : uint(2);
+                                mWallDirection = mCurrentCollision.startX <= Number(get_PhysPosX()) ? uint(1) : uint(2);
                                 //used to not be on the wall, and velocity.y >= 0
                                 if(_loc29_ == 0 && Number(get_VelocityY()) >= 0)
                                 {
                                     set_VelocityY(0);//velocity.y = 0
-                                    _loc34_ = currentCollision.startY > currentCollision.endY ? currentCollision.startY : currentCollision.endY;
+                                    _loc34_ = mCurrentCollision.startY > mCurrentCollision.endY ? mCurrentCollision.startY : mCurrentCollision.endY;
                                     if(Number(get_PhysPosY()) >= _loc34_)
                                     {
                                         §_-L2h§ = uint(param1 + uint(112));//7th
                                     }
                                 }
                                 //                      sticky
-                                if(!!§_-E1H§ && (currentCollision.type & GameUtils.§_-32X§) != 0)
+                                if(!!§_-E1H§ && (mCurrentCollision.type & GameUtils.§_-32X§) != 0)
                                 {
                                     if(§_-L2h§ == 0)
                                     {
@@ -4099,68 +4079,65 @@ package
                                         §_-L2h§ = 0;
                                     }
                                 }
-                                else if(Number(get_VelocityY()) > gravity * 0.85 * GameUtils.§_-C4I§)
+                                else if(Number(get_VelocityY()) > mGravity * 0.85 * GameUtils.§_-C4I§)
                                 {
-                                    _loc15_ = this;
-                                    _loc15_.set_VelocityY(_loc15_.get_VelocityY() - (gravity + _loc13_) * 0.85 * GameUtils.§_-C4I§);
+                                    set_VelocityY(get_VelocityY() - (mGravity + _loc13_) * 0.85 * GameUtils.§_-C4I§);
                                 }
                             }
                         }
                         //                                                              wall cancel
-                        if(wallDirection != 0 && _loc29_ == 0 && §_-p3I§.§_-y44§ != null && §_-p3I§.§_-81n§)
+                        if(mWallDirection != 0 && _loc29_ == 0 && §_-p3I§.§_-y44§ != null && §_-p3I§.§_-81n§)
                         {
                             §_-p3I§.§_-y44§.§_-24Z§ = true;
                         }
                     }
                     //       wall           pressure plate
-                    if(wallDirection != 0 && (currentCollision.type & GameUtils.pressurePlateCollision) != 0)
+                    if(mWallDirection != 0 && (mCurrentCollision.type & GameUtils.PRESSURE_PLATE_COLLISION) != 0)
                     {
-                        game.rulesManager.§_-zY§(param1,this);
+                        mGame.mRulesManager.§_-zY§(param1,this);
                     }
                     if(_loc36_)
                     {
                         //velocity.y = Gravity
-                        set_VelocityY(gravity * GameUtils.§_-C4I§);
+                        set_VelocityY(mGravity * GameUtils.§_-C4I§);
                         §_-e4N§ = true;
                     }
                     //          no slide
-                    else if((currentCollision.type & GameUtils.NO_SLIDE_COLLISION) != 0)
+                    else if((mCurrentCollision.type & GameUtils.NO_SLIDE_COLLISION) != 0)
                     {
                         set_VelocityX(0);//velocity.x = 0
                     }
                     else if(!§_-R48§ && §_-p3I§.§_-y44§ == null)
                     {
                         //force of 10 to keep you at the wall
-                        set_VelocityX(currentCollision.startX <= Number(get_PhysPosX()) ? Number(-10) : Number(10));
+                        set_VelocityX(mCurrentCollision.startX <= Number(get_PhysPosX()) ? Number(-10) : Number(10));
                     }
                     Entity.§_-W2R§.x = 0;
                     Entity.§_-W2R§.y = Entity.§_-q0§.y - Entity.§_-B5a§.y;
                     Entity.§_-X3x§.x = 0;
                     Entity.§_-X3x§.y = Entity.§_-W2R§.y;
-                    _loc35_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-W2R§,Entity.zzOutHitLoc2,null,null,null,_loc3_,0);
-                    _loc39_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-X3x§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+                    _loc35_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-W2R§,Entity.zzOutHitLoc2,null,null,null,_loc3_,0);
+                    _loc39_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-X3x§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
                     if(_loc39_ != null && Entity.§_-X3x§.length < Entity.§_-W2R§.length)
                     {
                         Entity.§_-W2R§.y = Entity.§_-X3x§.y;
                         _loc35_ = _loc39_;
                     }
-                    _loc15_ = this;
-                    _loc15_.set_PhysPosY(Number(Number(_loc15_.get_PhysPosY()) + Entity.§_-W2R§.y));
+                    set_PhysPosY(_loc15_.get_PhysPosY() + Entity.§_-W2R§.y);
                     if(_loc35_ != null)
                     {
                         §_-L3i§.push(_loc35_);
-                        _loc15_ = this;
-                        _loc15_.set_PhysPosY(Number(Number(_loc15_.get_PhysPosY()) + (Entity.§_-q0§.y > 0 ? -1.01 : 1.01)));
+                        set_PhysPosY(get_PhysPosY() + (Entity.§_-q0§.y > 0 ? -1.01 : 1.01));
                     }
                 }
                 //      pressure plate
-                else if((currentCollision.type & GameUtils.pressurePlateCollision) != 0)
+                else if((mCurrentCollision.type & GameUtils.PRESSURE_PLATE_COLLISION) != 0)
                 {
-                    game.rulesManager.§_-zY§(param1,this);
+                    mGame.mRulesManager.§_-zY§(param1,this);
                 }
             }
-            §_-Y3H§ = currentCollision;
-            if(§_-Y3H§ != null)//in modern versions, also requires not being stunned
+            §_-Y3H§ = mCurrentCollision;
+            if(§_-Y3H§ != null)//in modern versions, also requires not being mStunned
             {
                 §_-k1r§ = true;
             }
@@ -4168,20 +4145,20 @@ package
             {
                 §_-L3i§.push(§_-Y3H§);
             }
-            if(currentCollision != null && (currentCollision.collisionNormal.y >= 0 || currentCollision.§_-E20§))
+            if(mCurrentCollision != null && (mCurrentCollision.collisionNormal.y >= 0 || mCurrentCollision.§_-E20§))
             {
-                currentCollision = null;
+                mCurrentCollision = null;
             }
             _loc36_ = Boolean(get_Airborne());
-            set_Airborne(currentCollision == null);//set is airborne
-            if(game.§_-T1o§.scoringType == ScoringType.HOCKEY)
+            set_Airborne(mCurrentCollision == null);//set is airborne
+            if(mGame.§_-T1o§.scoringType == ScoringType.HOCKEY)
             {
                 set_Airborne(false);
             }
-            //not stunned and (wasn't aerial or was aerial, touched wall)
+            //not mStunned and (wasn't aerial or was aerial, touched wall)
             if(!get_Stunned() && (!_loc36_ || _loc30_))
             {
-                _loc40_ = wallSlipCount;
+                _loc40_ = mWallSlipCount;
                 _loc37_ = true;
                 //touchned wall. wall sliping.
                 if(!!_loc30_ && _loc40_ >= uint(9))
@@ -4190,7 +4167,7 @@ package
                 }
                 if(_loc37_)
                 {
-                    §_-p3I§.§_-z3R§();//reset air options count
+                    §_-p3I§.resetAirOptions();//reset air options count
                 }
             }
             if(!get_Airborne())//not aerial
@@ -4198,13 +4175,13 @@ package
                 set_Fastfalling(false);//fastfalling = false
                 set_ShowAsFastFalling(false);//show as not fastfalling
             }
-            if(!!§_-F1W§ && currentCollision != null)
+            if(!!§_-F1W§ && mCurrentCollision != null)
             {
-                //not stunned
+                //not mStunned
                 set_Stunned(false);
                 §_-F1W§ = false;
                 //do morph thing?
-                game.rulesManager.§_-x2h§(param1,this);
+                mGame.mRulesManager.§_-x2h§(param1,this);
             }
             if(!get_Airborne())
             {
@@ -4217,9 +4194,9 @@ package
                     if(get_Jumped())
                     {
                         //time of landing when we jumped before
-                        timeLandAfterJump = param1;
+                        mTimeLandAfterJump = param1;
                         //still in jump startup?
-                        if(jumpType != uint(0))
+                        if(mJumpType != uint(0))
                         {
                             //add 4f to jump time
                             timeJumped += uint(64);
@@ -4239,7 +4216,7 @@ package
                 //not airborne
                 if(!get_Airborne())
                 {
-                    //show landing recovery cloud
+                    //show landing mRecovery cloud
                     §_-85B§(param1);
                 }
             }
@@ -4249,7 +4226,7 @@ package
                 §_-FD§ = false;
             }
             //landed on a wall?
-            if(wallDirection != 0 && wallDirection != _loc29_)
+            if(mWallDirection != 0 && mWallDirection != _loc29_)
             {
                 if(get_Dodging())//dodging
                 {
@@ -4258,12 +4235,12 @@ package
                 if(!get_Stunned() && !§_-FD§)
                 {
                     §_-FD§ = true;
-                    §_-Z35§(param1,wallDirection);
+                    §_-Z35§(param1,mWallDirection);
                 }
                 §_-65P§(param1,§_-p3I§.§_-s3Q§(uint(5)));
             }
             //got off a wall? im pretty sure this should be the opposite way around
-            else if(wallDirection == 0 && wallDirection != _loc29_)
+            else if(mWallDirection == 0 && mWallDirection != _loc29_)
             {
                 if(get_Dodging())//dodging
                 {
@@ -4275,14 +4252,14 @@ package
             {
                 §_-85n§ = null;
             }
-            _loc40_ = uint(game.§_-04E§(Number(get_PhysPosX()),Number(get_PhysPosY()),Boolean(get_Stunned()),!get_Airborne() || wallDirection != 0));
+            _loc40_ = uint(mGame.§_-04E§(Number(get_PhysPosX()),Number(get_PhysPosY()),Boolean(get_Stunned()),!get_Airborne() || mWallDirection != 0));
             if(_loc40_ != 0)
             {
                 §_-B3I§ = _loc40_;
             }
-            if(game.level.§_-A1B§)
+            if(mGame.mLevel.§_-A1B§)
             {
-                _loc35_ = game.§_-J2b§.§_-U1q§(team,lastPhysPosY,lastPhysPosX,Number(get_PhysPosX()),Number(get_PhysPosY()),uint(4));
+                _loc35_ = mGame.mCollisionManager.Raycast(mTeam,mLastPhysPosY,mLastPhysPosX,Number(get_PhysPosX()),Number(get_PhysPosY()),uint(4));
                 if(_loc35_ != null)
                 {
                     §_-B3I§ |= uint(32);
@@ -4309,11 +4286,11 @@ package
             }
             if(§_-Y3i§ == null)
             {
-                §_-Y3i§ = new §_-S25§(game,§_-qy§.§_-IJ§,team,Boolean(§_-u4F§()));
+                §_-Y3i§ = new §_-S25§(mGame,§_-qy§.§_-IJ§,mTeam,Boolean(§_-u4F§()));
             }
             if(§_-Y3m§ == null)
             {
-                §_-Y3m§ = new §_-S25§(game,§_-qy§.§_-IJ§,team,Boolean(§_-u4F§()));
+                §_-Y3m§ = new §_-S25§(mGame,§_-qy§.§_-IJ§,mTeam,Boolean(§_-u4F§()));
             }
             _loc1_ = §_-Y3i§;
             _loc1_.§_-41h§.mTheDO3D.§_-21f§ = false;
@@ -4326,17 +4303,17 @@ package
             {
                 §_-rp§();
             }
-            var _loc3_:Boolean = game.§_-7z§ || §_-r1U§;
-            var _loc4_:Boolean = game.§_-7z§ || §_-GD§;
-            var _loc5_:Boolean = !!§_-A3N§.§_-gr§ && (game.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0;
-            var _loc6_:Boolean = !!game.§_-T1o§.scoringType.§_-Q2a§ && entityId < 5;
-            if((_loc5_ || game.§_-7z§ || _loc2_ || §_-GD§ || §_-r1U§ || _loc6_) && state != uint(7) && state != uint(8) && §_-kN§ == 0)
+            var _loc3_:Boolean = mGame.§_-7z§ || §_-r1U§;
+            var _loc4_:Boolean = mGame.§_-7z§ || §_-GD§;
+            var _loc5_:Boolean = !!§_-A3N§.§_-gr§ && (mGame.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0;
+            var _loc6_:Boolean = !!mGame.§_-T1o§.scoringType.§_-Q2a§ && mEntityId < 5;
+            if((_loc5_ || mGame.§_-7z§ || _loc2_ || §_-GD§ || §_-r1U§ || _loc6_) && mState != uint(7) && mState != uint(8) && §_-kN§ == 0)
             {
                 _loc7_ = false;
-                _loc8_ = (§_-E44§ & Entity.BOT) != 0 ? §_-g33§.§_-S2h§ : game.§_-o24§(§_-Qi§);
+                _loc8_ = (§_-E44§ & Entity.BOT) != 0 ? §_-g33§.§_-S2h§ : mGame.§_-o24§(§_-Qi§);
                 if(§_-r1U§ || _loc5_)
                 {
-                    if(!game.§_-7z§ && !_loc5_)
+                    if(!mGame.§_-7z§ && !_loc5_)
                     {
                         _loc8_ = §_-c1c§;
                         _loc7_ = true;
@@ -4349,7 +4326,7 @@ package
                 _loc1_ = !!_loc7_ ? §_-Y3i§ : §_-Y3m§;
                 _loc9_ = _loc1_.§_-VR§;
                 _loc10_ = Boolean(§_-r3m§()) ? uint(75) : uint(50);
-                _loc9_.§_-U2H§(_loc8_,game.worldUILayer3D,_loc10_,true);
+                _loc9_.§_-U2H§(_loc8_,mGame.worldUILayer3D,_loc10_,true);
                 _loc11_ = Boolean(§_-u4F§()) ? 55 : 45;
                 _loc9_.§_-r1i§.x = Number(get_AppearPosX());
                 _loc12_ = Number(get_AppearPosY());
@@ -4361,7 +4338,7 @@ package
                 in modern version there's an if here:
                 if(§_-A3N§.§_-gS§ == uint(5))
                 {
-                    loc14 = ??.??(damage);
+                    loc14 = ??.??(mDamage);
                     loc1.§_-41h§.??(loc14,0);
                 }
                 */
@@ -4379,29 +4356,29 @@ package
             var _loc2_:Boolean = false;
             var _loc3_:Boolean = false;
             var _loc4_:Boolean = false;
-            if(playerInput != null)
+            if(mPlayerInput != null)
             {
-                playerInput.§_-C1l§(param1);//do input thing
+                mPlayerInput.§_-C1l§(param1);//do mInput thing
                 _loc2_ = Boolean(get_Left());
                 if(IsMoveLocked(param1) || (§_-E44§ & Entity.§_-25l§) != 0)
                 {
                     //dodging. not spot dodging. mark as running.
-                    set_Running(get_Dodging() && timeDodgeStarted != 0 && dodgeDirection != 0);
+                    set_Running(get_Dodging() && mTimeDodgeStarted != 0 && mDodgeDirection != 0);
                     //dodging down or attacking with a path/collider thingy
-                    set_Dropping(get_Dodging() && (dodgeDirection & uint(2)) != 0 || §_-p3I§.§_-M1g§);
+                    set_Dropping(get_Dodging() && (mDodgeDirection & uint(2)) != 0 || §_-p3I§.§_-M1g§);
                     if(§_-p3I§.§_-y44§ != null && Boolean(§_-x2q§()))//attacking, movement locked
                     {
-                        if(directionLockedInPower)//direction locked
+                        if(mDirectionLockedInPower)//mDirection locked
                         {
                             set_Left(§_-p3I§.§_-y44§.§_-U2J§);
                         }
-                        else if((playerInput.input & uint(4)) != 0)//left
+                        else if((mPlayerInput.mInput & uint(4)) != 0)//left
                         {
-                            set_Left(true);//set direction
+                            set_Left(true);//set mDirection
                         }
-                        else if((playerInput.input & uint(8)) != 0)//right
+                        else if((mPlayerInput.mInput & uint(8)) != 0)//right
                         {
-                            set_Left(false);//set direction
+                            set_Left(false);//set mDirection
                         }
                     }
                 }
@@ -4410,12 +4387,12 @@ package
                     //running
                     set_Running(true);
                     //left
-                    if((playerInput.input & uint(4)) != 0)
+                    if((mPlayerInput.mInput & uint(4)) != 0)
                     {
                         set_Left(true);
                     }
                     //right
-                    else if((playerInput.input & uint(8)) != 0)
+                    else if((mPlayerInput.mInput & uint(8)) != 0)
                     {
                         set_Left(false);
                     }
@@ -4427,22 +4404,22 @@ package
                     _loc3_ = false;
                     _loc4_ = false;
                     //dashing and at most 6 frames passed since dash started and trying to turn around
-                    if(!!inDash && uint(timeDashed + uint(112)) > param1 && Boolean(get_Left()) != Boolean(get_LeftFacing()))
+                    if(!!mInDash && uint(mTimeDashed + uint(112)) > param1 && Boolean(get_Left()) != Boolean(get_LeftFacing()))
                     {
                         //not running
                         set_Running(false);
                     }
                     //(holding sideways or not holding down), and dash time > jump time
-                    if(((playerInput.input & (uint(4) | uint(8))) != 0 || (playerInput.input & uint(2)) == 0) && timeDashed > timeJumped)
+                    if(((mPlayerInput.mInput & (uint(4) | uint(8))) != 0 || (mPlayerInput.mInput & uint(2)) == 0) && mTimeDashed > timeJumped)
                     {
-                        _loc3_ = uint(timeDashed + 160) > playerInput.timeDownInputted;//dash_time > down_time-10f
-                        _loc4_ = uint(timeDashed + 560) > param1;//dash_time > curr_time-35f
+                        _loc3_ = uint(mTimeDashed + 160) > mPlayerInput.timeDownInputted;//dash_time > down_time-10f
+                        _loc4_ = uint(mTimeDashed + 560) > param1;//dash_time > curr_time-35f
                     }
-                    if(playerInput.§_-42c§ == param1)
+                    if(mPlayerInput.§_-42c§ == param1)
                     {
                         set_Dropping(false);
                     }
-                    else if(get_Dropping() && (playerInput.input & uint(2)) != 0)//down
+                    else if(get_Dropping() && (mPlayerInput.mInput & uint(2)) != 0)//down
                     {
                         set_Dropping(true);
                     }
@@ -4451,17 +4428,17 @@ package
                     {
                         set_Dropping(true);
                     }
-                    else if((playerInput.input & uint(2)) == 0)//not down
+                    else if((mPlayerInput.mInput & uint(2)) == 0)//not down
                     {
                         set_Dropping(false);
                     }
                     //attacking on ground
-                    else if(currentCollision != null && (playerInput.input & Commands.§_-F32§) != 0)
+                    else if(mCurrentCollision != null && (mPlayerInput.mInput & Commands.§_-F32§) != 0)
                     {
                         set_Dropping(false);
                     }
                     //  attacking                                                       not IsAirPower
-                    else if(§_-p3I§.§_-y44§ != null && !§_-p3I§.§_-y44§.§_-Ks§ && !§_-p3I§.§_-y44§.§_-F2V§.§_-qs§)
+                    else if(§_-p3I§.§_-y44§ != null && !§_-p3I§.§_-y44§.§_-Ks§ && !§_-p3I§.§_-y44§.mPowerType.§_-qs§)
                     {
                         set_Dropping(false);
                     }
@@ -4475,13 +4452,13 @@ package
                         //because of the else if we should always be holding down here
                         //so if we're holding sideways, fall through if down 10 frames after dash, or dash 35f ago and attack ended 17f ago.
                         
-                        set_Dropping(playerInput.timeDownInputted > playerInput.§_-42c§ && !_loc3_ || §_-p3I§.§_-y44§ == null && uint(§_-p3I§.§_-zl§ + 275) < param1 && !_loc4_);
+                        set_Dropping(mPlayerInput.timeDownInputted > mPlayerInput.§_-42c§ && !_loc3_ || §_-p3I§.§_-y44§ == null && uint(§_-p3I§.§_-zl§ + 275) < param1 && !_loc4_);
                     }
-                    game.rulesManager.§_-nn§(param1,this);
+                    mGame.mRulesManager.§_-nn§(param1,this);
                 }
                 §_-OF§ = false;
-                //turning around during attack and not direction locked
-                if(Boolean(get_Left()) != _loc2_ && !directionLockedInPower)
+                //turning around during attack and not mDirection locked
+                if(Boolean(get_Left()) != _loc2_ && !mDirectionLockedInPower)
                 {
                     if(§_-F1T§)
                     {
@@ -4489,12 +4466,12 @@ package
                     }
                     §_-Ki§ = §_-6n§;
                     §_-6n§ = §_-C2§;
-                    //time of turnaround input?
+                    //time of turnaround mInput?
                     §_-C2§ = param1;
                     §_-F1T§ = false;
                 }
-                //turning around and direction locked
-                else if(!!directionLockedInPower && Boolean(get_Left()) != Boolean(get_LeftFacing()))
+                //turning around and mDirection locked
+                else if(!!mDirectionLockedInPower && Boolean(get_Left()) != Boolean(get_LeftFacing()))
                 {
                     §_-OF§ = true;
                 }
@@ -4520,16 +4497,16 @@ package
             var _loc16_:uint = 0;
             var _loc17_:Boolean = false;
             var _loc18_:Boolean = false;
-            if(game.§_-T1o§.scoringType == ScoringType.HYDRA && (§_-E44§ & Entity.BOT) != 0)
+            if(mGame.§_-T1o§.scoringType == ScoringType.HYDRA && (§_-E44§ & Entity.BOT) != 0)
             {
                 §_-35d§.§_-l3q§(2368548,2894892);
             }
-            else if(game.§_-T1o§.scoringType == ScoringType.SUPERBRAWL && (game.rulesManager.§_-K2W§ & int(1 << entityId)) != 0)
+            else if(mGame.§_-T1o§.scoringType == ScoringType.SUPERBRAWL && (mGame.mRulesManager.§_-K2W§ & int(1 << mEntityId)) != 0)
             {
                 §_-35d§.§_-l3q§(16777062,3355443);
             }
             //in modern versions there's extra stuff here that handle volley battle
-            else if(state == uint(5) || (§_-E44§ & Entity.§_-Z4l§) != 0)
+            else if(mState == uint(5) || (§_-E44§ & Entity.§_-Z4l§) != 0)
             {
                 _loc2_ = param1 / 100;
                 _loc3_ = uint(_loc2_);
@@ -4551,22 +4528,22 @@ package
             {
                 §_-35d§.§_-l3q§(16777215,3684539);
             }
-            else if(timeLastHit != 0 && uint(timeLastHit + 175) >= param1)
+            else if(mTimeLastHit != 0 && uint(mTimeLastHit + 175) >= param1)
             {
-                _loc5_ = int(damage);
-                if(game.§_-T1o§.scoringType == ScoringType.STREET_BRAWL)
+                _loc5_ = int(mDamage);
+                if(mGame.§_-T1o§.scoringType == ScoringType.STREET_BRAWL)
                 {
                     _loc5_ = 50;
                 }
                 //in modern versions this is replaced by more shit
-                else if(game.§_-T1o§.scoringType == ScoringType.VOLLEY_BATTLE)
+                else if(mGame.§_-T1o§.scoringType == ScoringType.VOLLEY_BATTLE)
                 {
                     _loc5_ = 50;
                 }
                 _loc3_ = uint(§_-xP§.§_-9o§(_loc5_));
                 §_-35d§.§_-l3q§(uint(§_-xP§.§_-l4X§[_loc3_]),uint(§_-xP§.§_-j2i§[_loc3_]));
             }
-            else if(uint(get_CurrentAerialJumpCount()) >= uint(game.rulesManager.maxAerialJumpCount()))
+            else if(uint(get_CurrentAerialJumpCount()) >= uint(mGame.mRulesManager.maxAerialJumpCount()))
             {
                 §_-35d§.§_-l3q§(12303291,1118481);
             }
@@ -4578,7 +4555,7 @@ package
             {
                 §_-35d§.§_-m4K§();
             }
-            var _loc7_:§_-F3e§ = game;
+            var _loc7_:§_-F3e§ = mGame;
             _loc3_ = uint(32768);
             if(!((_loc7_.§_-p2a§ & _loc3_) != 0 || (_loc7_.§_-p2a§ & uint(32)) != 0 && (_loc7_.§_-pM§ & _loc3_) != 0))
             {
@@ -4654,7 +4631,7 @@ package
             §_-23M§();
             §_-U4O§();
             //exahusted and wall slipping
-            if(!!§_-p3I§.recoveryExhausted && wallSlipCount >= uint(9))
+            if(!!§_-p3I§.mRecoveryExhausted && mWallSlipCount >= uint(9))
             {
                 _loc2_ = false;
                 _loc3_ = 0;
@@ -4663,7 +4640,7 @@ package
                 {
                     _loc5_ = _loc4_[_loc3_];
                     _loc3_++;
-                    if(_loc5_.§_-F2V§ == PowerType.SWEATING_OUT_SFX)//sweating
+                    if(_loc5_.mPowerType == PowerType.SWEATING_OUT_SFX)//sweating
                     {
                         _loc2_ = true;
                     }
@@ -4688,7 +4665,7 @@ package
                 _loc3_--;
             }
             §_-35d§.§_-v3e§(false);
-            if(game.§_-n4m§() && (game.§_-U2a§ || game.§_-f2T§))
+            if(mGame.§_-n4m§() && (mGame.§_-U2a§ || mGame.§_-f2T§))
             {
                 §_-e1y§(Number(get_PhysPosX()),Number(get_PhysPosY()));
             }
@@ -4708,7 +4685,7 @@ package
             var _loc12_:Boolean = false;
             var _loc13_:Boolean = false;
             var _loc14_:uint = 0;
-            var _loc2_:uint = state;
+            var _loc2_:uint = mState;
             switch(int(_loc2_))
             {
                 case 0:
@@ -4726,23 +4703,23 @@ package
                 case 6:
                     §_-p3I§.§_-A3E§(param1);
             }
-            //direction not locked
-            if(!directionLockedInPower)
+            //mDirection not locked
+            if(!mDirectionLockedInPower)
             {
-                //stunned and ...
+                //mStunned and ...
                 if(get_Stunned() && !§_-12Q§() && Number(get_VelocityX() * get_VelocityX() + get_VelocityY() * get_VelocityY()) >= Entity.§_-L3W§)
                 {
-                    //facing direction = velocity.x == 0 ? direction : velocity.x > 0 ? left : right
+                    //facing mDirection = velocity.x == 0 ? mDirection : velocity.x > 0 ? left : right
                     set_LeftFacing(Boolean(set_Left(Number(get_VelocityX()) == 0 ? Boolean(get_Left()) : Number(get_VelocityX()) > 0)));
                 }
                 //on wall
-                else if(wallDirection != 0)
+                else if(mWallDirection != 0)
                 {
                     //facing left if left and no wall, or on left wall
-                    set_LeftFacing(get_Left() && wallDirection == 0 || wallDirection == 2);
+                    set_LeftFacing(get_Left() && mWallDirection == 0 || mWallDirection == 2);
                 }
                 //dodging left/right
-                else if(get_Dodging() && (dodgeDirection & (uint(4) | uint(8))) != 0)
+                else if(get_Dodging() && (mDodgeDirection & (uint(4) | uint(8))) != 0)
                 {
                     set_LeftFacing(Boolean(get_Left()));
                 }
@@ -4757,9 +4734,9 @@ package
             §_-e1y§(Number(get_PhysPosX()),Number(get_PhysPosY()),param1);
             §_-21V§(param1);
             §_-K2m§(param1);
-            if(((§_-E44§ & Entity.§_-r2y§) != 0 || (§_-E44§ & Entity.BOT) != 0 && (game.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0) && (§_-E44§ & Entity.§_-JC§) != 0)
+            if(((§_-E44§ & Entity.§_-r2y§) != 0 || (§_-E44§ & Entity.BOT) != 0 && (mGame.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0) && (§_-E44§ & Entity.§_-JC§) != 0)
             {
-                if(state == uint(3))
+                if(mState == uint(3))
                 {
                     _loc3_ = §_-B5J§.§_-I2O§;
                     _loc4_ = Number(get_PhysPosX());
@@ -4770,17 +4747,17 @@ package
                     Entity.§_-w2W§.top = _loc6_ - _loc3_;
                     _loc7_ = Number(get_PhysPosY());
                     Entity.§_-w2W§.bottom = Number(_loc7_ + _loc3_);
-                    if(game.§_-f4W§.§_-J3O§.containsRect(Entity.§_-w2W§))
+                    if(mGame.§_-f4W§.§_-J3O§.containsRect(Entity.§_-w2W§))
                     {
                         §_-E44§ &= ~Entity.§_-JC§;
                     }
                 }
-                else if(state != uint(7) && state != uint(8))
+                else if(mState != uint(7) && mState != uint(8))
                 {
                     §_-E44§ &= ~Entity.§_-JC§;
                 }
             }
-            _loc2_ = (game.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 ? 146 : 146;
+            _loc2_ = (mGame.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 ? 146 : 146;
             if(§_-kN§ != 0 && param1 > uint(§_-kN§ + _loc2_))
             {
                 §_-x6§(param1,§_-kN§,§_-73e§);
@@ -4788,17 +4765,17 @@ package
                 §_-73e§ = 0;
             }
             _loc3_ = 1.1 * GameUtils.§_-C4I§;
-            _loc4_ = get_Dodging() && Boolean(FastDodging()) ? _loc3_ : GameUtils.§_-C4I§;
+            _loc4_ = get_Dodging() && Boolean(fastDodging()) ? _loc3_ : GameUtils.§_-C4I§;
             //backdash startup/active
-            if((inDashStartup || inDash) && dashType == uint(3))
+            if((mInDashStartup || mInDash) && mDashType == uint(3))
             {
                 _loc4_ = GameUtils.§_-C4I§ * 1.23;
             }
             if((§_-E44§ & Entity.§_-Q2N§) != 0)
             {
-                if((game.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) == 0)
+                if((mGame.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) == 0)
                 {
-                    _loc10_ = game;
+                    _loc10_ = mGame;
                     if((_loc10_.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) == 0)
                     {
                         _loc9_ = (_loc10_.§_-p2a§ & (uint(262144) | uint(524288))) != 0;
@@ -4819,21 +4796,21 @@ package
             }
             if(_loc9_)
             {
-                _loc11_ = game.§_-J1f§;
+                _loc11_ = mGame.§_-J1f§;
                 _loc8_ = param1 != uint(_loc11_ - _loc11_ % 16);
             }
             else
             {
                 _loc8_ = false;
             }
-            game.rulesManager.§_-b4o§(this,param1);
+            mGame.mRulesManager.§_-b4o§(this,param1);
             §_-r4R§(param1);
             if(!_loc8_)
             {
                 §_-35d§.§_-Q2C§.§_-31W§(_loc4_,null);
             }
             §_-NO§();
-            _loc10_ = game;
+            _loc10_ = mGame;
             _loc11_ = uint(32768);
             if(!((_loc10_.§_-p2a§ & _loc11_) != 0 || (_loc10_.§_-p2a§ & uint(32)) != 0 && (_loc10_.§_-pM§ & _loc11_) != 0))
             {
@@ -4875,7 +4852,7 @@ package
             }
             if(_loc12_)
             {
-                if(this == game.§_-725§)
+                if(this == mGame.§_-725§)
                 {
                     §_-P4L§.§_-hL§.§_-Xq§(this);
                 }
@@ -4894,26 +4871,26 @@ package
                 §_-I1y§.§_-a1E§(param1);
             }
             §_-v1w§(param1);
-            var _loc2_:uint = state;
+            var _loc2_:uint = mState;
             switch(int(_loc2_))
             {
                 case 0:
                 case 5:
-                    if(state == uint(5))
+                    if(mState == uint(5))
                     {
-                        if(§_-n1a§ == 0)
+                        if(mRespawnInvincibilityEnd == 0)
                         {
-                            §_-n1a§ = uint(param1 + 2500);
+                            mRespawnInvincibilityEnd = uint(param1 + 2500);
                         }
-                        if(§_-n1a§ <= param1 || §_-p3I§.§_-y1j§ != null && !game.rulesManager.§_-v3B§() || §_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.§_-k2C§ && !§_-p3I§.§_-y44§.§_-F2V§.§_-O4y§)
+                        if(mRespawnInvincibilityEnd <= param1 || §_-p3I§.§_-y1j§ != null && !mGame.mRulesManager.§_-v3B§() || §_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.§_-k2C§ && !§_-p3I§.§_-y44§.mPowerType.mIsTaunt)
                         {
-                            state = uint(0);
-                            §_-n1a§ = 0;
+                            mState = uint(0);
+                            mRespawnInvincibilityEnd = 0;
                         }
-                        if(game.§_-T1o§.scoringType == ScoringType.GAUNTLET)
+                        if(mGame.§_-T1o§.scoringType == ScoringType.GAUNTLET)
                         {
-                            state = uint(0);
-                            §_-n1a§ = 0;
+                            mState = uint(0);
+                            mRespawnInvincibilityEnd = 0;
                         }
                     }
                     if(!§_-t1Q§)
@@ -4930,10 +4907,10 @@ package
                         }
                         else if((§_-E44§ & Entity.§_-92X§) == 0)
                         {
-                            set_PhysPosX(stickyX);
-                            set_PhysPosY(stickyY);
+                            set_PhysPosX(mStickyX);
+                            set_PhysPosY(mStickyY);
                         }
-                        _loc3_ = game;
+                        _loc3_ = mGame;
                         _loc5_ = uint(32768);
                         if(!((_loc3_.§_-p2a§ & _loc5_) != 0 || (_loc3_.§_-p2a§ & uint(32)) != 0 && (_loc3_.§_-pM§ & _loc5_) != 0))
                         {
@@ -4967,25 +4944,25 @@ package
                         }
                         if(_loc4_)
                         {
-                            game.§_-w3z§.§_-q3j§(this,param1);
+                            mGame.§_-w3z§.§_-q3j§(this,param1);
                         }
                     }
-                    if(state == uint(0) && §_-NW§)
+                    if(mState == uint(0) && §_-NW§)
                     {
                         §_-NW§ = false;
                     }
                     if(§_-K2L§ != null && (!§_-jC§.§_-Z4Y§ && §_-jC§.§_-94v§ && !§_-jC§.§_-2H§) && param1 > 6000 && int(Math.floor(param1 / 1000)) > int(Math.floor((uint(param1 - 16)) / 1000)))
                     {
-                        game.§_-W45§.§_-53j§(this,§_-K2L§,param1);
+                        mGame.§_-W45§.§_-53j§(this,§_-K2L§,param1);
                         _loc7_ = §_-K2L§;
                         _loc7_.CurrTime = param1;
-                        _loc7_.GameState = game.§_-W45§.game.§_-p2a§;
-                        §_-jC§.§_-B3z§(uint(game.§_-725§ == this ? §_-A3N§.§_-d3§ : int(uint(-1))),param1,null,§_-K2L§);
+                        _loc7_.GameState = mGame.§_-W45§.mGame.§_-p2a§;
+                        §_-jC§.§_-B3z§(uint(mGame.§_-725§ == this ? §_-A3N§.§_-d3§ : int(uint(-1))),param1,null,§_-K2L§);
                     }
                     break;
                 case 2:
                     §_-MQ§ = true;
-                    if(param1 >= uint(250 + game.§_-231§))
+                    if(param1 >= uint(250 + mGame.§_-231§))
                     {
                         Respawn(param1,true);
                     }
@@ -4993,7 +4970,7 @@ package
                 case 3:
                 case 4:
                     §_-p3I§.§_-ab§(param1);
-                    §_-n1a§ = 0;
+                    mRespawnInvincibilityEnd = 0;
                     §_-t1Q§ = false;
                     break;
                 case 6:
@@ -5001,19 +4978,19 @@ package
                     if(§_-85n§ == null || !§_-85n§.§_-k2C§)
                     {
                         §_-85n§ = null;
-                        state = uint(0);
+                        mState = uint(0);
                     }
-                    else if(§_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.§_-F2V§.§_-44r§)
+                    else if(§_-p3I§.§_-y44§ != null && §_-p3I§.§_-y44§.mPowerType.§_-44r§)
                     {
                         §_-p3I§.§_-y44§.§_-s3l§();
                         §_-85n§ = null;
-                        state = uint(0);
+                        mState = uint(0);
                     }
                     break;
                 case 7:
                 case 8:
-                    _loc5_ = state == uint(7) ? §_-x4d§ : §_-352§;
-                    if((§_-E44§ & Entity.§_-JC§) == 0 && (uint(game.rulesManager.§_-C2o§()) <= 1 || param1 >= uint(_loc5_ + 1500)))
+                    _loc5_ = mState == uint(7) ? §_-x4d§ : §_-352§;
+                    if((§_-E44§ & Entity.§_-JC§) == 0 && (uint(mGame.mRulesManager.§_-C2o§()) <= 1 || param1 >= uint(_loc5_ + 1500)))
                     {
                         §_-E44§ |= Entity.§_-JC§;
                     }
@@ -5024,7 +5001,7 @@ package
                     §_-p3I§.§_-L1Y§(param1);//make unarmed?
                     §_-p4H§();
                     §_-p3I§.§_-ab§(param1);
-                    §_-n1a§ = 0;
+                    mRespawnInvincibilityEnd = 0;
                     §_-t1Q§ = false;
                     break;
                 case 9:
@@ -5033,7 +5010,7 @@ package
                     Respawn(param1,true);
                     break;
                 default:
-                    §_-tP§.§_-P3w§("Unaccounted-for entity state " + §_-g3S§.§_-pl§(state) + " for " + §_-g3S§.§_-pl§(entityId));
+                    §_-tP§.§_-P3w§("Unaccounted-for entity state " + §_-g3S§.§_-pl§(mState) + " for " + §_-g3S§.§_-pl§(mEntityId));
             }
         }
         
@@ -5046,53 +5023,53 @@ package
             var _loc9_:* = null as Entity;
             var _loc10_:Number = NaN;
             var _loc3_:DodgeType = null;
-            if(dodgeId != 0)
+            if(mDodgeId != 0)
             {
-                _loc3_ = DodgeType.dodgeList[dodgeId];
+                _loc3_ = DodgeType.sDodgeList[mDodgeId];
             }
-            //not airborne    not on wall   not stunned    not gc
-            if(!get_Airborne() && wallDirection == 0 && !get_Stunned() && !gravityCanceling && dodgeId != 0)
+            //not airborne    not on wall   not mStunned    not gc
+            if(!get_Airborne() && mWallDirection == 0 && !get_Stunned() && !mGravityCanceling && mDodgeId != 0)
             {
                 //                       CooldownLanded
-                _loc4_ = uint(uint(uint(_loc3_.cooldownLanded * 16) + dodgeDuration) + dodgeRecover);
-                if(timeDodgeRestored > _loc4_)//set time for getting back dodge, based on cooldown landed.
+                _loc4_ = uint(uint(uint(_loc3_.mCooldownLanded * 16) + mDodgeDuration) + mDodgeRecover);
+                if(mDodgeLockDuration > _loc4_)//set time for getting back dodge, based on cooldown landed.
                 {
-                    timeDodgeRestored = _loc4_;
+                    mDodgeLockDuration = _loc4_;
                 }
             }
             //missed an attack in the last 6f
-            var _loc5_:Boolean = uint(timeMissedHit + Entity.§_-S3v§) > param1;
+            var _loc5_:Boolean = uint(mTimeMissedHit + Entity.§_-S3v§) > param1;
             //dodgelocked   dodge input time + dodge back <= time
-            if(get_DodgeLocked() && uint(timeDodgeStarted + timeDodgeRestored) <= param1 && !_loc5_)
+            if(get_DodgeLocked() && uint(mTimeDodgeStarted + mDodgeLockDuration) <= param1 && !_loc5_)
             {
-                if(timeDodgeStarted > 0)
+                if(mTimeDodgeStarted > 0)
                 {
                     §_-p3I§.§_-W26§(PowerType.SWEATING_OUT_SFX);//SWEATING_OUT_SFX
                 }
-                timeDodgeStarted = 0;
+                mTimeDodgeStarted = 0;
                 §_-F2i§(false,true);
             }
             if(get_Dodging())
             {
                 _loc6_ = true;
                 //grounded spot dodge
-                if(_loc3_.direction == 0 && _loc3_.airType == uint(1))
+                if(_loc3_.mDirection == 0 && _loc3_.mAirType == uint(1))
                 {
                     _loc6_ = false;
                 }
                 //dodge done
-                if(uint(uint(timeDodgeStarted + dodgeDuration) + dodgeRecover) <= param1)
+                if(uint(uint(mTimeDodgeStarted + mDodgeDuration) + mDodgeRecover) <= param1)
                 {
                     set_Dodging(false);//not dodging
-                    timeDashJumped = 0;
+                    mTimeDashJumped = 0;
                     §_-bc§ = 0;
-                    if(wallDirection == 0)//not on wall
+                    if(mWallDirection == 0)//not on wall
                     {
-                        _loc7_ = dodgeId != 0 ? DodgeType.dodgeList[dodgeId] : null;
+                        _loc7_ = mDodgeId != 0 ? DodgeType.sDodgeList[mDodgeId] : null;
                         if(_loc7_ != null)
                         {
                             //                          PostDodge
-                            postDodge = uint(param1 + uint(_loc7_.postDodge * 16));
+                            mPostDodge = uint(param1 + uint(_loc7_.mPostDodge * 16));
                         }
                     }
                     if(!get_DodgeLocked())//has dodge
@@ -5113,42 +5090,38 @@ package
                             }
                         }
                         //holding a side
-                        if((playerInput.input & (uint(8) | uint(4))) != 0 || !§_-b3N§)
+                        if((mPlayerInput.mInput & (uint(8) | uint(4))) != 0 || !§_-b3N§)
                         {
                             //                                      //not holding right
-                            if(Number(get_VelocityX()) > 0 && (playerInput.input & uint(8)) == 0 && _loc6_)
+                            if(Number(get_VelocityX()) > 0 && (mPlayerInput.mInput & uint(8)) == 0 && _loc6_)
                             {
-                                if((playerInput.input & uint(4)) != 0)//holding left
+                                if((mPlayerInput.mInput & uint(4)) != 0)//holding left
                                 {
-                                    _loc9_ = this;
-                                    _loc9_.set_VelocityX(_loc9_.get_VelocityX() * _loc3_.§_-o2r§);//mult velocity x by ExitBackX
+                                    set_VelocityX(_loc9_.get_VelocityX() * _loc3_.mExitBackX);//mult velocity x by ExitBackX
                                 }
                                 else
                                 {
-                                    _loc9_ = this;
-                                    _loc9_.set_VelocityX(_loc9_.get_VelocityX() * _loc3_.§_-Y47§);//mult velocity x by ExitX
+                                    set_VelocityX(_loc9_.get_VelocityX() * _loc3_.mExitX);//mult velocity x by ExitX
                                 }
                             }
-                            else if(Number(get_VelocityX()) < 0 && (playerInput.input & uint(4)) == 0 && _loc6_)
+                            else if(Number(get_VelocityX()) < 0 && (mPlayerInput.mInput & uint(4)) == 0 && _loc6_)
                             {
-                                if((playerInput.input & uint(8)) != 0)
+                                if((mPlayerInput.mInput & uint(8)) != 0)
                                 {
-                                    _loc9_ = this;
-                                    _loc9_.set_VelocityX(_loc9_.get_VelocityX() * _loc3_.§_-o2r§);//mult velocity x by ExitBackX
+                                    set_VelocityX(_loc9_.get_VelocityX() * _loc3_.mExitBackX);//mult velocity x by ExitBackX
                                 }
                                 else
                                 {
-                                    _loc9_ = this;
-                                    _loc9_.set_VelocityX(_loc9_.get_VelocityX() * _loc3_.§_-Y47§);//mult velocity x by ExitX
+                                    set_VelocityX(_loc9_.get_VelocityX() * _loc3_.mExitX);//mult velocity x by ExitX
                                 }
                             }
                             //holding left
-                            if((playerInput.input & uint(4)) != 0 && (playerInput.input & uint(8)) == 0)
+                            if((mPlayerInput.mInput & uint(4)) != 0 && (mPlayerInput.mInput & uint(8)) == 0)
                             {
                                 set_Left(true);//set left
                             }
                             //holding right
-                            else if((playerInput.input & uint(8)) != 0 && (playerInput.input & uint(4)) == 0)
+                            else if((mPlayerInput.mInput & uint(8)) != 0 && (mPlayerInput.mInput & uint(4)) == 0)
                             {
                                 set_Left(false);//set right
                             }
@@ -5159,33 +5132,30 @@ package
                             {
                                 if(Number(get_VelocityX()) > 0 && §_-mB§ || Number(get_VelocityX()) < 0 && !§_-mB§)
                                 {
-                                    _loc9_ = this;
-                                    _loc9_.set_VelocityX(_loc9_.get_VelocityX() * _loc3_.§_-o2r§);//velocity.x *= ExitBackX
+                                    set_VelocityX(_loc9_.get_VelocityX() * _loc3_.mExitBackX);//velocity.x *= ExitBackX
                                 }
                                 else
                                 {
-                                    _loc9_ = this;
-                                    _loc9_.set_VelocityX(_loc9_.get_VelocityX() * _loc3_.§_-Y47§);//velocity.x *= ExitX
+                                    set_VelocityX(_loc9_.get_VelocityX() * _loc3_.mExitX);//velocity.x *= ExitX
                                 }
                             }
                             set_Left(§_-mB§);
                         }
                         if(_loc6_)
                         {
-                            _loc9_ = this;
-                            _loc9_.set_VelocityX(_loc9_.get_VelocityX() * §_-s4j§);
+                            set_VelocityX(_loc9_.get_VelocityX() * §_-s4j§);
                         }
                         //moving down. not holding down.
-                        if(Number(get_VelocityY()) > 0 && (playerInput.input & uint(2)) == 0)
+                        if(Number(get_VelocityY()) > 0 && (mPlayerInput.mInput & uint(2)) == 0)
                         {
                             //mult velocity y by up?ExitBackY:ExitY
-                            set_VelocityY((playerInput.input & uint(1)) != 0 ? get_VelocityY() * _loc3_.§_-14k§ : get_VelocityY() * _loc3_.§_-621§);
+                            set_VelocityY((mPlayerInput.mInput & uint(1)) != 0 ? get_VelocityY() * _loc3_.mExitBackY : get_VelocityY() * _loc3_.mExitY);
                         }
                         //moving up. not holding up.
-                        else if(Number(get_VelocityY()) < 0 && (playerInput.input & uint(1)) == 0)
+                        else if(Number(get_VelocityY()) < 0 && (mPlayerInput.mInput & uint(1)) == 0)
                         {
                             //mult velocity y by down?ExitBackY:ExitY
-                            set_VelocityY((playerInput.input & uint(2)) != 0 ? get_VelocityY() * _loc3_.§_-14k§ : get_VelocityY() * _loc3_.§_-621§);
+                            set_VelocityY((mPlayerInput.mInput & uint(2)) != 0 ? get_VelocityY() * _loc3_.mExitBackY : get_VelocityY() * _loc3_.mExitY);
                         }
                         §_-F2i§(true,false);
                         §_-s4j§ = 1;
@@ -5196,8 +5166,8 @@ package
                         }
                     }
                 }
-                //dodge not done. input is in the past.
-                else if(param1 >= timeDodgeStarted)
+                //dodge not done. mInput is in the past.
+                else if(param1 >= mTimeDodgeStarted)
                 {
                     if((§_-E44§ & Entity.§_-25l§) == 0)
                     {
@@ -5208,20 +5178,20 @@ package
                             _loc8_ = 60 * §_-s4j§ * _loc3_.§_-2d§;//AccelXMult
                             _loc10_ = 60 * §_-316§ * _loc3_.§_-N3P§;//AccelYMult
                             //                                      AccelXFormula
-                            _loc8_ *= Number(DodgeType.§_-V2b§(param1,_loc3_.§_-S3q§,this));
+                            _loc8_ *= Number(DodgeType.§_-V2b§(param1,_loc3_.mAccelXFormula,this));
                             //                                      AccelYFormula
-                            _loc10_ *= Number(DodgeType.§_-V2b§(param1,_loc3_.§_-73S§,this));
+                            _loc10_ *= Number(DodgeType.§_-V2b§(param1,_loc3_.mAccelYFormula,this));
                             //impulse x
-                            set_ImpulseX((dodgeDirection & uint(4)) != 0 ? -_loc8_ : ((dodgeDirection & uint(8)) != 0 ? _loc8_ : Number(0)));
+                            set_ImpulseX((mDodgeDirection & uint(4)) != 0 ? -_loc8_ : ((mDodgeDirection & uint(8)) != 0 ? _loc8_ : Number(0)));
                             //impulse y
                             set_ImpulseY(_loc10_);
                         }
-                        if((!§_-b3N§ || !§_-mB§) && ((playerInput.input & uint(4)) != 0 && (playerInput.input & uint(8)) == 0))
+                        if((!§_-b3N§ || !§_-mB§) && ((mPlayerInput.mInput & uint(4)) != 0 && (mPlayerInput.mInput & uint(8)) == 0))
                         {
                             §_-b3N§ = true;
                             §_-mB§ = true;
                         }
-                        else if((!§_-b3N§ || §_-mB§) && ((playerInput.input & uint(8)) != 0 && (playerInput.input & uint(4)) == 0))
+                        else if((!§_-b3N§ || §_-mB§) && ((mPlayerInput.mInput & uint(8)) != 0 && (mPlayerInput.mInput & uint(4)) == 0))
                         {
                             §_-b3N§ = true;
                             §_-mB§ = false;
@@ -5238,37 +5208,37 @@ package
             var _loc4_:Number = NaN;
             var _loc5_:* = null as PowerType;
             //dash startup
-            if(inDashStartup)
+            if(mInDashStartup)
             {
-                _loc2_ = timeDashStarted;
-                if(dashType == uint(1))
+                _loc2_ = mTimeDashStarted;
+                if(mDashType == uint(1))
                 {
                     _loc2_ += uint(16);//1f
                     //this is probably normal forward dash
                 }
-                else if(dashType == uint(2))
+                else if(mDashType == uint(2))
                 {
                     _loc2_ += uint(96);//6f
                     //floor cancel dash
                 }
-                else if(dashType == uint(3))//backdash
+                else if(mDashType == uint(3))//backdash
                 {
                     //in modern versions there's an extra check, that causes only 16 (1f) to be added
                     _loc2_ += uint(96);//6f
                     //this is probably normal backdash
                 }
-                else if(dashType == uint(4))
+                else if(mDashType == uint(4))
                 {
                     _loc2_ += 128;//8f
                     //dash into dash
                 }
-                else if(dashType == uint(5))
+                else if(mDashType == uint(5))
                 {
                     //in modern versions there's an extra check, that causes only 64 (4f) to be added. same check as last time.
                     //this is probably dash dancing dash
                     _loc2_ += uint(96);//6f
                 }
-                else if(dashType == uint(6))
+                else if(mDashType == uint(6))
                 {
                     _loc2_ += uint(16);//1f
                     //a platform cancel backdash that was forced to be a forward dash
@@ -5278,56 +5248,56 @@ package
                 if(param1 >= _loc2_)
                 {
                     //in modern versions can also be 7
-                    _loc3_ = dashType == uint(3);//if this is true, we backdash
+                    _loc3_ = mDashType == uint(3);//if this is true, we backdash
                     _loc4_ = !!_loc3_ ? 65 : 78;
-                    if(dashType == uint(4))
+                    if(mDashType == uint(4))
                     {
                         _loc4_ = 68;
                     }
                     //forward dash. holding the CTF flag.
-                    if(!_loc3_ && Boolean(game.rulesManager.holdingFlagCTF(this)))
+                    if(!_loc3_ && Boolean(mGame.mRulesManager.holdingFlagCTF(this)))
                     {
                         _loc4_ = 53.29039999999999;
                     }
-                    //in modern versions there's another if statement here
+                    //in modern versions there's another if mStatement here
                     //if you're holding the oddball, set loc4 to 65. this affects both backdash and forward dash.
-                    inDashStartup = false;
-                    inDash = true;
-                    timeDashed = param1;//time once dash started
+                    mInDashStartup = false;
+                    mInDash = true;
+                    mTimeDashed = param1;//time once dash started
                     set_VelocityX(0);
                     set_VelocityY(0);
-                    //give impulse in dash direction
-                    set_ImpulseX(Boolean(get_LeftFacing()) == _loc3_ ? _loc4_ : -_loc4_);
+                    //give impulse in dash mDirection
+                    set_ImpulseX(get_LeftFacing() == _loc3_ ? _loc4_ : -_loc4_);
                     §_-F1T§ = !_loc3_;//forward dashing
                     _loc5_ = !!_loc3_ ? PowerType.BACKDASH_CLOUD : PowerType.DASH_CLOUD;//loc3?BackdashCloud:DashCloud
                     §_-p3I§.§_-v4U§(_loc5_,this,null);
                 }
             }
             //in dash
-            else if(inDash)
+            else if(mInDash)
             {
                 //dash officially ends after 20 frames
-                _loc2_ = uint(timeDashed + 320);//dashtime + 20f
+                _loc2_ = uint(mTimeDashed + 320);//dashtime + 20f
                 if(param1 >= _loc2_)
                 {
                     if(§_-p3I§.§_-y44§ == null)//no attack
                     {
-                        set_Left(Boolean(get_LeftFacing()));//set direction to facing direction
-                        directionLockedInPower = false;//unlock direction
+                        set_Left(get_LeftFacing());//set mDirection to facing mDirection
+                        mDirectionLockedInPower = false;//unlock mDirection
                     }
-                    inDash = false;
+                    mInDash = false;
                 }
             }
             //dashjumped atleast 1 frame ago
-            if(inDashJump)
+            if(mInDashJump)
             {
-                if(param1 >= uint(timeDashJumped + uint(16)))
+                if(param1 >= uint(mTimeDashJumped + uint(16)))
                 {
                     //VelocityY
                     set_VelocityY(0);
                     //ImpulseY
                     set_ImpulseY(-41);
-                    inDashJump = false;
+                    mInDashJump = false;
                 }
             }
         }
@@ -5350,38 +5320,36 @@ package
             }
             if(Number(get_ImpulseX()) != 0)
             {
-                _loc3_ = this;
-                _loc3_.set_VelocityX(Number(Number(_loc3_.get_VelocityX()) + get_ImpulseX() * 0.65));
+                set_VelocityX(Number(Number(_loc3_.get_VelocityX()) + get_ImpulseX() * 0.65));
             }
             if(Number(get_ImpulseY()) != 0)
             {
-                _loc3_ = this;
-                _loc3_.set_VelocityY(Number(Number(_loc3_.get_VelocityY()) + get_ImpulseY() * 0.65));
+                set_VelocityY(Number(Number(_loc3_.get_VelocityY()) + get_ImpulseY() * 0.65));
             }
             set_ImpulseX(Number(set_ImpulseY(0)));
             //in dash
-            if(inDash)
+            if(mInDash)
             {
-                if(param1 >= timeDashed)//has dashed
+                if(param1 >= mTimeDashed)//has dashed
                 {
-                    inDash = false;
-                    inDashStartup = false;
-                    dodgeDirection = 0;
+                    mInDash = false;
+                    mInDashStartup = false;
+                    mDodgeDirection = 0;
                 }
             }
             //dash startup
-            else if(inDashStartup)
+            else if(mInDashStartup)
             {
-                //had inputted dash
-                if(param1 >= timeDashStarted)
+                //had mInputted dash
+                if(param1 >= mTimeDashStarted)
                 {
                     //left
-                    if((dodgeDirection & uint(4)) != 0)
+                    if((mDodgeDirection & uint(4)) != 0)
                     {
                         Entity.§_-q0§.x = -1;
                     }
                     //right
-                    else if((dodgeDirection & uint(8)) != 0)
+                    else if((mDodgeDirection & uint(8)) != 0)
                     {
                         Entity.§_-q0§.x = 1;
                     }
@@ -5390,12 +5358,12 @@ package
                         Entity.§_-q0§.x = 0;
                     }
                     //up
-                    if((dodgeDirection & uint(1)) != 0)
+                    if((mDodgeDirection & uint(1)) != 0)
                     {
                         Entity.§_-q0§.y = -1;
                     }
                     //down
-                    else if((dodgeDirection & uint(2)) != 0)
+                    else if((mDodgeDirection & uint(2)) != 0)
                     {
                         Entity.§_-q0§.y = 1;
                     }
@@ -5408,13 +5376,11 @@ package
                     {
                         set_Left(Boolean(set_LeftFacing(Entity.§_-q0§.x < 0)));
                     }
-                    _loc3_ = this;
-                    _loc3_.set_VelocityX(Number(Number(_loc3_.get_VelocityX()) + Entity.§_-q0§.x));
-                    _loc3_ = this;
-                    _loc3_.set_VelocityY(Number(Number(_loc3_.get_VelocityY()) + Entity.§_-q0§.y));
-                    inDash = true;
-                    timeDashed = uint(param1 + 272);//set dash start time to be in 17f. wtf??
-                    if(game.§_-d4a§ == 0)
+                    set_VelocityX(Number(Number(_loc3_.get_VelocityX()) + Entity.§_-q0§.x));
+                    set_VelocityY(Number(Number(_loc3_.get_VelocityY()) + Entity.§_-q0§.y));
+                    mInDash = true;
+                    mTimeDashed = uint(param1 + 272);//set dash start time to be in 17f. wtf??
+                    if(mGame.§_-d4a§ == 0)
                     {
                         §_-65P§(param1,§_-p3I§.§_-s3Q§(uint(3)));
                     }
@@ -5422,7 +5388,7 @@ package
             }
             else
             {
-                _loc4_ = playerInput.input;
+                _loc4_ = mPlayerInput.mInput;
                 _loc5_ = 0;
                 _loc6_ = 0;
                 if((_loc4_ & uint(1)) != 0)
@@ -5441,10 +5407,8 @@ package
                 {
                     _loc5_ = 0.08;
                 }
-                _loc3_ = this;
-                _loc3_.set_VelocityX(Number(Number(_loc3_.get_VelocityX()) + _loc5_));
-                _loc3_ = this;
-                _loc3_.set_VelocityY(Number(Number(_loc3_.get_VelocityY()) + _loc6_));
+                set_VelocityX(Number(Number(_loc3_.get_VelocityX()) + _loc5_));
+                set_VelocityY(Number(Number(_loc3_.get_VelocityY()) + _loc6_));
                 if(get_Running())
                 {
                     set_Left(Boolean(set_LeftFacing(_loc5_ < 0)));
@@ -5458,14 +5422,14 @@ package
                 _loc5_ = 19;
                 _loc6_ = 0.6;
             }
-            //stunned
+            //mStunned
             else if(get_Stunned())
             {
                 _loc5_ = 19;
                 _loc6_ = 4;
             }
             //in dash
-            else if(inDash)
+            else if(mInDash)
             {
                 _loc5_ = 14;
                 _loc6_ = 0.1;
@@ -5493,9 +5457,9 @@ package
                 {
                     §_-12m§ = true;
                 }
-                game.rulesManager.§_-U2m§(param1,this);
+                mGame.mRulesManager.§_-U2m§(param1,this);
             }
-            var _loc8_:Rectangle = game.level.§_-X2t§;
+            var _loc8_:Rectangle = mGame.mLevel.§_-X2t§;
             var _loc9_:Boolean = false;
             if(Number(get_PhysPosX()) < _loc8_.left - 50)
             {
@@ -5520,8 +5484,8 @@ package
             if(!!_loc9_ && !get_Stunned())
             {
                 set_Stunned(true);
-                timeLastHit = param1;
-                stun = 300;
+                mTimeLastHit = param1;
+                mStun = 300;
             }
         }
         
@@ -5539,8 +5503,8 @@ package
             var _loc3_:* = null as Volume;
             var _loc4_:* = null as §_-V1A§;
             §_-e0§();
-            state = uint(0);
-            var _loc1_:§_-l3r§ = game.§_-1F§;
+            mState = uint(0);
+            var _loc1_:§_-l3r§ = mGame.§_-1F§;
             var _loc2_:Waypoint = _loc1_.§_-J2H§ > 0 && _loc1_.§_-J2H§ <= uint(int(_loc1_.§_-s4p§.length)) ? _loc1_.§_-s4p§[uint(_loc1_.§_-J2H§ - 1)] : null;
             if(_loc2_ != null)
             {
@@ -5550,13 +5514,13 @@ package
             }
             else
             {
-                _loc4_ = game.level.§_-i2z§[0];
+                _loc4_ = mGame.mLevel.§_-i2z§[0];
                 set_PhysPosX(_loc4_.§_-8N§);
                 set_PhysPosY(_loc4_.§_-B1W§);
             }
         }
         
-        //                       time           damage            hitter      power
+        //                       time           mDamage            hitter      power
         public function §_-81H§(param1:uint, param2:Number, param3:Entity, param4:PowerType = undefined, param5:uint = 0, param6:PowerType = undefined) : void
         {
             var _loc7_:uint = 0;
@@ -5566,38 +5530,38 @@ package
             }
             //in modern versions there's some call to RulesManager here
             //that wraps these if and else
-            if(param3.team == team)//same team
+            if(param3.mTeam == mTeam)//same mTeam
             {
-                //update game stats
+                //update mGame stats
                 param3.§_-N3U§.§_-W3r§(param2,param4,param5,param6);
                 §_-N3U§.§_-s11§(param2);
             }
             else
             {
-                //update game stats
+                //update mGame stats
                 param3.§_-N3U§.§_-g1r§(param2,param4,param5,param6);
                 §_-N3U§.§_-E2I§(param2);
             }
-            if(game.rulesManager.§_-54Y§(this))//should have damage
+            if(mGame.mRulesManager.§_-54Y§(this))//should have mDamage
             {
-                damage += param2;//add damage
+                mDamage += param2;//add mDamage
             }
-            if(damage < 0)
+            if(mDamage < 0)
             {
-                damage = 0;
+                mDamage = 0;
             }
-            //                  time  entity  hitter damage
-            game.rulesManager.§_-Or§(param1,this,param3,param2);
+            //                  time  entity  hitter mDamage
+            mGame.mRulesManager.§_-Or§(param1,this,param3,param2);
             if(§_-t2o§() && param2 > 0)
             {
-                _loc7_ = this == game.§_-725§ ? uint(15632520) : uint(16776977);
-                game.§_-V35§(entityId,param2,Number(get_PhysCenterX()),get_PhysPosY() - 120,_loc7_);
+                _loc7_ = this == mGame.§_-725§ ? uint(15632520) : uint(16776977);
+                mGame.§_-V35§(mEntityId,param2,Number(get_PhysCenterX()),get_PhysPosY() - 120,_loc7_);
             }
         }
         
         public function §_-13f§(param1:uint, param2:Boolean) : void
         {
-            state = uint(8);
+            mState = uint(8);
             §_-vT§ = param1;
             §_-p4H§();
             §_-35d§.mTheDO3D.§_-21f§ = false;
@@ -5610,26 +5574,26 @@ package
             {
                 §_-E44§ |= Entity.§_-JC§;
             }
-            if((game.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && game.§_-j2p§ != null)
+            if((mGame.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && mGame.§_-j2p§ != null)
             {
-                game.§_-j2p§.§_-859§(param1,this,false);
+                mGame.§_-j2p§.§_-859§(param1,this,false);
             }
         }
         
         public function §_-d4G§(param1:uint) : void
         {
-            state = uint(9);
+            mState = uint(9);
             §_-E44§ |= Entity.§_-12u§;
             §_-352§ = param1;
-            if((game.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0)
+            if((mGame.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0)
             {
-                if(game.§_-j2p§ != null)
+                if(mGame.§_-j2p§ != null)
                 {
-                    game.§_-j2p§.§_-859§(param1,this,true);
+                    mGame.§_-j2p§.§_-859§(param1,this,true);
                 }
                 if((§_-E44§ & Entity.§_-51s§) != 0 && (§_-E44§ & Entity.BOT) == 0)
                 {
-                    game.§_-y1r§();
+                    mGame.§_-y1r§();
                 }
             }
         }
@@ -5652,9 +5616,9 @@ package
         //i think this is platform canceling??
         public function PlatformCancel(param1:uint, param2:Boolean, param3:Boolean = false, param4:uint = 0) : Boolean
         {
-            var _loc5_:Boolean = uint(timeDropped + Entity.§_-Wo§) >= param1;
+            var _loc5_:Boolean = uint(mTimeDropped + Entity.§_-Wo§) >= param1;
             //extra check in modern versions:
-            //if !loc5 and param2 and param4&2!=0 and VelocityX > 0 and param1 >= (down input time?)+64 return false
+            //if !loc5 and param2 and param4&2!=0 and VelocityX > 0 and param1 >= (down mInput time?)+64 return false
             //                                     you mean velocityY?
             if(_loc5_)
             {
@@ -5669,14 +5633,14 @@ package
                 Entity.§_-c3z§.y = Entity.§_-K4F§;//-30
             }
             //soft check?                               tean        x               y
-            var _loc6_:CollisionLine = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-c3z§,Entity.§_-p1P§,null,null,null,uint(2),uint(1));
+            var _loc6_:CollisionLine = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-c3z§,Entity.§_-p1P§,null,null,null,uint(2),uint(1));
             if(_loc6_ == null)
             {
                 return false;
             }
             set_VelocityY(0);
             §_-e1y§(Number(get_PhysPosX()),Entity.§_-p1P§.y - 1.01);
-            currentCollision = _loc6_;
+            mCurrentCollision = _loc6_;
             return true;
         }
         
@@ -5690,7 +5654,7 @@ package
             }
             set_VelocityY(0);
             §_-e1y§(Number(get_PhysPosX()),Entity.§_-it§.y - 1.01);
-            currentCollision = _loc4_;
+            mCurrentCollision = _loc4_;
             return true;
         }
         
@@ -5735,13 +5699,13 @@ package
             }
             Entity.§_-rz§.y = _loc4_;
             //check hard, i think
-            var _loc5_:CollisionLine = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-rz§,Entity.§_-it§,null,null,null,uint(1),0);
+            var _loc5_:CollisionLine = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-rz§,Entity.§_-it§,null,null,null,uint(1),0);
             if(_loc5_ == null)
             {
-                //in modern versions, if param2 and param3&2 != 0 and param1 >= (down input time?)+64, return null
+                //in modern versions, if param2 and param3&2 != 0 and param1 >= (down mInput time?)+64, return null
                 Entity.§_-rz§.y = _loc4_ * 0.5;
                 //check soft
-                _loc5_ = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-rz§,Entity.§_-it§,null,null,null,uint(2),0);
+                _loc5_ = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-rz§,Entity.§_-it§,null,null,null,uint(2),0);
                 if(_loc5_ == null)
                 {
                     return null;
@@ -5764,7 +5728,7 @@ package
             {
                 return false;
             }
-            var _loc2_:§_-F3e§ = game;
+            var _loc2_:§_-F3e§ = mGame;
             var _loc4_:uint = uint(32768);
             if(!((_loc2_.§_-p2a§ & _loc4_) != 0 || (_loc2_.§_-p2a§ & uint(32)) != 0 && (_loc2_.§_-pM§ & _loc4_) != 0))
             {
@@ -5808,15 +5772,15 @@ package
             {
                 return true;
             }
-            if((game.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0 && §_-A3N§.§_-03a§)
+            if((mGame.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0 && §_-A3N§.§_-03a§)
             {
                 return true;
             }
-            var _loc7_:§_-F3e§ = game;
+            var _loc7_:§_-F3e§ = mGame;
             _loc5_ = uint(16777216);
             if((_loc7_.§_-p2a§ & _loc5_) != 0 || (_loc7_.§_-p2a§ & uint(32)) != 0 && (_loc7_.§_-pM§ & _loc5_) != 0)
             {
-                _loc6_ = Boolean(game.§_-1F§.§_-kf§());
+                _loc6_ = Boolean(mGame.§_-1F§.§_-kf§());
             }
             else
             {
@@ -5834,11 +5798,11 @@ package
             var _loc1_:Boolean = false;
             var _loc3_:Boolean = false;
             var _loc5_:uint = 0;
-            if(game.§_-U2a§)
+            if(mGame.§_-U2a§)
             {
                 return false;
             }
-            var _loc2_:§_-F3e§ = game;
+            var _loc2_:§_-F3e§ = mGame;
             var _loc4_:uint = uint(32768);
             if(!((_loc2_.§_-p2a§ & _loc4_) != 0 || (_loc2_.§_-p2a§ & uint(32)) != 0 && (_loc2_.§_-pM§ & _loc4_) != 0))
             {
@@ -5882,7 +5846,7 @@ package
             {
                 return true;
             }
-            if((game.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0 && §_-A3N§.§_-e12§)
+            if((mGame.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0 && §_-A3N§.§_-e12§)
             {
                 return true;
             }
@@ -5899,7 +5863,7 @@ package
             {
                 return false;
             }
-            var _loc2_:uint = state;
+            var _loc2_:uint = mState;
             switch(int(_loc2_))
             {
                 case 7:
@@ -5917,7 +5881,7 @@ package
                 default:
                     return true;
             }
-            return Boolean(game.rulesManager.§_-l2R§(this));
+            return Boolean(mGame.mRulesManager.§_-l2R§(this));
         }
         
         public function §_-UR§(param1:§_-o4B§) : void
@@ -5930,7 +5894,7 @@ package
             {
                 §_-q2h§.§_-c4J§();
             }
-            §_-q2h§ = param1 != null ? new TrailEffect(game,this,param1) : null;
+            §_-q2h§ = param1 != null ? new TrailEffect(mGame,this,param1) : null;
         }
         
         public function §_-6r§(param1:Vector.<uint>, param2:uint, param3:uint, param4:Array) : void
@@ -5995,13 +5959,13 @@ package
             //hit or ??
             if(param2)
             {
-                timeLandedHit = param1;
-                timeMissedHit = 0;
+                mTimeLandedHit = param1;
+                mTimeMissedHit = 0;
             }
             else
             {
-                timeLandedHit = 0;
-                timeMissedHit = param1;
+                mTimeLandedHit = 0;
+                mTimeMissedHit = param1;
                 //not throw and not smth related to stances
                 if(!param4)
                 {
@@ -6015,12 +5979,12 @@ package
             var _loc6_:* = null as PowerType;
             var _loc7_:* = null as §_-tS§;
             var _loc5_:Boolean = §_-85n§ == null || !§_-85n§.§_-k2C§;
-            if(param3 != null && param3.§_-k2C§ && (state == uint(0) || _loc5_ || §_-85n§.§_-D2f§ == param3.§_-D2f§))
+            if(param3 != null && param3.§_-k2C§ && (mState == uint(0) || _loc5_ || §_-85n§.§_-D2f§ == param3.§_-D2f§))
             {
-                state = uint(6);
+                mState = uint(6);
                 §_-85n§ = param3;
-                §_-85n§.§_-32u§ = entityId;
-                _loc6_ = §_-85n§.§_-F2V§;
+                §_-85n§.§_-32u§ = mEntityId;
+                _loc6_ = §_-85n§.mPowerType;
                 _loc7_ = §_-85n§.§_-t2B§;
                 if(_loc6_.§_-Dg§)//grab
                 {
@@ -6039,9 +6003,9 @@ package
             }
             else if(_loc5_)
             {
-                if(state == uint(6))
+                if(mState == uint(6))
                 {
-                    state = uint(0);
+                    mState = uint(0);
                 }
                 §_-85n§ = null;
             }
@@ -6053,7 +6017,7 @@ package
             §_-p3I§.§_-81O§ = 0;
             if(!param1)
             {
-                gravityCanceling = false;
+                mGravityCanceling = false;
             }
             if(param2)
             {
@@ -6081,18 +6045,18 @@ package
             {
                 return;
             }
-            var _loc1_:uint = uint(game.§_-725§ == this ? §_-A3N§.§_-d3§ : int(uint(-1)));
+            var _loc1_:uint = uint(mGame.§_-725§ == this ? §_-A3N§.§_-d3§ : int(uint(-1)));
             if(_loc1_ == uint(-1))
             {
                 return;
             }
-            game.§_-W45§.§_-63T§(this);
-            if((game.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && game.§_-q4Y§ != 0)
+            mGame.§_-W45§.§_-63T§(this);
+            if((mGame.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && mGame.§_-q4Y§ != 0)
             {
-                _loc2_ = game.§_-K3a§.§_-R2m§;
+                _loc2_ = mGame.§_-K3a§.§_-R2m§;
                 if(_loc2_ == §_-B2Y§.PLAYLIST_RANKED1V1)
                 {
-                    game.§_-W45§.Send1v1StatDump(this);
+                    mGame.§_-W45§.Send1v1StatDump(this);
                 }
             }
         }
@@ -6112,7 +6076,7 @@ package
                 §_-25t§ = _loc2_.§_-UK§ != null ? _loc2_.§_-UK§.copy() : null;
                 if(§_-h3O§ != 0 || §_-25t§ != null)
                 {
-                    §_-62g§ = _loc2_.§_-F2V§;
+                    §_-62g§ = _loc2_.mPowerType;
                 }
             }
             §_-85n§ = null;
@@ -6152,8 +6116,8 @@ package
             {
                 return;
             }
-            var _loc3_:§_-l3r§ = game.§_-1F§;
-            var _loc5_:§_-F3e§ = _loc3_.game;
+            var _loc3_:§_-l3r§ = mGame.§_-1F§;
+            var _loc5_:§_-F3e§ = _loc3_.mGame;
             var _loc6_:uint = uint(16777216);
             if((_loc5_.§_-p2a§ & _loc6_) != 0 || (_loc5_.§_-p2a§ & uint(32)) != 0 && (_loc5_.§_-pM§ & _loc6_) != 0)
             {
@@ -6169,12 +6133,12 @@ package
                 return;
             }
             §_-VM§(param2);
-            var _loc7_:Boolean = state == uint(9);
-            if(state == uint(2) && game.level != null && game.level.§_-X2t§ != null)
+            var _loc7_:Boolean = mState == uint(9);
+            if(mState == uint(2) && mGame.mLevel != null && mGame.mLevel.§_-X2t§ != null)
             {
                 §_-MQ§ = true;
             }
-            if(state != uint(2) && !_loc7_)
+            if(mState != uint(2) && !_loc7_)
             {
                 §_-N3U§.§_-P1z§(uint(param1 - §_-352§),true);
             }
@@ -6183,19 +6147,19 @@ package
             {
                 §_-C1C§(param1);
             }
-            else if(state == uint(2) || _loc7_)
+            else if(mState == uint(2) || _loc7_)
             {
-                state = uint(3);
+                mState = uint(3);
             }
             if(§_-l2p§ == 0)
             {
-                damage = uint(0);
+                mDamage = uint(0);
             }
             else
             {
-                damage = §_-l2p§;
+                mDamage = §_-l2p§;
             }
-            var _loc8_:§_-F3e§ = game;
+            var _loc8_:§_-F3e§ = mGame;
             var _loc10_:uint = uint(32768);
             if(!((_loc8_.§_-p2a§ & _loc10_) != 0 || (_loc8_.§_-p2a§ & uint(32)) != 0 && (_loc8_.§_-pM§ & _loc10_) != 0))
             {
@@ -6229,26 +6193,26 @@ package
             }
             if(_loc9_)
             {
-                game.§_-w3z§.§_-Y7§(this,param1);
+                mGame.§_-w3z§.§_-Y7§(this,param1);
             }
             §_-p3I§.§_-L1Y§(param1);
-            game.rulesManager.§_-v34§(param1,this);
-            if(!!param2 && state != uint(8))
+            mGame.mRulesManager.§_-v34§(param1,this);
+            if(!!param2 && mState != uint(8))
             {
-                state = uint(3);
+                mState = uint(3);
                 §_-e0§();
                 if((§_-E44§ & Entity.§_-bD§) != 0)
                 {
-                    set_PhysPosX(game.level.§_-i2z§[§_-g4m§].§_-8N§);
+                    set_PhysPosX(mGame.mLevel.§_-i2z§[§_-g4m§].§_-8N§);
                     set_PhysPosY(-1400);
-                    state = uint(5);
+                    mState = uint(5);
                     set_VelocityX(0);
                     set_VelocityY(0);
                     set_ImpulseX(0);
                     set_ImpulseY(60);
                     set_Stunned(true);
-                    timeLastHit = param1;
-                    stun = 40;//2f stun? 3f stun?
+                    mTimeLastHit = param1;
+                    mStun = 40;//2f mStun? 3f mStun?
                     §_-C5R§ = true;
                     §_-NW§ = true;
                 }
@@ -6280,38 +6244,38 @@ package
             §_-q1w§ = false;
             set_Dodging(false);
             §_-F2i§(false,true);
-            timeDodgeStarted = 0;
-            timeDodgeRecoverEnd = 0;
-            timeDodgeEnd = 0;
+            mTimeDodgeStarted = 0;
+            mTimeDodgeRecoverEnd = 0;
+            mTimeDodgeEnd = 0;
             set_Airborne(true);
             set_CurrentAerialJumpCount(0);
-            §_-p3I§.§_-z3R§();
+            §_-p3I§.resetAirOptions();
             set_Stunned(false);
             §_-C3R§ = false;
             §_-w2r§ = false;
             set_Dropping(false);
             set_Fastfalling(false);
-            directionLockedInPower = false;
+            mDirectionLockedInPower = false;
             §_-GM§(false);
             §_-vR§(false);
-            wallDirection = 0;
-            jumpType = uint(0);
+            mWallDirection = 0;
+            mJumpType = uint(0);
             set_Jumped(false);
-            timeLandAfterJump = 0;
-            wallSlipCount = 0;
+            mTimeLandAfterJump = 0;
+            mWallSlipCount = 0;
             §_-C2§ = 0;
             §_-6n§ = 0;
             §_-Ki§ = 0;
-            inDashStartup = false;
-            inDash = false;
-            inDashJump = false;
-            timeDashStarted = 0;
-            timeDashed = 0;
+            mInDashStartup = false;
+            mInDash = false;
+            mInDashJump = false;
+            mTimeDashStarted = 0;
+            mTimeDashed = 0;
             §_-b2X§ = 0;
-            timeDashJumped = 0;
-            dashType = 0;
+            mTimeDashJumped = 0;
+            mDashType = 0;
             §_-F1T§ = false;
-            currentCollision = null;
+            mCurrentCollision = null;
             §_-i1e§ = false;
             §_-s4y§ = 0;
             §_-F4O§ = 0;
@@ -6333,19 +6297,19 @@ package
             var _loc1_:ItemType = §_-p3I§.§_-y1j§ != null && !§_-14O§ ? §_-p3I§.§_-y1j§.§_-S1k§ : ItemType.§_-Hq§;
             §_-2R§ = §_-zx§(_loc1_);
             §_-2R§.§_-11q§ = §_-02m§.§_-35W§;
-            §_-35d§ = new §_-c4y§(game,§_-2R§,true,true);
+            §_-35d§ = new §_-c4y§(mGame,§_-2R§,true,true);
             var _loc2_:Number = Number(get_AppearPosX());
             §_-35d§.mTheDO3D.x = Number(_loc2_ + §_-x2s§);
             var _loc3_:Number = Number(get_AppearPosY());
             §_-35d§.mTheDO3D.y = Number(_loc3_ + §_-B3L§);
-            §_-35d§.§_-Q2C§.§_-H4e§ = animSpeed;
+            §_-35d§.§_-Q2C§.§_-H4e§ = mAnimSpeed;
             if((§_-E44§ & (Entity.§_-r2y§ | Entity.BOT | Entity.§_-s4N§)) != 0)
             {
-                game.§_-l1f§.§_-K1V§(§_-35d§.mTheDO3D);
+                mGame.§_-l1f§.§_-K1V§(§_-35d§.mTheDO3D);
             }
             else
             {
-                game.§_-l1f§.§_-D3s§(§_-35d§.mTheDO3D);
+                mGame.§_-l1f§.§_-D3s§(§_-35d§.mTheDO3D);
             }
             §_-p3I§.§_-91Y§ = true;
             if((§_-E44§ & Entity.§_-I3S§) != 0)
@@ -6359,9 +6323,9 @@ package
         {
             if(§_-85n§ == null || !§_-85n§.§_-k2C§ || §_-85n§.§_-D2f§ == param1)
             {
-                if(state == uint(6))
+                if(mState == uint(6))
                 {
-                    state = uint(0);
+                    mState = uint(0);
                 }
                 §_-85n§ = null;
             }
@@ -6378,7 +6342,7 @@ package
             {
                 if(!(§_-o3W§ == null || !§_-o3W§.§_-z12§()))
                 {
-                    return playerInput.§_-o3W§ != §_-o3W§;
+                    return mPlayerInput.§_-o3W§ != §_-o3W§;
                 }
                 return true;
             }
@@ -6391,7 +6355,7 @@ package
             var _loc3_:int = 0;
             var _loc4_:int = 0;
             //sudden death?
-            if(state != uint(7) && state != uint(8))
+            if(mState != uint(7) && mState != uint(8))
             {
                 §_-MQ§ = true;
                 §_-F4a§();
@@ -6403,7 +6367,7 @@ package
                 §_-t1Q§ = true;
                 §_-p4H§();
                 §_-p3I§.§_-L1Y§(param1);
-                damage = 350;
+                mDamage = 350;
                 §_-c1U§ = 1;
             }
             else
@@ -6429,8 +6393,8 @@ package
             var _loc11_:* = null as IMap;
             var _loc12_:uint = 0;
             var _loc6_:uint = param3 == 0 ? §_-s2u§ : param3;
-            var _loc7_:Boolean = §_-x36§ != null && (game.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) == 0;
-            var _loc8_:Boolean = (game.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0 && game.§_-25D§ > game.§_-J1f§;
+            var _loc7_:Boolean = §_-x36§ != null && (mGame.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) == 0;
+            var _loc8_:Boolean = (mGame.§_-p2a§ & (uint(1024) | uint(2048) | uint(8192))) != 0 && mGame.§_-25D§ > mGame.§_-J1f§;
             var _loc9_:IMap = null;
             if(_loc7_)
             {
@@ -6501,7 +6465,7 @@ package
         public function §_-I1S§(param1:uint, param2:Boolean) : void
         {
             var _loc6_:* = null as §_-th§;
-            var _loc3_:DodgeType = DodgeType.dodgeList[dodgeId];
+            var _loc3_:DodgeType = DodgeType.sDodgeList[mDodgeId];
             if(_loc3_ == null)
             {
                 return;
@@ -6518,21 +6482,21 @@ package
             }
             if(Number(Math.abs(Number(get_VelocityX()))) > Number(Math.abs(_loc4_)))
             {
-                set_VelocityX((dodgeDirection & uint(4)) != 0 ? -_loc4_ : ((dodgeDirection & uint(8)) != 0 ? _loc4_ : Number(0)));
+                set_VelocityX((mDodgeDirection & uint(4)) != 0 ? -_loc4_ : ((mDodgeDirection & uint(8)) != 0 ? _loc4_ : Number(0)));
             }
             if(Number(Math.abs(Number(get_VelocityY()))) > Number(Math.abs(_loc5_)))
             {
                 set_VelocityY(_loc5_);
             }
             set_Dodging(false);//not dodging
-            timeDodgeEnd = 0;
+            mTimeDodgeEnd = 0;
             §_-F2i§(true,true);
             //gc
             if(param2)
             {
-                gravityCanceling = true;
+                mGravityCanceling = true;
                 //set time to get dodge             Cooldown
-                timeDodgeRestored = uint(dodgeDuration + uint(_loc3_.§_-k49§ * 16));
+                mDodgeLockDuration = uint(mDodgeDuration + uint(_loc3_.mDodgeCooldown * 16));
                 if(get_Airborne())//aerial
                 {
                     //attacking. this is a gc!
@@ -6588,22 +6552,22 @@ package
             var _loc13_:§_-G33§ = §_-G33§.§_-25P§(uint(1),_loc9_);//dex
             var _loc14_:§_-G33§ = §_-G33§.§_-25P§(uint(2),_loc10_);//def
             var _loc15_:§_-G33§ = §_-G33§.§_-25P§(uint(3),_loc11_);//spd
-            strengthStat = _loc8_;//str stat
-            impulseMult = _loc12_.impulseMult;//impulse mult
-            recoverMod = _loc13_.recoverMod;//recover mod
-            airRecoverMod = _loc13_.airRecoverMod;//air recover mod
-            sigRecoverMod = _loc13_.sigRecoverMod;//sig recover mod
-            minChargeMod = _loc13_.minChargeMod;//min charge mod
-            defenseStat = _loc10_;//def stat
-            recovery = _loc14_.recovery;//recovery
-            animSpeed = _loc15_.animSpeed;//anim speed
-            runSpeed = _loc15_.runSpeed;//run speed
-            airRunSpeed = _loc15_.airRunSpeed;//air run speed
-            acceleration = _loc15_.acceleration;//acceleration
-            airAcceleration = _loc15_.airAcceleration;//air acceleration
-            friction = _loc15_.friction;//friction
-            airFriction = _loc15_.airFriction;//air friction
-            jumpXImpulse = _loc15_.jumpXImpulse;//jump X impulse
+            mStrengthStat = _loc8_;//str stat
+            mImpulseMult = _loc12_.mImpulseMult;//impulse mult
+            mRecoverMod = _loc13_.mRecoverMod;//recover mod
+            mAirRecoverMod = _loc13_.mAirRecoverMod;//air recover mod
+            mSigRecoverMod = _loc13_.mSigRecoverMod;//sig recover mod
+            mMinChargeMod = _loc13_.mMinChargeMod;//min charge mod
+            mDefenseStat = _loc10_;//def stat
+            mRecovery = _loc14_.mRecovery;//mRecovery
+            mAnimSpeed = _loc15_.mAnimSpeed;//anim speed
+            mRunSpeed = _loc15_.mRunSpeed;//run speed
+            mAirRunSpeed = _loc15_.mAirRunSpeed;//air run speed
+            mAcceleration = _loc15_.mAcceleration;//mAcceleration
+            mAirAcceleration = _loc15_.mAirAcceleration;//air mAcceleration
+            mFriction = _loc15_.mFriction;//mFriction
+            mAirFriction = _loc15_.mAirFriction;//air mFriction
+            mJumpXImpulse = _loc15_.mJumpXImpulse;//jump X impulse
             §_-p3I§.§_-91Y§ = true;//inited stats?
             §_-b2M§ = null;
         }
@@ -6614,15 +6578,15 @@ package
             {
                 return;
             }
-            if(state == uint(2) || §_-MQ§)
+            if(mState == uint(2) || §_-MQ§)
             {
                 return;
             }
-            if(game.§_-l14§ == null || int(game.§_-l14§.length) < uint(5))
+            if(mGame.§_-l14§ == null || int(mGame.§_-l14§.length) < uint(5))
             {
                 return;
             }
-            if(game.§_-T1o§.§_-B2g§())
+            if(mGame.§_-T1o§.§_-B2g§())
             {
                 return;
             }
@@ -6638,7 +6602,7 @@ package
             var _loc11_:* = null as RollbackEvent;
             var _loc12_:uint = 0;
             var _loc6_:RollbackEvent = null;
-            if(game.§_-J3E§)
+            if(mGame.§_-J3E§)
             {
                 _loc7_ = false;
                 _loc8_ = 0;
@@ -6681,37 +6645,37 @@ package
             var _loc7_:int = 0;
             var _loc8_:int = 0;
             var _loc9_:* = null as Entity;
-            var _loc4_:Entity = param2 != 0 ? game.§_-GY§(param2) : null;
-            var _loc5_:Boolean = !game.rulesManager.§_-I4d§;
+            var _loc4_:Entity = param2 != 0 ? mGame.§_-GY§(param2) : null;
+            var _loc5_:Boolean = !mGame.mRulesManager.§_-I4d§;
             if(_loc4_ != null)
             {
-                if(game.§_-T1o§.scoringType == ScoringType.CONQUEST)
+                if(mGame.§_-T1o§.scoringType == ScoringType.CONQUEST)
                 {
-                    if(game.rulesManager.§_-v2z§(_loc4_))
+                    if(mGame.mRulesManager.§_-v2z§(_loc4_))
                     {
                         _loc6_ = 0;
-                        _loc7_ = int(game.§_-l14§.length);
+                        _loc7_ = int(mGame.§_-l14§.length);
                         while(_loc6_ < _loc7_)
                         {
                             _loc8_ = _loc6_++;
-                            _loc9_ = game.§_-l14§[_loc8_];
-                            if(_loc9_.team == _loc4_.team && !game.rulesManager.§_-v2z§(_loc9_))
+                            _loc9_ = mGame.§_-l14§[_loc8_];
+                            if(_loc9_.mTeam == _loc4_.mTeam && !mGame.mRulesManager.§_-v2z§(_loc9_))
                             {
                                 _loc4_ = _loc9_;
                                 break;
                             }
                         }
                     }
-                    if(game.rulesManager.§_-v2z§(this))
+                    if(mGame.mRulesManager.§_-v2z§(this))
                     {
                         _loc5_ = false;
                     }
                 }
             }
-            if(game.§_-p2a§ == uint(128) && ((_loc4_ == null || _loc4_ == this) && _loc4_ != game.§_-725§ && this != game.§_-725§))
+            if(mGame.§_-p2a§ == uint(128) && ((_loc4_ == null || _loc4_ == this) && _loc4_ != mGame.§_-725§ && this != mGame.§_-725§))
             {
                 _loc5_ = true;
-                _loc4_ = game.§_-725§;
+                _loc4_ = mGame.§_-725§;
             }
             if(_loc5_)
             {
@@ -6720,10 +6684,10 @@ package
             }
             if(§_-A3N§.§_-A3F§)
             {
-                game.§_-i3u§.§_-U1I§(param1,this,_loc4_);
+                mGame.§_-i3u§.§_-U1I§(param1,this,_loc4_);
             }
-            var _loc10_:§_-730§ = game.§_-I4§.§_-U1v§(param1,_loc4_,this);
-            if(_loc4_ != null && _loc4_.team != team)
+            var _loc10_:§_-730§ = mGame.§_-I4§.§_-U1v§(param1,_loc4_,this);
+            if(_loc4_ != null && _loc4_.mTeam != mTeam)
             {
                 _loc4_.§_-N3U§.§_-r3Y§(param1);
             }
@@ -6732,14 +6696,14 @@ package
                 §_-kN§ = param1;
                 §_-73e§ = _loc10_.mID;
             }
-            game.rulesManager.§_-l47§(param1,_loc4_,this,param3);
+            mGame.mRulesManager.§_-l47§(param1,_loc4_,this,param3);
             //Stock and bit thing that the ItemManager count
-            if(!!game.§_-T1o§.scoringType.§_-e3q§ && (§_-E44§ & Entity.§_-353§) == 0)
+            if(!!mGame.§_-T1o§.scoringType.§_-e3q§ && (§_-E44§ & Entity.§_-353§) == 0)
             {
                 //recalculate weapon and gadget goals
-                game.itemsManager.§_-B56§ = 0;
+                mGame.itemsManager.§_-B56§ = 0;
             }
-            game.§_-I4§.§_-P3f§ = true;
+            mGame.§_-I4§.§_-P3f§ = true;
         }
         
         public function §_-A1h§(param1:Boolean = false) : void
@@ -6814,7 +6778,7 @@ package
                 §_-tP§.§_-P3w§(§_-Qi§.§_-WK§ + " using Rune index " + ("" + _loc3_.§_-K2x§) + " for wrong hero " + param1.§_-H2N§);
             }
             //in modern versions this has an and with some condition
-            if(game.§_-p2a§ == uint(64))
+            if(mGame.§_-p2a§ == uint(64))
             {
                 §_-Qi§.§_-WK§ = param1.§_-t1p§;
             }
@@ -6834,24 +6798,24 @@ package
                 _loc10_ = §_-b2M§;
                 _loc11_ = §_-b2M§;
             }
-            strengthStat = _loc4_;
-            impulseMult = _loc8_.impulseMult;
+            mStrengthStat = _loc4_;
+            mImpulseMult = _loc8_.mImpulseMult;
             §_-R32§ = _loc5_;
-            recoverMod = _loc9_.recoverMod;
-            airRecoverMod = _loc9_.airRecoverMod;
-            sigRecoverMod = _loc9_.sigRecoverMod;
-            minChargeMod = _loc9_.minChargeMod;
-            defenseStat = _loc6_;
-            recovery = _loc10_.recovery;
+            mRecoverMod = _loc9_.mRecoverMod;
+            mAirRecoverMod = _loc9_.mAirRecoverMod;
+            mSigRecoverMod = _loc9_.mSigRecoverMod;
+            mMinChargeMod = _loc9_.mMinChargeMod;
+            mDefenseStat = _loc6_;
+            mRecovery = _loc10_.mRecovery;
             §_-P3p§ = _loc7_;
-            animSpeed = _loc11_.animSpeed;
-            runSpeed = _loc11_.runSpeed;
-            airRunSpeed = _loc11_.airRunSpeed;
-            acceleration = _loc11_.acceleration;
-            airAcceleration = _loc11_.airAcceleration;
-            friction = _loc11_.friction;
-            airFriction = _loc11_.airFriction;
-            jumpXImpulse = _loc11_.jumpXImpulse;
+            mAnimSpeed = _loc11_.mAnimSpeed;
+            mRunSpeed = _loc11_.mRunSpeed;
+            mAirRunSpeed = _loc11_.mAirRunSpeed;
+            mAcceleration = _loc11_.mAcceleration;
+            mAirAcceleration = _loc11_.mAirAcceleration;
+            mFriction = _loc11_.mFriction;
+            mAirFriction = _loc11_.mAirFriction;
+            mJumpXImpulse = _loc11_.mJumpXImpulse;
         }
         
         public function §_-J3G§(param1:uint, param2:§_-G1R§ = undefined, param3:Boolean = true) : void
@@ -6866,15 +6830,15 @@ package
             var _loc5_:§_-yr§ = §_-61V§[param1];
             var _loc6_:HeroType = HeroType.§_-X2B§[_loc5_.§_-s32§ & 65535];
             var _loc7_:Boolean = false;
-            if(game.§_-T1o§.scoringType == ScoringType.SCRAMBLE)
+            if(mGame.§_-T1o§.scoringType == ScoringType.SCRAMBLE)
             {
                 _loc6_ = §_-M2x§[param1];
                 _loc7_ = true;
             }
             if(_loc6_ != null)
             {
-                _loc8_ = int(game.§_-l14§.length);
-                §_-14i§ = uint(entityId + uint(param1 * _loc8_));
+                _loc8_ = int(mGame.§_-l14§.length);
+                §_-14i§ = uint(mEntityId + uint(param1 * _loc8_));
                 _loc9_ = CostumeType.§_-b3B§[_loc5_.§_-s2a§];
                 §_-21l§(_loc6_,_loc5_.§_-K2x§);
                 §_-15I§(_loc5_.§_-a16§,_loc9_,_loc7_);
@@ -6886,12 +6850,12 @@ package
             {
                 if(§_-K2L§ != null)
                 {
-                    game.§_-W45§.§_-C3a§(this,§_-K2L§);
+                    mGame.§_-W45§.§_-C3a§(this,§_-K2L§);
                 }
                 else if(§_-f1k§ != null)
                 {
-                    game.§_-W45§.§_-C3a§(this,§_-f1k§);
-                    game.§_-W45§.§_-C3a§(this,§_-01R§);
+                    mGame.§_-W45§.§_-C3a§(this,§_-f1k§);
+                    mGame.§_-W45§.§_-C3a§(this,§_-01R§);
                 }
             }
         }
@@ -6911,50 +6875,50 @@ package
             }
             var _loc4_:§_-th§ = §_-p3I§.§_-y44§;
             //is dash jump?             dashed at most 9 frames ago      on ground||doing a ground jump
-            var _loc5_:Boolean = uint(timeDashed + 160) > param1 && (currentCollision != null || jumpType == uint(1));
+            var _loc5_:Boolean = uint(mTimeDashed + 160) > param1 && (mCurrentCollision != null || mJumpType == uint(1));
             //                                              holding left                                   holding right
-            var _loc6_:Boolean = !!_loc5_ && ((playerInput.input & uint(4)) != 0 && Boolean(get_Left()) || (playerInput.input & uint(8)) != 0 && !get_Left());
+            var _loc6_:Boolean = !!_loc5_ && ((mPlayerInput.mInput & uint(4)) != 0 && Boolean(get_Left()) || (mPlayerInput.mInput & uint(8)) != 0 && !get_Left());
             //                                                                                      12f            (not a dash jump, or it's a floor cancel dash)
-            if(!param3 && !param2 && _loc4_ == null && (timeLandedHit == 0 || param1 > uint(timeLandedHit + Entity.§_-LG§)) && (!_loc5_ || dashType == uint(2)))
+            if(!param3 && !param2 && _loc4_ == null && (mTimeLandedHit == 0 || param1 > uint(mTimeLandedHit + Entity.§_-LG§)) && (!_loc5_ || mDashType == uint(2)))
             {
                 //12f
-                if(uint(timeDropped + Entity.§_-Wo§) >= param1)
+                if(uint(mTimeDropped + Entity.§_-Wo§) >= param1)
                 {
                     //in moder versions we also pass false + _-e7
                     //this doesn't end up doing anything
                     PlatformCancel(param1,false);
-                    if(currentCollision == null)//no collision
+                    if(mCurrentCollision == null)//no collision
                     {
                         FloorCancel(param1,false);//floor cancel?
                     }
                 }
                 //              air jump           wall jump
-                §_-65c§(param1,currentCollision == null,wallDirection != 0,false);
-                if(currentCollision != null)//on ground
+                §_-65c§(param1,mCurrentCollision == null,mWallDirection != 0,false);
+                if(mCurrentCollision != null)//on ground
                 {
-                    jumpType = uint(1);
+                    mJumpType = uint(1);
                 }
-                else if(wallDirection != 0)//on wall
+                else if(mWallDirection != 0)//on wall
                 {
-                    jumpType = uint(2);
+                    mJumpType = uint(2);
                 }
                 else
                 {
-                    jumpType = uint(3);
+                    mJumpType = uint(3);
                 }
                 timeJumped = param1;
                 return;
             }
             set_Jumped(true);//set jumped to true
             §_-m1O§ = true;
-            timeDropped = 0;
+            mTimeDropped = 0;
             set_Fastfalling(false);
             timeJumped = param1;
             §_-p3O§();
-            timeDashJumped = 0;
-            timeDodgeRecoverEnd = 0;
+            mTimeDashJumped = 0;
+            mTimeDodgeRecoverEnd = 0;
             var _loc7_:Number = !!param2 ? 0.86 : 1;
-            if(currentCollision != null || jumpType == uint(1))//on ground
+            if(mCurrentCollision != null || mJumpType == uint(1))//on ground
             {
                 if(!param3)
                 {
@@ -6964,8 +6928,8 @@ package
                 _loc8_ = 57 * _loc7_;
                 if(_loc5_)//dashjump
                 {
-                    inDashJump = true;
-                    timeDashJumped = param1;
+                    mInDashJump = true;
+                    mTimeDashJumped = param1;
                     if(§_-A3N§.§_-A3F§)
                     {
                         §_-N3U§.§_-C1X§ = §_-N3U§.§_-C1X§ + 1;
@@ -6979,25 +6943,24 @@ package
                     {
                         set_VelocityX(-66);
                     }
-                    _loc9_ = game;
+                    _loc9_ = mGame;
                     if((_loc9_.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && _loc9_.§_-j2p§ != null && _loc9_.§_-31T§ == uint(1))
                     {
-                        game.§_-j2p§.§_-mm§(param1,this,"dash.Jump");
+                        mGame.§_-j2p§.§_-mm§(param1,this,"dash.Jump");
                     }
                 }
                 else
                 {
-                    _loc9_ = game;
+                    _loc9_ = mGame;
                     if((_loc9_.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && _loc9_.§_-j2p§ != null && _loc9_.§_-31T§ == uint(1))
                     {
-                        game.§_-j2p§.§_-mm§(param1,this,"jump.Ground");
+                        mGame.§_-j2p§.§_-mm§(param1,this,"jump.Ground");
                     }
                 }
                 set_VelocityY(0);
-                currentCollision = null;
-                _loc10_ = this;
-                _loc10_.set_ImpulseY(_loc10_.get_ImpulseY() - _loc8_);//impulse.y -= loc8. gives upwards momentum.
-                §_-p3I§.§_-z3R§();
+                mCurrentCollision = null;
+                set_ImpulseY(_loc10_.get_ImpulseY() - _loc8_);//impulse.y -= loc8. gives upwards momentum.
+                §_-p3I§.resetAirOptions();
                 _loc11_ = false;
                 //running or dashjump forward
                 if(get_Running() || _loc6_)
@@ -7006,11 +6969,10 @@ package
                     if(get_Left())
                     {
                         //dashing with atleast 4 velocity right
-                        if(!!inDash && Number(get_VelocityX()) > 4)
+                        if(!!mInDash && Number(get_VelocityX()) > 4)
                         {
-                            _loc10_ = this;
                             //velocity.x -= 4
-                            _loc10_.set_VelocityX(_loc10_.get_VelocityX() - 4);
+                            set_VelocityX(_loc10_.get_VelocityX() - 4);
                         }
                         else if(Number(get_VelocityX()) > 0)
                         {
@@ -7018,16 +6980,14 @@ package
                         }
                         else if(Number(get_VelocityX()) <= -_loc12_)
                         {
-                            _loc10_ = this;
-                            _loc10_.set_ImpulseX(_loc10_.get_ImpulseX() - jumpXImpulse * 0.5);
+                            set_ImpulseX(_loc10_.get_ImpulseX() - mJumpXImpulse * 0.5);
                             //impulse.x -= jumpXimpulse/2
                         }
                     }
                     //dashing with atleast 4 velocity left
-                    else if(!!inDash && Number(get_VelocityX()) < 4)
+                    else if(!!mInDash && Number(get_VelocityX()) < 4)
                     {
-                        _loc10_ = this;
-                        _loc10_.set_VelocityX(Number(Number(_loc10_.get_VelocityX()) + 4));
+                        set_VelocityX(Number(Number(_loc10_.get_VelocityX()) + 4));
                     }
                     else if(Number(get_VelocityX()) < 0)
                     {
@@ -7035,12 +6995,11 @@ package
                     }
                     else if(Number(get_VelocityX()) >= _loc12_)
                     {
-                        _loc10_ = this;
-                        _loc10_.set_ImpulseX(Number(Number(_loc10_.get_ImpulseX()) + jumpXImpulse * 0.5));
+                        set_ImpulseX(Number(Number(_loc10_.get_ImpulseX()) + mJumpXImpulse * 0.5));
                     }
                 }
             }
-            else if(wallDirection != 0 || jumpType == uint(2))//on wall
+            else if(mWallDirection != 0 || mJumpType == uint(2))//on wall
             {
                 increaseWallSlipCount();//inc wall touch
                 if(!param3)
@@ -7048,38 +7007,35 @@ package
                     //             air  wall
                     §_-65c§(param1,false,true,true);
                 }
-                currentCollision = null;
+                mCurrentCollision = null;
                 _loc8_ = Entity.§_-Qc§ * _loc7_;
                 _loc12_ = 48;
-                _loc10_ = this;
-                _loc10_.set_ImpulseY(_loc10_.get_ImpulseY() - _loc8_);//impulse.y -= loc8
+                set_ImpulseY(_loc10_.get_ImpulseY() - _loc8_);//impulse.y -= loc8
                 set_VelocityY(Number(set_VelocityX(0)));
                 //not running
                 if(!get_Running())
                 {
-                    //set direction to facing direction
+                    //set mDirection to facing mDirection
                     set_Left(Boolean(get_LeftFacing()));
                 }
                 //if holding towards wall, add 43.2. otherwise add 48
-                if(wallDirection == 1)
+                if(mWallDirection == 1)
                 {
-                    _loc10_ = this;
                     //impulse x
-                    _loc10_.set_ImpulseX(Number(Number(_loc10_.get_ImpulseX()) + _loc12_ * (Boolean(get_Left()) ? 0.9 : Number(1))));
+                    set_ImpulseX(Number(Number(_loc10_.get_ImpulseX()) + _loc12_ * (Boolean(get_Left()) ? 0.9 : Number(1))));
                 }
                 else
                 {
-                    _loc10_ = this;
-                    _loc10_.set_ImpulseX(_loc10_.get_ImpulseX() - _loc12_ * (Boolean(get_Left()) ? Number(1) : 0.9));
+                    set_ImpulseX(_loc10_.get_ImpulseX() - _loc12_ * (Boolean(get_Left()) ? Number(1) : 0.9));
                 }
-                _loc9_ = game;
+                _loc9_ = mGame;
                 if((_loc9_.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && _loc9_.§_-j2p§ != null && _loc9_.§_-31T§ == uint(1))
                 {
                     //wall jump
-                    game.§_-j2p§.§_-mm§(param1,this,"jump.Wall");
+                    mGame.§_-j2p§.§_-mm§(param1,this,"jump.Wall");
                 }
             }
-            else if(uint(get_CurrentAerialJumpCount()) < uint(game.rulesManager.maxAerialJumpCount()))//used air options < 2. air jump.
+            else if(uint(get_CurrentAerialJumpCount()) < uint(mGame.mRulesManager.maxAerialJumpCount()))//used air options < 2. air jump.
             {
                 increaseWallSlipCount();//update wall slip
                 if(!param3)
@@ -7093,12 +7049,9 @@ package
                     _loc8_ = 65 * _loc7_;
                 }
                 set_VelocityY(0);
-                _loc10_ = this;
                 //impulse.y -= loc8
-                _loc10_.set_ImpulseY(_loc10_.get_ImpulseY() - _loc8_);
-                _loc10_ = this;
-                _loc13_ = uint(_loc10_.get_CurrentAerialJumpCount());
-                _loc10_.set_CurrentAerialJumpCount(uint(_loc13_ + 1));//increase used air options
+                set_ImpulseY(get_ImpulseY() - _loc8_);
+                set_CurrentAerialJumpCount(get_CurrentAerialJumpCount() + 1);//increase used air options
                 if(§_-A3N§.§_-A3F§)
                 {
                     §_-N3U§.§_-I3F§ = §_-N3U§.§_-I3F§ + 1;
@@ -7119,10 +7072,10 @@ package
                         set_VelocityX(-_loc12_);
                     }
                 }
-                _loc9_ = game;
+                _loc9_ = mGame;
                 if((_loc9_.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && _loc9_.§_-j2p§ != null && _loc9_.§_-31T§ == uint(1))
                 {
-                    game.§_-j2p§.§_-mm§(param1,this,"jump.Air");
+                    mGame.§_-j2p§.§_-mm§(param1,this,"jump.Air");
                 }
             }
             else
@@ -7134,11 +7087,11 @@ package
             {
                 §_-N3U§.§_-e2q§ = §_-N3U§.§_-e2q§ + 1;
             }
-            _loc9_ = game;
+            _loc9_ = mGame;
             _loc13_ = uint(16777216);
             if((_loc9_.§_-p2a§ & _loc13_) != 0 || (_loc9_.§_-p2a§ & uint(32)) != 0 && (_loc9_.§_-pM§ & _loc13_) != 0)
             {
-                game.§_-1F§.lessonManager.§_-I4Q§(param1,entityId,_loc5_);
+                mGame.§_-1F§.lessonManager.§_-I4Q§(param1,mEntityId,_loc5_);
             }
         }
         
@@ -7149,7 +7102,7 @@ package
         
         public function §_-zH§() : Boolean
         {
-            if(!game.§_-T1o§.§_-E9§())
+            if(!mGame.§_-T1o§.§_-E9§())
             {
                 return false;
             }
@@ -7185,7 +7138,7 @@ package
             //only returns false if all of the following apply:
                 //movement is not locked, or we're slide charging a sig
                 //not dodging
-                //not stunned
+                //not mStunned
                 //not charging throw
                 //not on the sidekick??
                 //not sudden death??
@@ -7194,16 +7147,16 @@ package
             //so true if any are true:
                 //movement is locked and we're not slide charging a sig
                 //dodging
-                //stunned
+                //mStunned
                 //charging throw
                 //on the sidekick??
                 //sudden death??
                 //in dash startup
                 //at most 6 frames into a backdash
             var _loc2_:Boolean = true;
-            if(state == uint(0) || state == uint(5))
+            if(mState == uint(0) || mState == uint(5))
             {
-                if(!(§_-x2q§() && !§_-p3I§.§_-c2e§(param1) || Boolean(get_Dodging()) || Boolean(get_Stunned()) || §_-p3I§.§_-S2§ != 0 || §_-F1W§ || §_-t1Q§ || inDashStartup))
+                if(!(§_-x2q§() && !§_-p3I§.§_-c2e§(param1) || Boolean(get_Dodging()) || Boolean(get_Stunned()) || §_-p3I§.§_-S2§ != 0 || §_-F1W§ || §_-t1Q§ || mInDashStartup))
                 {
                     _loc2_ = Boolean(InBackdashLag(param1));//at most 6 frames into a backdash
                 }
@@ -7226,12 +7179,12 @@ package
             if(get_Dodging())
             {
                 _loc1_ = null;
-                if(dodgeId != 0)
+                if(mDodgeId != 0)
                 {
-                    _loc1_ = DodgeType.dodgeList[dodgeId];
+                    _loc1_ = DodgeType.sDodgeList[mDodgeId];
                 }
                 //grounded spot dodge
-                if(_loc1_ != null && _loc1_.direction == 0 && _loc1_.airType == uint(1))
+                if(_loc1_ != null && _loc1_.mDirection == 0 && _loc1_.mAirType == uint(1))
                 {
                     return true;
                 }
@@ -7250,9 +7203,9 @@ package
         
         public function §_-L41§() : Boolean
         {
-            if(get_Airborne() && uint(get_CurrentAerialJumpCount()) >= uint(game.rulesManager.maxAerialJumpCount()))
+            if(get_Airborne() && uint(get_CurrentAerialJumpCount()) >= uint(mGame.mRulesManager.maxAerialJumpCount()))
             {
-                return wallDirection == 0;
+                return mWallDirection == 0;
             }
             return false;
         }
@@ -7264,12 +7217,12 @@ package
             var _loc7_:Boolean = false;
             var _loc8_:Boolean = false;
             var _loc9_:Boolean = false;
-            var _loc4_:uint = state;
+            var _loc4_:uint = mState;
             switch(int(_loc4_))
             {
                 case 0:
                 case 5:
-                    _loc5_ = IsMoveLocked(param1) || Boolean(get_JumpLockedForPower()) || jumpType != uint(0) || §_-p3I§.§_-S2§ != 0 || Boolean(InLandingLag(param1));
+                    _loc5_ = IsMoveLocked(param1) || Boolean(get_JumpLockedForPower()) || mJumpType != uint(0) || §_-p3I§.§_-S2§ != 0 || Boolean(InLandingLag(param1));
                     if((§_-E44§ & Entity.§_-V3D§) != 0)
                     {
                         return true;
@@ -7279,13 +7232,13 @@ package
                         return true;
                     }
                     //PostDodge ahead
-                    _loc6_ = postDodge > param1;
+                    _loc6_ = mPostDodge > param1;
                     if(_loc6_)
                     {
                         return true;
                     }
                     //                      aerial and used all air options and not on a wall
-                    _loc7_ = !param3 && (get_Airborne() && uint(get_CurrentAerialJumpCount()) >= uint(game.rulesManager.maxAerialJumpCount()) && wallDirection == 0);
+                    _loc7_ = !param3 && (get_Airborne() && uint(get_CurrentAerialJumpCount()) >= uint(mGame.mRulesManager.maxAerialJumpCount()) && mWallDirection == 0);
                     if(_loc7_)
                     {
                         return true;
@@ -7298,7 +7251,7 @@ package
                         return true;
                     }
                     //16f
-                    //jumpde in the last 16 frames and got out of stun in the last 16 frames
+                    //jumpde in the last 16 frames and got out of mStun in the last 16 frames
                     _loc9_ = uint(timeJumped + Entity.§_-U1p§) >= param1 && uint(timeStunExited + Entity.§_-U1p§) >= param1;
                     if(_loc9_)
                     {
@@ -7319,9 +7272,9 @@ package
             jump land cancelled within the last 3 frames
             not on wall
             */
-            if(param1 < uint(timeLandAfterJump + uint(64)) && !get_Airborne())
+            if(param1 < uint(mTimeLandAfterJump + uint(64)) && !get_Airborne())
             {
-                return wallDirection == 0;
+                return mWallDirection == 0;
             }
             return false;
         }
@@ -7362,18 +7315,18 @@ package
             Entity.§_-h1J§.y = param1;
             Entity.§_-12z§.x = 0;
             Entity.§_-12z§.y = 0;
-            var _loc2_:CollisionLine = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-h1J§,Entity.§_-12z§,null,null,null,uint(2) | uint(1),0);
+            var _loc2_:CollisionLine = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-h1J§,Entity.§_-12z§,null,null,null,uint(2) | uint(1),0);
             return _loc2_ == null;
         }
         
         //is fast dodging
-        public function FastDodging() : Boolean
+        public function fastDodging() : Boolean
         {
             if(!get_Dodging())//not dodging
             {
                 return false;
             }
-            var _loc1_:DodgeType = dodgeId != 0 ? DodgeType.dodgeList[dodgeId] : null;
+            var _loc1_:DodgeType = mDodgeId != 0 ? DodgeType.sDodgeList[mDodgeId] : null;
             if(_loc1_ != null)
             {
                 return _loc1_.isFast;//is fast
@@ -7381,11 +7334,11 @@ package
             return false;
         }
         
-        //                      time            input
+        //                      time            mInput
         public function §_-6q§(param1:uint, param2:uint) : Boolean
         {
             //atleast 13 frames since hit
-            if(uint(timeLandedHit + Entity.§_-P3a§) < param1)
+            if(uint(mTimeLandedHit + Entity.§_-P3a§) < param1)
             {
                 return false;
             }
@@ -7397,7 +7350,7 @@ package
                 return false;
             }
             //spot or down+collision
-            if(param2 == 0 || currentCollision != null && param2 == uint(2))
+            if(param2 == 0 || mCurrentCollision != null && param2 == uint(2))
             {
                 return false;
             }
@@ -7406,19 +7359,19 @@ package
         
         public function §_-N1a§(param1:Number, param2:Number) : Boolean
         {
-            if((dodgeDirection & uint(4)) != 0 && param1 < 0)
+            if((mDodgeDirection & uint(4)) != 0 && param1 < 0)
             {
                 return true;
             }
-            if((dodgeDirection & uint(8)) != 0 && param1 > 0)
+            if((mDodgeDirection & uint(8)) != 0 && param1 > 0)
             {
                 return true;
             }
-            if((dodgeDirection & uint(1)) != 0 && param2 < 0)
+            if((mDodgeDirection & uint(1)) != 0 && param2 < 0)
             {
                 return true;
             }
-            if((dodgeDirection & uint(2)) != 0 && param2 > 0)
+            if((mDodgeDirection & uint(2)) != 0 && param2 > 0)
             {
                 return true;
             }
@@ -7437,9 +7390,9 @@ package
             not jumping?
             no jump land cancel thing within the last 3 frames?
             */
-            if(!(IsMoveLocked(param1) || get_DodgeLocked() && !param2 || Boolean(get_Dodging()) || §_-p3I§.§_-y44§ != null || wallDirection != 0 || Boolean(game.level.§_-q1A§(uint(1),Number(get_PhysCenterX()),Number(get_PhysCenterY()),team)) || jumpType != uint(0) || Boolean(InLandingLag(param1))))
+            if(!(IsMoveLocked(param1) || get_DodgeLocked() && !param2 || Boolean(get_Dodging()) || §_-p3I§.§_-y44§ != null || mWallDirection != 0 || Boolean(mGame.mLevel.§_-q1A§(uint(1),Number(get_PhysCenterX()),Number(get_PhysCenterY()),mTeam)) || mJumpType != uint(0) || Boolean(InLandingLag(param1))))
             {
-                return wallSlipCount >= uint(9);
+                return mWallSlipCount >= uint(9);
             }
             return true;
         }
@@ -7454,17 +7407,17 @@ package
             //not jumping
             //grounded and (jump land cancelled within the last 3 frames)? and not on wall
             //not stance-power and not charge throw?
-            if(IsMoveLocked(param1) || inDashStartup || uint(timeDashed + uint(112)) > param1 || !§_-p3I§.§_-Cp§ && §_-p3I§.§_-t4Y§ != PowerType.§_-95n§.§_-Q3f§ && uint(timeMissedHit + uint(112)) > param1 || §_-p3I§.§_-y44§ != null || wallDirection != 0 || jumpType != uint(0) || Boolean(InLandingLag(param1)))
+            if(IsMoveLocked(param1) || mInDashStartup || uint(mTimeDashed + uint(112)) > param1 || !§_-p3I§.§_-Cp§ && §_-p3I§.§_-t4Y§ != PowerType.§_-95n§.§_-Q3f§ && uint(mTimeMissedHit + uint(112)) > param1 || §_-p3I§.§_-y44§ != null || mWallDirection != 0 || mJumpType != uint(0) || Boolean(InLandingLag(param1)))
             {
                 return true;
             }
             var _loc2_:DodgeType = null;
-            if(dodgeId != 0)
+            if(mDodgeId != 0)
             {
-                _loc2_ = DodgeType.dodgeList[dodgeId];
+                _loc2_ = DodgeType.sDodgeList[mDodgeId];
             }
             //ToDashDelay and stuff passed
-            if(_loc2_ != null && uint(uint(timeDodgeStarted + dodgeDuration) + uint(_loc2_.§_-VE§ * 16)) > param1)
+            if(_loc2_ != null && uint(uint(mTimeDodgeStarted + mDodgeDuration) + uint(_loc2_.§_-VE§ * 16)) > param1)
             {
                 return true;
             }
@@ -7478,16 +7431,16 @@ package
         
         public function §_-25Q§(param1:uint) : void
         {
-            var _loc2_:DodgeType = dodgeId != 0 ? DodgeType.dodgeList[dodgeId] : null;
+            var _loc2_:DodgeType = mDodgeId != 0 ? DodgeType.sDodgeList[mDodgeId] : null;
             //                   param1 < dodge time + StartInvuln
-            if(_loc2_ != null && param1 < uint(timeDodgeStarted + uint(_loc2_.startInvuln * 16)))
+            if(_loc2_ != null && param1 < uint(mTimeDodgeStarted + uint(_loc2_.startInvuln * 16)))
             {
                 set_Dodging(false);//not dodging
-                timeDodgeStarted = 0;
-                timeDodgeRecoverEnd = 0;
-                timeDodgeEnd = 0;
-                timeDodgeRestored = 0;
-                dodgeDirection = 0;
+                mTimeDodgeStarted = 0;
+                mTimeDodgeRecoverEnd = 0;
+                mTimeDodgeEnd = 0;
+                mDodgeLockDuration = 0;
+                mDodgeDirection = 0;
                 §_-94F§ = false;
                 §_-F2i§(false,true);
             }
@@ -7500,26 +7453,26 @@ package
         
         public function §_-p3O§() : void
         {
-            if(!!inDashJump && Number(get_VelocityY()) < -41)
+            if(!!mInDashJump && Number(get_VelocityY()) < -41)
             {
                 set_VelocityY(-41);
             }
-            inDashJump = false;
+            mInDashJump = false;
         }
         
         public function §_-P2f§() : void
         {
             //dashing/dash startup, and not attacking
-            if((inDashStartup || inDash) && §_-p3I§.§_-y44§ == null)
+            if((mInDashStartup || mInDash) && §_-p3I§.§_-y44§ == null)
             {
-                directionLockedInPower = false;
+                mDirectionLockedInPower = false;
             }
-            inDashStartup = false;
+            mInDashStartup = false;
             §_-F1T§ = false;
-            inDash = false;
-            dashType = 0;
-            timeDashStarted = 0;
-            timeDashed = 0;
+            mInDash = false;
+            mDashType = 0;
+            mTimeDashStarted = 0;
+            mTimeDashed = 0;
             §_-b2X§ = 0;
             §_-p3O§();
         }
@@ -7534,7 +7487,7 @@ package
             var _loc5_:Boolean = false;
             if(_loc3_ != null)
             {
-                _loc6_ = §_-p3I§.§_-c4B§(_loc3_.§_-F2V§);
+                _loc6_ = §_-p3I§.§_-c4B§(_loc3_.mPowerType);
                 //                                has exahusted
                 if(!!param1 && _loc3_.§_-k2C§ && _loc6_.§_-5r§ && §_-p3I§.§_-Za§ != 0 && uint(§_-p3I§.§_-Za§ + 300) >= param2)
                 {
@@ -7570,11 +7523,11 @@ package
         
         public function increaseWallSlipCount() : void
         {
-            wallSlipCount = wallSlipCount + 1;
-            if(wallSlipCount == uint(9))
+            mWallSlipCount = mWallSlipCount + 1;
+            if(mWallSlipCount == uint(9))
             {
-                set_CurrentAerialJumpCount(uint(game.rulesManager.maxAerialJumpCount()));//lose all air optins
-                §_-p3I§.recoveryExhausted = true;//exahusted
+                set_CurrentAerialJumpCount(uint(mGame.mRulesManager.maxAerialJumpCount()));//lose all air optins
+                §_-p3I§.mRecoveryExhausted = true;//exahusted
                 §_-p3I§.§_-P2Q§(PowerType.SWEATING_OUT_SFX);//sweat buds
             }
         }
@@ -7582,11 +7535,11 @@ package
         public function §_-U1s§(param1:uint, param2:Boolean) : Boolean
         {
             //dashing and started dashing at most 6 frames ago
-            if(!!inDash && uint(timeDashed + uint(112)) > param1)
+            if(!!mInDash && uint(mTimeDashed + uint(112)) > param1)
             {
                 if(!param2)
                 {
-                    return §_-C2§ > timeDashed;
+                    return §_-C2§ > mTimeDashed;
                 }
                 return true;
             }
@@ -7596,12 +7549,12 @@ package
         public function InBackdashLag(param1:uint) : Boolean
         {
             //at most 6 frames into a backdash. in modern versions this can also be 7.
-            if(!!inDash && dashType == uint(3))
+            if(!!mInDash && mDashType == uint(3))
             {
                 //dashtime + 7f > time
                 //dashtime > time - 7f
                 //dashtiume >= time - 6f
-                return uint(timeDashed + uint(112)) > param1;
+                return uint(mTimeDashed + uint(112)) > param1;
             }
             return false;
         }
@@ -7612,7 +7565,7 @@ package
         {
             var _loc7_:* = null as DodgeType;
             var _loc5_:Boolean = false;
-            if(wallDirection != 0)//on wall
+            if(mWallDirection != 0)//on wall
             {
                 return false;
             }
@@ -7623,13 +7576,13 @@ package
             }
             var _loc6_:uint = 0;
             //no dodge
-            if(dodgeId == 0)
+            if(mDodgeId == 0)
             {
                 _loc6_ = uint(32);
             }
             else
             {
-                _loc7_ = DodgeType.dodgeList[dodgeId];
+                _loc7_ = DodgeType.sDodgeList[mDodgeId];
                 //no dodge. default to 2 frames.
                 if(_loc7_ == null)
                 {
@@ -7644,12 +7597,12 @@ package
             if(get_Dodging())
             {
                 //dodge duration passed
-                if(param1 >= uint(timeDodgeStarted + dodgeDuration))
+                if(param1 >= uint(mTimeDodgeStarted + mDodgeDuration))
                 {
                     return false;
                 }
                 //time to start i frames
-                if(uint(timeDodgeStarted + _loc6_) <= param1)
+                if(uint(mTimeDodgeStarted + _loc6_) <= param1)
                 {
                     return true;
                 }
@@ -7693,10 +7646,10 @@ package
                 if(param1.§_-k4B§ != null)
                 {
                     _loc7_ = param1.§_-k4B§;
-                    if((game.§_-T1o§.§_-D4a§ & uint(1)) != 0 && param1.§_-k1I§)
+                    if((mGame.§_-T1o§.§_-D4a§ & uint(1)) != 0 && param1.§_-k1I§)
                     {
                         _loc8_ = new CustomArt(_loc7_.fileName,_loc7_.§_-D3Y§);
-                        _loc9_ = team;
+                        _loc9_ = mTeam;
                         switch(int(_loc9_))
                         {
                             case 1:
@@ -7709,7 +7662,7 @@ package
                     }
                     _loc2_.push(_loc7_);
                 }
-                if(game.§_-T1o§.scoringType == ScoringType.SUPERBRAWL && §_-9d§ != null && (game.rulesManager.§_-K2W§ & int(1 << entityId)) != 0)
+                if(mGame.§_-T1o§.scoringType == ScoringType.SUPERBRAWL && §_-9d§ != null && (mGame.mRulesManager.§_-K2W§ & int(1 << mEntityId)) != 0)
                 {
                     §_-9d§.§_-q23§(_loc2_,§_-02m§);
                 }
@@ -7739,7 +7692,7 @@ package
                 §_-tP§.§_-hg§("gfx type not found for entity");
                 return null;
             }
-            var _loc10_:Boolean = game.§_-T1o§.scoringType == ScoringType.SCRAMBLE;
+            var _loc10_:Boolean = mGame.§_-T1o§.scoringType == ScoringType.SCRAMBLE;
             var _loc11_:GfxType = _loc3_.§_-D5k§();
             _loc11_.§_-u2Z§ = §_-14i§;
             _loc2_.push(§_-IE§.§_-B1j§());
@@ -7764,7 +7717,7 @@ package
             {
                 _loc11_.§_-82k§ = _loc11_.§_-82k§.concat(_loc4_);
             }
-            var _loc12_:LevelType = game.level.levelType;
+            var _loc12_:LevelType = mGame.mLevel.mLevelType;
             if(_loc12_.§_-YL§ != null)
             {
                 _loc11_.§_-82k§.push(_loc12_.§_-YL§);
@@ -7782,12 +7735,12 @@ package
             if(_loc13_)
             {
                 _loc14_ = §_-g33§.§_-t1p§;
-                if(_loc14_ != null && game.§_-p2a§ == uint(64))
+                if(_loc14_ != null && mGame.§_-p2a§ == uint(64))
                 {
                     §_-Qi§.§_-WK§ = _loc14_;
                 }
             }
-            var _loc15_:GfxType = game.rulesManager.§_-72i§(_loc11_,this);
+            var _loc15_:GfxType = mGame.mRulesManager.§_-72i§(_loc11_,this);
             if(_loc15_ != null)
             {
                 _loc11_ = _loc15_;
@@ -7827,10 +7780,10 @@ package
             if(get_Airborne() && !param1)
             {
                 //      air run speed
-                return airRunSpeed * §_-p3I§.§_-939§;
+                return mAirRunSpeed * §_-p3I§.§_-939§;
             }
             //run speed
-            return runSpeed * §_-p3I§.§_-W3F§;
+            return mRunSpeed * §_-p3I§.§_-W3F§;
         }
         
         public function §_-x3L§(param1:Point) : void
@@ -7881,12 +7834,12 @@ package
             var _loc5_:* = null as String;
             var _loc1_:§_-th§ = §_-p3I§.§_-y44§;
             var _loc2_:§_-D45§ = null;
-            var _loc3_:ScoringType = game.§_-T1o§.scoringType;
+            var _loc3_:ScoringType = mGame.§_-T1o§.scoringType;
             if(_loc1_ != null)
             {
                 _loc2_ = _loc1_.§_-p1U§;
             }
-            else if(wallDirection != 0)//on wall
+            else if(mWallDirection != 0)//on wall
             {
                 if(§_-p3I§.§_-y1j§ == null)
                 {
@@ -8068,7 +8021,7 @@ package
         
         public function §_-g49§() : uint
         {
-            if(game.§_-725§ == this)
+            if(mGame.§_-725§ == this)
             {
                 return §_-A3N§.§_-d3§;
             }
@@ -8164,7 +8117,7 @@ package
         {
             var _loc4_:Number = NaN;
             var _loc5_:* = null as Entity;
-            var _loc3_:ScoringType = game.§_-T1o§.scoringType;
+            var _loc3_:ScoringType = mGame.§_-T1o§.scoringType;
             if(ScoringType.RING == _loc3_)
             {
                 §_-F4O§ = §_-F4O§ + 1;
@@ -8176,36 +8129,34 @@ package
                 }
                 if(!param2)
                 {
-                    _loc4_ = currentCollision.collisionNormal.x;
+                    _loc4_ = mCurrentCollision.collisionNormal.x;
                     //velocity.x = 1.1 * velocity.x * collision.normal.x
                     set_VelocityX(1.1 * Math.abs(Number(get_VelocityX())) * _loc4_);
-                    _loc5_ = this;
                     //velocity.x = velocity.x + 50*collision.normal.x
-                    _loc5_.set_VelocityX(Number(Number(_loc5_.get_VelocityX()) + 50 * _loc4_));
+                    set_VelocityX(Number(Number(_loc5_.get_VelocityX()) + 50 * _loc4_));
                     //in dash, or dash startup, or ??
-                    if(inDashStartup || §_-F1T§ || inDash)
+                    if(mInDashStartup || §_-F1T§ || mInDash)
                     {
                         //turnaround during dash based on normal
                         //this makes sure we're turning around after dashing into a rope
                         set_Left(_loc4_ < 0);
                         set_LeftFacing(Boolean(get_Left()));
                     }
-                    game.rulesManager.§_-LK§(currentCollision);
+                    mGame.mRulesManager.§_-LK§(mCurrentCollision);
                     return true;
                 }
                 //aerial
                 //not in dodge
                 //not attacking
                 //good degree
-                if(!!param2 && Boolean(get_Airborne()) && !get_Dodging() && §_-p3I§.§_-y44§ == null && Number(Math.abs(currentCollision.collisionNormal.x)) > Number(Math.abs(currentCollision.collisionNormal.y)))
+                if(!!param2 && Boolean(get_Airborne()) && !get_Dodging() && §_-p3I§.§_-y44§ == null && Number(Math.abs(mCurrentCollision.collisionNormal.x)) > Number(Math.abs(mCurrentCollision.collisionNormal.y)))
                 {
-                    _loc4_ = currentCollision.collisionNormal.x;
+                    _loc4_ = mCurrentCollision.collisionNormal.x;
                     set_VelocityX(1.1 * Math.abs(Number(get_VelocityX())) * _loc4_);
-                    _loc5_ = this;
-                    _loc5_.set_VelocityX(Number(Number(_loc5_.get_VelocityX()) + 30 * _loc4_));
+                    set_VelocityX(Number(Number(_loc5_.get_VelocityX()) + 30 * _loc4_));
                     set_Left(_loc4_ < 0);
                     set_LeftFacing(Boolean(get_Left()));
-                    game.rulesManager.§_-LK§(currentCollision);
+                    mGame.mRulesManager.§_-LK§(mCurrentCollision);
                     return true;
                 }
             }
@@ -8232,14 +8183,14 @@ package
             if(§_-U1d§ == null)
             {
                 §_-U1d§ = new MovieClip();
-                game.§_-d3e§.addChild(§_-U1d§);
+                mGame.§_-d3e§.addChild(§_-U1d§);
             }
         }
         
         public function §_-C1C§(param1:uint) : void
         {
-            state = uint(7);
-            var _loc2_:§_-F3e§ = game;
+            mState = uint(7);
+            var _loc2_:§_-F3e§ = mGame;
             if((_loc2_.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) == 0 && (_loc2_.§_-p2a§ & (uint(1) | uint(8) | uint(4096) | uint(8192))) == 0)
             {
                 §_-N3U§.§_-P1z§(uint(param1 - §_-352§),false);
@@ -8257,23 +8208,23 @@ package
         
         public function §_-U4O§() : void
         {
-            if(state == uint(3) || state == uint(7) || state == uint(8))
+            if(mState == uint(3) || mState == uint(7) || mState == uint(8))
             {
                 §_-93k§.§_-65Z§();
                 return;
             }
             //GhostRule
-            if((game.§_-T1o§.§_-D4a§ & uint(128)) != 0)
+            if((mGame.§_-T1o§.§_-D4a§ & uint(128)) != 0)
             {
                 §_-93k§.§_-65Z§();
                 return;
             }
-            if(game.§_-T1o§.scoringType == ScoringType.VOLLEY_BATTLE && (§_-E44§ & Entity.§_-w4l§) != 0)
+            if(mGame.§_-T1o§.scoringType == ScoringType.VOLLEY_BATTLE && (§_-E44§ & Entity.§_-w4l§) != 0)
             {
                 §_-93k§.§_-eS§(Number(get_PhysPosX()),Number(get_PhysPosY()),90,90,0);
                 return;
             }
-            if(game.§_-T1o§.scoringType == ScoringType.SOCCER && (§_-E44§ & Entity.§_-w4l§) != 0)
+            if(mGame.§_-T1o§.scoringType == ScoringType.SOCCER && (§_-E44§ & Entity.§_-w4l§) != 0)
             {
                 §_-93k§.§_-eS§(Number(get_PhysPosX()),Number(get_PhysPosY()),90,90,0);
                 return;
@@ -8331,7 +8282,7 @@ package
             var _loc13_:* = null as DodgeType;
             var _loc14_:Boolean = false;
             var _loc15_:Number = NaN;
-            if(game.§_-T1o§.scoringType == ScoringType.HOCKEY)
+            if(mGame.§_-T1o§.scoringType == ScoringType.HOCKEY)
             {
                 return false;
             }
@@ -8342,10 +8293,10 @@ package
             var _loc7_:Boolean = false;
             var _loc8_:uint = 0;
             //down left or downright
-            //in modern versions, with a test feature, this is always set to false if we're less than 4 frames coming out of stun
-            //this is the post hitstun dodge consistency
+            //in modern versions, with a test feature, this is always set to false if we're less than 4 frames coming out of mStun
+            //this is the post hitmStun dodge consistency
             var _loc9_:Boolean = param2 == (uint(4) | uint(2)) || param2 == (uint(8) | uint(2));
-            //                                  less than 4 frames since out of stun?
+            //                                  less than 4 frames since out of mStun?
             var _loc10_:Boolean = !_loc9_ && uint(timeStunExited + uint(64)) > param1;
             //if we can't chain dodge, loc5 HAS to be true for us to dodge
             if(!IsDodgeLocked(param1))
@@ -8353,17 +8304,17 @@ package
                 _loc5_ = true;
             }
             //                      didn't dodge buffer?
-            else if(!!_loc3_ && timeDodgeStarted != §_-S2T§ && timeDodgeStarted != 0 && !IsDodgeLocked(param1,_loc3_))
+            else if(!!_loc3_ && mTimeDodgeStarted != §_-S2T§ && mTimeDodgeStarted != 0 && !IsDodgeLocked(param1,_loc3_))
             {
-                _loc4_ = uint(timeDodgeStarted + timeDodgeRestored);//time that previous dodge would end
-                §_-S2T§ = param1;//time of last dodge input?
+                _loc4_ = uint(mTimeDodgeStarted + mDodgeLockDuration);//time that previous dodge would end
+                §_-S2T§ = param1;//time of last dodge mInput?
                 _loc5_ = true;
             }
             //can chain dodge
             else if(§_-K2B§(param1))
             {
                 _loc6_ = true;
-                _loc8_ = dodgeDirection;
+                _loc8_ = mDodgeDirection;
                 _loc5_ = true;
             }
             var _loc11_:Boolean = !_loc10_ && !(!!_loc5_ && (_loc3_ || _loc6_));
@@ -8377,7 +8328,7 @@ package
                     return false;
                 }
                 //                          has collision
-                if(!!_loc11_ && _loc12_ && currentCollision != null)
+                if(!!_loc11_ && _loc12_ && mCurrentCollision != null)
                 {
                     return false;
                 }
@@ -8392,7 +8343,7 @@ package
                 //keep groundness, reset count
                 §_-83Q§ = uint(0) | §_-83Q§ & 65535;
             }
-            //not spot input, and not doing illegal chain dodge
+            //not spot mInput, and not doing illegal chain dodge
             _loc12_ = param2 != 0 && (((_loc8_ | param2) & uint(4)) == 0 || ((_loc8_ | param2) & uint(8)) == 0);
             //can chain dodge, and legal chain dodge
             if(!!_loc6_ && _loc12_)
@@ -8400,12 +8351,12 @@ package
                 _loc7_ = true;
             }
             //                  aerial or turnaround before hit or not up/down
-            else if(!!_loc3_ && (get_Airborne() || §_-C2§ <= timeLandedHit || param2 != uint(1) && param2 != uint(2)))
+            else if(!!_loc3_ && (get_Airborne() || §_-C2§ <= mTimeLandedHit || param2 != uint(1) && param2 != uint(2)))
             {
                 _loc7_ = true;
                 §_-p3I§.§_-81O§ = §_-p3I§.§_-t4Y§;
             }
-            //not aerial and no post histun dodge consistency preventing dash
+            //not aerial and no post himStun dodge consistency preventing dash
             //this forces you to spot dodge on the ground IF AT LEAST 4 FRAMES PASSED SINCE STUN
             else if(!get_Airborne() && !_loc10_)
             {
@@ -8420,12 +8371,12 @@ package
             if(_loc6_)
             {
                 //prev dodge
-                _loc13_ = dodgeId != 0 ? DodgeType.dodgeList[dodgeId] : null;
+                _loc13_ = mDodgeId != 0 ? DodgeType.sDodgeList[mDodgeId] : null;
                 //                          up or down
-                if(_loc13_ != null && (_loc13_.direction & (uint(2) | uint(4))) != 0)
+                if(_loc13_ != null && (_loc13_.mDirection & (uint(2) | uint(4))) != 0)
                 {
-                    //did turnaround after previous dodge input?
-                    if(§_-C2§ > timeDodgeStarted)
+                    //did turnaround after previous dodge mInput?
+                    if(§_-C2§ > mTimeDodgeStarted)
                     {
                         _loc7_ = false;
                     }
@@ -8435,23 +8386,23 @@ package
                         //cancel chain dodge
                         _loc7_ = false;
                     }
-                    //currently dodging up, and input is down
-                    else if(_loc13_.direction == uint(2) && param2 == uint(2))
+                    //currently dodging up, and mInput is down
+                    else if(_loc13_.mDirection == uint(2) && param2 == uint(2))
                     {
                         _loc7_ = false;
                     }
-                    //current dodging down, and input is up
-                    else if(_loc13_.direction == uint(4) && param2 == uint(1))
+                    //current dodging down, and mInput is up
+                    else if(_loc13_.mDirection == uint(4) && param2 == uint(1))
                     {
                         _loc7_ = false;
                     }
                 }
             }
-            //                          input   isaerial     isfast         test
-            _loc13_ = DodgeType.§_-d2e§(param2,Boolean(get_Airborne()),_loc7_,(game.§_-T1o§.§_-D4a§ & uint(64)) != 0);
+            //                          mInput   isaerial     isfast         test
+            _loc13_ = DodgeType.§_-d2e§(param2,Boolean(get_Airborne()),_loc7_,(mGame.§_-T1o§.§_-D4a§ & uint(64)) != 0);
             set_Dodging(true);//in dodge
-            timeDodgeStarted = param1;//time dodge input
-            dodgeDirection = param2;//dodge direction
+            mTimeDodgeStarted = param1;//time dodge mInput
+            mDodgeDirection = param2;//dodge mDirection
             if((param2 & uint(4)) != 0) //left
             {
                 §_-94F§ = true;
@@ -8462,14 +8413,14 @@ package
             }
             else //not left/right
             {
-                //set to facing direction
+                //set to facing mDirection
                 §_-94F§ = Boolean(get_LeftFacing());
             }
-            dodgeId = _loc13_.§_-b3x§;
-            //fast and facing direction != input direction
+            mDodgeId = _loc13_.§_-b3x§;
+            //fast and facing mDirection != mInput mDirection
             if(!!_loc13_.isFast && Boolean(get_LeftFacing()) != §_-94F§)
             {
-                //set direction and facing direction
+                //set mDirection and facing mDirection
                 set_Left(§_-94F§);
                 set_LeftFacing(§_-94F§);
             }
@@ -8484,40 +8435,40 @@ package
                 //          not airborne or (jumped and no options used and jumptime + 4f >= param1)
                 _loc14_ = !get_Airborne() || timeJumped != 0 && uint(get_CurrentAerialJumpCount()) == 0 && uint(timeJumped + DodgeType.§_-41W§) >= param1;
                 _loc15_ = Number(§_-n1z§(_loc14_));
-                //set x velocity based on dodge direction
-                set_VelocityX((dodgeDirection & uint(4)) != 0 ? -_loc15_ : _loc15_);
+                //set x velocity based on dodge mDirection
+                set_VelocityX((mDodgeDirection & uint(4)) != 0 ? -_loc15_ : _loc15_);
             }
             §_-s4j§ = Number(_loc13_.§_-q3Z§(param1,this));
             §_-316§ = Number(_loc13_.§_-y4m§(param1,this));
-            dodgeDuration = uint(_loc13_.mDuration * 16);//dodge duration
-            dodgeRecover = uint(_loc13_.§_-E3h§ * 16);//dodge recover
-            timeDodgeEnd = uint(param1 + dodgeDuration);//dodge end time
+            mDodgeDuration = uint(_loc13_.mDuration * 16);//dodge duration
+            mDodgeRecover = uint(_loc13_.§_-E3h§ * 16);//dodge recover
+            mTimeDodgeEnd = uint(param1 + mDodgeDuration);//dodge end time
             if(_loc13_.isFast)//fast
             {
                 //fast dodge: time + dodge duration + dodge recover
-                timeDodgeRecoverEnd = uint(uint(param1 + dodgeDuration) + dodgeRecover);
+                mTimeDodgeRecoverEnd = uint(uint(param1 + mDodgeDuration) + mDodgeRecover);
             }
             //aerial or on wall
-            _loc14_ = get_Airborne() || wallDirection != 0;
+            _loc14_ = get_Airborne() || mWallDirection != 0;
             //                              cooldown        cooldown grounded
-            var _loc16_:uint = !!_loc14_ ? _loc13_.§_-k49§ : _loc13_.§_-e4h§;
+            var _loc16_:uint = !!_loc14_ ? _loc13_.mDodgeCooldown : _loc13_.§_-e4h§;
             _loc16_ *= 16;
             //time for getting back dodge
-            timeDodgeRestored = uint(uint(dodgeDuration + _loc16_) + dodgeRecover);
+            mDodgeLockDuration = uint(uint(mDodgeDuration + _loc16_) + mDodgeRecover);
             //make sure that previous dodge cooldown would still apply
-            if(_loc4_ != 0 && uint(timeDodgeStarted + timeDodgeRestored) < _loc4_)
+            if(_loc4_ != 0 && uint(mTimeDodgeStarted + mDodgeLockDuration) < _loc4_)
             {
-                timeDodgeRestored = uint(_loc4_ - timeDodgeStarted);
+                mDodgeLockDuration = uint(_loc4_ - mTimeDodgeStarted);
             }
             var _loc17_:uint = uint(§_-83Q§ >>> 16);
             §_-83Q§ = uint(0);
             //fast dodging
-            if(FastDodging())
+            if(fastDodging())
             {
                 //can chain dodge
                 if(_loc6_)
                 {
-                    //legal chain dodge input
+                    //legal chain dodge mInput
                     if(_loc12_)
                     {
                         //set groundnes
@@ -8525,7 +8476,7 @@ package
                     }
                 }
                 //not aerial, and not a spot dodge
-                else if(!get_Airborne() && dodgeDirection != 0)
+                else if(!get_Airborne() && mDodgeDirection != 0)
                 {
                     §_-83Q§ = uint(1);
                 }
@@ -8536,13 +8487,13 @@ package
                 §_-83Q§ = uint(uint(_loc17_ + 1) << 16) | §_-83Q§ & 65535;
             }
             //aerial or not a spot dodge. zero out velocity.
-            if(dodgeDirection != 0 || Boolean(get_Airborne()))
+            if(mDodgeDirection != 0 || Boolean(get_Airborne()))
             {
                 set_VelocityY(0);
                 set_VelocityX(0);
             }
-            inDashJump = false;
-            timeDropped = 0;
+            mInDashJump = false;
+            mTimeDropped = 0;
             §_-b3N§ = false;
             //dodge count?
             §_-N3U§.§_-x3y§ = §_-N3U§.§_-x3y§ + 1;
@@ -8551,21 +8502,21 @@ package
                 //air dodge count?
                 §_-N3U§.§_-W3W§ = §_-N3U§.§_-W3W§ + 1;
             }
-            var _loc18_:§_-F3e§ = game;
+            var _loc18_:§_-F3e§ = mGame;
             if((_loc18_.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && _loc18_.§_-j2p§ != null && _loc18_.§_-31T§ == uint(1))
             {
-                game.§_-j2p§.§_-mm§(param1,this,"dodge." + _loc13_.§_-F1I§);
+                mGame.§_-j2p§.§_-mm§(param1,this,"dodge." + _loc13_.§_-F1I§);
             }
             //used all air options, and exahusted
-            if(uint(get_CurrentAerialJumpCount()) >= uint(game.rulesManager.maxAerialJumpCount()) && §_-p3I§.recoveryExhausted)
+            if(uint(get_CurrentAerialJumpCount()) >= uint(mGame.mRulesManager.maxAerialJumpCount()) && §_-p3I§.mRecoveryExhausted)
             {
                 §_-p3I§.§_-P2Q§(PowerType.SWEATING_OUT_SFX);//sweat
             }
-            var _loc19_:§_-F3e§ = game;
+            var _loc19_:§_-F3e§ = mGame;
             var _loc20_:uint = uint(16777216);
             if((_loc19_.§_-p2a§ & _loc20_) != 0 || (_loc19_.§_-p2a§ & uint(32)) != 0 && (_loc19_.§_-pM§ & _loc20_) != 0)
             {
-                game.§_-1F§.lessonManager.§_-xS§(param1,entityId,_loc13_,_loc6_,Boolean(get_Airborne()));
+                mGame.§_-1F§.lessonManager.§_-xS§(param1,mEntityId,_loc13_,_loc6_,Boolean(get_Airborne()));
             }
             return true;
         }
@@ -8619,7 +8570,7 @@ package
             §_-xC§ = null;
             §_-c3L§ = null;
             §_-l2H§ = null;
-            currentCollision = null;
+            mCurrentCollision = null;
             §_-Y3H§ = null;
             if(§_-2R§ != null)
             {
@@ -8646,10 +8597,10 @@ package
                 §_-35d§.§_-JQ§();
                 §_-35d§ = null;
             }
-            if(playerInput != null)
+            if(mPlayerInput != null)
             {
-                playerInput.§_-T1W§();
-                playerInput = null;
+                mPlayerInput.§_-T1W§();
+                mPlayerInput = null;
             }
             if(§_-93k§ != null)
             {
@@ -8756,7 +8707,7 @@ package
             }
             if(§_-83m§.§_-V1K§ != null)
             {
-                §_-83m§.§_-V1K§.§_-8f§(entityId);
+                §_-83m§.§_-V1K§.§_-8f§(mEntityId);
             }
             §_-x36§ = null;
             §_-L3i§ = null;
@@ -8768,7 +8719,7 @@ package
             §_-b2M§ = null;
             §_-h1Q§ = null;
             §_-Qi§ = null;
-            game = null;
+            mGame = null;
         }
         
         public function §_-X4h§(param1:uint) : void
@@ -8780,7 +8731,7 @@ package
             set_VelocityY(0);
             timeJumped = 0;
             Jump(param1,false,true);
-            jumpType = uint(0);
+            mJumpType = uint(0);
         }
         
         public function Dash(param1:uint, param2:uint) : Boolean
@@ -8814,16 +8765,16 @@ package
             {
                 _loc6_ = true;
             }
-            if(currentCollision != null)//collision
+            if(mCurrentCollision != null)//collision
             {
                 _loc8_ = Boolean(get_Left());//is left
                 _loc9_ = Boolean(get_LeftFacing());//left facing
                 _loc10_ = §_-C2§;
                 _loc11_ = §_-6n§;
                 _loc12_ = §_-Ki§;
-                //left input thing?
-                _loc13_ = (playerInput.input & uint(4)) != 0 || !!_loc9_ && (playerInput.input & uint(8)) == 0;
-                _loc14_ = !directionLockedInPower && _loc4_ && _loc13_ != _loc8_;
+                //left mInput thing?
+                _loc13_ = (mPlayerInput.mInput & uint(4)) != 0 || !!_loc9_ && (mPlayerInput.mInput & uint(8)) == 0;
+                _loc14_ = !mDirectionLockedInPower && _loc4_ && _loc13_ != _loc8_;
                 if(_loc14_)
                 {
                     _loc12_ = _loc11_;
@@ -8831,9 +8782,9 @@ package
                     _loc10_ = param1;
                 }
                 //in dash
-                _loc15_ = inDash;
+                _loc15_ = mInDash;
                 _loc16_ = _loc9_;
-                //if holding diagonally down, backdash input window is 10 frames instead of 5 frames
+                //if holding diagonally down, backdash mInput window is 10 frames instead of 5 frames
                 //but maybe because of > it's 9 and 4?
                 //i think it's 9 and 4
                 _loc17_ = !!_loc4_ && _loc5_ ? 160 : uint(80);
@@ -8841,9 +8792,9 @@ package
                 {
                     _loc17_ = 160;
                 }
-                if(uint(timeLandedHit + _loc17_) > param1 || uint(timeMissedHit + _loc17_) > param1)
+                if(uint(mTimeLandedHit + _loc17_) > param1 || uint(mTimeMissedHit + _loc17_) > param1)
                 {
-                    _loc16_ = §_-EI§;//facing direction while hit?
+                    _loc16_ = §_-EI§;//facing mDirection while hit?
                 }
                 //not in dash and holding side and ?? > 0 and something about 12f gaps
                 else if(!_loc15_ && _loc4_ && _loc12_ > 0 && uint(_loc11_ + 192) >= _loc10_ && uint(_loc12_ + 192) >= _loc11_ && uint(_loc10_ + 192) >= param1)
@@ -8858,7 +8809,7 @@ package
                         _loc16_ = _loc13_;
                     }
                 }
-                else if(!directionLockedInPower && !_loc15_ && uint(_loc10_ + _loc17_) > param1)
+                else if(!mDirectionLockedInPower && !_loc15_ && uint(_loc10_ + _loc17_) > param1)
                 {
                     _loc16_ = !_loc13_;
                 }
@@ -8873,7 +8824,7 @@ package
                 //this is probably "should backdash"
                 _loc19_ = _loc16_ != _loc13_;
                 //cannot backdash into a backdash if dash started less than 39 frames ago or if we're currently dashing
-                if(!!_loc19_ && dashType == uint(3) && (_loc15_ || uint(uint(timeDashed + 320) + 320) > param1))
+                if(!!_loc19_ && mDashType == uint(3) && (_loc15_ || uint(uint(mTimeDashed + 320) + 320) > param1))
                 //              or 7
                 {
                     return false;
@@ -8887,26 +8838,26 @@ package
                 //if true, that means we're doing the force forward dash thing
                 if(_loc18_)
                 {
-                    dashType = uint(6);
+                    mDashType = uint(6);
                 }
                 //in modern versions there's also:
                 /*
                 if(loc19 && loc15 && testfeaturecheck?)
                 {
-                    dashType = uint(7);
+                    mDashType = uint(7);
                 }
                 */
                 //should backdash
                 else if(_loc19_)
                 {
                     //backdash
-                    dashType = uint(3);
+                    mDashType = uint(3);
                 }
                 //in modern versions, can also be 7
-                else if(!!_loc15_ && dashType == uint(3))
+                else if(!!_loc15_ && mDashType == uint(3))
                 {
                     //dash dancing forward dash
-                    dashType = uint(5);
+                    mDashType = uint(5);
                 }
                 else if(_loc15_)
                 {
@@ -8916,32 +8867,32 @@ package
                     }
                     §_-F1T§ = false;
                     //dash into dash?
-                    dashType = uint(4);
+                    mDashType = uint(4);
                 }
                 //floor cancel
                 else if(_loc3_)
                 {
                     //floor cancel dash
-                    dashType = uint(2);
+                    mDashType = uint(2);
                 }
                 else
                 {
-                    dashType = uint(1);//normal forward dash
+                    mDashType = uint(1);//normal forward dash
                 }
                 set_Left(_loc16_);
                 set_LeftFacing(_loc16_);
-                timeDashStarted = param1;//dash time
-                inDashStartup = true;//dash startup
-                inDash = false;//not in dash
-                directionLockedInPower = true;
+                mTimeDashStarted = param1;//dash time
+                mInDashStartup = true;//dash startup
+                mInDash = false;//not in dash
+                mDirectionLockedInPower = true;
                 §_-p3O§();
-                timeDodgeRecoverEnd = 0;
+                mTimeDodgeRecoverEnd = 0;
                 §_-N3U§.§_-s2e§ = §_-N3U§.§_-s2e§ + 1;
-                _loc20_ = game;
+                _loc20_ = mGame;
                 if((_loc20_.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0 && _loc20_.§_-j2p§ != null && _loc20_.§_-31T§ == uint(1))
                 {
                     _loc21_ = null;
-                    _loc22_ = dashType;
+                    _loc22_ = mDashType;
                     switch(int(_loc22_))
                     {
                         case 1:
@@ -8956,14 +8907,14 @@ package
                     }
                     if(_loc21_ != null)
                     {
-                        game.§_-j2p§.§_-mm§(param1,this,_loc21_);
+                        mGame.§_-j2p§.§_-mm§(param1,this,_loc21_);
                     }
                 }
-                _loc23_ = game;
+                _loc23_ = mGame;
                 _loc22_ = uint(16777216);
                 if((_loc23_.§_-p2a§ & _loc22_) != 0 || (_loc23_.§_-p2a§ & uint(32)) != 0 && (_loc23_.§_-pM§ & _loc22_) != 0)
                 {
-                    game.§_-1F§.lessonManager.§_-g1C§(param1,entityId,dashType);
+                    mGame.§_-1F§.lessonManager.§_-g1C§(param1,mEntityId,mDashType);
                 }
                 return true;
             }
@@ -8983,8 +8934,8 @@ package
                 _loc1_.§_-X1a§ = "SFX_KO.swf";
                 _loc1_.§_-P2X§ = "a_OffScreenBubble";
                 _loc1_.§_-z2w§ = "Ready";
-                §_-d3i§ = new §_-c4y§(game,_loc1_,false,false,false);
-                game.worldUILayer3D.§_-D3s§(§_-d3i§.mTheDO3D);
+                §_-d3i§ = new §_-c4y§(mGame,_loc1_,false,false,false);
+                mGame.worldUILayer3D.§_-D3s§(§_-d3i§.mTheDO3D);
             }
             §_-d3i§.mTheDO3D.§_-21f§ = false;
         }
@@ -9002,36 +8953,32 @@ package
             Entity.§_-B5a§.y = Entity.§_-q0§.y;
             Entity.§_-uq§.x = Entity.§_-q0§.x;
             Entity.§_-uq§.y = Entity.§_-q0§.y;
-            var _loc9_:CollisionLine = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-B5a§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
-            var _loc10_:CollisionLine = game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-uq§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+            var _loc9_:CollisionLine = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-B5a§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+            var _loc10_:CollisionLine = mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),get_PhysPosY() - 120,Entity.§_-uq§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
             if(_loc10_ != null && Entity.§_-uq§.length < Entity.§_-B5a§.length)
             {
                 Entity.§_-B5a§.x = Entity.§_-uq§.x;
                 Entity.§_-B5a§.y = Entity.§_-uq§.y;
                 _loc9_ = _loc10_;
             }
-            _loc11_ = this;
-            _loc11_.set_PhysPosX(Number(Number(_loc11_.get_PhysPosX()) + Entity.§_-B5a§.x));
-            _loc11_ = this;
-            _loc11_.set_PhysPosY(Number(Number(_loc11_.get_PhysPosY()) + Entity.§_-B5a§.y));
+            set_PhysPosX(Number(Number(_loc11_.get_PhysPosX()) + Entity.§_-B5a§.x));
+            set_PhysPosY(Number(Number(_loc11_.get_PhysPosY()) + Entity.§_-B5a§.y));
             if(_loc9_ != null)
             {
                 Entity.§_-B5a§.normalize(1.01);
-                _loc11_ = this;
-                _loc11_.set_PhysPosX(_loc11_.get_PhysPosX() - Entity.§_-B5a§.x);
-                _loc11_ = this;
-                _loc11_.set_PhysPosY(_loc11_.get_PhysPosY() - Entity.§_-B5a§.y);
+                set_PhysPosX(_loc11_.get_PhysPosX() - Entity.§_-B5a§.x);
+                set_PhysPosY(_loc11_.get_PhysPosY() - Entity.§_-B5a§.y);
             }
             Entity.§_-X1F§.x = 0;
             Entity.§_-X1F§.y = -120;
-            if(game.§_-J2b§.RayCast(team,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-X1F§,Entity.zzOutHitLoc2,null,null,null,uint(1),0) != null)
+            if(mGame.mCollisionManager.Raycast(mTeam,Number(get_PhysPosX()),Number(get_PhysPosY()),Entity.§_-X1F§,Entity.zzOutHitLoc2,null,null,null,uint(1),0) != null)
             {
                 Entity.§_-B5a§.x = 0;
                 Entity.§_-B5a§.y = Entity.§_-q0§.y;
                 Entity.§_-uq§.x = 0;
                 Entity.§_-uq§.y = Entity.§_-q0§.y;
-                _loc9_ = game.§_-J2b§.RayCast(team,_loc5_,_loc6_,Entity.§_-B5a§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
-                _loc10_ = game.§_-J2b§.RayCast(team,_loc5_,_loc6_ - 120,Entity.§_-uq§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+                _loc9_ = mGame.mCollisionManager.Raycast(mTeam,_loc5_,_loc6_,Entity.§_-B5a§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
+                _loc10_ = mGame.mCollisionManager.Raycast(mTeam,_loc5_,_loc6_ - 120,Entity.§_-uq§,Entity.zzOutHitLoc2,null,null,null,uint(1),0);
                 if(_loc10_ != null && Entity.§_-uq§.length < Entity.§_-B5a§.length)
                 {
                     Entity.§_-B5a§.y = Entity.§_-uq§.y;
@@ -9041,8 +8988,7 @@ package
                 set_PhysPosY(Number(_loc6_ + Entity.§_-B5a§.y));
                 if(_loc9_ != null)
                 {
-                    _loc11_ = this;
-                    _loc11_.set_PhysPosY(Number(Number(_loc11_.get_PhysPosY()) + (Entity.§_-q0§.y > 0 ? -1.01 : 1.01)));
+                    set_PhysPosY(Number(Number(_loc11_.get_PhysPosY()) + (Entity.§_-q0§.y > 0 ? -1.01 : 1.01)));
                 }
             }
             if(param4)
@@ -9073,7 +9019,7 @@ package
             {
                 _loc2_ = §_-25t§ != null ? int(§_-25t§.length) : 0;
                 _loc3_ = _loc1_.§_-UK§ != null ? int(_loc1_.§_-UK§.length) : 0;
-                if(§_-62g§ == _loc1_.§_-F2V§ || _loc1_.§_-V6§ == §_-h3O§ || _loc2_ > 0 && _loc3_ > 0 && uint(§_-25t§[0]) == uint(_loc1_.§_-UK§[0]))
+                if(§_-62g§ == _loc1_.mPowerType || _loc1_.§_-V6§ == §_-h3O§ || _loc2_ > 0 && _loc3_ > 0 && uint(§_-25t§[0]) == uint(_loc1_.§_-UK§[0]))
                 {
                     if(§_-h3O§ != 0 && _loc1_.§_-V6§ != 0)
                     {
@@ -9127,7 +9073,7 @@ package
         
         public function §_-21V§(param1:uint) : void
         {
-            if(lastHitEntityId == 0)
+            if(mLastHitEntityId == 0)
             {
                 return;
             }
@@ -9135,12 +9081,12 @@ package
             {
                 §_-d3q§ = 0;
             }
-            //                              on wall or ground        not stunned
-            if(§_-d3q§ == 0 && (currentCollision != null || wallDirection != 0) && !get_Stunned())
+            //                              on wall or ground        not mStunned
+            if(§_-d3q§ == 0 && (mCurrentCollision != null || mWallDirection != 0) && !get_Stunned())
             {
-                lastHitEntityId = 0;
-                lastHitPowerId = 0;
-                lastHitPowerFlags = 0;
+                mLastHitEntityId = 0;
+                mLastHitPowerId = 0;
+                mLastHitPowerFlags = 0;
                 §_-22a§ = 0;
                 §_-c1T§ = 0;
                 §_-UR§(§_-r3y§);
@@ -9158,7 +9104,7 @@ package
             {
                 return;
             }
-            if(game.§_-q4Y§ != 0)
+            if(mGame.§_-q4Y§ != 0)
             {
                 return;
             }
@@ -9167,26 +9113,26 @@ package
                 §_-B3I§ = 0;
                 return;
             }
-            if(game.rulesManager.§_-83s§(param1,this))
+            if(mGame.mRulesManager.§_-83s§(param1,this))
             {
                 return;
             }
             if(!§_-jC§.§_-Z4Y§ && §_-jC§.§_-94v§ && !§_-jC§.§_-2H§)
             {
-                _loc2_ = lastHitEntityId != 0 ? game.§_-GY§(lastHitEntityId) : null;
+                _loc2_ = mLastHitEntityId != 0 ? mGame.§_-GY§(mLastHitEntityId) : null;
                 if(_loc2_ != null && _loc2_ != this)
                 {
-                    game.§_-W45§.§_-1x§(_loc2_,param1,this);
+                    mGame.§_-W45§.§_-1x§(_loc2_,param1,this);
                 }
                 else
                 {
-                    game.§_-W45§.§_-K49§(this,param1);
+                    mGame.§_-W45§.§_-K49§(this,param1);
                 }
             }
             var _loc3_:Boolean = §_-i1e§;
             if(_loc3_)
             {
-                §_-e1y§(Number(get_PhysPosX()),game.level.§_-X2t§.top - game.level.levelType.§_-31d§);
+                §_-e1y§(Number(get_PhysPosX()),mGame.mLevel.§_-X2t§.top - mGame.mLevel.mLevelType.§_-31d§);
             }
             var _loc4_:uint = §_-B3I§;
             if(get_Stunned())
@@ -9194,19 +9140,19 @@ package
                 _loc4_ |= uint(16);
             }
             §_-e0§();
-            state = uint(3);
-            if((game.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0)
+            mState = uint(3);
+            if((mGame.§_-p2a§ & (uint(4) | uint(2) | uint(4194304))) != 0)
             {
-                if(game.§_-j2p§ != null)
+                if(mGame.§_-j2p§ != null)
                 {
-                    game.§_-j2p§.§_-v2J§(param1,entityId,lastHitEntityId,_loc4_);
+                    mGame.§_-j2p§.§_-v2J§(param1,mEntityId,mLastHitEntityId,_loc4_);
                 }
             }
-            §_-j2h§(param1,lastHitEntityId,_loc3_);
+            §_-j2h§(param1,mLastHitEntityId,_loc3_);
             §_-P4L§.§_-S4v§.§_-C4C§();
             §_-c1U§ = §_-c1U§ - 1;
             var _loc5_:Boolean = false;
-            var _loc6_:§_-F3e§ = game;
+            var _loc6_:§_-F3e§ = mGame;
             var _loc8_:uint = uint(32768);
             if(!((_loc6_.§_-p2a§ & _loc8_) != 0 || (_loc6_.§_-p2a§ & uint(32)) != 0 && (_loc6_.§_-pM§ & _loc8_) != 0))
             {
@@ -9240,20 +9186,20 @@ package
             }
             if(_loc7_)
             {
-                _loc5_ = Boolean(game.§_-w3z§.§_-v1r§(this,param1));
+                _loc5_ = Boolean(mGame.§_-w3z§.§_-v1r§(this,param1));
             }
             else
             {
-                _loc10_ = game;
+                _loc10_ = mGame;
                 _loc9_ = uint(16777216);
                 if((_loc10_.§_-p2a§ & _loc9_) != 0 || (_loc10_.§_-p2a§ & uint(32)) != 0 && (_loc10_.§_-pM§ & _loc9_) != 0)
                 {
-                    _loc5_ = Boolean(game.§_-1F§.§_-83s§(this));
+                    _loc5_ = Boolean(mGame.§_-1F§.§_-83s§(this));
                 }
             }
             if(!_loc5_)
             {
-                _loc11_ = state != uint(7) && (§_-c1U§ > 0 || game.§_-T1o§.§_-O2Y§ == 0) && !game.rulesManager.§_-I4d§;
+                _loc11_ = mState != uint(7) && (§_-c1U§ > 0 || mGame.§_-T1o§.§_-O2Y§ == 0) && !mGame.mRulesManager.§_-I4d§;
                 Respawn(param1,_loc11_);
             }
         }
@@ -9261,7 +9207,7 @@ package
         public function §_-DT§() : void
         {
             var _loc2_:uint = 0;
-            var _loc1_:uint = int(game.§_-l14§.length);
+            var _loc1_:uint = int(mGame.§_-l14§.length);
             if(§_-14i§ > _loc1_)
             {
                 _loc2_ = uint(§_-14i§ - _loc1_);
@@ -9271,7 +9217,7 @@ package
         
         public function §_-v2a§(param1:uint) : void
         {
-            if(!!§_-F1T§ && (!get_Running() || Boolean(get_Airborne()) || wallDirection != 0 || §_-p3I§.§_-y44§ != null))
+            if(!!§_-F1T§ && (!get_Running() || Boolean(get_Airborne()) || mWallDirection != 0 || §_-p3I§.§_-y44§ != null))
             {
                 §_-b2X§ = param1;
                 §_-F1T§ = false;
@@ -9287,21 +9233,21 @@ package
         public function §_-f2K§() : Boolean
         {
             //dash startup
-            if(inDashStartup)
+            if(mInDashStartup)
             {
                 return false;
             }
             //dashing
-            if(inDash)
+            if(mInDash)
             {
                 //no longer dashing
-                inDash = false;
+                mInDash = false;
                 //no attacking
                 if(§_-p3I§.§_-y44§ == null)
                 {
                     //set IsLeft to LeftFacing
                     set_Left(Boolean(get_LeftFacing()));
-                    directionLockedInPower = false;
+                    mDirectionLockedInPower = false;
                 }
             }
             return true;
@@ -9309,7 +9255,7 @@ package
         
         public function §_-5Q§() : Boolean
         {
-            return state == uint(0);
+            return mState == uint(0);
         }
         
         //i think this checks if we're allowed to chain dodge
@@ -9319,7 +9265,7 @@ package
             //if our dodge ended more than 3(?) frames ago (inclusive), we can't
             
             //not dodging and (has dodge or dodge_end+2f < param1)
-            if(!get_Dodging() && !(get_DodgeLocked() && uint(uint(timeDodgeStarted + dodgeDuration) + Entity.§_-x1t§) >= param1))
+            if(!get_Dodging() && !(get_DodgeLocked() && uint(uint(mTimeDodgeStarted + mDodgeDuration) + Entity.§_-x1t§) >= param1))
             {
                 return false;
             }
@@ -9346,21 +9292,21 @@ package
         
         public function §_-r4s§(param1:uint) : Boolean
         {
-            //not dashing and not in dash startup and not stunned and inputted dash within the last 35 frames
-            if(!get_Stunned() && !inDashStartup && !inDash)
+            //not dashing and not in dash startup and not mStunned and mInputted dash within the last 35 frames
+            if(!get_Stunned() && !mInDashStartup && !mInDash)
             {
-                return param1 >= uint(timeDashStarted + 560);
+                return param1 >= uint(mTimeDashStarted + 560);
             }
             return false;
         }
         
         public function §_-1m§(param1:Entity, param2:uint) : Boolean
         {
-            if(param1.team == team)
+            if(param1.mTeam == mTeam)
             {
                 return false;
             }
-            if(state != uint(0) && state != uint(5))
+            if(mState != uint(0) && mState != uint(5))
             {
                 return false;
             }
@@ -9373,12 +9319,12 @@ package
         {
             var _loc3_:Boolean = false;
             var _loc4_:* = null as RulesManager;
-            if(game.§_-T1o§.scoringType == ScoringType.SUPERBRAWL)
+            if(mGame.§_-T1o§.scoringType == ScoringType.SUPERBRAWL)
             {
-                _loc4_ = game.rulesManager;
-                if((_loc4_.§_-K2W§ & int(1 << entityId)) != 0)
+                _loc4_ = mGame.mRulesManager;
+                if((_loc4_.§_-K2W§ & int(1 << mEntityId)) != 0)
                 {
-                    _loc3_ = (_loc4_.§_-P18§ & int(1 << entityId)) != 0;
+                    _loc3_ = (_loc4_.§_-P18§ & int(1 << mEntityId)) != 0;
                 }
                 else
                 {
@@ -9393,7 +9339,7 @@ package
             {
                 return false;
             }
-            if(state == uint(0))
+            if(mState == uint(0))
             {
                 return !Invincible(param1,param2);
             }
@@ -9402,9 +9348,9 @@ package
         
         public function §_-D3r§() : Boolean
         {
-            if(state != uint(0))
+            if(mState != uint(0))
             {
-                return state == uint(5);
+                return mState == uint(5);
             }
             return true;
         }
@@ -9420,7 +9366,7 @@ package
             {
                 set_VelocityX(0);
                 set_VelocityY(0);
-                state = uint(0);
+                mState = uint(0);
                 return;
             }
             //do not bounce on no slide ceiling. and ceiling is no slide.
@@ -9433,11 +9379,11 @@ package
             {
                 _loc3_ = 1;
             }
-            //gamemode collision
-            else if((param2.type & GameUtils.gamemodeCollision) != 0)
+            //mGamemode collision
+            else if((param2.type & GameUtils.mGamemodeCollision) != 0)
             {
                 //for ring this is 1.4
-                _loc3_ = Number(game.rulesManager.§_-m1h§(_loc3_,§_-F4O§ != 0));
+                _loc3_ = Number(mGame.mRulesManager.§_-m1h§(_loc3_,§_-F4O§ != 0));
             }
             //bouncy
             else if((param2.type & GameUtils.bouncyCollision) != 0)
@@ -9467,7 +9413,7 @@ package
                 _loc9_ = !!_loc7_ ? §_-916§ : Number(get_VelocityY());
                 Entity.u.y = _loc9_;
                 Entity.v.normalize(Entity.u.length);
-                //apply acceleration and shit
+                //apply mAcceleration and shit
                 set_VelocityX(Entity.v.x);
                 set_VelocityY(Entity.v.y);
             }
@@ -9476,9 +9422,8 @@ package
                 //beyond 25 speed
                 if(Entity.v.length >= _loc4_)
                 {
-                    _loc10_ = this;
                     //bounce at x axis
-                    _loc10_.set_VelocityX(_loc10_.get_VelocityX() * -_loc3_);
+                    set_VelocityX(_loc10_.get_VelocityX() * -_loc3_);
                 }
                 else
                 {
@@ -9490,9 +9435,8 @@ package
                 //speed is beyond 25
                 if(Entity.v.length >= _loc5_)
                 {
-                    _loc10_ = this;
                     //bounce at y axis
-                    _loc10_.set_VelocityY(_loc10_.get_VelocityY() * -_loc3_);
+                    set_VelocityY(_loc10_.get_VelocityY() * -_loc3_);
                 }
                 else
                 {
@@ -9580,15 +9524,15 @@ package
             var _loc2_:int = 0;
             var _loc3_:int = 0;
             var _loc4_:* = null as Entity;
-            if((game.§_-T1o§.§_-D4a§ & uint(1)) != 0)
+            if((mGame.§_-T1o§.§_-D4a§ & uint(1)) != 0)
             {
                 _loc1_ = 0;
-                _loc2_ = int(game.§_-l14§.length);
+                _loc2_ = int(mGame.§_-l14§.length);
                 while(_loc1_ < _loc2_)
                 {
                     _loc3_ = _loc1_++;
-                    _loc4_ = game.§_-l14§[_loc3_];
-                    if(_loc4_ != this && _loc4_.team == team && (_loc4_.§_-E44§ & Entity.§_-51s§) != 0 && (_loc4_.§_-E44§ & Entity.BOT) == 0)
+                    _loc4_ = mGame.§_-l14§[_loc3_];
+                    if(_loc4_ != this && _loc4_.mTeam == mTeam && (_loc4_.§_-E44§ & Entity.§_-51s§) != 0 && (_loc4_.§_-E44§ & Entity.BOT) == 0)
                     {
                         if(§_-A3N§.§_-i1a§ == uint(4))
                         {
@@ -9634,7 +9578,7 @@ package
             var _loc8_:* = null as GfxType;
             §_-xC§ = [];
             §_-c3L§ = [];
-            var _loc1_:uint = uint(game.§_-T1o§.§_-Y1k§());
+            var _loc1_:uint = uint(mGame.§_-T1o§.§_-Y1k§());
             var _loc2_:int = 0;
             var _loc3_:int = int(_loc1_);
             while(_loc2_ < _loc3_)
@@ -9683,21 +9627,21 @@ package
         
         public function §_-05H§(param1:uint) : void
         {
-            //                  not in dash startup, not dashing, and dash input was atleast 35 frames ago
-            if(!(!get_Stunned() && !inDashStartup && !inDash && param1 >= uint(timeDashStarted + 560)))
+            //                  not in dash startup, not dashing, and dash mInput was atleast 35 frames ago
+            if(!(!get_Stunned() && !mInDashStartup && !mInDash && param1 >= uint(mTimeDashStarted + 560)))
             {
                 return;
             }
             //dash startup
-            inDashStartup = true;
+            mInDashStartup = true;
             //will dash in 2 frames
-            timeDashStarted = uint(param1 + 128);
-            //select dodge direction?
-            dodgeDirection = playerInput.input & uint(15);
-            //no input. use facing direction.
-            if(dodgeDirection == 0)
+            mTimeDashStarted = uint(param1 + 128);
+            //select dodge mDirection?
+            mDodgeDirection = mPlayerInput.mInput & uint(15);
+            //no mInput. use facing mDirection.
+            if(mDodgeDirection == 0)
             {
-                dodgeDirection = Boolean(get_LeftFacing()) ? uint(4) : uint(8);
+                mDodgeDirection = Boolean(get_LeftFacing()) ? uint(4) : uint(8);
             }
         }
         
@@ -9718,17 +9662,17 @@ package
             var _loc18_:Boolean = false;
             var _loc19_:* = null as §_-F3e§;
             var _loc4_:uint = 0;
-            var _loc5_:§_-730§ = game.§_-I4§.§_-G2Q§(param3,param2);
+            var _loc5_:§_-730§ = mGame.§_-I4§.§_-G2Q§(param3,param2);
             if(_loc5_ != null)
             {
                 _loc6_ = _loc5_.§_-ra§;
-                _loc7_ = _loc6_ != 0 ? game.§_-GY§(_loc6_) : null;
-                _loc8_ = game.§_-T1o§.scoringType;
+                _loc7_ = _loc6_ != 0 ? mGame.§_-GY§(_loc6_) : null;
+                _loc8_ = mGame.§_-T1o§.scoringType;
                 if(!_loc8_.§_-5B§ && !_loc8_.§_-e3q§ && !_loc8_.§_-h15§)
                 {
                     if(_loc7_ != null && _loc7_ != this)
                     {
-                        if(_loc7_.team == team)//same team
+                        if(_loc7_.mTeam == mTeam)//same mTeam
                         {
                             §_-P4L§.§_-S4v§.§_-Tm§(_loc7_,"Minus2");
                         }
@@ -9747,12 +9691,12 @@ package
                 {
                     §_-P4L§.§_-S4v§.§_-Tm§(this,"Minus1");
                 }
-                game.§_-I4§.§_-O2o§(param1,_loc5_);
-                game.§_-64E§.§_-j2h§(_loc5_);
-                if(!§_-MQ§ && (§_-E44§ & Entity.§_-I3S§) == 0 && game.§_-d4a§ == 0)
+                mGame.§_-I4§.§_-O2o§(param1,_loc5_);
+                mGame.§_-64E§.§_-j2h§(_loc5_);
+                if(!§_-MQ§ && (§_-E44§ & Entity.§_-I3S§) == 0 && mGame.§_-d4a§ == 0)
                 {
-                    _loc10_ = game.§_-1F§;
-                    _loc12_ = _loc10_.game;
+                    _loc10_ = mGame.§_-1F§;
+                    _loc12_ = _loc10_.mGame;
                     _loc13_ = uint(16777216);
                     if((_loc12_.§_-p2a§ & _loc13_) != 0 || (_loc12_.§_-p2a§ & uint(32)) != 0 && (_loc12_.§_-pM§ & _loc13_) != 0)
                     {
@@ -9768,7 +9712,7 @@ package
                 {
                     _loc9_ = false;
                 }
-                _loc12_ = game;
+                _loc12_ = mGame;
                 _loc13_ = uint(32768);
                 if(!((_loc12_.§_-p2a§ & _loc13_) != 0 || (_loc12_.§_-p2a§ & uint(32)) != 0 && (_loc12_.§_-pM§ & _loc13_) != 0))
                 {
@@ -9802,7 +9746,7 @@ package
                 }
                 if(_loc15_)
                 {
-                    _loc14_ = this != game.§_-725§;
+                    _loc14_ = this != mGame.§_-725§;
                 }
                 else
                 {
@@ -9820,11 +9764,11 @@ package
                 {
                     _loc9_ = false;
                 }
-                _loc19_ = game;
+                _loc19_ = mGame;
                 _loc16_ = uint(16777216);
                 if((_loc19_.§_-p2a§ & _loc16_) != 0 || (_loc19_.§_-p2a§ & uint(32)) != 0 && (_loc19_.§_-pM§ & _loc16_) != 0)
                 {
-                    _loc18_ = this != game.§_-725§;
+                    _loc18_ = this != mGame.§_-725§;
                 }
                 else
                 {
@@ -9832,7 +9776,7 @@ package
                 }
                 if(_loc18_)
                 {
-                    _loc17_ = game.§_-1F§.§_-b3h§.§_-l2d§ != null;
+                    _loc17_ = mGame.§_-1F§.§_-b3h§.§_-l2d§ != null;
                 }
                 else
                 {
@@ -9842,7 +9786,7 @@ package
                 {
                     _loc9_ = false;
                 }
-                if(game.§_-T1o§.§_-E9§())
+                if(mGame.§_-T1o§.§_-E9§())
                 {
                     _loc9_ = false;
                 }
@@ -9852,7 +9796,7 @@ package
                     _loc4_ = §_-q2h§.§_-r3y§.§_-a§;
                 }
             }
-            §_-ZN§.PostEvent(lastHitEntityId == 0 ? "UI_InGame_Crowd_Cheer_Play" : "UI_InGame_Crowd_Cheer_Long_Play",_loc4_);
+            §_-ZN§.PostEvent(mLastHitEntityId == 0 ? "UI_InGame_Crowd_Cheer_Play" : "UI_InGame_Crowd_Cheer_Long_Play",_loc4_);
         }
         
         public function §_-15I§(param1:uint, param2:CostumeType, param3:Boolean = false) : void
@@ -9974,7 +9918,7 @@ package
         
         public function §_-Z35§(param1:uint, param2:uint) : void
         {
-            if(game.§_-d4a§ == 0)
+            if(mGame.§_-d4a§ == 0)
             {
                 if(param2 == (Boolean(get_LeftFacing()) ? uint(2) : uint(1)))
                 {
@@ -9989,9 +9933,9 @@ package
         
         public function §_-85B§(param1:uint) : void
         {
-            if(game.§_-d4a§ == 0)
+            if(mGame.§_-d4a§ == 0)
             {
-                if(param1 == timeLandAfterJump)
+                if(param1 == mTimeLandAfterJump)
                 {
                     §_-p3I§.§_-v4U§(PowerType.LANDING_RECOVER_CLOUD,this,null);
                 }
@@ -10018,11 +9962,11 @@ package
                 }
             }
             //last jump                             and exhausted            and no dodge             dodged
-            if(_loc5_ == PowerType.JUMP_CLOUD_POWER_3 && §_-p3I§.recoveryExhausted && Boolean(get_DodgeLocked()) && timeDodgeStarted != 0)
+            if(_loc5_ == PowerType.JUMP_CLOUD_POWER_3 && §_-p3I§.mRecoveryExhausted && Boolean(get_DodgeLocked()) && mTimeDodgeStarted != 0)
             {
                 §_-p3I§.§_-P2Q§(PowerType.SWEATING_OUT_SFX);//SWEATING_OUT_SFX
             }
-            var _loc6_:uint = wallSlipCount;//wall slip thing?
+            var _loc6_:uint = mWallSlipCount;//wall slip thing?
             if(!param4)
             {
                 _loc6_++;
@@ -10097,11 +10041,11 @@ package
             var _loc7_:uint = !!param2 ? uint(3) : uint(2);//air?3:2
             var _loc8_:Number = 1;
             //air               air actions used >= 2
-            if(!!param2 && uint(get_CurrentAerialJumpCount()) >= uint(game.rulesManager.maxAerialJumpCount()))
+            if(!!param2 && uint(get_CurrentAerialJumpCount()) >= uint(mGame.mRulesManager.maxAerialJumpCount()))
             {
                 _loc8_ = 0.5;//but this is never used? lmao
             }
-            if(game.§_-d4a§ == 0)
+            if(mGame.§_-d4a§ == 0)
             {
                 §_-65P§(param1,§_-p3I§.§_-s3Q§(_loc7_));//do eqiup sound thing
                 §_-p3I§.§_-v4U§(_loc5_,this,null);

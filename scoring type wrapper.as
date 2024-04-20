@@ -245,6 +245,7 @@ package
             §_-k4U§ = null;
         }
         
+        //read scoring type data
         public function §_-q4W§(param1:§_-d2A§) : void
         {
             §_-D4a§ = uint(param1.§_-13O§());
@@ -425,6 +426,7 @@ package
             return ItemType.§_-54q§(§_-x4F§.§_-24N§);
         }
         
+        //load data from replay
         public function §_-324§(param1:§_-N2e§) : void
         {
             if(param1 != null)

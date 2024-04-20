@@ -1864,9 +1864,13 @@ package
                             }
                             else
                             {
+                                //abs speed x
                                 _loc18_ = §_-z2B§ > 0 ? §_-z2B§ : -§_-z2B§;
+                                //abs speed y
                                 _loc19_ = §_-54T§ > 0 ? §_-54T§ : -§_-54T§;
                                 _loc20_ = _loc19_ > _loc18_ ? Number(uint(64)) : Number(uint(32));
+                                //not stunned and etc
+                                //maybe this disables the thing?
                                 if(!_loc14_.§_-B4B§() && uint(param1 - §_-QV§) < _loc20_)
                                 {
                                     §_-c4h§ |= _loc15_;

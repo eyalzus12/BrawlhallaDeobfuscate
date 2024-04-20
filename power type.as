@@ -197,7 +197,7 @@ package
         public static var §_-z2K§:uint = 4026531840;
         
         public static var §_-i4e§:Array;
-        
+        //original power dict
         public static var §_-424§:IMap;
         
         public static var §_-q2E§:Vector.<§_-Y3o§>;
@@ -682,7 +682,7 @@ package
         public var §_-S3V§:Vector.<int>;
         
         public var §_-w2f§:uint;
-        
+        //FixedRecoverTime
         public var §_-nt§:uint;
         //min charge time
         public var §_-G21§:uint;
@@ -887,6 +887,7 @@ package
                         §_-tP§.§_-hg§("Max Release does not exist for power named: " + _loc6_.§_-Uc§ + ", needs power: " + _loc6_.§_-N2y§);
                     }
                 }
+                //BGPowerOnFire
                 if(_loc6_.§_-p4Q§ != null)
                 {
                     _loc7_ = 0;
@@ -2762,8 +2763,10 @@ package
             {
                 _loc4_.§_-d1N§ = uint(1);
             }
+            //MeteorGrab or MeteorPound
             if(_loc4_.§_-h14§ == uint(9))
             {
+                //down
                 _loc4_.§_-W1V§ = uint(2);
             }
             if(!!_loc4_.§_-3§ && _loc4_.§_-W2k§ != null && _loc4_.§_-417§ == 0)
@@ -2821,6 +2824,7 @@ package
             }
             if(_loc3_ == "PistolGroundPound")
             {
+                //down
                 _loc4_.§_-W1V§ = uint(2);
             }
             if(_loc3_ == "PistolSmashNeutralComboPunk")
@@ -2854,6 +2858,7 @@ package
             if(_loc3_ == "AxeGroundPound")
             {
                 _loc4_.§_-l2j§ = true;
+                //need to release heavy?
                 _loc4_.§_-W1V§ = 0;
             }
             if(_loc3_ == "AxeGroundPoundCombo")
@@ -3818,6 +3823,7 @@ package
         public static function §_-Y1A§(param1:§_-Y3o§, param2:String) : Boolean
         {
             var _loc3_:StringMap = §_-Y3o§.§_-424§;
+            //origin power of param2
             var _loc4_:§_-Y3o§ = param2 in StringMap.reserved ? _loc3_.getReserved(param2) : _loc3_.h[param2];
             if(_loc4_ == null)
             {
