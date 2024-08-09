@@ -1247,9 +1247,10 @@ package
             var _loc3_:uint = 0;
             var _loc4_:§_-92l§ = param2.§_-p2z§;
             §_-M4U§.§_-98§(true);
+            // active
             if(param2.§_-319§ == uint(1))
             {
-                §_-l3D§.§_-I4§.§_-eJ§(param1,§_-M4U§,param2.§_-MF§,param2.§_-S1k§.§_-04R§);
+                §_-l3D§.§_-I4§.§_-eJ§(param1,§_-M4U§,param2.§_-MF§,param2.§_-S1k§.§_-04R§);//this function is empty
                 _loc5_ = §_-M4U§;
                 if(param2.§_-MF§ != §_-M4U§.§_-j3U§)
                 {
@@ -2313,7 +2314,7 @@ package
                         //only allow picking items from your sidekick
                         if(!(!!_loc18_ && !§_-M4U§.§_-Z2x§(_loc14_)))
                         {
-                            //                                  light and recent pickup
+                            // not active or not light pickup
                             if(!(_loc14_.§_-319§ == uint(1) && param3))
                             {
                                 //not weapon, or is spawnable, or weapon1, or weapon2
@@ -3169,6 +3170,7 @@ package
                     §_-M4U§.§_-I1y§.§_-43X§ = §_-y1j§.§_-04R§;
                 }
             }
+            // OnActivatePower
             var _loc5_:§_-Y3o§ = §_-Y3o§.§_-YP§(§_-y1j§.§_-S1k§.§_-N3p§);
             if(_loc5_ == null || _loc5_.§_-t2B§.§_-g2z§ == null)
             {

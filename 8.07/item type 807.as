@@ -381,10 +381,10 @@ package
             ItemType.§_-M4f§ = new Vector.<ItemType>();
             ItemType.§_-p2F§ = new Vector.<ItemType>();
             ItemType.§_-vy§ = [];
-            var _loc2_:* = param1.§_-X24§();
+            var _loc2_:* = param1.§_-X24§();//§_-l2X§
             while(Boolean(_loc2_.hasNext()))
             {
-                _loc3_ = _loc2_.next();
+                _loc3_ = _loc2_.next();//§_-d3f§
                 ItemType.§_-c1Q§(_loc3_,false);
             }
             var _loc4_:StringMap = ItemType.§_-E5i§;
@@ -495,6 +495,7 @@ package
             }
         }
         
+        //                              §_-d3f§
         public static function §_-c1Q§(param1:§_-H3z§, param2:Boolean) : void
         {
             var _loc6_:* = null as §_-x2n§;
@@ -514,10 +515,10 @@ package
             _loc4_.§_-M1T§ = _loc3_;
             _loc4_.§_-I2h§ = param1.§_-G49§("Spawnable");
             _loc4_.§_-03F§ = new Vector.<String>(21,true);
-            var _loc5_:* = param1.§_-33f§();
+            var _loc5_:* = param1.§_-33f§();//§_-11V§
             while(Boolean(_loc5_.hasNext()))
             {
-                _loc6_ = _loc5_.next();
+                _loc6_ = _loc5_.next();//§_-n1x§
                 _loc7_ = _loc6_.§_-G10§();
                 _loc8_ = _loc7_;
                 if(_loc8_ == "AirFriction")

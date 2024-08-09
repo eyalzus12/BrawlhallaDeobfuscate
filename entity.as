@@ -7507,18 +7507,22 @@ package
         
         public function §_-N1a§(param1:Number, param2:Number) : Boolean
         {
+            //left
             if((§_-r1h§ & uint(4)) != 0 && param1 < 0)
             {
                 return true;
             }
+            //right
             if((§_-r1h§ & uint(8)) != 0 && param1 > 0)
             {
                 return true;
             }
+            //up
             if((§_-r1h§ & uint(1)) != 0 && param2 < 0)
             {
                 return true;
             }
+            //down
             if((§_-r1h§ & uint(2)) != 0 && param2 > 0)
             {
                 return true;
@@ -7718,7 +7722,7 @@ package
             return false;
         }
         
-        //                      time         isSig                    item?
+        //                      time         isSig                    item
         //this is probably "has i frames"
         public function §_-P3m§(param1:uint, param2:Boolean = false, param3:Boolean = false, param4:Boolean = false) : Boolean
         {

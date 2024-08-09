@@ -1483,7 +1483,7 @@ package
             var _loc19_:int = int(_loc18_.length);
             var _loc21_:Number = 0;
             var _loc20_:Number = 0;
-            var _loc22_:int = 1;
+            var _loc22_:int = 1; // current frame
             var _loc24_:Number = 0;
             var _loc23_:Number = 0;
             var _loc26_:Number = 0;

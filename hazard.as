@@ -45,8 +45,8 @@ package
             §_-l3D§ = param1;
             §_-J3x§ = param2;
             §_-H1l§ = param3;
-            §_-d4W§ = param4;
-            §_-i4r§ = param5;
+            §_-d4W§ = param4;//offsetX
+            §_-i4r§ = param5;//offsetY
             §_-D4K§ = param6;
             §_-p4Y§ = param7;
             §_-N4o§ = param8;

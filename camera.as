@@ -1444,6 +1444,7 @@ package
             param1.height = param2.height;
         }
         
+        //lerp between two rectangles
         public function §_-311§(param1:Rectangle, param2:Rectangle, param3:Rectangle, param4:Number) : void
         {
             var _loc5_:Number = 1 - param4;

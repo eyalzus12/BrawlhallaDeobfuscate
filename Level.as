@@ -513,7 +513,7 @@ package
                         //center
                         _loc5_ = (_loc16_.startX + _loc16_.§_-a1T§) * 0.5;
                         _loc6_ = (_loc16_.startY + _loc16_.§_-64f§) * 0.5;
-                        //?
+                        //
                         _loc5_ += 5 - _loc5_ % 10;
                         _loc6_ += 5 - _loc6_ % 10;
                         //soft col
@@ -535,6 +535,7 @@ package
                             {
                                 _loc9_.x = Number(param1 + 10);
                                 _loc10_.x = -param1 - 10;
+                                //raycast
                                 §_-l3D§.§_-J2b§.§_-Y4g§(0,_loc5_,_loc6_,_loc9_,_loc11_,_loc16_,null,null,uint(1),0,0,0,_loc4_);
                                 §_-l3D§.§_-J2b§.§_-Y4g§(0,_loc5_,_loc6_,_loc10_,_loc11_,_loc16_,null,null,uint(1),0,0,0,_loc3_);
                                 if(int(int(_loc4_.length) % 2) != 0)

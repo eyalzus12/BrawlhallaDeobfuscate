@@ -271,7 +271,7 @@ package
             var _loc3_:§_-c3k§ = §_-D2f§.§_-oC§();
             var _loc4_:§_-L2m§ = _loc3_.§_-kh§(§_-d4B§);
             var _loc5_:§_-TL§ = _loc4_ != null && §_-p3f§ < _loc4_.§_-N3k§ ? _loc4_.§_-Y3a§(int(Math.floor(§_-p3f§))) : null;
-            var _loc6_:Point = _loc5_ != null ? _loc5_.§_-p1k§ : null;
+            var _loc6_:Point = _loc5_ != null ? _loc5_.§_-p1k§ : null;//OffsetA
             var _loc10_:§_-Ej§ = §_-D2f§;
             var _loc11_:§_-Ej§ = _loc2_;
             var _loc12_:Number = §_-F2V§.§_-74e§ != 0 ? (uint(param1 - §_-D4g§)) / (uint(uint(param1 + §_-F2V§.§_-74e§) - §_-D4g§)) : Number(1);

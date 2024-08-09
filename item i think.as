@@ -176,9 +176,9 @@ package
         public var §_-57§:Number;
         
         public var §_-BQ§:Number;
-        //y
+        //previous y?
         public var §_-o3y§:Number;
-        //x
+        //previous x?
         public var §_-C5K§:Number;
         
         public var §_-a2j§:uint;
@@ -192,7 +192,7 @@ package
         public var §_-c4E§:Number;
         //x
         public var §_-A1U§:Number;
-        
+        //height?
         public var §_-442§:Number;
         
         public var §_-L1u§:Number;
@@ -257,9 +257,9 @@ package
         public var §_-r3P§:Point;
         
         public var §_-43B§:Number;
-        
+        // visual (camera) y position?
         public var §_-626§:Number;
-        
+        // visual (camera) x position?
         public var §_-Y2M§:Number;
         
         public var §_-j1d§:Number;
@@ -361,7 +361,7 @@ package
             {
                 return;
             }
-            var _loc3_:Rectangle = §_-l3D§.§_-f4W§.§_-J3O§;
+            var _loc3_:Rectangle = §_-l3D§.§_-f4W§.§_-J3O§;//camera rect?
             var _loc4_:Boolean = false;
             var _loc5_:uint = 0;
             var _loc6_:Number = 0;
@@ -382,6 +382,7 @@ package
             §_-MM§();
             if(!§_-yL§ && (§_-l3D§.§_-SY§.§_-v26§(§_-p2z§) || !!_loc12_ && !§_-n1U§ && (§_-319§ == uint(2) || §_-319§ == uint(0))))
             {
+                // to the left of camera
                 if(Number(§_-L1u§ + _loc10_) < _loc3_.left)
                 {
                     §_-Y2M§ = _loc3_.left;
@@ -390,6 +391,7 @@ package
                     _loc5_ |= uint(4);
                     _loc4_ = true;
                 }
+                // to the right of camera
                 else if(§_-L1u§ - _loc10_ > _loc3_.right)
                 {
                     §_-Y2M§ = _loc3_.right;
@@ -402,6 +404,7 @@ package
                 {
                     §_-Y2M§ = §_-A1U§;
                 }
+                // above camera
                 if(Number(§_-442§ + _loc11_) < _loc3_.top)
                 {
                     §_-626§ = Number(_loc3_.top + _loc11_);
@@ -410,6 +413,7 @@ package
                     _loc5_ |= uint(1);
                     _loc4_ = true;
                 }
+                // below camera
                 else if(§_-442§ - _loc11_ > _loc3_.bottom)
                 {
                     §_-626§ = Number(_loc3_.bottom + _loc11_);
@@ -418,6 +422,7 @@ package
                     _loc5_ |= uint(2);
                     _loc4_ = true;
                 }
+                // to the left or right
                 else if(_loc4_)
                 {
                     §_-626§ = Number(§_-c4E§ + -30);
@@ -1071,7 +1076,7 @@ package
         {
             var _loc5_:Number = NaN;
             var _loc6_:Number = NaN;
-                                //StickToWalls and  Mx      and (?? or AlwaysArmed)
+                                //StickToWalls and  Mx      and (active or AlwaysArmed)
             var _loc3_:Boolean = !!§_-S1k§.§_-m2m§ && §_-Mx§ && (§_-319§ == uint(1) || §_-S1k§.§_-d3d§);
             var _loc4_:Number = Number(Math.sqrt(Number(§_-z2B§ * §_-z2B§ + §_-54T§ * §_-54T§)));
             //ConditionalStickToWalls has STRICT_ANGLE
@@ -1364,6 +1369,8 @@ package
             }
         }
         
+        // seems to run when hitting an entity?
+        //                      time         user           target
         public function §_-s3j§(param1:uint, param2:§_-Ej§, param3:§_-Ej§, param4:Point, param5:§_-g3N§ = undefined) : void
         {
             var _loc6_:* = null as §_-Ej§;
@@ -1511,6 +1518,7 @@ package
             var _loc4_:Number = §_-S1k§.§_-W11§ * 0.5;
             var _loc5_:Number = §_-C5M§ != null && §_-C5M§.startY < §_-c4E§ ? §_-c4E§ : §_-c4E§ - _loc4_;
             var _loc6_:Point = new Point(§_-A1U§,_loc5_);
+            //on caught power
             param2.§_-p3I§.§_-v4U§(§_-M43§,param3,_loc6_);
         }
         
@@ -1704,11 +1712,12 @@ package
             if(§_-U1d§ != null)
             {
                 §_-U1d§.graphics.clear();
+                //                                              can hit          cant hit
                 §_-U1d§.graphics.beginFill(§_-319§ == uint(1) ? uint(8912896) : uint(8947712),0.5);
                 §_-zp§.§_-Cs§(§_-U1d§,0,§_-S1k§.§_-W11§ * -0.5,§_-S1k§.§_-fY§ * 0.5,§_-S1k§.§_-W11§ * 0.5);
                 §_-U1d§.graphics.endFill();
-                §_-U1d§.x = §_-Y2M§;
-                §_-U1d§.y = §_-626§;
+                §_-U1d§.x = §_-Y2M§;//center?
+                §_-U1d§.y = §_-626§;//
                 _loc1_ = Number(§_-35d§.mTheDO3D.§_-D5w§());
                 §_-U1d§.rotation = _loc1_ * §_-zp§.§_-H2V§;
             }
@@ -1842,6 +1851,7 @@ package
                                     continue;
                                 }
                             }
+                            // check collisions?
                             _loc17_ = Boolean(_loc14_.§_-w4f§(Number(§_-r3P§.x + §_-A1U§),Number(§_-r3P§.y + §_-c4E§),§_-U3g§.x,§_-U3g§.y,§_-43B§));
                             if(!_loc17_ && Boolean(_loc14_.§_-w4f§(§_-C5K§,§_-o3y§ - _loc3_,§_-A1U§ - §_-C5K§,§_-c4E§ - §_-o3y§,_loc4_)))
                             {
@@ -1851,14 +1861,17 @@ package
                             {
                                 §_-c4h§ &= ~_loc15_;
                             }
+                            // has i frames
                             else if(_loc14_.§_-P3m§(param1,false,true))
                             {
+                                // speed vs dodge direction thing
                                 if(_loc14_.§_-N1a§(§_-z2B§,§_-54T§))
                                 {
                                     §_-c4h§ &= ~_loc15_;
                                 }
                                 else
                                 {
+                                    // i think this prevents getting frame trapped from items?
                                     §_-c4h§ |= _loc15_;
                                 }
                             }
@@ -1888,12 +1901,14 @@ package
             {
                 §_-54t§(param1,_loc2_,_loc7_);
             }
+            // active
             else if(§_-319§ == uint(1))
             {
                 _loc21_ = null;
                 //no CannotInitiateItemCollision
                 if(!§_-S1k§.§_-n1R§)
                 {
+                    //                      time   entity X       Y       RangeX? RangeY?
                     §_-l3D§.§_-D3R§.§_-h3c§(param1,_loc2_,§_-L1u§,§_-442§,_loc6_,_loc6_,uint(4),§_-g3N§.§_-y3S§);
                     _loc11_ = 0;
                     _loc12_ = int(§_-g3N§.§_-y3S§.length);

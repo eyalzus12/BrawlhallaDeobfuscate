@@ -914,7 +914,7 @@ package
                         //                                 ImpulseToPoint through soft    thing   DoNotBounceOffNoSlideCeiling
                         §_-B3s§(param1,param6,_loc39_,param7,!!param14 && param2.§_-f4j§,false,param2.§_-A4o§);
                         _loc21_.§_-y44§.§_-D4g§ = param1;
-                        _loc21_.§_-y44§.§_-o3T§(param1);
+                        _loc21_.§_-y44§.§_-o3T§(param1);//this function uses OffsetA
                     }
                 }
             }
