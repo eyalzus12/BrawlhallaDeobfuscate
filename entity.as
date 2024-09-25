@@ -3362,7 +3362,7 @@ package
             §_-bI§ = Number(§_-ze§());
             var _loc2_:Number = Number(§_-K27§() * §_-K27§() + §_-75Y§() * §_-75Y§());
             §_-l25§(param1,_loc2_);
-            //touching collision, not stunned
+            //touching collision, not stunned, not ball
             if(§_-C5M§ != null && !§_-B4B§() && (§_-E44§ & §_-Ej§.§_-w4l§) == 0)
             {
                 if(!§_-p3I§.§_-x1U§ || Number(§_-75Y§()) > 0)
@@ -3399,6 +3399,7 @@ package
             {
                 _loc9_ = §_-ws§ * §_-ws§ > §_-Ej§.§_-E4h§ || §_-916§ * §_-916§ > §_-Ej§.§_-E4h§;
                 _loc10_ = Boolean(§_-zH§()) ? Number(0) : §_-V21§;
+                //ball and 
                 if((§_-E44§ & §_-Ej§.§_-w4l§) != 0 && !§_-w2r§)
                 {
                     _loc10_ = 8.5548;
@@ -3999,6 +4000,7 @@ package
                     }
                 }
             }
+            // stunned or ball
             else if(§_-B4B§() || (§_-E44§ & §_-Ej§.§_-w4l§) != 0)
             {
                 _loc31_ = Number(§_-K27§());

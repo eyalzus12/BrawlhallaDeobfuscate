@@ -419,13 +419,14 @@ package
             if(param2 == "StandardHorizontal")
             {
                 _loc5_ = param3.§_-p3I§;
-                _loc6_ = Number(param3.§_-K27§());
+                _loc6_ = Number(param3.§_-K27§());//velocity X
                 _loc7_ = false;
-                //aerial                                                no options used
+                //aerial                                                no options used        jumped in the last 4 frames?
                 if(param3.§_-go§() && param3.§_-W1q§ != 0 && uint(param3.§_-T4A§()) == 0 && uint(param3.§_-W1q§ + §_-T1c§.§_-41W§) >= param1)
                 {
                     _loc7_ = true;
                 }
+                // run/air run speed. if loc7 is true, always run speed.
                 _loc8_ = Number(param3.§_-n1z§(_loc7_));
                 _loc9_ = _loc8_ * 2;
                 if(_loc9_ < 0)
@@ -437,8 +438,10 @@ package
                     _loc8_ *= -1;
                 }
                 _loc10_ = 0;
+                //velocityX less than dodge speed chosen
                 if(!(_loc8_ < 0 && _loc6_ < _loc8_ || _loc8_ > 0 && _loc6_ > _loc8_))
                 {
+                    //needed to accel
                     _loc10_ = _loc8_ - _loc6_;
                     if(_loc10_ < 0)
                     {

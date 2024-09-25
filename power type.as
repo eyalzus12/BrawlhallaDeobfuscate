@@ -3549,8 +3549,8 @@ package
         //0 - 2147483648
         //1 - 1073741824
         //2 - 536870912
-        //3 - 268435456     dodge ended "recently" (30-32 frames?) (from combat manager)
-        //4 - 134217728
+        //3 - 268435456     target's dodge ended "recently" (30-32 frames?) (from combat manager)
+        //4 - 134217728     first hit since touched collision?
         //5 - 67108864      within 0.4s after cd end?
         //6 - 33554432
         //7 - 16777216      yumiko hammer ssig power hit index has impulse offset x < 0? (from combat manager)

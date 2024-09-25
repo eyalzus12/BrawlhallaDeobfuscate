@@ -3008,12 +3008,12 @@ package
             var _loc5_:* = null as §_-Ej§;
             var _loc6_:int = 0;
             var _loc7_:* = null as Vector.<§_-Ej§>;
-            var _loc2_:§_-Ej§ = §_-l3D§.§_-GY§(§_-b10§);
+            var _loc2_:§_-Ej§ = §_-l3D§.§_-GY§(§_-b10§);//get ball
             if(_loc2_ != null)
             {
                 if(_loc2_.§_-Ko§ == uint(0))
                 {
-                    _loc3_ = _loc2_.§_-U3p§;
+                    _loc3_ = _loc2_.§_-U3p§;//id of last hitter
                     if(_loc3_ != 0 && _loc3_ != §_-I33§)
                     {
                         _loc4_ = §_-l3D§.§_-GY§(§_-I33§);
@@ -3045,14 +3045,18 @@ package
                 {
                     _loc4_ = _loc7_[_loc6_];
                     _loc6_++;
+                    // stunned
                     if(_loc4_.§_-B4B§())
                     {
                         if(_loc4_.§_-Ko§ == uint(0))
                         {
+                            // not ball
                             if(_loc4_ != _loc2_)
                             {
+                                // penalty zone
                                 if(_loc4_.§_-42u§ == 1 && Boolean(mPenaltyZone2.§_-z2l§(Number(_loc4_.§_-p1C§()),Number(_loc4_.§_-ze§()))) || _loc4_.§_-42u§ == 2 && Boolean(mPenaltyZone1.§_-z2l§(Number(_loc4_.§_-p1C§()),Number(_loc4_.§_-ze§()))))
                                 {
+                                    // respawn
                                     _loc4_.§_-tF§(param1,true);
                                 }
                             }
@@ -4525,14 +4529,14 @@ package
             if(§_-l3D§.§_-T1o§.§_-35D§ != 0 && uint(§_-s1d§(param1)) == 0)
             {
                 //§_-55X§ is the team with the ball
-                _loc2_ = 1;
+                _loc2_ = 1;//center
                 if(§_-55X§ == 1)
                 {
-                    _loc2_ = 2;
+                    _loc2_ = 2;//right
                 }
                 else if(§_-55X§ == 2)
                 {
-                    _loc2_ = 0;
+                    _loc2_ = 0;//left
                 }
                 §_-B1L§(param1,null,_loc2_);
             }
@@ -5373,6 +5377,7 @@ package
             var _loc11_:* = null as §_-c4y§;
             var _loc4_:Boolean = §_-l3D§.§_-d4a§ == 0;
             var _loc5_:Boolean = false;
+            // self goal?
             if(param2.§_-42u§ != param3)
             {
                 _loc5_ = true;
@@ -6103,7 +6108,7 @@ package
                     mPenaltyZone2 = _loc6_;
                 }
             }
-            var _loc7_:§_-Ej§ = null;
+            var _loc7_:§_-Ej§ = null;//ball?
             _loc4_ = 0;
             var _loc8_:Vector.<§_-Ej§> = §_-l3D§.§_-l14§;
             while(_loc4_ < int(_loc8_.length))
@@ -9256,6 +9261,7 @@ package
             }
             else if(ScoringType.BRAWLBALL == _loc3_)
             {
+                //                                                              right                                                            left       center
                 §_-K1y§ = param2.§_-A1U§ > §_-y3p§[2].x && param2.§_-E4n§ == 2 ? uint(2) : (param2.§_-A1U§ < §_-y3p§[0].x && param2.§_-E4n§ == 1 ? uint(0) : uint(1));
                 §_-75a§ = param1;
                 §_-I1r§ = true;

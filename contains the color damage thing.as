@@ -554,6 +554,7 @@ package
                         }
                         if(_loc34_ == 3)
                         {
+                            //not ball
                            if((_loc15_.§_-E44§ & §_-Ej§.§_-w4l§) == 0)
                            {
                               _loc35_ = 3 - _loc33_.§_-c1U§;

@@ -168,6 +168,7 @@ package
             {
                 §_-p2Y§.§_-N32§ = param1;
             }
+            // looping? not looping?
             §_-e23§ = Number(Math.abs(_loc9_ - §_-02B§)) > 0.1 || Number(Math.abs(_loc10_ - §_-w44§)) > 0.1;
             return §_-e23§;
         }

@@ -885,6 +885,7 @@ package
                 //                         time hitter hitee  knockback power stun          flags   softdrop movement during stun?
                 //this checks some "can hit" stuff. and also disarms.
                 _loc40_ = Boolean(§_-85L§(param1,param5,param6,param7,param2,_loc39_,param8,param16,param14,_loc33_ != 0 || _loc37_,_loc42_));
+                // not ball
                 if((param6.§_-E44§ & §_-Ej§.§_-w4l§) == 0)
                 {
                     param6.§_-UR§(param5.§_-r3y§);
@@ -1156,6 +1157,7 @@ package
             var _loc21_:Boolean = _loc12_.§_-y44§ != null;
             //      time   hitee   stun  knockback  softdropImpulseToPoint thing   DoNotBounceOffNoSlideCeiling
             §_-B3s§(param1,param3,param6,param4,!!param9 && param5.§_-f4j§,param10,param5.§_-A4o§);
+            // ball
             if((param3.§_-E44§ & §_-Ej§.§_-w4l§) != 0)
             {
                 §_-l3D§.§_-SY§.§_-Pf§(Number(param3.§_-85C§()),Number(param3.§_-W3l§()));

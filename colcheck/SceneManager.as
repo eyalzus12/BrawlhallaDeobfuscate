@@ -269,6 +269,7 @@ package
             §_-Nw§(§_-N0§,§_-r3C§,§_-Y4W§,§_-31f§);
         }
         
+        // seems to be for moving entities based on moving platforms!
         public function §_-f2r§(param1:uint) : void
         {
             var _loc7_:int = 0;
@@ -315,12 +316,15 @@ package
             {
                 return;
             }
+            // go over moving platforms
             _loc5_ = 0;
             _loc6_ = int(§_-l3D§.§_-D3R§.§_-C3r§.length);
             while(_loc5_ < _loc6_)
             {
                 _loc7_ = _loc5_++;
+                // go over items
                 _loc8_ = §_-l3D§.§_-D3R§.§_-C3r§[_loc7_];
+                // raycast towards movement direction. move to stopping point.
                 if(_loc8_.§_-C5M§ != null && _loc8_.§_-C5M§.§_-23H§)
                 {
                     SceneManager.§_-9S§.x = _loc8_.§_-C5M§.startX + _loc8_.§_-C5M§.§_-u2f§ - _loc8_.§_-C5M§.§_-wL§ - _loc8_.§_-C5M§.§_-s3§;
@@ -364,6 +368,7 @@ package
                         _loc23_ = false;
                         SceneManager.§_-9S§.x = 0;
                         SceneManager.§_-9S§.y = 0;
+                        // go over collisions touched
                         if(_loc2_.§_-L3i§ != null)
                         {
                             _loc25_ = 0;
@@ -372,6 +377,7 @@ package
                             {
                                 _loc27_ = _loc25_++;
                                 _loc4_ = _loc2_.§_-L3i§[_loc27_];
+                                // apply the movement
                                 if(!(_loc4_ == null || !_loc4_.§_-23H§))
                                 {
                                     if(_loc4_.startX != _loc4_.§_-l1I§)
@@ -393,6 +399,7 @@ package
                             _loc32_ = Number(_loc30_ + SceneManager.§_-9S§.x);
                             _loc31_ = Number(_loc29_ + SceneManager.§_-9S§.y);
                             _loc25_ = 0;
+                            // do two passes
                             while(_loc25_ < 2)
                             {
                                 _loc26_ = _loc25_++;
@@ -400,18 +407,23 @@ package
                                 _loc28_ -= 120;
                                 if(_loc4_ != null)
                                 {
+                                    // wall
                                     if(_loc4_.startX == _loc4_.§_-a1T§)
                                     {
+                                        // moves through wall
                                         if(Number(§_-zp§.§_-g2e§(_loc30_,_loc32_,_loc4_.startX)) == _loc4_.startX)
                                         {
+                                            // snap to wall, with a small offset
                                             _loc32_ = Number(_loc4_.startX + _loc4_.§_-a2J§.x * 1.01);
                                         }
                                     }
+                                    // flat floor
                                     else if(_loc4_.startY == _loc4_.§_-64f§)
                                     {
-                                        //(not soft or ?<startX) and ??
+                                        //(not soft or above floor) and moves through floor
                                         if(((_loc4_.type & uint(2)) == 0 || _loc29_ < _loc4_.startY) && Number(§_-zp§.§_-g2e§(_loc29_,_loc31_,_loc4_.startY)) == _loc4_.startY)
                                         {
+                                            // snap to floor, with a small offset
                                             _loc31_ = Number(_loc4_.startY + _loc4_.§_-a2J§.y * 1.01);
                                         }
                                     }
@@ -430,7 +442,11 @@ package
                             _loc2_.§_-G4I§(_loc32_);
                             _loc2_.§_-5d§(_loc31_);
                         }
+                        
+                        // why tf do we need more work
+                        
                         _loc25_ = 0;
+                        //go over moving platforms
                         _loc26_ = int(§_-C53§.length);
                         while(_loc25_ < _loc26_)
                         {
@@ -442,10 +458,12 @@ package
                                 {
                                     _loc33_ = 0;
                                     _loc34_ = int(_loc3_.§_-A2i§.length);
+                                    // go over its collision
                                     while(_loc33_ < _loc34_)
                                     {
                                         _loc35_ = _loc33_++;
                                         _loc4_ = _loc3_.§_-A2i§[_loc35_];
+                                        // not my collision, or is previous collision and not a wall
                                         if(!(_loc2_.§_-C5M§ == _loc4_ || _loc2_.§_-Y3H§ == _loc4_ && _loc4_.startX == _loc4_.§_-a1T§))
                                         {
                                             _loc9_ = _loc4_.startX - _loc4_.§_-l1I§;
