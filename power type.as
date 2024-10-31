@@ -210,6 +210,27 @@ package
          
         //VariableImpulse
         public var §_-B1O§:Vector.<int>;
+        // J4J - is grab?
+        // Dg - is grab?
+        // z2X - is ground check
+        // GO - ??
+        // X36 - ??
+        // fT - ??
+        // Z4I - how many hitboxes have to detect collision
+        // e4A - ??
+        // C5s - ??
+        // wY - doesn't lose i frames
+        // W1V - ??
+        // 12k - ??
+        // I2J - ??
+        // O4y - is taunt
+        // 51d - is taunt main
+        // lp - is taunt release
+        // X3z - is team taunt
+        // TI - is assist taunt
+        // 23T - ??
+        // 22x - stance?
+        
         //targetting type enum
         //PBAoE - 1
         //PBAoEHB - 1. z2X is true.

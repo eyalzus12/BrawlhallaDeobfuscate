@@ -750,6 +750,7 @@ package
                 //GroundPound/GroundPoundHB/GroundCheck/MeteorGrab/MeteorPound
                 if(§_-F2V§.§_-h14§ == uint(6) || §_-F2V§.§_-h14§ == uint(9))
                 {
+                    // §_-T0§(true)
                     §_-D2f§.§_-747§(param1);
                 }
                 //throwing power
@@ -2015,6 +2016,7 @@ package
             }
         }
         
+        //                      time         check soft
         public function §_-L4F§(param1:uint, param2:Boolean) : §_-A1T§
         {
             var _loc11_:int = 0;
@@ -2319,6 +2321,8 @@ package
             //GroundPound/GroundPoundHB/GroundCheck/MeteorGrab/MeteorPound
             if(§_-F2V§.§_-h14§ == uint(6) || §_-F2V§.§_-h14§ == uint(9))
             {
+                //§_-T0§(false)
+                // this is the one thing i haven't figured out
                 §_-D2f§.§_-y2K§(0);
             }
             //throwing power
