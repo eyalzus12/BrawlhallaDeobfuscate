@@ -220,7 +220,7 @@ package
         // e4A - ??
         // C5s - ??
         // wY - doesn't lose i frames
-        // W1V - ??
+        // W1V - charge as long as this input is held
         // 12k - ??
         // I2J - ??
         // O4y - is taunt
@@ -2772,6 +2772,7 @@ package
                 _loc4_.§_-lp§ = false;
             }
             _loc4_.§_-v32§ = _loc4_.§_-h14§ == uint(1);
+            // ignore line of sight
             _loc4_.§_-64p§ = _loc4_.§_-h14§ == uint(3) || _loc4_.§_-h14§ == uint(11) || _loc4_.§_-h14§ == uint(2);
             _loc4_.§_-t3j§ = _loc4_.§_-h14§ == uint(10);
             _loc4_.§_-64W§ = _loc4_.§_-h14§ == uint(5) || _loc4_.§_-h14§ == uint(3);
