@@ -4682,27 +4682,30 @@ package
             {
                 _loc6_ = false;
             }
+            // this is the recovery/cooldown flash
             if(_loc6_)
             {
-                _loc4_ = §_-p3I§.§_-65D§;
+                _loc4_ = §_-p3I§.§_-65D§; // mCurrCooldownTimestamp1
                 _loc9_ = §_-p3I§.mCurrCooldownTimestamp2;
-                _loc2_ = §_-p3I§.§_-l1n§ / 16;
-                _loc10_ = uint(_loc2_);
-                _loc11_ = _loc4_ / 16;
-                _loc12_ = uint(_loc11_);
-                _loc13_ = _loc9_ / 16;
-                _loc14_ = uint(_loc13_);
-                _loc15_ = param1 / 16;
-                _loc16_ = uint(_loc15_);
-                _loc17_ = _loc16_ >= _loc10_ && _loc16_ <= uint(_loc10_ + uint(5));
-                _loc18_ = _loc16_ >= _loc12_ && _loc16_ <= uint(_loc12_ + uint(5)) || _loc16_ >= _loc14_ && _loc16_ <= uint(_loc14_ + uint(5));
+                _loc2_ = §_-p3I§.§_-l1n§ / 16; // frame attack ended?
+                _loc10_ = uint(_loc2_); // frame attack ended?
+                _loc11_ = _loc4_ / 16; // mCurrCooldownTimestamp1
+                _loc12_ = uint(_loc11_); // mCurrCooldownTimestamp1
+                _loc13_ = _loc9_ / 16; // mCurrCooldownTimestamp2
+                _loc14_ = uint(_loc13_); // mCurrCooldownTimestamp2
+                _loc15_ = param1 / 16; // time
+                _loc16_ = uint(_loc15_); // time
+                // check for has cooldown is time < timestamp
+                // so first orange frame is the first frame where there is no longer cooldown
+                _loc17_ = _loc16_ >= _loc10_ && _loc16_ <= uint(_loc10_ + uint(5)); // recovery
+                _loc18_ = _loc16_ >= _loc12_ && _loc16_ <= uint(_loc12_ + uint(5)) || _loc16_ >= _loc14_ && _loc16_ <= uint(_loc14_ + uint(5)); // cooldown
                 if(!!_loc18_ && !§_-G2Z§(param1) && §_-p3I§.§_-y44§ == null)
                 {
-                    §_-35d§.§_-l3q§(16754706,6513507);
+                    §_-35d§.§_-l3q§(16754706,6513507);//cooldown
                 }
                 else if(_loc17_)
                 {
-                    §_-35d§.§_-l3q§(3073008,6513507);
+                    §_-35d§.§_-l3q§(3073008,6513507);//recovery
                 }
             }
         }

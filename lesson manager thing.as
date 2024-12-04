@@ -941,6 +941,7 @@ package
             }
         }
         
+        // PowerEnd
         public function §_-14p§(param1:uint, param2:uint, param3:uint) : void
         {
             if(§_-35c§)
@@ -953,6 +954,7 @@ package
             }
         }
         
+        // ActiveInput
         public function §_-92R§(param1:uint, param2:uint, param3:§_-Y3o§) : void
         {
             if(param3.§_-91Z§ == 0)
@@ -969,7 +971,7 @@ package
             }
         }
         
-        //attack
+        // PowerCast
         public function §_-V31§(param1:uint, param2:uint, param3:uint, param4:Boolean) : void
         {
             var _loc5_:uint = 0;

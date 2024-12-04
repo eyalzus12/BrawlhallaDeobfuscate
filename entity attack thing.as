@@ -689,7 +689,7 @@ package
                 §_-63D§(param1);
             }
             var _loc3_:uint = uint(_loc2_ - §_-G2L§);
-            var _loc4_:Boolean = _loc2_ >= §_-l26§;
+            var _loc4_:Boolean = _loc2_ >= §_-l26§;// finished startup
             if(§_-22w§ != null)
             {
                 if(Number(§_-22w§[_loc3_]) > 0)
@@ -773,6 +773,8 @@ package
             }
         }
         
+        // returns whether still active
+        // §_-24Z§ is relevant for result
         public function §_-g46§(param1:uint) : Boolean
         {
             var _loc8_:* = null as §_-X2n§;
@@ -1053,10 +1055,12 @@ package
                     }
                     _loc21_++;
                 }
+                //                  SelfImpulseOnHit
                 if(§_-s4T§ != 0 && §_-F2V§.§_-T4Q§)
                 {
                     §_-d2v§(param1);
                 }
+                //                  EndOnHit
                 if(_loc15_ != 0 && §_-F2V§.§_-vj§)
                 {
                     §_-24Z§ = true;
@@ -1161,15 +1165,19 @@ package
                 //release
                 §_-B2§();
             }
+            // MOST IMPORTANT
+            // reached last frame of recovery?
             _loc17_ = _loc2_ >= §_-25N§;
             if(!!§_-Ks§ && _loc17_)
             {
+                // store charge time if relevant
                 if(!!§_-F2V§.§_-l2j§ && §_-8m§ == 0)
                 {
                     §_-8m§ = §_-F2V§.§_-W42§;
                 }
                 return false;
             }
+            // FistsSmashNeutralHitCelestial, OrbSmashDownBGRageFighter, OrbSmashDownCharge2BGRageFighter, OrbSmashDownCharge3BGRageFighter
             if(!!§_-F2V§.§_-51h§ && §_-W2B§)
             {
                 §_-24Z§ = true;
@@ -1681,12 +1689,13 @@ package
                 }
                 else
                 {
-                    //add total attack length
+                    //add total attack length?
                     §_-25N§ += §_-F2V§.§_-W42§;
                 }
                 //AntigravTime
                 if(§_-F2V§.§_-Qj§ != 0)
                 {
+                    // thing - FixedRecoverTime - RecoverTime
                     §_-Qj§ = int(Math.floor(uint(§_-25N§ - §_-F2V§.§_-nt§) - _loc3_));
                     §_-Qj§ += §_-F2V§.§_-Qj§;
                 }
@@ -2300,7 +2309,7 @@ package
             §_-l3D§.§_-l1f§.setChildIndex(§_-D2f§.§_-35d§.mTheDO3D,_loc3_);
         }
         
-        //on power replace
+        //on power replace/end
         public function §_-Jf§(param1:Boolean = false) : void
         {
             if(!§_-2f§)
