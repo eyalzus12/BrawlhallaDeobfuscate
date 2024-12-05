@@ -263,11 +263,13 @@ package
                         §_-89§ = _loc21_;
                         §_-B5d§ = _loc22_;
                         break;
+                    // GameData
                     case 4:
                         §_-z1v§.§_-41L§(param2);
                         _loc10_ = param2.§_-vw§();
                         _loc6_ = param2.§_-j34§();
                         §_-s33§ = LevelType.§_-me§[_loc10_];
+                        // hero count
                         _loc11_ = 0;
                         if(_loc6_ > 5)
                         {
@@ -277,38 +279,43 @@ package
                         }
                         while(param2.§_-13K§(1) != 0)
                         {
-                            _loc19_ = param2.§_-vw§();
-                            _loc21_ = param2.§_-W45§();
+                            // read entity
+                            _loc19_ = param2.§_-vw§(); //entId
+                            _loc21_ = param2.§_-W45§(); // name
+                            // read player data
                             _loc23_ = new §_-g33§();
-                            _loc23_.§_-z1A§ = param2.§_-vw§();
-                            _loc23_.§_-b2k§ = param2.§_-vw§();
-                            _loc23_.§_-d3q§ = param2.§_-vw§();
-                            _loc23_.§_-34n§ = param2.§_-vw§();
+                            _loc23_.§_-z1A§ = param2.§_-vw§(); // colorSchemeId
+                            _loc23_.§_-b2k§ = param2.§_-vw§(); // spawnBotId
+                            _loc23_.§_-d3q§ = param2.§_-vw§(); // emitterId
+                            _loc23_.§_-34n§ = param2.§_-vw§(); // playerThemeId
+                            // read taunts
                             _loc16_ = 0;
                             while(_loc16_ < int(8))
                             {
                                 _loc17_ = _loc16_++;
                                 _loc23_.§_-65G§[_loc17_] = param2.§_-vw§();
                             }
-                            _loc23_.§_-Y4C§ = param2.§_-j34§();
-                            _loc23_.§_-S3H§ = param2.§_-j34§();
+                            _loc23_.§_-Y4C§ = param2.§_-j34§(); // winTauntId
+                            _loc23_.§_-S3H§ = param2.§_-j34§(); // loseTauntId
+                            // owned taunts
                             while(param2.§_-13K§(1) != 0)
                             {
                                 _loc23_.§_-u2J§.push(param2.§_-vw§());
                             }
-                            _loc23_.§_-23W§ = param2.§_-j34§();
-                            _loc23_.§_-a4q§ = param2.§_-vw§();
-                            _loc23_.§_-C3a§ = param2.§_-vw§();
+                            _loc23_.§_-23W§ = param2.§_-j34§(); // avatarId
+                            _loc23_.§_-a4q§ = param2.§_-vw§(); // team
+                            _loc23_.§_-C3a§ = param2.§_-vw§(); // connectionTime
+                            // heros
                             _loc16_ = 0;
                             _loc17_ = int(_loc6_);
                             while(_loc16_ < _loc17_)
                             {
                                 _loc18_ = _loc16_++;
                                 _loc24_ = _loc23_.§_-GP§[_loc18_];
-                                _loc24_.§_-N3W§ = HeroType.§_-M2a§(param2.§_-vw§(),0);
-                                _loc24_.§_-f2M§ = param2.§_-vw§();
-                                _loc24_.§_-41B§ = param2.§_-vw§();
-                                _loc24_.§_-e3B§ = param2.§_-vw§();
+                                _loc24_.§_-N3W§ = HeroType.§_-M2a§(param2.§_-vw§() /* heroId */,0);
+                                _loc24_.§_-f2M§ = param2.§_-vw§(); // costumeId
+                                _loc24_.§_-41B§ = param2.§_-vw§(); // stanceIndex
+                                _loc24_.§_-e3B§ = param2.§_-vw§(); // weaponIds
                             }
                             if(param2.§_-13K§(1) != 0)
                             {
