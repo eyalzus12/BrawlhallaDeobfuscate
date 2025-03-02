@@ -67,10 +67,10 @@ package
         
         public var §_-S4C§:Number;
         
-        //                          ?           ScaleX        RotateSkew0     RotateSkew1   ScaleY          X               Y           Opacity         Frame
+        //                          name           ScaleX        RotateSkew0     RotateSkew1   ScaleY          X               Y           Opacity         Frame
         public function §_-k3V§(param1:String, param2:Number, param3:Number, param4:Number, param5:Number, param6:Number, param7:Number, param8:Number, param9:int)
         {
-            §_-M5C§ = param1;//name of R/L variation
+            §_-M5C§ = param1;
             §_-o4S§ = param6;
             §_-21S§ = param7;
             §_-S4C§ = param2;
@@ -133,8 +133,9 @@ package
             {
                 _loc13_ = param1.readUnsignedByte() / 255;//Opacity
             }
+            // bones types. first bone is UNKNOWN.
             var _loc14_:String = §_-o25§.§_-f2f§[_loc4_];
-            //                  ?     ScaleX    Rotates     ScaleY X       Y        Opacity  Frame
+            //                  name     ScaleX    Rotates     ScaleY X       Y        Opacity  Frame
             return new §_-k3V§(_loc14_,_loc6_,_loc7_,_loc8_,_loc9_,_loc10_,_loc11_,_loc13_,_loc12_);
         }
         

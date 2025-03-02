@@ -271,12 +271,13 @@ package
                             _loc9_ = §_-D45§.§_-YA§;
                         }
                     }
-                    _loc14_ = int(_loc9_.§_-q30§[_loc13_]);
+                    _loc14_ = int(_loc9_.§_-q30§[_loc13_]);//offsetY
                     _loc15_ = int(_loc9_.§_-Z4W§[_loc13_] - _loc9_.§_-Y3l§[_loc13_] / 2 + param1.§_-g33§.§_-W11§ * 0.5);
-                    _loc16_ = int(_loc9_.§_-s12§[_loc13_]);
-                    _loc17_ = int(_loc9_.§_-Y3l§[_loc13_]);
+                    _loc16_ = int(_loc9_.§_-s12§[_loc13_]);//width
+                    _loc17_ = int(_loc9_.§_-Y3l§[_loc13_]);//height
                     if(!_loc2_)
                     {
+                        //
                         §_-14A§(null,1,_loc14_,_loc15_,_loc16_,_loc17_,param1.§_-I4N§(),false,0);
                     }
                 }
@@ -1056,6 +1057,7 @@ package
             }
         }
         
+        //                      power           offsetX      offsetY     width       height
         public function §_-14A§(param1:§_-Y3o§, param2:uint, param3:int, param4:int, param5:int, param6:int, param7:Boolean, param8:Boolean, param9:uint, param10:Point = undefined, param11:Boolean = false) : void
         {
             if(§_-44a§ != param1 && param2 == 0 && !param11)

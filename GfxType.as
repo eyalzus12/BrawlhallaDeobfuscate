@@ -33,7 +33,7 @@ package
         public var §_-c4L§:Number;
         
         public var §_-u2R§:Vector.<CustomArt>;
-        
+        //color swaps
         public var §_-82k§:Vector.<ColorSwap>;
         
         public var §_-y1O§:Number;

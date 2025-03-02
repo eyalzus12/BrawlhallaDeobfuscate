@@ -176,8 +176,8 @@ package
             §_-V8§ = param1;
             §_-Ak§ = §_-25I§.§_-y1e§(§_-V8§.§_-23A§,§_-V8§.§_-4I§,§_-V8§.§_-23A§);
             §_-gh§ = new IntMap();
-            §_-u3o§ = §_-V8§.§_-X3h§();
-            §_-Uw§ = §_-V8§.§_-Y4Y§();
+            §_-u3o§ = §_-V8§.§_-X3h§();//[oldColor,newColor,artType]
+            §_-Uw§ = §_-V8§.§_-Y4Y§();//oldcolor | (arttype? << 24) -> newcolor
             var _loc2_:String = §_-V8§.§_-4I§;//AnimFile
             var _loc3_:String = §_-V8§.§_-23A§;//AnimClass
             if(_loc2_.indexOf("Animation_") == 0)
@@ -234,6 +234,7 @@ package
             return _loc2_ < 0;
         }
         
+        // get .a definition
         public static function §_-F5e§(param1:String, param2:String, param3:String) : MovieClip
         {
             var _loc5_:* = null as StringMap;
@@ -302,6 +303,7 @@ package
             if(_loc8_ == null)
             {
                 _loc9_ = param3 == null ? param1 : param1 + "_" + param3;
+                // get class _loc9_ from swf param2
                 _loc10_ = §_-D5P§.§_-l1M§(_loc9_,param2);
                 if(_loc10_ != null)
                 {
@@ -366,7 +368,8 @@ package
             }
         }
         
-        //                            color swap array       .a           bone thing
+        // filter color swaps
+        //                            color swap array       .a           bone art type
         public static function §_-W9§(param1:Vector.<uint>, param2:Array, param3:uint) : Vector.<uint>
         {
             var _loc9_:int = 0;
@@ -390,7 +393,7 @@ package
                 {
                     _loc13_ = _loc11_++;
                     _loc14_ = _loc13_ * 3;
-                    // same old color and same bone thing (or bone thing is 0)
+                    // same old color and same art type (or art type is 0)
                     if(_loc10_ == param1[_loc14_] && (param1[_loc14_ + 2] == 0 || param1[_loc14_ + 2] == param3))
                     {
                         _loc4_.push(param1[_loc14_]);
@@ -580,7 +583,7 @@ package
                     _loc17_ = _loc15_++;
                     if(!(_loc14_[_loc17_] == null || _loc14_[_loc17_].§_-F2N§ == null))
                     {
-                        _loc18_ = _loc14_[_loc17_].§_-F2N§.§_-M5C§;
+                        _loc18_ = _loc14_[_loc17_].§_-F2N§.§_-M5C§;// og bone name
                         if(!_loc3_ && _loc18_ == "a_Torso1")
                         {
                             if(!(_loc17_ >= int(_loc14_.length) || _loc14_[_loc17_] == null || _loc17_ + 1 >= int(_loc14_.length) || _loc14_[_loc17_ + 1] == null))
@@ -1052,6 +1055,7 @@ package
             var _loc8_:Number = §_-V8§.§_-K2K§ * _loc7_;
             var _loc9_:§_-8a§ = null;
             var _loc10_:int = int(param2.§_-B1u§);//frame id
+            // it's always null...
             if(§_-Ak§.§_-X2s§ != null)
             {
                 //Ak - anim group
@@ -1154,6 +1158,7 @@ package
                         _loc21_.gotoAndStop(_loc16_);
                         _loc21_.stopAllMovieClips();
                     }
+                    //                        sprite animScale    tint       color swap map
                     _loc22_ = §_-E1R§.§_-924§(_loc21_,_loc8_,§_-V8§.§_-W3F§,_loc20_ ? §_-Uw§ : null,0,true);
                     if(_loc22_ != null)
                     {
@@ -2046,6 +2051,7 @@ package
                             _loc28_[_loc30_] = §_-P5p§.§_-u2L§;
                             continue;
                         }
+                        // filter out color swaps to those defined by the .a
                         _loc33_ = !!_loc32_.bHasColors ? §_-P5p§.§_-W9§(§_-u3o§,_loc32_.a,§_-vq§.§_-Y3M§.get(_loc14_.§_-M5C§)) : null;
                         _loc34_ = _loc33_ != null && int(_loc33_.length) > 0;
                         _loc35_ = null;

@@ -73,15 +73,17 @@ package
         
         public static function §_-Y2C§(param1:uint, param2:uint, param3:IMap) : uint
         {
+            // try and find color swap
             var _loc4_:uint = param3.h[param1 | uint(param2 << 24)];
             if(_loc4_ != 0)
             {
                 return _loc4_;
             }
+            // if none with specific art type, find with generic (0)
             return param3.h[param1];
         }
         
-        //                              sprite       animScale       tint      color swap map   bone thing
+        //                              sprite       animScale       tint      color swap map   bone art type
         public static function §_-924§(param1:Sprite, param2:Number, param3:uint, param4:IMap, param5:uint, param6:Boolean, param7:Boolean = true) : Bitmap
         {
             var _loc16_:* = null as BitmapData;

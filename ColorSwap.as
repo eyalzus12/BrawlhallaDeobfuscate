@@ -3,9 +3,9 @@ package
     public class ColorSwap
     {
          
-        
+        //OLDCOLOR
         public var §_-Z1k§:uint;
-        
+        //NEWCOLOR
         public var §_-k44§:uint;
         
         public var §_-s4X§:uint;

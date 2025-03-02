@@ -558,7 +558,7 @@ package
             while(_loc3_ >= 0)
             {
                 _loc4_ = §_-L1N§[_loc3_];
-                //oldColor | (rep? << 24)
+                //oldColor | (arttype? << 24)
                 _loc5_ = uint(_loc4_.§_-O3M§ | uint(_loc4_.§_-w4E§ << 24));
                 _loc6_ = _loc4_.§_-B3H§;//newColor
                 _loc1_.h[_loc5_] = _loc6_;
@@ -580,11 +580,11 @@ package
                 _loc3_ = (_loc6_ = _loc3_) + 1;
                 _loc5_ = §_-L1N§[_loc6_];
                 _loc4_ = (_loc6_ = _loc4_) + 1;
-                _loc2_[_loc6_] = _loc5_.§_-O3M§;
+                _loc2_[_loc6_] = _loc5_.§_-O3M§;//OldColor
                 _loc4_ = (_loc6_ = _loc4_) + 1;
-                _loc2_[_loc6_] = _loc5_.§_-B3H§;
+                _loc2_[_loc6_] = _loc5_.§_-B3H§;//NewColor
                 _loc4_ = (_loc6_ = _loc4_) + 1;
-                _loc2_[_loc6_] = _loc5_.§_-w4E§;
+                _loc2_[_loc6_] = _loc5_.§_-w4E§;//ArtType
             }
             return _loc2_;
         }

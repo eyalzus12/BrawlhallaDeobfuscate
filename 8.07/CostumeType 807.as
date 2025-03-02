@@ -1430,28 +1430,34 @@ package
             {
                 return _loc2_;
             }
+            // go over swaps in color scheme
             var _loc3_:Array = param1 != null ? param1.§_-y4u§ : null;
             if(_loc3_ != null)
             {
+                //color exception types
                 _loc4_ = §_-oG§.§_-cn§(§_-4S§,param1.§_-lE§);
                 _loc5_ = 0;
                 _loc6_ = int(§_-k1R§.§_-q4h§);
                 while(_loc5_ < _loc6_)
                 {
                     _loc7_ = _loc5_++;
+                    // has a source defined
                     if(uint(§_-m1k§[_loc7_]) != 0)
                     {
                         _loc8_ = uint(_loc3_[_loc7_]);
+                        // apply exception
                         if(_loc4_ != null && uint(_loc3_[uint(_loc4_[_loc7_])]) > 0)
                         {
                             _loc8_ = uint(_loc3_[uint(_loc4_[_loc7_])]);
                         }
+                        // create swap
                         if(_loc8_ != 0)
                         {
                             _loc2_.push(new ColorSwap(uint(§_-m1k§[_loc7_]),_loc8_,2));
                         }
                     }
                 }
+                // apply scheme swaps, but only those where the color scheme has no swap
                 if(§_-v2p§ != 0 && uint(§_-m1k§[§_-k1R§.§_-P54§]) != 0 && uint(_loc3_[§_-k1R§.§_-P54§]) == 0 && uint(_loc3_[§_-v2p§]) != 0)
                 {
                     _loc2_.push(new ColorSwap(uint(§_-m1k§[§_-k1R§.§_-P54§]),uint(_loc3_[§_-v2p§]),2));
@@ -1488,6 +1494,7 @@ package
             var _loc9_:§_-k1R§ = §_-k1R§.NO_COLOR_SCHEME;
             if(_loc9_ != null && _loc9_.§_-y4u§ != null)
             {
+                // we do the same but for the nothing color scheme? why? it swaps nothing...
                 _loc5_ = 0;
                 _loc6_ = int(§_-k1R§.§_-q4h§);
                 while(_loc5_ < _loc6_)
@@ -1504,6 +1511,7 @@ package
                         }
                     }
                 }
+                // if the color scheme doesn't have a swap, swap by defines?
                 if(§_-v2p§ != 0 && uint(§_-m1k§[§_-k1R§.§_-P54§]) != 0 && !(_loc3_ != null && uint(_loc3_[§_-k1R§.§_-P54§]) != 0))
                 {
                     _loc2_.push(new ColorSwap(uint(§_-m1k§[§_-k1R§.§_-P54§]),uint(§_-m1k§[§_-v2p§]),2));
@@ -1537,6 +1545,7 @@ package
                     _loc2_.push(new ColorSwap(uint(§_-m1k§[§_-k1R§.§_-x2e§]),uint(§_-m1k§[§_-A5o§]),2));
                 }
             }
+            // direct swaps
             if(§_-x1A§ != 0 && uint(§_-m1k§[§_-k1R§.§_-P54§]) != 0 && !(_loc3_ != null && uint(_loc3_[§_-k1R§.§_-P54§]) != 0))
             {
                 _loc2_.push(new ColorSwap(uint(§_-m1k§[§_-k1R§.§_-P54§]),§_-x1A§,2));

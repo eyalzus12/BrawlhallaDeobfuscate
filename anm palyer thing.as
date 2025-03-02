@@ -118,8 +118,8 @@ package
             §_-N2V§ = param1;
             §_-A3T§ = §_-z4U§.§_-52n§(§_-N2V§.§_-P2X§,§_-N2V§.§_-X1a§,§_-N2V§.§_-P2X§);
             §_-h1W§ = new IntMap();
-            §_-C4y§ = §_-N2V§.§_-J4b§();
-            §_-J3N§ = §_-N2V§.§_-S1h§();
+            §_-C4y§ = §_-N2V§.§_-J4b§();//color swap thing
+            §_-J3N§ = §_-N2V§.§_-S1h§();//color swap thing 2
             var _loc2_:String = §_-N2V§.§_-X1a§;
             var _loc3_:String = §_-N2V§.§_-P2X§;
             if(_loc2_.indexOf("Animation_") == 0)

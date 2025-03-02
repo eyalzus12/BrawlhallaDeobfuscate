@@ -40,19 +40,19 @@ package
         public static var §_-X4E§:§_-D45§;
          
         
-        public var §_-s12§:Vector.<Number>;
+        public var §_-s12§:Vector.<Number>;//width
         
         public var §_-55I§:String;
         
         public var §_-V10§:uint;
         
-        public var §_-Y3l§:Vector.<Number>;
+        public var §_-Y3l§:Vector.<Number>;//height
         
         public var §_-X1g§:Array;
         
-        public var §_-Z4W§:Vector.<Number>;
+        public var §_-Z4W§:Vector.<Number>;//offsetY
         
-        public var §_-q30§:Vector.<Number>;
+        public var §_-q30§:Vector.<Number>;//offsetX
         
         public function §_-D45§()
         {
@@ -265,10 +265,10 @@ package
                 _loc30_ = _loc28_ < _loc17_ ? Number(_loc5_[_loc28_]) : Number(_loc5_[0]);
                 _loc31_ = _loc28_ < _loc22_ ? Number(_loc6_[_loc28_]) : Number(_loc6_[0]);
                 _loc32_ = _loc28_ < _loc23_ ? Number(_loc7_[_loc28_]) : Number(_loc7_[0]);
-                _loc11_.§_-q30§[_loc28_] = _loc29_;
-                _loc11_.§_-Z4W§[_loc28_] = _loc30_;
-                _loc11_.§_-s12§[_loc28_] = _loc31_;
-                _loc11_.§_-Y3l§[_loc28_] = _loc32_;
+                _loc11_.§_-q30§[_loc28_] = _loc29_;//offsetX
+                _loc11_.§_-Z4W§[_loc28_] = _loc30_;//offsetY
+                _loc11_.§_-s12§[_loc28_] = _loc31_;//width
+                _loc11_.§_-Y3l§[_loc28_] = _loc32_;//height
                 if(!_loc10_ && Number(_loc30_ + _loc32_ / 2) > 80)
                 {
                     §_-tP§.§_-P3w§("Hurtbox " + _loc11_.§_-55I§ + " extends below ground at offsetY " + _loc30_ + " height " + _loc32_);
@@ -339,8 +339,8 @@ package
                 param2.§_-s2§ = param1;
                 param2.§_-N4Z§ = !!param3 ? -§_-q30§[_loc5_] : Number(§_-q30§[_loc5_]);
                 param2.§_-22Q§ = Number(§_-Z4W§[_loc5_]);
-                param2.§_-fY§ = Number(§_-s12§[_loc5_]);
-                param2.§_-W11§ = Number(§_-Y3l§[_loc5_]);
+                param2.§_-fY§ = Number(§_-s12§[_loc5_]);//width
+                param2.§_-W11§ = Number(§_-Y3l§[_loc5_]);//height
                 param2.§_-82t§ = _loc5_;
             }
         }

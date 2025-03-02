@@ -104,6 +104,7 @@ package
             return _loc12_ <= _loc11_ * _loc11_;
         }
         
+        // hurtbox hit checker?     width           height
         public static function §_-eq§(param1:Number, param2:Number, param3:Point, param4:Point) : Number
         {
             var _loc5_:Number = NaN;
