@@ -35,7 +35,7 @@ package
         
         public static var §_-1T§:IMap;
          
-        
+        //base start
         public var §_-m3z§:uint;
         
         public var §_-C5g§:Class;

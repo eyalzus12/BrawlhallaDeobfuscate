@@ -82,6 +82,7 @@ package
             return param3.h[param1];
         }
         
+        //            CreateSrcBitmap(sp,            myScale,       tint,     colorSwapsDict, gearTypeIdx, bClipTight,    _param7)
         public static function §_-IP§(param1:Sprite, param2:Number, param3:uint, param4:IMap, param5:uint, param6:Boolean, param7:Boolean = true) : Bitmap
         {
             var _loc15_:* = null as BitmapData;
@@ -241,6 +242,7 @@ package
             return _loc3_;
         }
         
+        //RenderSprite
         public static function §_-75e§(param1:DisplayObject) : Bitmap
         {
             if(param1.parent == null)

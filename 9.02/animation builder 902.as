@@ -16,6 +16,7 @@ package
     import haxe.ds.StringMap;
     import haxe.ds._IntMap.IntMapValuesIterator;
     
+    //SuperAnimData
     public class §_-U34§
     {
         
@@ -296,6 +297,7 @@ package
             return _loc2_ < 0;
         }
         
+        // GetReferenceMovieClip(className:String, fileName: String, setName: String)
         public static function §_-U51§(param1:String, param2:String, param3:String) : MovieClip
         {
             var _loc5_:* = null as StringMap;
@@ -304,8 +306,10 @@ package
             var _loc9_:* = null as String;
             var _loc10_:* = null as Class;
             var _loc4_:IMap = null;
+            //if(setName is not null)
             if(param3 != null)
             {
+                //loc4 = §_-z36§[fileName][setName] ??= []
                 _loc5_ = §_-U34§.§_-z36§;
                 _loc6_ = param2 in StringMap.reserved ? _loc5_.getReserved(param2) : _loc5_.h[param2];
                 if(_loc6_ == null)
@@ -337,6 +341,7 @@ package
             }
             else
             {
+                //loc4 = §_-d5E§[fileName] ??= []
                 _loc5_ = §_-U34§.§_-d5E§;
                 if(param2 in StringMap.reserved)
                 {
@@ -360,17 +365,20 @@ package
                     }
                 }
             }
+            // loc8 = loc4[className]
             var _loc8_:MovieClip = param1 in StringMap.reserved ? _loc4_.getReserved(param1) : _loc4_.h[param1];
             if(_loc8_ == null)
             {
+                // loc9 = setName is null ? className : className + "_" + setName
                 _loc9_ = param3 == null ? param1 : param1 + "_" + param3;
-                // bone sources
+                // ResourceManager._getBoneSource(loc9, fileName)
                 _loc10_ = §_-K5a§.§_-Q1X§(_loc9_,param2);
                 if(_loc10_ != null)
                 {
                     _loc8_ = Type.createInstance(_loc10_,[]);
                     _loc8_.gotoAndStop(1);
                     _loc8_.stopAllMovieClips();
+                    //hasOwnProperty
                     if(§_-d2W§.§_-z2z§(_loc8_,"a") != null)
                     {
                         _loc8_.bHasColors = true;
@@ -387,6 +395,7 @@ package
                 {
                     _loc8_ = §_-U34§.§_-92S§;
                 }
+                //loc4[className] = loc8
                 if(param1 in StringMap.reserved)
                 {
                     _loc4_.setReserved(param1,_loc8_);
@@ -429,6 +438,7 @@ package
             }
         }
         
+        //GetActuallyUsedSwapColors(colorSwaps: uint[], myColors: any[], gearTypeIdx: uint): uint[]
         public static function §_-f3S§(param1:Vector.<uint>, param2:Array, param3:uint) : Vector.<uint>
         {
             var _loc9_:int = 0;
@@ -1353,7 +1363,7 @@ package
             return param3;
         }
         
-        //                              animation           ?               sprite          usually 0.44
+        //           SetFrameData3D(animMove:AnimMove, animFrame:AnimFrame, tgtSprite3D:Sprite3D, _param4:Number)
         public function SetFrameData3D(param1:§_-M5d§, param2:§_-Z2a§, param3:Sprite3D, param4:Number) : void
         {
             var _loc13_:Boolean = false;
@@ -1380,7 +1390,8 @@ package
             {
                 param3.§_-B4M§();
             }
-            var _loc6_:Number = §_-U34§.§_-Q2i§.§_-mk§; // this is set by the camera based on window size(?)
+            var _loc6_:Number = §_-U34§.§_-Q2i§.§_-mk§; // this is set by the camera based on window size
+            // uI = customResolution
             var _loc7_:Number = §_-i1I§.§_-uI§ != 0 ? §_-i1I§.§_-uI§ : param4;
             _loc7_ *= _loc6_ < 3 ? _loc6_ : 3;
             // mQ = anim scale
@@ -1487,6 +1498,7 @@ package
                         _loc21_.gotoAndStop(_loc16_);
                         _loc21_.stopAllMovieClips();
                     }
+                              //CreateSrcBitmap
                     _loc22_ = §_-X9§.§_-IP§(_loc21_,_loc8_,§_-i1I§.§_-048§,_loc20_ ? §_-541§ : null,0,true);
                     if(_loc22_ != null)
                     {
@@ -1533,6 +1545,7 @@ package
         }
         
         // called by image render tool to save
+        // SetFrameData(animMove:AnimMove, animFrame:AnimFrame, tgtSprite:Sprite, tgtBmp:Bitmap, ?, ?) : void
         public function §_-Zr§(param1:§_-M5d§, param2:§_-Z2a§, param3:Sprite, param4:Bitmap, param5:Number, param6:Boolean = false) : void
         {
             var _loc14_:* = null as Sprite2D;
@@ -1752,6 +1765,7 @@ package
                     _loc6_ = _loc8_.§_-t4r§;
                     if(!(_loc5_ != 0 && _loc8_.§_-B24§ != 0 && _loc8_.§_-B24§ != _loc5_))
                     {
+                        //GetReferenceMovieClip
                         _loc9_ = §_-U34§.§_-U51§(param2,_loc8_.fileName,_loc6_);
                         if(_loc9_ != null)
                         {
@@ -1813,6 +1827,7 @@ package
             §_-Np§ = 0;
         }
         
+        //            BuildNewSprite3D(customArts:CustomArt[], movieFrameDef: BoneDef[], bmpScale:Number):Sprite3D
         public function BuildNewSprite3D(param1:Vector.<CustomArt>, param2:Vector.<§_-E3b§>, param3:Number) : §_-A5K§
         {
             var _loc11_:int = 0;
@@ -2037,6 +2052,7 @@ package
                             _loc28_[_loc30_] = §_-U34§.§_-e1H§;
                             continue;
                         }
+                        //                          GetActuallyUsedSwapColors
                         _loc37_ = !!_loc35_.bHasColors ? §_-U34§.§_-f3S§(§_-h35§,_loc35_.a,§_-M5d§.§_-x30§.get(_loc12_.§_-A2L§)) : null;
                         _loc38_ = _loc37_ != null && int(_loc37_.length) > 0;
                         _loc39_ = !_loc38_ || _loc26_;
