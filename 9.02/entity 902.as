@@ -7766,6 +7766,7 @@ package
             {
                 _loc8_.§_-i3r§ = _loc8_.§_-i3r§.concat(_loc4_);
             }
+            // crate colors
             var _loc9_:LevelType = §_-13E§.§_-Q3A§.§_-Yo§;
             if(_loc9_.§_-Q3K§ != null)
             {

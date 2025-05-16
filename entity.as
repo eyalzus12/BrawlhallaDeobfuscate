@@ -5830,7 +5830,7 @@ package
                 _loc4_ = 100;
             }
             §_-Ej§.§_-rz§.y = _loc4_;
-            //check hard, i think
+            //check hard
             var _loc5_:§_-A1T§ = §_-l3D§.§_-J2b§.§_-Y4g§(§_-42u§,Number(§_-p1C§()),Number(§_-ze§()),§_-Ej§.§_-rz§,§_-Ej§.§_-it§,null,null,null,uint(1),0);
             if(_loc5_ == null)
             {
@@ -9118,6 +9118,7 @@ package
             §_-d3i§.mTheDO3D.§_-21f§ = false;
         }
         
+        //                      newX            newY
         public function §_-Y22§(param1:Number, param2:Number, param3:uint = 0, param4:Boolean = false) : §_-A1T§
         {
             var _loc11_:* = null as §_-Ej§;
