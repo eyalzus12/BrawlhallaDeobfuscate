@@ -23,7 +23,7 @@ def readUint32(stream):
 def readUbyte(stream):
     return int.from_bytes(stream.read(1),"big")
 
-FILES = ["Game last stalker version"]
+FILES = ["Game"]
 for swzFileName in FILES:
     outpath = f'dumps/{swzFileName}'
     os.makedirs(outpath, exist_ok=True)

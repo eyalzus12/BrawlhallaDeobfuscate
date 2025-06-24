@@ -297,6 +297,7 @@ package
                 §_-41Q§();
                 return;
             }
+            // get cast index
             var _loc3_:int = int(§_-44a§.§_-V4m§[§_-G3Q§]);
             if(!§_-m2i§.§_-21f§)
             {
@@ -1057,7 +1058,7 @@ package
             }
         }
         
-        //                      power           offsetX      offsetY     width       height
+        //                      power                       offsetX      offsetY     width       height
         public function §_-14A§(param1:§_-Y3o§, param2:uint, param3:int, param4:int, param5:int, param6:int, param7:Boolean, param8:Boolean, param9:uint, param10:Point = undefined, param11:Boolean = false) : void
         {
             if(§_-44a§ != param1 && param2 == 0 && !param11)

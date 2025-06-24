@@ -494,6 +494,7 @@ package
             §_-l3D§.§_-SY§.§_-F4N§(§_-M4U§);
         }
         
+        // TickCombat
         public function §_-A3E§(param1:uint) : void
         {
             var _loc2_:int = int(§_-f46§.length) - 1;
@@ -922,7 +923,8 @@ package
             }
         }
         
-        //                      time        power
+        // QueuePowerType
+        //                      time        power        hit id override       charge time      ?
         public function §_-H4L§(param1:uint, param2:§_-Y3o§, param3:uint = 0, param4:uint = 0, param5:uint = 0) : Boolean
         {
             if(!§_-C3O§(param2,param1))
@@ -931,6 +933,7 @@ package
             }
             if(§_-y44§ != null)
             {
+                // DestroyActivePower
                 §_-y44§.§_-Jf§();
             }
             §_-y44§ = new §_-th§(§_-l3D§,param2,§_-M4U§,param3,param4,null,param5);
@@ -1072,15 +1075,29 @@ package
             return false;
         }
         
-      //public function QueueItemCollisionPower(currTime:uint, powerType:PowerType, param3:uint, target:Entity, targetPos:Point, sourcePos:Point, param7:uint, overrideVector:Point, param9:Number, airTimeMult:Number, param11:uint, param12:uint = 0) : §_-th§
-        public function §_-91v                 (param1:uint,   param2:§_-Y3o§,      param3:uint, param4:§_-Ej§, param5:Point,    param6:Point,    param7:uint, param8:Point,         param9:Number, param10:Number,     param11:uint, param12:uint = 0) : §_-th§
+        /*
+        function: QueueItemCollisionPower
+        param1: uint currTime
+        param2: PowerType powerType
+        param3: uint hitIdOverride*
+        param4: Entity target
+        param5: Point targetPos
+        param6: Point sourcePos
+        param7: uint unknown1*
+        param8: Point overridePoint
+        param9: Number gfxRotation
+        param10: Number airTimeMult
+        param11: uint unknown2*
+        param12: uint unknown3*
+        */
+        public function §_-91v(param1:uint, param2:§_-Y3o§, param3:uint, param4:§_-Ej§, param5:Point, param6:Point, param7:uint, param8:Point, param9:Number, param10:Number, param11:uint, param12:uint = 0) : §_-th§
         {
             var _loc13_:§_-th§ = new §_-th§(§_-l3D§,param2,§_-M4U§,param3,0,param5,param7);
             _loc13_.§_-C38§ = param4;
             _loc13_.§_-2f§ = true;
             _loc13_.§_-d1t§ = true;
             _loc13_.§_-U3s§ = param6;
-            _loc13_.§_-K1P§ = param9;
+            _loc13_.§_-K1P§ = param9;//GfxRotation?
             _loc13_.§_-k4a§ = 0;
             _loc13_.§_-h12§ = param11;
             _loc13_.§_-p3j§ |= param12;
@@ -1107,6 +1124,7 @@ package
             return true;
         }
         
+        //QueueAsBackgroundPower?
         public function §_-v4U§(param1:§_-Y3o§, param2:§_-Ej§, param3:Point, param4:uint = 0, param5:uint = 0, param6:uint = 0) : §_-th§
         {
             if(param1 == null)
@@ -1118,7 +1136,7 @@ package
                 return null;
             }
             var _loc7_:§_-th§ = new §_-th§(§_-l3D§,param1,§_-M4U§,param4,param5,param3,param6);
-            _loc7_.§_-C38§ = param2;
+            _loc7_.§_-C38§ = param2;//mTarget
             _loc7_.§_-2f§ = true;
             §_-f46§.push(_loc7_);
             return _loc7_;
@@ -1399,6 +1417,7 @@ package
                 //AllowBGInterrupt
                 if(_loc4_ != null && _loc4_.§_-F2V§.§_-A1i§)
                 {
+                    // interrupt
                     _loc4_.§_-p4H§();
                 }
             }
@@ -1913,6 +1932,7 @@ package
             return _loc13_;
         }
         
+        // find next power
         public function §_-H4z§(param1:uint, param2:§_-th§, param3:§_-Y3o§, param4:Boolean) : String
         {
             var _loc5_:int = 0;
@@ -1921,12 +1941,12 @@ package
             {
                 return param3.§_-k4§;//ComboOverrideIfButton H
             }
-            //                           !released  (!IgnoreButtonOnMiss || hit)        && (!IgnoreButtonOnHit|| !hit)
+            //                     !mbWasReleaseCancelled  (!IgnoreButtonOnMiss || hit)        && (!IgnoreButtonOnHit|| !hit)
             if(param3.§_-N2y§ != null && !param4 && (!param3.§_-25i§ || param2.§_-j4i§) && (!param3.§_-Y40§ || !param2.§_-j4i§))
             {
                 return param3.§_-N2y§;//ComboOverrideIfButton MAX
             }
-            //                          !released                                     (!IgnoreButtonOnMiss||hit)          && (!IgnoreButtonOnHit|| !hit)
+            //                 !mbWasReleaseCancelled                                     (!IgnoreButtonOnMiss||hit)          && (!IgnoreButtonOnHit|| !hit)
             if(param3.§_-728§ != null && param4 && Boolean(param2.§_-43G§(param1)) && (!param3.§_-25i§ || param2.§_-j4i§) && (!param3.§_-Y40§ || !param2.§_-j4i§))
             {
                 return param3.§_-728§;//ComboOverrideIfButton MIN
@@ -1948,7 +1968,7 @@ package
             {
                 return param3.§_-C4w§;//ComboOverrideIfWall
             }
-            if(param3.§_-o4U§ != null && param4)//param4 - release?
+            if(param3.§_-o4U§ != null && param4)//param4 - mbWasReleaseCancelled
             {
                 return param3.§_-o4U§;//ComboOverrideIfRelease
             }
@@ -2008,6 +2028,26 @@ package
             return _loc4_;
         }
         
+        /*
+        function: FireThisPower
+        param1: uint currTime
+        param2: uint frame
+        param3: PowerType powerType
+        param4: ActivePower activePower
+        param5: Point sourcePos
+        param6: Point targetPos
+        param7: Vector<Entity> targetList
+        param8: uint castIndex
+        param9: Array excludeList
+        param10: uint chargeTime
+        param11: bool bFiringLeft
+        param12: uint itemVelocity
+        param13: Point overrideVector
+        param14: Number velocityX(?)
+        param15: uint heldDir(?)
+        param16: bool heavyInput(?)
+        param17: uint unknown*
+        */
         //                       time         frame          power                                                                          hit index                     charge                                                                                   velx              helddir           heavy input
         public function §_-A46§(param1:uint, param2:uint, param3:§_-Y3o§, param4:§_-th§, param5:Point, param6:Point, param7:Vector.<§_-Ej§>, param8:uint, param9:Array, param10:uint = 0, param11:Boolean = false, param12:uint = 0, param13:Point = undefined, param14:Number = 1, param15:uint = 0, param16:Boolean = false, param17:uint = 0) : uint
         {
@@ -2048,14 +2088,16 @@ package
                     }
                     if(!!param3.§_-X36§ && _loc22_.§_-Ko§ == uint(6) && !_loc23_)
                     {
+                        // ReleaseHeldByPower
                         _loc22_.§_-15n§(§_-M4U§);
                     }
                     _loc24_ = param3.§_-92e§;//IsSignature
                     //                                                                                                              not Uninterruptable
-                    //this n2n is probably "can hit"
+                    //n2n is CanBeTargeted
                     if(_loc22_.§_-n2n§(param1,_loc24_) && !_loc23_ && (!param3.§_-J4J§ || _loc22_.§_-p3I§.§_-y44§ == null || !_loc22_.§_-p3I§.§_-y44§.§_-F2V§.§_-44r§))
                     {
                         _loc25_ = 0;
+                        //                                  mTargetEntOfPower    overrideVector
                         _loc26_ = !param3.§_-64W§ || _loc22_ == param4.§_-C38§ ? param13 : null;
                         _loc22_.§_-T2c§(§_-xP§.§_-l1Q§);
                         _loc27_ = Number(_loc22_.§_-K3g§());
@@ -2528,6 +2570,12 @@ package
             return false;
         }
         
+        /*
+        function: CheckPowerTick
+        param1: uint currTime
+        param2: ActivePower activePower
+        param3: uint bgIndex
+        */
         public function §_-63K§(param1:uint, param2:§_-th§, param3:uint = 0) : void
         {
             var _loc6_:* = null as §_-Y3o§;
@@ -2558,12 +2606,12 @@ package
             var _loc31_:uint = 0;
             var _loc32_:uint = 0;
             var _loc33_:Boolean = false;
-            var _loc34_:* = null as String;
+            var _loc34_:* = null as String;//next power
             var _loc35_:* = null as §_-d2R§;
-            var _loc36_:* = null as §_-Y3o§;
+            var _loc36_:* = null as §_-Y3o§;//next power
             var _loc37_:uint = 0;
             var _loc38_:* = null as Array;
-            var _loc39_:* = null as §_-th§;
+            var _loc39_:* = null as §_-th§;//new active power
             var _loc40_:* = null as §_-F3e§;
             var _loc41_:uint = 0;
             var _loc42_:int = 0;
@@ -2574,6 +2622,7 @@ package
             {
                 return;
             }
+            // is background power?
             var _loc4_:Boolean = param2.§_-2f§;
             var _loc5_:Boolean = Boolean(param2.§_-g46§(param1));
             if(!_loc5_)
@@ -2582,7 +2631,7 @@ package
                 _loc6_ = param2.§_-F2V§;
                 //some hit ID related thing
                 _loc7_ = param2.§_-v1n§;
-                //
+                //mTimeCharged
                 _loc8_ = param2.§_-8m§;
                 //
                 _loc9_ = param2.§_-k2C§;
@@ -2592,11 +2641,11 @@ package
                 _loc11_ = param2.§_-915§;
                 // mTargetEntOfPower
                 _loc12_ = param2.§_-C38§;
-                //"release"?
+                //mbWasReleaseCancelled
                 _loc13_ = param2.§_-W2B§;
                 //
                 _loc14_ = param2.§_-p3j§;
-                //
+                //mTargetPos
                 _loc15_ = param2.§_-T3m§;
                 //
                 _loc16_ = param2.§_-U3s§;
@@ -2660,6 +2709,7 @@ package
                     }
                 }
                 _loc33_ = false;
+                // ComboOverrideIfInterrupt
                 if(!_loc9_ && _loc6_.§_-33M§ != null && !((_loc6_.§_-h14§ == uint(3) || _loc6_.§_-h14§ == uint(13)) && _loc31_ == 0 && !_loc30_))
                 {
                     _loc34_ = _loc6_.§_-33M§;
@@ -2714,6 +2764,7 @@ package
                 if(_loc36_ != null)
                 {
                     _loc39_ = null;
+                    // not item collision power?
                     if(!param2.§_-d1t§)
                     {
                         if(_loc4_)
@@ -2737,8 +2788,7 @@ package
                         }
                         if(!_loc4_)
                         {
-                            //not (AllowMove or MeteorPoundRelease)
-                            //and no AllowMoveForward
+                            //!AllowMove && !AllowMoveForward
                             if(!_loc36_.§_-12k§ && !_loc6_.§_-V1H§)
                             {
                                 §_-M4U§.§_-vR§(true);
@@ -2748,7 +2798,7 @@ package
                             {
                                 §_-M4U§.§_-g3I§ = true;
                             }
-                            //not MeteorPoundRelease
+                            //not AllowJump
                             if(!_loc36_.§_-I2J§)
                             {
                                 //set jump locked
@@ -2776,6 +2826,7 @@ package
                         }
                         if(_loc36_.§_-C5s§ != uint(0) && _loc15_ != null)
                         {
+                            // mTargetPos
                             _loc39_.§_-T3m§ = new Point(_loc15_.x,_loc15_.y);
                         }
                         if(_loc36_.§_-GO§)
@@ -2783,8 +2834,10 @@ package
                             // mTargetEntOfPower
                             _loc39_.§_-C38§ = _loc12_;
                         }
+                        // only true for MeteorPoundRelease
                         if(_loc36_.§_-t3j§)
                         {
+                            // mbWasReleaseCancelled
                             _loc39_.§_-W2B§ = _loc13_;
                         }
                         if(_loc36_.§_-e4A§)
@@ -2904,6 +2957,7 @@ package
             return _loc4_;
         }
         
+        // CanCastPower
         public function §_-C3O§(param1:§_-Y3o§, param2:uint) : Boolean
         {
             if(param1 == null)
@@ -2941,6 +2995,7 @@ package
             return true;
         }
         
+        // CachePowerFlags?
         public function §_-A36§() : void
         {
             §_-H2O§ = false;
@@ -2973,7 +3028,7 @@ package
             §_-e2s§ = §_-y44§.§_-U3n§;
             §_-01t§ = _loc1_.§_-h14§ == uint(14);
             //is aerial, doing a signature, targeting type is Smash/SmashGrab, not gc
-            //i think this is not slide charging
+            //i think this is "not slide charging"
             if(§_-M4U§.§_-go§() && _loc1_.§_-92e§ && _loc1_.§_-h14§ == uint(8) && (§_-y44§.§_-p3j§ & uint(2)) == 0)
             {
                 §_-a1h§ = false;
@@ -3152,6 +3207,7 @@ package
             }
         }
         
+        // only called when doing light/heavy while holding an item with an OnActivatePower
         public function §_-En§(param1:uint, param2:uint = 0) : Boolean
         {
             var _loc3_:int = 0;

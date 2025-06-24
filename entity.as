@@ -7920,10 +7920,10 @@ package
         
         public function §_-s4G§() : int
         {
-            var _loc1_:Number = §_-p1C§() * 1000;
-            var _loc2_:Number = §_-ze§() * 1000;
-            var _loc3_:Number = §_-K27§() * 1000;
-            var _loc4_:Number = §_-75Y§() * 1000;
+            var _loc1_:Number = §_-p1C§() * 1000;//PhysPosX
+            var _loc2_:Number = §_-ze§() * 1000;//PhysPosY
+            var _loc3_:Number = §_-K27§() * 1000;//VelocityX
+            var _loc4_:Number = §_-75Y§() * 1000;//VelocityY
             var _loc5_:int = int(Math.round(_loc1_));
             var _loc6_:int = int(Math.round(_loc2_));
             var _loc7_:int = int(Math.round(_loc3_));
@@ -9861,25 +9861,31 @@ package
                 _loc6_ = _loc5_.§_-ra§;
                 _loc7_ = _loc6_ != 0 ? §_-l3D§.§_-GY§(_loc6_) : null;
                 _loc8_ = §_-l3D§.§_-T1o§.§_-x4F§;
+                // not points and not stock and no waves
                 if(!_loc8_.§_-5B§ && !_loc8_.§_-e3q§ && !_loc8_.§_-h15§)
                 {
                     if(_loc7_ != null && _loc7_ != this)
                     {
-                        if(_loc7_.§_-42u§ == §_-42u§)//same team
+                        //same team. -2 to you.
+                        if(_loc7_.§_-42u§ == §_-42u§)
                         {
                             §_-P4L§.§_-S4v§.§_-Tm§(_loc7_,"Minus2");
                         }
+                        //different team. +2 to you.
                         else
                         {
                             §_-P4L§.§_-S4v§.§_-Tm§(_loc7_,"Plus2");
                         }
+                        // either way, killed player gets -1.
                         §_-P4L§.§_-S4v§.§_-Tm§(this,"Minus1");
                     }
+                    // SD. -3
                     else
                     {
                         §_-P4L§.§_-S4v§.§_-Tm§(this,"Minus3");
                     }
                 }
+                // not points and is stock
                 else if(!_loc8_.§_-5B§ && _loc8_.§_-e3q§)
                 {
                     §_-P4L§.§_-S4v§.§_-Tm§(this,"Minus1");

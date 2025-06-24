@@ -210,22 +210,22 @@ package
          
         //VariableImpulse
         public var §_-B1O§:Vector.<int>;
-        // J4J - is grab?
-        // Dg - is grab?
+        // J4J - ignore Uninterruptable
+        // Dg - is grab
         // z2X - is ground check
-        // GO - ??
-        // X36 - ??
+        // GO - stores mTargetEntOfPower
+        // X36 - ReleaseHeldEntity?
         // fT - ??
         // Z4I - how many hitboxes have to detect collision
-        // e4A - ??
+        // e4A - HasGfxRotation?
         // C5s - ??
         // wY - doesn't lose i frames
         // W1V - charge as long as this input is held
-        // 12k - ??
-        // I2J - ??
+        // 12k - AllowMove
+        // I2J - prevent jump during recovery?
         // O4y - is taunt
         // 51d - is taunt main
-        // lp - is taunt release
+        // lp - is release
         // X3z - is team taunt
         // TI - is assist taunt
         // 23T - ??
@@ -243,7 +243,7 @@ package
         //Self - 4
         //RangedAoE - 5
         //RangedGrab - 5. Dg and J4J are true.
-        //PathExplosion - 5. e4A is true. C5s is 1.
+        //PathExplosion - 5. e4A is true. ComboUseSameTargetPos=TRUE.
         //GroundPound - 6
         //GroundPoundHB - 6. z2X is true.
         //GroundCheck - 6. z2X and wY are true.
@@ -459,7 +459,7 @@ package
         public var §_-GO§:Boolean;
         
         public var §_-d2z§:Boolean;
-        
+        // release when aerial?
         public var §_-s3v§:Boolean;
         
         public var §_-s3w§:Boolean;
@@ -585,7 +585,7 @@ package
         public var §_-E4R§:Array;
         
         public var §_-Qs§:int;
-        
+        // min active frames (when charge affects active frames)
         public var §_-A1c§:int;
         //MinimumImpulse
         public var §_-z4N§:uint;
@@ -711,11 +711,11 @@ package
         public var §_-I3H§:Vector.<int>;
         
         public var §_-41F§:uint;
-        
+        //FireImpulseMaxX
         public var §_-736§:Vector.<int>;
-        
+        //FireImpulseY
         public var §_-j28§:Vector.<int>;
-        
+        //FireImpulseX
         public var §_-F1v§:Vector.<int>;
         
         public var §_-j2w§:uint;
@@ -747,7 +747,7 @@ package
         public var §_-45a§:Boolean;
         //only true for LanceSmashSideCombo
         public var §_-I3G§:Boolean;
-        
+        // charge affects active frames
         public var §_-s4M§:Boolean;
         //SmashRelease
         public var §_-B1S§:Boolean;
@@ -2638,6 +2638,7 @@ package
                 _loc48_ = uint(_loc43_ != 0 ? Number(Math.max(_loc44_,1)) : Number(_loc44_));
                 _loc4_.§_-W42§ += uint(_loc48_ + _loc45_);
                 _loc4_.§_-41F§ += _loc45_;
+                // no startup
                 if(_loc44_ == 0)
                 {
                     _loc4_.§_-41F§ = _loc4_.§_-41F§ + 1;
@@ -2645,7 +2646,7 @@ package
                 _loc49_ = 1 + int(Math.ceil(_loc45_ / _loc46_));
                 _loc4_.§_-K2O§.push(_loc44_);//before :/@ (Startup)
                 _loc4_.§_-K4y§.push(_loc31_);//the string itself
-                _loc4_.§_-V4m§.push(_loc41_);//0
+                _loc4_.§_-V4m§.push(_loc41_);//cast index
                 _loc4_.§_-m31§.push(false);//false
                 _loc50_ = 1;
                 _loc51_ = int(_loc49_);
@@ -2654,7 +2655,7 @@ package
                     _loc52_ = _loc50_++;
                     _loc4_.§_-K2O§.push(!!_loc47_ ? _loc46_ : uint(0));//0
                     _loc4_.§_-K4y§.push(_loc31_);//the string itself
-                    _loc4_.§_-V4m§.push(_loc41_);//0
+                    _loc4_.§_-V4m§.push(_loc41_);//cast index
                     _loc4_.§_-m31§.push(false);//false
                 }
                 _loc4_.§_-k4h§ = Number(§_-Y3o§.§_-U2S§(_loc4_,_loc7_,null,_loc4_.§_-B1O§,_loc43_,_loc49_)) != 0 || _loc4_.§_-k4h§;

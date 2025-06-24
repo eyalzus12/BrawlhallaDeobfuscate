@@ -50,11 +50,11 @@ package
         
         public static var §_-73u§:Number = 0.5;
          
-        
+        // mbWasReleaseCancelled
         public var §_-W2B§:Boolean;
         
         public var §_-cF§:Boolean;
-        
+        // mbPowerFacingLeft
         public var §_-U2J§:Boolean;
         
         public var §_-g4H§:Boolean;
@@ -64,7 +64,7 @@ package
         public var §_-U3n§:Boolean;
         
         public var §_-14Q§:Boolean;
-        
+        // is active
         public var §_-k2C§:Boolean;
         
         public var §_-B5e§:Boolean;
@@ -74,13 +74,13 @@ package
         public var §_-24Z§:Boolean;
         
         public var §_-Vt§:Boolean;
-        
+        // in startup?
         public var §_-Ks§:Boolean;
         
         public var §_-L3L§:Boolean;
         
         public var §_-H2O§:Boolean;
-        
+        // released charge?
         public var §_-Q23§:Boolean;
         
         public var §_-U3F§:Boolean;
@@ -92,37 +92,37 @@ package
         public var §_-G1Y§:Number;
         
         public var §_-s4T§:uint;
-        
+        // mTimeCharged
         public var §_-8m§:uint;
-        
+        // mTargetPos
         public var §_-T3m§:Point;
-        
+        // mTarget
         public var §_-C38§:§_-Ej§;
-        
+        // start frame
         public var §_-G2L§:uint;
         
         public var §_-K3W§:Number;
-        
+        // mSourcePos
         public var §_-U3s§:Point;
         
         public var §_-915§:uint;
         
         public var §_-d4B§:String;
-        
+        // seems to be attack end time
         public var §_-25N§:uint;
-        
+        // mPower
         public var §_-F2V§:§_-Y3o§;
         
         public var §_-t2B§:§_-tS§;
-        
+        // mCreator
         public var §_-D2f§:§_-Ej§;
-        
+        // mOverridePoint
         public var §_-23D§:Point;
         
         public var §_-n1g§:Number;
         
         public var §_-k4a§:uint;
-        
+        // hit ID
         public var §_-v1n§:uint;
         
         public var §_-p1U§:§_-D45§;
@@ -136,11 +136,11 @@ package
         public var §_-E4x§:uint;
         
         public var §_-D4g§:uint;
-        
+        // mGfxRotation
         public var §_-K1P§:Number;
         
         public var §_-E3N§:uint;
-        
+        // time until next hitbox?
         public var §_-l26§:uint;
         
         public var §_-q16§:int;
@@ -148,7 +148,7 @@ package
         public var §_-23y§:uint;
         
         public var §_-UE§:uint;
-        
+        // curent cast?
         public var §_-U1T§:uint;
         
         public var §_-p3f§:Number;
@@ -166,15 +166,16 @@ package
         public var §_-22w§:Array;
         
         public var §_-159§:uint;
-        
+        // mAlreadyHitList?
         public var §_-O1x§:Array;
-        
+        // mAirTimeMult
         public var §_-G1p§:Number;
         
         public var §_-2f§:Boolean;
         
         public var §_-l3D§:§_-F3e§;
         
+        //                     game             power         creator      hitIdOverride  chargeTime               targetPos               ?
         public function §_-th§(param1:§_-F3e§, param2:§_-Y3o§, param3:§_-Ej§, param4:uint, param5:uint = 0, param6:Point = undefined, param7:uint = 0)
         {
             var _loc8_:Number = NaN;
@@ -222,6 +223,7 @@ package
                 §_-v1n§ = param4;
             }
             §_-t2B§ = §_-F2V§.§_-l1V§(§_-D2f§.§_-d33§,§_-D2f§.§_-65d§);
+            // lance recovery charge affecting active frames thing
             if(!!§_-F2V§.§_-s4M§ && §_-F2V§.§_-K2O§ != null)
             {
                 _loc8_ = §_-F2V§.§_-Yu§ != 0 ? §_-8m§ / §_-F2V§.§_-Yu§ : Number(0);
@@ -393,6 +395,7 @@ package
             }
         }
         
+        // UpdateFirePositions
         public function §_-e4d§() : void
         {
             var _loc2_:Number = NaN;
@@ -773,6 +776,7 @@ package
             }
         }
         
+        // TickPower. param1 = currTime.
         // returns whether still active
         // §_-24Z§ is relevant for result
         public function §_-g46§(param1:uint) : Boolean
@@ -818,7 +822,7 @@ package
             var _loc3_:uint = uint(_loc2_ - §_-G2L§);//frames spent
             var _loc4_:Number = §_-F2V§.§_-G21§;//MinChargeTime
             var _loc5_:Boolean = false;
-            //             passed min charge     sig                chargeable non sig       taunt
+            //             passed min charge  charge with heavy   charge with dir       taunt
             if(!§_-Ks§ && _loc3_ > _loc4_ && (§_-F2V§.§_-l2j§ || §_-F2V§.§_-W1V§ != 0 || §_-F2V§.§_-51d§))
             {
                 §_-qK§(_loc2_);
@@ -875,16 +879,18 @@ package
             {
                 §_-zv§(param1);
             }
+            // time for active frames
             var _loc13_:Boolean = _loc2_ >= §_-l26§;
             if(!§_-Ks§ && _loc13_)
             {
-                §_-33n§();
-                §_-e4d§();
+                §_-33n§();//FindFirePositions
+                §_-e4d§();//UpdateFirePositions
+                //                           DelayCastGfxToFirstFire
                 if(!!§_-2f§ && §_-U1T§ == 0 && §_-F2V§.§_-W2x§)
                 {
                     §_-o3§(param1);
                 }
-                §_-zv§(param1);
+                §_-zv§(param1);//AnimateFire?
                 §_-Ks§ = true;
                 §_-E3N§ = §_-E3N§ + 1;
                 _loc14_ = §_-D2f§.§_-p3I§;
@@ -934,6 +940,7 @@ package
                         if((_loc5_ || §_-F2V§.§_-V2e§) && !§_-F2V§.§_-wY§)
                         {
                             //                              time    frame   power                            hit index                        groundt?        veloc
+                            //FireThisPower
                             _loc24_ += uint(_loc14_.§_-A46§(param1,_loc2_,§_-F2V§,this,§_-U3s§,§_-T3m§,_loc22_,§_-U1T§,§_-O1x§,_loc9_,§_-U2J§,§_-k4a§,§_-23D§,§_-n1g§,§_-E4x§,§_-W1N§,_loc16_));
                         }
                         //                 (!IsMultiHit or MinTimeBetweenHits != 0)
@@ -1110,6 +1117,7 @@ package
                 {
                     §_-W2B§ = true;
                 }
+                // found relevant collision. min cancel time passed.
                 //                                                  MinCancelTime
                 if(_loc24_ != uint(5) && _loc24_ != uint(0) && (§_-F2V§.§_-z4h§ == 0 || _loc3_ >= §_-F2V§.§_-z4h§))
                 {
@@ -1132,6 +1140,7 @@ package
                         §_-B5e§ = true;
                     }
                 }
+                // not last frame. if charge affecting active frames thing, not final frame.
                 else if(_loc10_ < int(§_-F2V§.§_-K2O§.length) - 1 && (!§_-F2V§.§_-s4M§ || _loc10_ < §_-q16§))
                 {
                     _loc28_ = uint(§_-F2V§.§_-K2O§[§_-U1T§ = uint(§_-U1T§ + 1)]);
@@ -1140,10 +1149,12 @@ package
                 }
                 else
                 {
+                    //!AllowMove && AllowRecoverMove
                     if(!§_-F2V§.§_-12k§ && §_-F2V§.§_-d4S§)
                     {
                         §_-D2f§.§_-vR§(false);
                     }
+                    //!AllowJump && AllowJumpDuringRecover
                     if(!§_-F2V§.§_-I2J§ && §_-F2V§.§_-f30§)
                     {
                         §_-D2f§.§_-C32§(false);
@@ -1219,8 +1230,8 @@ package
             {
                 _loc2_ += 0.5 * (§_-8m§ / §_-F2V§.§_-Yu§);
             }
-            var _loc3_:Vector.<int> = §_-F2V§.§_-F1v§;
-            var _loc4_:Vector.<int> = §_-F2V§.§_-j28§;
+            var _loc3_:Vector.<int> = §_-F2V§.§_-F1v§;//FireImpulseX
+            var _loc4_:Vector.<int> = §_-F2V§.§_-j28§;//FireImpulseY
             var _loc5_:Number = 0;
             var _loc6_:Number = 0;
             var _loc7_:int = §_-U1T§;
@@ -1333,6 +1344,7 @@ package
             §_-d4B§ = _loc2_.§_-g2z§;
         }
         
+        // PredictWillHit(currTime:uint, targetEntity:Entity)
         public function §_-i1Z§(param1:uint, param2:§_-Ej§) : uint
         {
             var _loc17_:int = 0;
@@ -1536,6 +1548,13 @@ package
             return uint(uint(§_-G2L§ + §_-F2V§.§_-G21§) + 1) == _loc2_;
         }
         
+        /*
+        0 - no collision
+        1 - EndOnHit activated
+        2 - floor or ceiling
+        4 - wall
+        5 - not a target method which checks for collision
+        */
         //not GroundPound/GroundPoundHB/GroundCheck/MeteorGrab/MeteorPound - 5
         //EndOnHit and hit - 1
         //touching collision, wall - 4
@@ -1543,7 +1562,6 @@ package
         //GroundCheckGrabHit/MeteorGrab/MeteorPound/GroundPoundHB/GroundCheck/PBAoEHB and has non0 damage:
         //  if collision check brought floor or ceiling - 2
         //  else 0
-        
         public function §_-b2E§(param1:uint, param2:uint, param3:uint, param4:Boolean) : uint
         {
             var _loc7_:Boolean = false;
@@ -1617,6 +1635,7 @@ package
             return (§_-159§ & int(1 << param1.§_-j3U§)) == 0;
         }
         
+        // interrupt power
         public function §_-p4H§() : void
         {
             var _loc1_:int = 0;
@@ -1636,6 +1655,7 @@ package
             }
         }
         
+        // InitPower
         public function §_-63D§(param1:uint) : void
         {
             var _loc2_:uint = 0;
@@ -1662,7 +1682,7 @@ package
                 §_-p1U§ = §_-F2V§.§_-55I§ != null ? §_-D45§.§_-Y2n§(§_-F2V§.§_-55I§) : null;
                 //starting frame?
                 §_-G2L§ = _loc2_;
-                //startup
+                //time until next hitbox?
                 §_-l26§ = uint(§_-G2L§ + uint(§_-F2V§.§_-K2O§[0]));
                 //RecoverTime
                 _loc3_ = §_-F2V§.§_-D5q§;
@@ -1682,7 +1702,7 @@ package
                     
                     //recover * (1 + charge*mult/length)
                 }
-                //add current startup?
+                // add startup frames up to relevant cast?
                 if(§_-q16§ != 0)
                 {
                     §_-25N§ += uint(§_-F2V§.§_-J22§(§_-q16§));
@@ -1708,14 +1728,17 @@ package
                 }
                 if(!§_-2f§)
                 {
+                    //!AllowMove && !AllowMoveForward
                     if(!§_-F2V§.§_-12k§ && !§_-F2V§.§_-V1H§)
                     {
                         §_-D2f§.§_-vR§(true);
                     }
+                    //!AllowJump
                     if(!§_-F2V§.§_-I2J§)
                     {
                         §_-D2f§.§_-C32§(true);
                     }
+                    //AllowMoveForward
                     if(§_-F2V§.§_-V1H§)
                     {
                         §_-D2f§.§_-GM§(true);
@@ -1931,13 +1954,21 @@ package
             §_-23y§ = param1;
         }
         
-        //called on release?
+        //HandleAttackRelease(bForceDirectionRelease)
         public function §_-B2§(param1:Boolean = false) : void
         {
             §_-U3F§ = true;
             §_-Vt§ = §_-Vt§ || param1;
         }
         
+        /*
+        GetTargetList
+        (param1) currTime: uint 
+        (param2) castIndex: uint
+        (param3) ownerPhysCenterX: Number
+        (param4) ownerPhysCenterY: Number
+        (param5) entList*: Vector.<Entity>
+        */
         public function §_-Xm§(param1:uint, param2:uint, param3:uint, param4:Number, param5:Number, param6:Vector.<§_-Ej§>) : void
         {
             var _loc19_:uint = 0;
@@ -2186,12 +2217,15 @@ package
             §_-p3j§ |= uint(131072);
         }
         
+        // FindFirePositions
         public function §_-33n§() : void
         {
+            // mSourcePos
             if(§_-U3s§ == null)
             {
                 §_-U3s§ = new Point(Number(§_-D2f§.§_-K3g§()),Number(§_-D2f§.§_-Q2P§()));
             }
+            // mTargetPos
             if(§_-T3m§ == null)
             {
                 §_-T3m§ = new Point(§_-U3s§.x,§_-U3s§.y);
@@ -2232,6 +2266,7 @@ package
             }
         }
         
+        //EndCastLoop(bSoftEnd)
         public function §_-N2C§(param1:Boolean = false) : void
         {
             var _loc2_:* = null as §_-Y3o§;
@@ -2309,6 +2344,7 @@ package
             §_-l3D§.§_-l1f§.setChildIndex(§_-D2f§.§_-35d§.mTheDO3D,_loc3_);
         }
         
+        // DestroyActivePower
         //on power replace/end
         public function §_-Jf§(param1:Boolean = false) : void
         {
@@ -2547,10 +2583,11 @@ package
             §_-N2C§();
         }
         
+        // CompleteAttackRelease
         //min charge time passed
         public function §_-qK§(param1:uint) : void
         {
-            var _loc2_:Boolean = !!§_-F2V§.§_-l2j§ && !§_-U3F§;//charging and not released
+            var _loc2_:Boolean = !!§_-F2V§.§_-l2j§ && !§_-U3F§;//chargable and not released
             var _loc3_:Boolean = §_-F2V§.§_-W1V§ != 0 && (§_-23y§ & §_-F2V§.§_-W1V§) == 0;//did not release input needed to release thing
             var _loc4_:Boolean = !!§_-F2V§.§_-51d§ && !§_-cF§;//taunt and not ??
             //not gc
@@ -2558,6 +2595,7 @@ package
             {
                 return;
             }
+            // mbWasReleaseCancelled
             if(§_-W2B§)
             {
                 return;
@@ -2575,12 +2613,13 @@ package
             §_-Ks§ = true;
             //                      FixedRecoverTime                    RecoverTime * recover mod
             §_-25N§ = uint(uint(param1 + §_-F2V§.§_-nt§) + int(Math.floor(§_-F2V§.§_-D5q§ * §_-G1Y§)));
-            §_-N2C§(§_-F2V§.§_-o4U§ == null);//doesn't have ComboOverrideIfRelease
+            §_-N2C§(§_-F2V§.§_-o4U§ == null /* doesn't have ComboOverrideIfRelease */);
             var _loc5_:int = uint(param1 - §_-G2L§);//charge time
             if(_loc5_ < 0)
             {
                 _loc5_ = 0;
             }
+            // mTimeCharged
             §_-8m§ = _loc5_;
         }
         
@@ -2676,6 +2715,7 @@ package
             return true;
         }
         
+        /// TODO: most of your comments here are wrong.
         public function §_-H2Y§() : void
         {
             var _loc15_:* = null as §_-c3k§;
