@@ -3446,23 +3446,28 @@ package
             var _loc3_:* = null as §_-S5R§;
             var _loc4_:* = null as §_-h3c§;
             var _loc5_:* = null as §_-13c§;
+            // infinite gadgets
             if(§_-F58§ < 4)
             {
-                _loc3_ = §_-i4R§.§_-CT§;
+                _loc3_ = §_-i4R§.§_-CT§;// item manager
+                // end
                 if(param2)
                 {
                     if(_loc3_.§_-b4J§ != 0)
                     {
                         _loc4_ = _loc3_.§_-i4R§.§_-E4C§;
+                        //             ItemSpawnRuleSetID                  WeaponSpawnRateID                   GadgetSpawnRateID
                         _loc3_.§_-W22§(§_-13c§.§_-624§.get(_loc4_.§_-M3m§),§_-S3P§.§_-74l§.get(_loc4_.§_-Q1o§),§_-S3P§.§_-74l§.get(_loc4_.§_-m1s§),_loc4_.§_-14e§);
                     }
                 }
+                //                          TabletopCrazyGadgets
                 else if(_loc3_.§_-b4J§ != §_-13c§.§_-Bz§.§_-M3m§)
                 {
                     _loc5_ = §_-13c§.§_-Bz§;
                     _loc3_.§_-W22§(_loc5_,_loc5_.§_-c3e§,_loc5_.§_-Tp§);
                 }
             }
+            // sidekick swarm
             else if(§_-F58§ < 8)
             {
                 if(!param2)
@@ -3470,6 +3475,7 @@ package
                     §_-US§(param1);
                 }
             }
+            // broken shield
             else if(§_-F58§ < 12)
             {
                 if(param2)
@@ -3481,6 +3487,7 @@ package
                     §_-A1n§(param1);
                 }
             }
+            // bomb rain
             else if(§_-F58§ < 19)
             {
                 if(!param2)
@@ -3488,6 +3495,7 @@ package
                     §_-X5e§(param1);
                 }
             }
+            // armageddon
             else if(!param2)
             {
                 §_-32Q§(param1);
@@ -3910,6 +3918,7 @@ package
                 }
                 else if(_loc8_.§_-I2r§ == null || _loc8_.§_-I2r§.§_-oY§ != "BrawlballStats")
                 {
+                    // set BrawlballStats
                     §_-g1c§(_loc8_);
                 }
             }
@@ -4704,7 +4713,7 @@ package
             §_-34W§ = §_-L3f§("a_DashDust03",0.55,"SFX_Spear.swf");
             §_-C19§ = §_-L3f§("a_FXSoccerBallHitDissipate",1,"SFX_GameModes.swf");
             §_-f4D§ = §_-L3f§("a_BrawlballRespawnEffect",1);
-            _loc2_.§_-12I§ = 2;
+            _loc2_.§_-12I§ = 2;// gravity
             §_-Y4W§ = new Vector.<CustomArt>(4,true);
             §_-U1w§ = new Vector.<CustomArt>(4,true);
             §_-Vc§ = new Vector.<CustomArt>(4,true);
@@ -5683,6 +5692,7 @@ package
             {
                 return;
             }
+            // CTFFlagStats
             §_-fX§(param1,§_-f4n§);
             if(param1.§_-G1B§ == 1)
             {
@@ -9308,6 +9318,7 @@ package
             }
             if(_loc2_ != null)
             {
+                // CTFBaseStats
                 §_-fX§(_loc2_,§_-p2y§);
             }
         }

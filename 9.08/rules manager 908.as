@@ -6722,6 +6722,7 @@ package
             }
         }
         
+        // this runs on respawn?
         public function §_-02S§(param1:uint, param2:§_-j53§) : void
         {
             var _loc5_:int = 0;

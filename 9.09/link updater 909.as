@@ -1087,7 +1087,7 @@ package
         public static function §_-b1I§(param1:§_-X2d§) : Boolean
         {
             var _loc2_:uint = uint(param1.type);
-            //                         16                              2463                             ?
+            //                         16                              2463                             174
             if(_loc2_ == LinkUpdater.§_-ML§ || _loc2_ == LinkUpdater.§_-v5O§ || _loc2_ == LinkUpdater.§_-MU§)
             {
                 return false;
