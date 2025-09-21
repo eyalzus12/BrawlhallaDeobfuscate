@@ -7487,6 +7487,7 @@ package
             return false;
         }
         
+        // can chase dodge?
         //                      time            input
         public function §_-6q§(param1:uint, param2:uint) : Boolean
         {
@@ -7497,7 +7498,7 @@ package
             }
             var _loc3_:Boolean = (param2 & uint(4)) != 0;
             var _loc4_:Boolean = (param2 & uint(8)) != 0;
-            //left and ? or right and ?
+            //left and faced right or right and faced left
             if(!!_loc3_ && !§_-EI§ || !!_loc4_ && §_-EI§)
             {
                 return false;
@@ -8950,7 +8951,7 @@ package
                 _loc10_ = §_-C2§;
                 _loc11_ = §_-6n§;
                 _loc12_ = §_-Ki§;
-                //holding left, or left facing and not holding right
+                //holding left, or left facing and not holding right. desired dash direction.
                 _loc13_ = (§_-k4k§.§_-e7§ & uint(4)) != 0 || !!_loc9_ && (§_-k4k§.§_-e7§ & uint(8)) == 0;
                 _loc14_ = !§_-g3I§ && _loc4_ && _loc13_ != _loc8_;
                 if(_loc14_)
@@ -8961,7 +8962,7 @@ package
                 }
                 //in dash
                 _loc15_ = §_-e3M§;
-                _loc16_ = _loc9_;
+                _loc16_ = _loc9_;// facing direction during dash
                 //if holding diagonally down, backdash input window is 10 frames instead of 5 frames
                 //but maybe because of > it's 9 and 4?
                 //i think it's 9 and 4
@@ -8987,6 +8988,7 @@ package
                         _loc16_ = _loc13_;
                     }
                 }
+                // not direction locked in power and not in dash and still in window from first turnaround. backdash.
                 else if(!§_-g3I§ && !_loc15_ && uint(_loc10_ + _loc17_) > param1)
                 {
                     _loc16_ = !_loc13_;

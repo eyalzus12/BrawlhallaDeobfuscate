@@ -1473,6 +1473,7 @@ package
             {
                 if(§_-v4X§(param1))
                 {
+                    // slide charge
                     §_-p3j§ |= uint(2048);
                 }
                 return true;
@@ -1518,6 +1519,7 @@ package
             return true;
         }
         
+        // is gravity cancelling
         public function §_-v4X§(param1:uint) : Boolean
         {
             //                                          CancelGravity
@@ -1536,6 +1538,7 @@ package
             {
                 return true;
             }
+            // FireImpulseY
             var _loc3_:uint = int(§_-F2V§.§_-j28§.length);
             var _loc4_:int = §_-U1T§ < _loc3_ ? int(§_-F2V§.§_-j28§[§_-U1T§]) : int(§_-F2V§.§_-j28§[0]);
             //equal to 2147483647, which is used for defaults
@@ -2190,6 +2193,7 @@ package
             {
                 _loc2_ *= 0.5;
             }
+            //                  slide charging a sig
             if(_loc2_ == 1 && Boolean(§_-c2e§(param1)))
             {
                 _loc2_ = 0.4;
