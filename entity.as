@@ -5652,6 +5652,7 @@ package
             }
         }
         
+        // TakeDamage
         //                       time           damage            hitter      power
         public function §_-81H§(param1:uint, param2:Number, param3:§_-Ej§, param4:§_-Y3o§ = undefined, param5:uint = 0, param6:§_-Y3o§ = undefined) : void
         {
@@ -6106,6 +6107,13 @@ package
             }
         }
         
+        /*
+        function: SetHeldByPower
+        param1: uint currTime
+        param2: Entity sourceEnt
+        param3: ActivePower activePower
+        param4: ?
+        */
         public function §_-x4A§(param1:uint, param2:§_-Ej§, param3:§_-th§, param4:Boolean = false) : void
         {
             var _loc6_:* = null as §_-Y3o§;
@@ -6114,6 +6122,7 @@ package
             if(param3 != null && param3.§_-k2C§ && (§_-Ko§ == uint(0) || _loc5_ || §_-85n§.§_-D2f§ == param3.§_-D2f§))
             {
                 §_-Ko§ = uint(6);
+                // holding power
                 §_-85n§ = param3;
                 §_-85n§.§_-32u§ = §_-j3U§;
                 _loc6_ = §_-85n§.§_-F2V§;
@@ -6122,6 +6131,7 @@ package
                 {
                     §_-85n§.§_-C38§ = this;
                 }
+                //                                  GrabAnim
                 if(!param4 && §_-35d§ != null && _loc7_.§_-QJ§ != null && _loc7_.§_-QJ§ != "")
                 {
                     §_-m2T§(param3.§_-U2J§);
@@ -6452,6 +6462,7 @@ package
             }
         }
         
+        // ReleaseHeldByPower
         public function §_-15n§(param1:§_-Ej§ = undefined) : void
         {
             if(§_-85n§ == null || !§_-85n§.§_-k2C§ || §_-85n§.§_-D2f§ == param1)
@@ -9502,8 +9513,11 @@ package
             return true;
         }
         
-        //this is probably "can get hit"
-        //                      time           isSig
+        /*
+        function: CanBeTargeted
+        param1: uint currTime
+        param2: bool isSig
+        */
         public function §_-n2n§(param1:uint, param2:Boolean = false) : Boolean
         {
             var _loc3_:Boolean = false;

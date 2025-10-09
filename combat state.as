@@ -1093,7 +1093,7 @@ package
         public function §_-91v(param1:uint, param2:§_-Y3o§, param3:uint, param4:§_-Ej§, param5:Point, param6:Point, param7:uint, param8:Point, param9:Number, param10:Number, param11:uint, param12:uint = 0) : §_-th§
         {
             var _loc13_:§_-th§ = new §_-th§(§_-l3D§,param2,§_-M4U§,param3,0,param5,param7);
-            _loc13_.§_-C38§ = param4;
+            _loc13_.§_-C38§ = param4;//mTargetEntOfPower
             _loc13_.§_-2f§ = true;
             _loc13_.§_-d1t§ = true;
             _loc13_.§_-U3s§ = param6;
@@ -2053,7 +2053,7 @@ package
         {
             var _loc21_:int = 0;
             var _loc22_:* = null as §_-Ej§;
-            var _loc23_:Boolean = false;
+            var _loc23_:Boolean = false;//shouldExclude
             var _loc24_:Boolean = false;
             var _loc25_:Number = NaN;
             var _loc26_:* = null as Point;
@@ -2077,15 +2077,19 @@ package
                 _loc22_ = param7[_loc21_];
                 if(!(!!param3.§_-jg§ && (_loc22_.§_-E44§ & §_-Ej§.§_-Re§) != 0))
                 {
+                    // check exclude list
                     _loc23_ = param9 != null && uint(param9[_loc22_.§_-j3U§]) != 0;
                     if(!!_loc23_ && param3.§_-417§ != 0)
                     {
+                        // check MinTimeBetweenHits
                         _loc23_ = uint(uint(param9[_loc22_.§_-j3U§]) + param3.§_-417§) > param2;
                     }
+                    // caspian katars dsig
                     if(!_loc23_ && param3.§_-s3w§)
                     {
                         _loc23_ = Boolean(_loc22_.§_-p3I§.§_-j1o§(param4.§_-v1n§));
                     }
+                    // ReleaseHeldEntity
                     if(!!param3.§_-X36§ && _loc22_.§_-Ko§ == uint(6) && !_loc23_)
                     {
                         // ReleaseHeldByPower
@@ -3035,6 +3039,7 @@ package
             }
             if(_loc1_.§_-X3z§)
             {
+                // mTargetEntOfPower
                 §_-ET§ = §_-y44§.§_-C38§ != null ? uint(2) : uint(1);
             }
             else if(_loc1_.§_-TI§)

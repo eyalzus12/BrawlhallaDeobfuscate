@@ -130,7 +130,7 @@ package
         public var §_-h12§:uint;
         
         public var §_-p3j§:uint;
-        
+        // held entity id?
         public var §_-32u§:uint;
         
         public var §_-E4x§:uint;
@@ -273,9 +273,10 @@ package
             var _loc3_:§_-c3k§ = §_-D2f§.§_-oC§();
             var _loc4_:§_-L2m§ = _loc3_.§_-kh§(§_-d4B§);
             var _loc5_:§_-TL§ = _loc4_ != null && §_-p3f§ < _loc4_.§_-N3k§ ? _loc4_.§_-Y3a§(int(Math.floor(§_-p3f§))) : null;
-            var _loc6_:Point = _loc5_ != null ? _loc5_.§_-p1k§ : null;//OffsetA
+            var _loc6_:Point = _loc5_ != null ? _loc5_.§_-p1k§ : null;//fire socket.
             var _loc10_:§_-Ej§ = §_-D2f§;
             var _loc11_:§_-Ej§ = _loc2_;
+            //                      GrabInterpolateTime
             var _loc12_:Number = §_-F2V§.§_-74e§ != 0 ? (uint(param1 - §_-D4g§)) / (uint(uint(param1 + §_-F2V§.§_-74e§) - §_-D4g§)) : Number(1);
             if(_loc12_ > 1)
             {
@@ -285,10 +286,12 @@ package
             {
                 _loc12_ = 0;
             }
+            // no attack has this at 3          caspian gauntlets ssig
             if(§_-F2V§.§_-d1N§ == uint(3) || §_-F2V§.§_-d1N§ == uint(4) && Number(_loc2_.§_-ze§()) > Number(§_-D2f§.§_-ze§()))
             {
                 _loc11_ = §_-D2f§;
                 _loc10_ = _loc2_;
+                // has fire socket
                 if(_loc6_ != null)
                 {
                     if(§_-U2J§)
@@ -299,8 +302,10 @@ package
                     {
                         _loc7_ = _loc6_.x;
                     }
+                    // distance to fire socket
                     _loc8_ = _loc2_.§_-p1C§() - _loc7_;
                     _loc9_ = _loc2_.§_-ze§() - _loc6_.y;
+                    // interpolate to fire socket
                     _loc8_ = Number(Number(§_-D2f§.§_-p1C§()) + _loc12_ * (_loc8_ - §_-D2f§.§_-p1C§()));
                     _loc9_ = Number(Number(§_-D2f§.§_-ze§()) + _loc12_ * (_loc9_ - §_-D2f§.§_-ze§()));
                 }
@@ -325,6 +330,7 @@ package
                 _loc8_ = Number(Number(_loc2_.§_-p1C§()) + _loc12_ * (_loc8_ - _loc2_.§_-p1C§()));
                 _loc9_ = Number(Number(_loc2_.§_-ze§()) + _loc12_ * (_loc9_ - _loc2_.§_-ze§()));
             }
+            //          cross gauntlets dsig
             else if(§_-F2V§.§_-d1N§ == uint(2) && §_-T3m§ != null)
             {
                 if(§_-D2f§.§_-I4N§())
@@ -1039,10 +1045,13 @@ package
                             }
                         }
                     }
+                    //              grab
                     if(!!_loc5_ && §_-F2V§.§_-Dg§ && _loc24_ != 0)
                     {
+                        // IsValidHold
                         if(§_-858§())
                         {
+                            // set target to be held entity
                             §_-C38§ = §_-l3D§.§_-GY§(§_-32u§);
                         }
                         else if(int(_loc22_.length) != 0)
@@ -1302,10 +1311,12 @@ package
             var _loc3_:Number = NaN;
             var _loc4_:Number = NaN;
             var _loc5_:Number = NaN;
+            // not IsValidHold
             if(!§_-858§())
             {
                 return;
             }
+            // move the player around
             var _loc2_:§_-Ej§ = §_-l3D§.§_-GY§(§_-32u§);
             if(§_-k2C§)
             {
@@ -1481,12 +1492,15 @@ package
             return false;
         }
         
+        // IsValidHold
         public function §_-858§() : Boolean
         {
+            // does not HoldHitEnts
             if(!§_-F2V§.§_-jg§)
             {
                 return false;
             }
+            // held entity?
             var _loc1_:§_-Ej§ = §_-l3D§.§_-GY§(§_-32u§);
             if(_loc1_ != null && _loc1_.§_-85n§ != null && _loc1_.§_-85n§ == this)
             {

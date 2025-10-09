@@ -229,6 +229,7 @@ package
                 ApplyPowerImpulse(currTime,sourceEnt,targetEnt,impulseUnitVector,power,_loc10_,castIndex);
                 targetEnt.SetTrailEffect(sourceEnt.§'7§);
             }
+            // HoldHitEnts
             if(power.§'!W§ && power == _loc21_.§4<§.§[?§ && !_loc21_.§4<§.§5!=§)
             {
                 targetEnt.SetHeldByPower(currTime,sourceEnt,_loc21_.§4<§);

@@ -545,7 +545,16 @@ package
             return true;
         }
         
-        //                      time            hitee           stun        knockback  softImpulseToPoint  thing      DoNotBounceOffNoSlideCeiling
+        /*
+        function: InterruptTarget
+        param1: uint currTime
+        param2: Entity targetEnt
+        param3: Number stunTime
+        param4: Point impulseVector
+        param5: Boolean softImpulseToPoint*
+        param6: Boolean ?*
+        param7: Boolean doNotBounceOffNoSlideCeiling*
+        */
         public function §_-B3s§(param1:uint, param2:§_-Ej§, param3:Number, param4:Point, param5:Boolean, param6:Boolean, param7:Boolean) : void
         {
             var _loc10_:int = 0;
@@ -662,6 +671,29 @@ package
             return Number(Math.max(_loc9_ - param3.§_-13W§,0));//reduce impulse negation. although entity never stores it so this does nothing
         }
         
+        /*
+        function: ExecuteHit
+        param1: uint currTime
+        param2: PowerType power
+        param3: hit info*
+        param4: ?
+        param5: Entity sourceEnt
+        param6: Entity targetEnt
+        param7: Point impulseUnitVector
+        param8: uint castIndex
+        param9: uint chargeTime
+        param10: uint itemVelocity
+        param11: Number airTimeMult
+        param12: Number force*
+        param13: Boolean heavyInput*
+        param14: Boolean dropThrough*
+        param15: uint hitWhenStunned?1:2 *
+        param16: uint powerFlags*
+        param17: PowerType ?
+        param18: Boolean ?
+        param19: Boolean ?
+        param20: uint itemIdx*
+        */
         public function §_-Gl§(param1:uint, param2:§_-Y3o§, param3:§_-tS§, param4:uint, param5:§_-Ej§, param6:§_-Ej§, param7:Point, param8:uint, param9:uint, param10:uint, param11:Number, param12:Number, param13:Boolean, param14:Boolean, param15:uint, param16:uint, param17:§_-Y3o§, param18:Boolean, param19:Boolean, param20:uint) : void
         {
             var _loc30_:int = 0;
@@ -892,6 +924,7 @@ package
                 }
             }
             _loc42_ = false;
+            // HoldHitEnts
             if(!!param2.§_-jg§ && !param19 && _loc21_.§_-y44§ != null)
             {
                 _loc43_ = _loc21_.§_-y44§.§_-F2V§;
@@ -910,12 +943,14 @@ package
                     }
                     if(_loc42_)
                     {
+                        // SetHeldByPower
                         param6.§_-x4A§(param1,param5,_loc21_.§_-y44§);
+                        // InterruptTarget
                         //      time   hitee  stun   knockback
                         //                                 ImpulseToPoint through soft    thing   DoNotBounceOffNoSlideCeiling
                         §_-B3s§(param1,param6,_loc39_,param7,!!param14 && param2.§_-f4j§,false,param2.§_-A4o§);
                         _loc21_.§_-y44§.§_-D4g§ = param1;
-                        _loc21_.§_-y44§.§_-o3T§(param1);//this function uses OffsetA
+                        _loc21_.§_-y44§.§_-o3T§(param1);
                     }
                 }
             }
@@ -1007,7 +1042,20 @@ package
             §_-d45§ = new Vector.<§_-ma§>();
         }
         
-        //                      time         hitter        got hit        knockback         power          stun                      flags        softdrop        stun movement?
+        /*
+        function: ApplyPowerImpulse
+        param1: uint currTime
+        param2: Entity sourceEnt
+        param3: Entity targetEnt
+        param4: Point impulseVector
+        param5: PowerType sourcePower
+        param6: Number stunTime
+        param7: uint castIndex
+        param8: uint powerFlags*
+        param9: Boolean droppingThroughSoftPlatform*
+        param10: Boolean movingDuringStun??*
+        param11: Boolean ?*
+        */
         public function §_-85L§(param1:uint, param2:§_-Ej§, param3:§_-Ej§, param4:Point, param5:§_-Y3o§, param6:Number, param7:uint, param8:uint, param9:Boolean, param10:Boolean, param11:Boolean) : Boolean
         {
             var _loc14_:* = null as ItemType;
@@ -1168,6 +1216,7 @@ package
             return _loc21_;
         }
         
+        // ApplyPowerDamage
         //                      time         hitter          hitee          damage            power
         public function §_-E3q§(param1:uint, param2:§_-Ej§, param3:§_-Ej§, param4:Number, param5:§_-Y3o§, param6:uint, param7:§_-Y3o§) : void
         {
