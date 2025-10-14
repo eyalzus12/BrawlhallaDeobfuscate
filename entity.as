@@ -5135,7 +5135,7 @@ package
             {
                 _loc3_ = §_-T1c§.§_-a3I§[§_-Z2c§];
             }
-            //not airborne    not on wall   not stunned    not gc
+            //not airborne    not on wall   not stunned    not gc     is dodging
             if(!§_-go§() && §_-c2T§ == 0 && !§_-B4B§() && !§_-B2m§ && §_-Z2c§ != 0)
             {
                 //                       CooldownLanded
