@@ -185,6 +185,7 @@ package
             }
         }
         
+        // TickCombatManager
         public function §_-j1f§(param1:uint) : void
         {
             var _loc4_:int = 0;
@@ -214,18 +215,24 @@ package
             {
                 _loc4_ = _loc2_++;
                 _loc5_ = §_-d45§[_loc4_];
+                // bIgnoreHit
                 if(!_loc5_.§_-15w§)
                 {
-                    _loc6_ = §_-l3D§.§_-GY§(_loc5_.§_-p2G§);//got hit
-                    _loc7_ = §_-l3D§.§_-GY§(_loc5_.§_-g4R§);//hitter
+                    _loc6_ = §_-l3D§.§_-GY§(_loc5_.§_-p2G§);//target
+                    _loc7_ = §_-l3D§.§_-GY§(_loc5_.§_-g4R§);//user
+                    // no target, no user, or no power used
                     if(_loc6_ == null || _loc7_ == null || _loc5_.§_-K1p§ == null)
                     {
+                        // ignore hit
                         _loc5_.§_-15w§ = true;
                     }
+                    // not idle or being grabbed
                     else if(_loc6_.§_-Ko§ != uint(0) && _loc6_.§_-Ko§ != uint(6))
                     {
+                        // ignore hit
                         _loc5_.§_-15w§ = true;
                     }
+                    // newer versions have check (_loc6_ != _loc7_). not hitting yourself.
                     else
                     {
                         _loc8_ = §_-l3D§;
@@ -236,6 +243,7 @@ package
                         }
                         if(!§_-v1B§(_loc5_.§_-K1p§))//not spawn bot / throw
                         {
+                            // go over all other combat hits
                             _loc10_ = 0;
                             _loc11_ = int(§_-d45§.length);
                             while(_loc10_ < _loc11_)
@@ -246,6 +254,7 @@ package
                                     _loc13_ = §_-d45§[_loc12_];
                                     if(!_loc13_.§_-15w§)
                                     {
+                                        // no power
                                         if(_loc13_.§_-K1p§ == null)
                                         {
                                             _loc13_.§_-15w§ = true;
@@ -253,16 +262,18 @@ package
                                         //not throw / spawn bot
                                         else if(!§_-v1B§(_loc13_.§_-K1p§))
                                         {
-                                            _loc14_ = §_-l3D§.§_-GY§(_loc13_.§_-p2G§);//got hit
-                                            _loc15_ = §_-l3D§.§_-GY§(_loc13_.§_-g4R§);//hitter
+                                            _loc14_ = §_-l3D§.§_-GY§(_loc13_.§_-p2G§);//target2
+                                            _loc15_ = §_-l3D§.§_-GY§(_loc13_.§_-g4R§);//user2
                                             //decide through HoldHitsEnt, then sig vs air, then by priority, then by str, then by damage
-                                            //same person got hit. one of these is a grab.
+                                            //same person got hit in both cases. one of these is a grab.
                                             _loc16_ = _loc13_.§_-p2G§ == _loc5_.§_-p2G§ && (_loc13_.§_-K1p§.§_-jg§ || _loc5_.§_-K1p§.§_-jg§);
                                             //decide through VariableImpulse
                                             //               same person got hit                and the same hitter
                                             _loc17_ = _loc13_.§_-p2G§ == _loc5_.§_-p2G§ && _loc13_.§_-g4R§ == _loc5_.§_-g4R§;
                                             //the same person hit two people. both grabs.
                                             _loc18_ = _loc7_ == _loc15_ && _loc5_.§_-K1p§.§_-jg§ && _loc13_.§_-K1p§.§_-jg§;
+                                            
+                                            // two players hit the same player, one of the moves is a grab
                                             if(_loc16_)
                                             {
                                                 //the one with HoldHitsEnt wins. aka grabs will take priority over non grabs when hitting the same person
@@ -292,6 +303,7 @@ package
                                                     }
                                                 }
                                             }
+                                            // the same player hit the same target with two different powers
                                             if(_loc17_)
                                             {
                                                 //the one with more VariableImpulse wins
@@ -323,9 +335,10 @@ package
                                                     _loc5_.§_-X29§ = true;
                                                 }
                                             }
-                                            //when hitting two people with grabs, not grabbing your teammate takes priority
+                                            // the same player hit two different players with two grabs
                                             if(_loc18_)
                                             {
+                                                //when hitting two people with grabs, not grabbing your teammate takes priority
                                                 if(_loc7_.§_-42u§ == _loc6_.§_-42u§ && _loc15_.§_-42u§ != _loc14_.§_-42u§)
                                                 {
                                                     _loc5_.§_-HB§ = true;
@@ -338,6 +351,8 @@ package
                                                 }
                                             }
                                             //CannonSmashNeutralContinueBrute CannonSmashNeutralContinue2Brute AxeSmashSideHit2Brute FistsSmashSideHit2Thief
+                                            //have higher priority
+                                            //but this check is outside the clash condition, which is stupid and leads to bugs probably
                                             if(!!_loc5_.§_-K1p§.§_-15y§ && !_loc13_.§_-K1p§.§_-15y§)
                                             {
                                                 _loc13_.§_-15w§ = true;

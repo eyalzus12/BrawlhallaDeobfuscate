@@ -1041,6 +1041,7 @@ package
                 {
                     §_-319§ = uint(0);
                 }
+                // standing still. start to disappear?
                 else if(§_-319§ == uint(2) && §_-z2B§ == 0 && §_-54T§ == 0)
                 {
                     §_-319§ = uint(0);

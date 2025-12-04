@@ -5080,6 +5080,7 @@ package
                     §_-n1a§ = 0;
                     §_-t1Q§ = false;
                     break;
+                // held by power?
                 case 6:
                     §_-p3I§.§_-ab§(param1);
                     if(§_-85n§ == null || !§_-85n§.§_-k2C§)

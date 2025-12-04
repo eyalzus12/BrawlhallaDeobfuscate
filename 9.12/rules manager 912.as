@@ -1728,7 +1728,7 @@ package
                     _loc3_++;
                     _loc13_.§_-T1B§ = true;
                 }
-                // set next item spawn time to be... 37 seconds ago???
+                // spawn weapons after 3 seconds
                 §_-l3h§ = uint(uint(param1 - §_-J5F§.§_-L5X§) + 50 * 60);
             }
             // reset ball hits
@@ -3224,6 +3224,7 @@ package
             §_-Q4G§ = 0;
         }
         
+        // dodgebomb loop
         public function §_-n2s§(param1:uint) : void
         {
             var _loc5_:int = 0;
@@ -4026,6 +4027,7 @@ package
             }
         }
         
+        // bombsketball loop
         public function §_-p5Q§(param1:uint) : void
         {
             var _loc6_:* = null as §_-H5f§;

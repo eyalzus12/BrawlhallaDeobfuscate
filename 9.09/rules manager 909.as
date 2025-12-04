@@ -3143,6 +3143,7 @@ package
             §_-y5u§ = 0;
         }
         
+        // dodgebomb loop
         public function §_-RA§(param1:uint) : void
         {
             var _loc5_:int = 0;
@@ -3730,6 +3731,7 @@ package
             }
         }
         
+        // brawlball loop
         public function §_-R4G§(param1:uint) : void
         {
             var _loc2_:int = 0;
@@ -3741,6 +3743,7 @@ package
             var _loc12_:* = null as §_-S2T§;
             var _loc13_:* = null as Vector.<§_-S2T§>;
             var _loc14_:* = null as §_-S2T§;
+            // RoundDuration
             if(§_-i4R§.§_-E4C§.§_-r3q§ != 0 && §_-826§(param1) == 0)
             {
                 _loc2_ = 1;
@@ -3752,6 +3755,7 @@ package
                 {
                     _loc2_ = 0;
                 }
+                // round reset
                 §_-O3V§(param1,null,_loc2_);
             }
             var _loc3_:uint = 0;
@@ -3945,6 +3949,7 @@ package
             }
         }
         
+        // bombsketball loop
         public function §_-p2k§(param1:uint) : void
         {
             var _loc6_:* = null as §_-S2T§;
@@ -5273,6 +5278,7 @@ package
             §_-34W§ = §_-L3f§("a_DashDust03",0.55,"SFX_Spear.swf");
         }
         
+        // brawlball init
         public function §_-I2B§(param1:uint) : void
         {
             var _loc6_:* = null as ItemSpawn;
@@ -5849,6 +5855,7 @@ package
             §_-i4R§.§_-CT§.§_-t3w§();
             §_-i4R§.§_-E1B§.§_-H53§ = true;
             ++§_-31G§;
+            // bubble tag round end, spawn one item for each player
             var _loc6_:int = 0;
             var _loc7_:Vector.<§_-22C§> = §_-i4R§.§_-Q5t§;
             while(_loc6_ < int(_loc7_.length))
@@ -7786,12 +7793,13 @@ package
             param1.§_-d5y§ = 0;
         }
         
+        // check if round ended or smth
         public function §_-826§(param1:uint) : uint
         {
             var _loc5_:int = 0;
             var _loc6_:uint = 0;
-            var _loc2_:int = int(uint(§_-i4R§.§_-E4C§.§_-r3q§ * 1000));
-            var _loc3_:int = int(uint(param1 - §_-B3r§));
+            var _loc2_:int = int(uint(§_-i4R§.§_-E4C§.§_-r3q§ * 1000));// RoundDuration in msec
+            var _loc3_:int = int(uint(param1 - §_-B3r§));// ball appearence
             var _loc4_:uint = uint(Math.max(0,Math.min(_loc2_,_loc2_ - _loc3_)));
             §_-i4R§.§_-E53§ = uint(_loc4_ / 1000);
             if(§_-i4R§.§_-E4C§.mDuration != 0)
