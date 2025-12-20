@@ -1,0 +1,78 @@
+Brawlhalla end of match fanfare logic.
+
+Throughout this explanation I will use the term "team". If teams are turned off, each player is his own team.
+
+These are the categories of end of match fanfares, sorted from highest to lowest priority
+* False Start
+* Draw
+* Anticlimax
+* Comeback
+* Nailbiter
+* Steamroll
+* Default
+
+Default is always used for the following cases:
+* Horde
+* Walker's attack
+* Less than 3 starting stocks
+* "Score to Win" is set
+
+## False Start
+
+The match needs to end within 31.25 seconds, via an SD
+
+## Draw
+
+Self explanatory
+
+## Anticlimax
+
+Only works in gamemodes using stocks.
+
+The match needs to end via an SD, with only one person left with 1 stock.
+
+## Combeback
+
+Each team may be marked as an underdog. Once a team has been marked as an underdog, it will stay marked for the rest of the game.
+
+This fanfare is shown if the team in the first place is marked as an underdog.
+
+A team is marked as an underdog if its score is sufficiently below the one of the top team.
+
+The required difference is computed as such:
+
+* If stock without teams, ceil(StartingLives / 2)
+* If stock with teams, ceil(StartingLives / 4)
+* If ScoreToWin is defined, ceil(ScoreToWin / 2)
+* If Kung Foot, 4
+* If Bounty, 8
+* If Gadget Mayhem, 8
+* If Oddbrawl, 8
+* If Timed with Classic scoring, 12
+* Else, 5
+
+Additionally, in team stocks, if a team has more than one player alive, all teams with 1 remaining player are marked as underdogs.
+
+## Nailbiter
+
+Each team may be marked as close to finishing (winning or losing). Once a team has been marked as finishing, it will stay finishing for the rest of the game, until the following apply:
+1. The gamemode uses stocks
+2. All teams are either gone or have 1 stock left
+3. More than one team is left alive
+4. None of the players are close to death
+
+Once all of these conditions apply, all teams are unmarked.
+
+A player is close to death if its damage is above a certain number. This number is 125 if their team is an underdog, and 150 otherwise. The number is reduced by 10 for each consecutive hit they receive without touching the ground, up to a reduction of 30.
+
+Finally, if there's no ScoreToWin, or a team is 1 point away from winning, all teams tied for the maximum score are marked as close to finishing. This does not happen if only one team has the max score.
+
+## Steamroll
+
+On stocks, the team in the first place must have 0 deaths, and all other teams must have died.
+
+Otherwise, there has to be only one team that has any score. The score of all other teams must be 0.
+
+## Default
+
+If no other conditions apply (or if Default is forced, like described above), this is used

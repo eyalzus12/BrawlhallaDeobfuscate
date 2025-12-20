@@ -1055,7 +1055,7 @@ package
             var _loc8_:Number = §_-V8§.§_-K2K§ * _loc7_;
             var _loc9_:§_-8a§ = null;
             var _loc10_:int = int(param2.§_-B1u§);//frame id
-            // it's always null...
+            // has to do with Dupe frames. probably frames are marked as dupe so you can cache it better?
             if(§_-Ak§.§_-X2s§ != null)
             {
                 //Ak - anim group

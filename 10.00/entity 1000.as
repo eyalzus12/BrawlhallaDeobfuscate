@@ -5110,7 +5110,7 @@ package
             {
                 if(§_-i3Q§ > 0)
                 {
-                    §_-I58§.§_-B1k§(PowerType.§_-F39§);
+                    §_-I58§.§_-B1k§(PowerType.§_-F39§);//SweatingOutSFX
                 }
                 §_-i3Q§ = 0;
                 §_-34L§(false,true);

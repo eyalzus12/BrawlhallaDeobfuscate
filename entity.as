@@ -1051,7 +1051,7 @@ package
         public var §_-C5d§:int;
         
         public var §_-O1u§:uint;
-        
+        // lives left?
         public var §_-c1U§:int;
         
         public var §_-A1M§:uint;
@@ -3096,8 +3096,10 @@ package
             §_-35k§ = uint(0);
         }
         
+        // get game score
         public function §_-n4V§() : void
         {
+            //                          Points || Waves                               ? score          : Stock                               ? lives   : 2*KOs-deaths-2*SDs-2*teamKOs
             §_-C5d§ = §_-l3D§.§_-T1o§.§_-w2T§() || Boolean(§_-l3D§.§_-T1o§.§_-552§()) ? §_-N3U§.§_-po§ : (Boolean(§_-l3D§.§_-T1o§.§_-B2g§()) ? §_-c1U§ : int(uint(uint(uint(§_-N3U§.§_-n§ * 2) - §_-N3U§.§_-eN§) - uint(uint(§_-N3U§.§_-pS§()) * 2))));
         }
         
