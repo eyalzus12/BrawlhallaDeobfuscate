@@ -216,10 +216,10 @@ package
         // GO - stores mTargetEntOfPower
         // X36 - ReleaseHeldEntity?
         // fT - ??
-        // Z4I - how many hitboxes have to detect collision
+        // Z4I - how many hitboxes don't hit, are collision checks instead
         // e4A - HasGfxRotation?
-        // C5s - ??
-        // wY - doesn't lose i frames
+        // C5s - ComboUseSameTargetPos
+        // wY - hitboxes don't hit
         // W1V - charge as long as this input is held
         // 12k - AllowMove
         // I2J - prevent jump during recovery?
@@ -377,7 +377,7 @@ package
         public var §_-f4j§:Boolean;
         
         public var §_-w1j§:Boolean;
-        
+        //path include soft platform?
         public var §_-M1g§:Boolean;
         
         public var §_-64p§:Boolean;
@@ -645,7 +645,13 @@ package
         public var §_-61O§:uint;
         //DownwardForceMult
         public var §_-p24§:Number;
-        
+        /*
+        ComboOverrideIfDir flags. 
+        1 - UP
+        2 - DOWN
+        4 - BACKWARD
+        8 - FORWARD
+        */
         public var §_-GK§:Vector.<uint>;
         //DIMaxAngle
         public var §_-MG§:Number;
@@ -1545,6 +1551,7 @@ package
                                     }
                                     _loc4_.§_-52j§.push(_loc37_);
                                 }
+                                // H = heavy
                                 else if(_loc35_[0] == "H")
                                 {
                                     _loc4_.§_-d2o§ = true;
@@ -2688,6 +2695,7 @@ package
                     _loc4_.§_-25q§ = uint(int(_loc4_.§_-O1Q§.length) - _loc49_);
                     _loc4_.§_-61O§ = int(_loc4_.§_-O1Q§.length) - 1;//last base damage index
                 }
+                // has &
                 if(_loc24_)
                 {
                     _loc53_ = uint(int(_loc4_.§_-K2O§.length) - _loc49_);
@@ -3955,6 +3963,7 @@ package
             return (§_-k1Y§ & (uint(512) | uint(64))) == (uint(512) | uint(64));
         }
         
+        // ComboOverrideIfDir   input        mbPowerFacingLeft
         public function §_-n3K§(param1:uint, param2:Boolean) : int
         {
             var _loc5_:int = 0;
@@ -3968,7 +3977,8 @@ package
             while(_loc3_ < _loc4_)
             {
                 _loc5_ = _loc3_++;
-                _loc6_ = uint(§_-a3n§(param2,_loc5_));
+                _loc6_ = uint(§_-a3n§(param2,_loc5_));// flip to match facing dir
+                // input matches direction, or nothing set and nothing held.
                 if(_loc6_ != 0 && (param1 & _loc6_) != 0 || _loc6_ == 0 && (param1 & uint(15)) == 0)
                 {
                     return _loc5_;
@@ -4078,11 +4088,13 @@ package
             return _loc2_;
         }
         
+        // flip ComboOverrideIfDir FORWARD and BACKWARD to match facing dir
         public function §_-a3n§(param1:Boolean, param2:uint) : uint
         {
             var _loc3_:uint = uint(§_-GK§[param2]);
             if(param1)
             {
+                // BACKWARD and not FORWARD. 
                 if((_loc3_ & uint(4)) != 0 && (_loc3_ & uint(8)) == 0)
                 {
                     _loc3_ &= ~uint(4);

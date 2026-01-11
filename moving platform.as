@@ -343,6 +343,7 @@ package
             var _loc5_:int = 0;
             var _loc6_:* = null as NavNode;
             §_-P1n§ = param1;
+            // first frame
             var _loc2_:Point = §_-15r§[0];
             var _loc3_:int = 0;
             var _loc4_:int = int(param1.length);
@@ -379,6 +380,7 @@ package
             var _loc6_:* = null as §_-A1T§;
             var _loc7_:Number = NaN;
             §_-A2i§ = param1;
+            // starting position
             var _loc2_:Point = §_-15r§[0];
             var _loc3_:int = 0;
             var _loc4_:int = int(§_-A2i§.length);
@@ -386,10 +388,11 @@ package
             {
                 _loc5_ = _loc3_++;
                 _loc6_ = §_-A2i§[_loc5_];
+                // start and end as offset from starting position
                 _loc6_.§_-u2f§ = _loc6_.§_-wL§ = Number(_loc6_.startX - _loc2_.x);
                 _loc6_.§_-q1I§ = _loc6_.§_-p38§ = Number(_loc6_.startY - _loc2_.y);
-                _loc6_.§_-E4y§ = _loc6_.§_-246§ = Number(_loc6_.§_-a1T§ - _loc2_.x);
-                _loc6_.§_-123§ = _loc6_.§_-z4f§ = Number(_loc6_.§_-64f§ - _loc2_.y);
+                _loc6_.§_-E4y§ = _loc6_.§_-246§ = Number(_loc6_.§_-a1T§ - _loc2_.x);// to x
+                _loc6_.§_-123§ = _loc6_.§_-z4f§ = Number(_loc6_.§_-64f§ - _loc2_.y); // to y
             }
         }
     }

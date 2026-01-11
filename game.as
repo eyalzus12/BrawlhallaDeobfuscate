@@ -7055,6 +7055,7 @@ package
             return _loc1_;
         }
         
+        // find entities intersecting with capsule
         //                      time         entity         X              Y              RX             RY             flags        out
         public function §_-z1N§(param1:uint, param2:§_-Ej§, param3:Number, param4:Number, param5:Number, param6:Number, param7:uint, param8:Vector.<§_-Ej§>) : void
         {
@@ -7100,8 +7101,9 @@ package
                     //bit 1 and can hit team, or bit 2 and can't hit team
                     if(_loc14_ || !!_loc10_ && _loc20_ || !!_loc11_ && !_loc20_)
                     {
-                        //idk. but for item pickup stuff it's (0,-150) and (0,0)
+                        // CreateCapsule
                         _loc22_ = Number(§_-B1§.§_-eq§(Number(param5 + param5),Number(param6 + param6),§_-K1R§.§_-94Q§,§_-K1R§.§_-t2n§));
+                        // CapsuleCollision
                         if(_loc19_.§_-w4f§(Number(param3 + §_-K1R§.§_-94Q§.x),Number(Number(param4 + param6) + §_-K1R§.§_-94Q§.y),§_-K1R§.§_-t2n§.x,§_-K1R§.§_-t2n§.y,_loc22_))
                         {
                             param8.push(_loc19_);

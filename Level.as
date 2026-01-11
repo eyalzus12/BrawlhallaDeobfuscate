@@ -470,6 +470,7 @@ package
             return _loc3_;
         }
         
+        // DetermineSurfaceNormals
         public function §_-A1n§(param1:Number, param2:Number) : void
         {
             var _loc15_:int = 0;

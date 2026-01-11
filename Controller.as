@@ -259,6 +259,7 @@ package
             }
         }
         
+        //                                                          1           8              2            4
         //                              input       deadzone        up          right         down          left
         public static function §_-WO§(param1:Point, param2:Number, param3:uint, param4:uint, param5:uint, param6:uint, param7:Number, param8:Number, param9:Number, param10:Number, param11:Number, param12:Number, param13:Number, param14:Number) : uint
         {

@@ -611,6 +611,25 @@ package
             }
         }
         
+        /*
+        function: HitTargetEntity
+        param1: Entity sourceEnt
+        param2: Entity targetEnt
+        param3: PowerType power
+        param4: ?
+        param5: uint hitID*
+        param6: Point impulseDirVector
+        param7: uint castIndex
+        param8: uint chargeTime
+        param9: uint itemID*
+        param10: uint itemVelocity
+        param11: Number airTimeMult
+        param12: Number impulse*
+        param13: Boolean heavyInput*
+        param14: Boolean softDrop*
+        param15: uint stunnedHit* (2 if true, else 1)
+        param16: uint powerFlags*
+        */
         //                      hitter          got hit        power                           hit info   knokback dir   hit index   holdtime?   item idx                                            force              heavy input              soft drop               hitwhenstunned?2:1
         public function §_-MX§(param1:§_-Ej§, param2:§_-Ej§, param3:§_-Y3o§, param4:§_-tS§, param5:uint, param6:Point, param7:uint, param8:uint, param9:uint, param10:uint = 0, param11:Number = 1, param12:Number = 0, param13:Boolean = false, param14:Boolean = false, param15:uint = 1, param16:uint = 0) : void
         {

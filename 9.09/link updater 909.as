@@ -2634,7 +2634,7 @@ package
         {
             §_-i4R§.§_-uA§.§_-L1b§(param1);
             §_-i4R§.§_-uA§.§_-S19§(param1);
-            §_-i4R§.§_-51m§.§_-d3J§(param1);
+            §_-i4R§.§_-51m§.§_-d3J§(param1);//playlists
             §_-t45§.§_-21c§.§_-n3n§();
         }
         
@@ -4761,7 +4761,7 @@ package
         
         public function §_-S2s§(param1:§_-X2d§) : void
         {
-            var _loc2_:§_-X2d§ = new §_-X2d§(§_-yO§.§_-s3i§);
+            var _loc2_:§_-X2d§ = new §_-X2d§(§_-yO§.§_-s3i§);// 12
             _loc2_.§_-q5w§(0);
             §_-i4R§.§_-x3G§(_loc2_);
             _loc2_.§_-Q3J§();
@@ -6381,7 +6381,7 @@ package
             §_-i4R§.§_-f40§ = param1.§_-wu§();
             §_-i4R§.§_-H5k§ = param1.§_-wu§();
             LinkUpdater.§_-y48§(param1,§_-i4R§);
-            §_-i4R§.§_-51m§.§_-d3J§(param1);
+            §_-i4R§.§_-51m§.§_-d3J§(param1);//playlists
             LinkUpdater.§_-c3O§(param1,§_-i4R§);
             §_-Y2F§(param1);
             §_-A3h§(param1);
@@ -6671,9 +6671,9 @@ package
             §_-b35§[LinkUpdater.§_-h5l§] = §_-XZ§;// 12000
             §_-b35§[LinkUpdater.§_-Z3n§] = §_-Ar§;// 12001
             §_-b35§[LinkUpdater.§_-N3g§] = §_-HX§;
-            §_-b35§[LinkUpdater.§_-ML§] = §_-p2n§;
+            §_-b35§[LinkUpdater.§_-ML§] = §_-p2n§;// 16
             §_-b35§[LinkUpdater.§_-Sw§] = §_-p2n§;
-            §_-b35§[LinkUpdater.§_-I4v§] = §_-z4f§;
+            §_-b35§[LinkUpdater.§_-I4v§] = §_-z4f§;//2431
             §_-b35§[LinkUpdater.§_-R1v§] = §_-t2W§;
             §_-b35§[LinkUpdater.§_-Wa§] = §_-34T§;
             §_-b35§[LinkUpdater.§_-v5x§] = §_-J5J§;
@@ -6766,7 +6766,7 @@ package
             §_-b35§[LinkUpdater.§_-A51§] = §_-d2s§;
             §_-b35§[LinkUpdater.§_-Oz§] = §_-i4R§.§_-A3z§.§_-Uq§;
             §_-b35§[LinkUpdater.§_-g5d§] = §_-83v§;
-            §_-b35§[LinkUpdater.§_-v5O§] = §_-s3h§;
+            §_-b35§[LinkUpdater.§_-v5O§] = §_-s3h§;//2463
             §_-b35§[LinkUpdater.§_-54x§] = §_-z5§;
             §_-b35§[LinkUpdater.§_-e2T§] = §_-n4m§;
             §_-b35§[LinkUpdater.§_-74O§] = §_-Ui§;
@@ -6838,8 +6838,8 @@ package
             §_-b35§[LinkUpdater.§_-b5p§] = §_-i4R§.§_-uA§.§_-A3D§;
             §_-b35§[LinkUpdater.§_-k2v§] = §_-vO§;
             §_-b35§[LinkUpdater.§_-F55§] = §_-b3x§;
-            §_-b35§[LinkUpdater.§_-X39§] = §_-e5h§;
-            §_-b35§[LinkUpdater.§_-O3t§] = §_-a1b§;
+            §_-b35§[LinkUpdater.§_-X39§] = §_-e5h§;//2523
+            §_-b35§[LinkUpdater.§_-O3t§] = §_-a1b§;//2524
             §_-b35§[LinkUpdater.§_-e1d§] = §_-L4g§;
             §_-b35§[LinkUpdater.§_-j3l§] = §_-r2i§;
             §_-b35§[LinkUpdater.§_-C1V§] = §_-C4g§;
@@ -6867,11 +6867,12 @@ package
             §_-b35§[LinkUpdater.§_-M4h§] = §_-i4R§.§_-x4v§.§_-Qp§;
             §_-b35§[LinkUpdater.§_-z17§] = §_-i4R§.§_-x4v§.§_-r5E§;
             §_-b35§[LinkUpdater.§_-iQ§] = §_-i4R§.§_-x4v§.§_-S3Z§;
-            §_-b35§[LinkUpdater.§_-IJ§] = §_-i4R§.§_-x4v§.§_-X3h§;
+            §_-b35§[LinkUpdater.§_-IJ§] = §_-i4R§.§_-x4v§.§_-X3h§; 
             §_-b35§[LinkUpdater.§_-I25§] = §_-i4R§.§_-x4v§.§_-15S§;
             §_-b35§[LinkUpdater.§_-b1B§] = §_-i4R§.§_-x4v§.§_-Y1T§;
             §_-b35§[LinkUpdater.§_-Ke§] = §_-i4R§.§_-x4v§.§_-KE§;
-            §_-b35§[§_-yO§.§_-y47§] = §_-S2s§;
+            // server response when sending hash
+            §_-b35§[§_-yO§.§_-y47§ /* 11 0x000B */] = §_-S2s§;
         }
         
         public function §_-e30§() : int

@@ -4353,6 +4353,7 @@ package
                 }
             }
             §_-t1l§(Number(§_-p1C§()),Number(§_-ze§()));
+            // reset impulse
             §_-61K§(0);
             §_-i3n§(0);
         }
@@ -4972,7 +4973,7 @@ package
             3 - ?
             4 - ?
             5 - respawn i frames
-            6 - ?
+            6 - held by power
             7 - eliminated
             8 - ?
             */
@@ -8357,6 +8358,7 @@ package
             §_-L2h§ = 0;
         }
         
+        // EndGroundPound
         public function §_-y2K§(param1:uint) : void
         {
             §_-T0§(false);
@@ -9426,6 +9428,14 @@ package
             }
         }
         
+        /*
+        function: CheckCapsuleCollision
+        param1: Number capsuleX
+        param2: Number capsuleY
+        param3: Number capsuleWidth
+        param4: Number capsuleHeight
+        param5: Number capsuleRad
+        */
         public function §_-w4f§(param1:Number, param2:Number, param3:Number, param4:Number, param5:Number) : Boolean
         {
             §_-E1R§(§_-Ej§.§_-j38§);

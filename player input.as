@@ -195,6 +195,7 @@ package
             {
                 _loc4_ = uint(11);
             }
+            // is stance
             else if(_loc3_.§_-01t§)
             {
                 _loc4_ = uint(9);

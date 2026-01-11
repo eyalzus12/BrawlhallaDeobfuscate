@@ -1819,6 +1819,7 @@ package
             if(!_loc8_)
             {
                 _loc10_ = !!_loc5_ ? §_-K1R§.§_-83P§ : §_-K1R§.§_-G36§ | §_-K1R§.§_-83P§;
+                // find hitbox target
                 §_-l3D§.§_-z1N§(param1,_loc2_,§_-L1u§,§_-442§,_loc6_,_loc6_,_loc10_,§_-g3N§.§_-e4i§);
                 _loc11_ = 0;
                 _loc12_ = int(§_-g3N§.§_-e4i§.length);
@@ -1852,7 +1853,7 @@ package
                                     continue;
                                 }
                             }
-                            // check collisions?
+                            // CheckCapsuleCollision
                             _loc17_ = Boolean(_loc14_.§_-w4f§(Number(§_-r3P§.x + §_-A1U§),Number(§_-r3P§.y + §_-c4E§),§_-U3g§.x,§_-U3g§.y,§_-43B§));
                             if(!_loc17_ && Boolean(_loc14_.§_-w4f§(§_-C5K§,§_-o3y§ - _loc3_,§_-A1U§ - §_-C5K§,§_-c4E§ - §_-o3y§,_loc4_)))
                             {

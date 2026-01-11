@@ -74,7 +74,7 @@ package
         public var §_-24Z§:Boolean;
         
         public var §_-Vt§:Boolean;
-        // in startup?
+        
         public var §_-Ks§:Boolean;
         
         public var §_-L3L§:Boolean;
@@ -148,7 +148,7 @@ package
         public var §_-23y§:uint;
         
         public var §_-UE§:uint;
-        // curent cast?
+        // curent cast? frame?
         public var §_-U1T§:uint;
         
         public var §_-p3f§:Number;
@@ -265,6 +265,7 @@ package
             var _loc13_:* = null as §_-A1T§;
             var _loc14_:Number = NaN;
             var _loc15_:Number = NaN;
+            // invalid hold
             if(!§_-858§())
             {
                 return;
@@ -449,6 +450,7 @@ package
                 case 10:
                 //Stance
                 case 14:
+                    // set source pos to source ent center
                     §_-U3s§.x = Number(§_-D2f§.§_-K3g§());
                     §_-U3s§.y = Number(§_-D2f§.§_-Q2P§());
                     break;
@@ -456,6 +458,7 @@ package
                 case 2:
                     if(§_-C38§ != null)
                     {
+                        // set target pos to targe ent center
                         §_-T3m§.x = Number(§_-C38§.§_-K3g§());
                         §_-T3m§.y = Number(§_-C38§.§_-Q2P§());
                     }
@@ -485,7 +488,7 @@ package
                     //got collision. stop at it.
                     if(_loc8_ != null)
                     {
-                        //store collision result in T3m
+                        //store collision result in T3m (target pos)
                         §_-T3m§.x = §_-th§.§_-z3U§.x;
                         §_-T3m§.y = §_-th§.§_-z3U§.y;
                         §_-24Z§ = true;
@@ -525,23 +528,27 @@ package
                             //hard
                             if((_loc8_.type & uint(1)) != 0)
                             {
-                                //distance from start??
+                                //distance moved?
                                 _loc2_ = _loc8_.startX - _loc8_.§_-l1I§;
                                 _loc3_ = _loc8_.startY - _loc8_.§_-M4g§;
-                                //not at start
+                                //moved
                                 if(!(Number(Math.abs(_loc2_)) < 0.00001 && Number(Math.abs(_loc3_)) < 0.00001))
                                 {
                                     _loc13_ = _loc8_.§_-l1I§;
                                     _loc14_ = _loc8_.§_-M4g§;
                                     _loc15_ = _loc8_.§_-l1I§ + _loc8_.§_-246§ - _loc8_.§_-wL§;
                                     _loc16_ = _loc8_.§_-M4g§ + _loc8_.§_-z4f§ - _loc8_.§_-p38§;
+                                    // target position
                                     _loc17_ = §_-T3m§.x;
                                     _loc18_ = §_-T3m§.y;
                                     _loc19_ = _loc17_ - _loc2_;
                                     _loc20_ = _loc18_ - _loc3_;
                                     _loc21_ = §_-th§.§_-C3H§;
+                                    // normal direction
                                     _loc22_ = Number(§_-zp§.atan2_netsafe(_loc8_.§_-a2J§.y,_loc8_.§_-a2J§.x));
+                                    // angle moved
                                     _loc23_ = Number(§_-zp§.atan2_netsafe(_loc3_,_loc2_));
+                                    // angle difference
                                     _loc24_ = _loc22_ - _loc23_;
                                     if(_loc24_ > Math.PI)
                                     {
@@ -551,8 +558,10 @@ package
                                     {
                                         _loc24_ += Math.PI * 2;
                                     }
+                                    // angle difference is less than 90deg and collision line intersects target position during expected next movement??
                                     if(Number(Math.abs(_loc24_)) < Math.PI / 2 && Boolean(§_-B1§.§_-S4O§(_loc13_,_loc14_,_loc15_,_loc16_,_loc17_,_loc18_,_loc19_,_loc20_,_loc21_)))
                                     {
+                                        // find where the collision will happen??
                                         _loc25_ = 0;
                                         if(Number(Math.abs(_loc15_ - _loc13_)) > 0.00001)
                                         {
@@ -573,19 +582,22 @@ package
                             }
                         }
                     }
+                    // current first hitbox?
                     _loc7_ = uint(§_-F2V§.§_-C2R§(§_-U1T§));
+                    // previous first hitbox?
                     _loc26_ = §_-U1T§ == 0 ? uint(0) : uint(§_-F2V§.§_-C2R§(uint(§_-U1T§ - 1)));
                     if(§_-U1T§ == 0 || _loc7_ != _loc26_)
                     {
                         _loc2_ = §_-T3m§.x;
                         _loc3_ = §_-T3m§.y;
-                        _loc13_ = int(§_-F2V§.§_-B1V§[_loc7_]);
-                        _loc14_ = int(§_-F2V§.§_-1Y§[_loc7_]);
+                        _loc13_ = int(§_-F2V§.§_-B1V§[_loc7_]);// center offset x
+                        _loc14_ = int(§_-F2V§.§_-1Y§[_loc7_]);// center offset y
                         _loc15_ = 0;
                         if(§_-U1T§ == 0)
                         {
                             _loc2_ = §_-U3s§.x;
                             _loc3_ = §_-U3s§.y;
+                            // if positioning the hitboxes relative to the target position, this would be the distance from the source position
                             _loc15_ = (!!§_-U2J§ ? -_loc13_ : _loc13_) + §_-T3m§.x - §_-U3s§.x;
                             _loc14_ = _loc14_ + §_-T3m§.y - §_-U3s§.y;
                         }
@@ -620,6 +632,7 @@ package
                         {
                             _loc29_.length = 0;
                         }
+                        // raycast from source position to hitbox positioned relative to target position
                         §_-l3D§.§_-J2b§.§_-Y4g§(§_-D2f§.§_-42u§,_loc2_,_loc3_,§_-th§.§_-Iv§,§_-th§.§_-z3U§,null,null,null,_loc27_,0,0,0,_loc29_);
                         _loc4_ = 0;
                         _loc5_ = int(_loc29_.length);
@@ -629,7 +642,7 @@ package
                             _loc8_ = _loc29_[_loc6_];
                             _loc22_ = Number(§_-zp§.atan2_netsafe(_loc8_.§_-a2J§.y,_loc8_.§_-a2J§.x));
                             _loc23_ = Number(§_-zp§.atan2_netsafe(_loc14_,_loc15_));
-                            //diff between intended angle and collision angle
+                            //diff between angle to hitbox and collision angle
                             _loc24_ = _loc22_ - _loc23_;
                             if(_loc24_ > Math.PI)
                             {
@@ -639,13 +652,16 @@ package
                             {
                                 _loc24_ += Math.PI * 2;
                             }
+                            // line from source to hitbox positioned relative to target intersects collision
                             if(Number(Math.abs(_loc24_)) > Math.PI / 2 && Boolean(§_-B1§.§_-S4O§(_loc2_,_loc3_,Number(_loc2_ + _loc15_),Number(_loc3_ + _loc14_),_loc8_.startX,_loc8_.startY,_loc8_.§_-a1T§,_loc8_.§_-64f§,§_-th§.§_-C3H§)))
                             {
                                 _loc25_ = §_-th§.§_-C3H§.x - _loc2_;
                                 _loc30_ = §_-th§.§_-C3H§.y - _loc3_;
+                                // squared distance
                                 _loc31_ = Number(_loc25_ * _loc25_ + _loc30_ * _loc30_);
                                 if(_loc20_ < 0 || _loc31_ < _loc20_)
                                 {
+                                    // wall
                                     if(Number(Math.abs(_loc8_.§_-a1T§ - _loc8_.startX)) < Number(Math.abs(_loc8_.§_-64f§ - _loc8_.startY)))
                                     {
                                         _loc28_ = true;
@@ -654,14 +670,18 @@ package
                                     {
                                         _loc28_ = false;
                                     }
+                                    // farthest went
                                     _loc16_ = _loc25_;
                                     _loc17_ = _loc30_;
+                                    // collision normal
                                     _loc18_ = _loc8_.§_-a2J§.x;
                                     _loc19_ = _loc8_.§_-a2J§.y;
+                                    // distance went
                                     _loc20_ = _loc31_;
                                 }
                             }
                         }
+                        // went some distance. set target to position we got to
                         if(_loc20_ >= 0)
                         {
                             §_-T3m§.x = Number(Number(_loc16_ + _loc2_) + _loc18_ * 0.01);
@@ -678,6 +698,7 @@ package
                         break;
                     }
             }
+            // PistolSmashNeutralComboPunk, OrbSmashDownThor, LanceSmashDownComboActualRobot
             if(§_-F2V§.§_-C0§)
             {
                 §_-T3m§.x = Number(§_-D2f§.§_-K3g§());
@@ -831,8 +852,10 @@ package
             //             passed min charge  charge with heavy   charge with dir       taunt
             if(!§_-Ks§ && _loc3_ > _loc4_ && (§_-F2V§.§_-l2j§ || §_-F2V§.§_-W1V§ != 0 || §_-F2V§.§_-51d§))
             {
+                // CompleteAttackRelease
                 §_-qK§(_loc2_);
             }
+            // stance stuff
             if(!§_-Ks§ && §_-Q23§ && _loc3_ > _loc4_)
             {
                 §_-W2X§(param1,_loc2_);
@@ -1121,7 +1144,7 @@ package
                 _loc24_ = uint(§_-b2E§(param1,§_-U1T§,_loc15_,_loc5_));
                 _loc10_ = §_-U1T§;
                 
-                //                                                                    not air power or not holding down
+                //                                                                    not air power or not holding down                             check for collision
                 if(!!_loc5_ && _loc24_ == uint(5) && §_-F2V§.§_-z2X§ && !§_-W2B§ && (!§_-F2V§.§_-qs§ || (§_-D2f§.§_-k4k§.§_-e7§ & uint(2)) == 0) && §_-L4F§(§_-U1T§,!§_-F2V§.§_-M1g§) != null)
                 {
                     §_-W2B§ = true;
@@ -1131,7 +1154,8 @@ package
                 if(_loc24_ != uint(5) && _loc24_ != uint(0) && (§_-F2V§.§_-z4h§ == 0 || _loc3_ >= §_-F2V§.§_-z4h§))
                 {
                     §_-N2C§(true);
-                    §_-25N§ = 0;
+                    §_-25N§ = 0; // this makes it end
+                    // EndGroundPound
                     §_-D2f§.§_-y2K§(param1);
                     //ground check, and touching collision or collision check succ
                     if(§_-F2V§.§_-h14§ == uint(6) && (_loc24_ == uint(2) || _loc24_ == uint(4)))
@@ -1171,6 +1195,7 @@ package
                     §_-N2C§(true);
                 }
             }
+            // ShowCloudTime
             if(_loc3_ == §_-F2V§.§_-A52§)
             {
                 §_-D2f§.§_-p3I§.§_-80§();
@@ -1202,6 +1227,7 @@ package
             {
                 §_-24Z§ = true;
             }
+            // should deactivate
             if(§_-24Z§)
             {
                 §_-N2C§();
@@ -1592,6 +1618,7 @@ package
                 return uint(1);
             }
             //not MeteorGrab or MeteorPound and not some Path/Collider thing
+            // should include soft platform
             var _loc5_:Boolean = §_-F2V§.§_-h14§ != uint(9) && !§_-F2V§.§_-M1g§;
             //IsAirPower
             if(§_-F2V§.§_-qs§)
@@ -1934,10 +1961,12 @@ package
         
         public function HandleInput(param1:uint, param2:uint, param3:Boolean, param4:Boolean) : void
         {
+            // IgnoreButtonOnHit
             if(!!§_-F2V§.§_-Y40§ && §_-s4T§ != 0)
             {
                 return;
             }
+            // ComboOverrideIfButton H
             if(!!§_-F2V§.§_-d2o§ && !param4)
             {
                 return;
@@ -1946,6 +1975,7 @@ package
             {
                 return;
             }
+            // heavy and stance
             if(!!param4 && §_-F2V§.§_-h14§ == uint(14))
             {
                 return;
@@ -1982,9 +2012,10 @@ package
         GetTargetList
         (param1) currTime: uint 
         (param2) castIndex: uint
-        (param3) ownerPhysCenterX: Number
-        (param4) ownerPhysCenterY: Number
-        (param5) entList*: Vector.<Entity>
+        (param3) hitboxIndex: uint
+        (param4) ownerPhysCenterX: Number
+        (param5) ownerPhysCenterY: Number
+        (param6) entList*: Vector.<Entity>
         */
         public function §_-Xm§(param1:uint, param2:uint, param3:uint, param4:Number, param5:Number, param6:Vector.<§_-Ej§>) : void
         {
@@ -1995,8 +2026,8 @@ package
             var _loc8_:Number = 0;
             var _loc9_:int = int(§_-F2V§.§_-B1V§[param3]);
             var _loc10_:int = int(§_-F2V§.§_-1Y§[param3]);
-            var _loc11_:int = int(§_-F2V§.§_-71I§[param3]);
-            var _loc12_:int = int(§_-F2V§.§_-s4V§[param3]);
+            var _loc11_:int = int(§_-F2V§.§_-71I§[param3]);// AoERadiusX
+            var _loc12_:int = int(§_-F2V§.§_-s4V§[param3]);// AoERadiusY
             var _loc13_:Number = 0;
             var _loc14_:Number = 0;
             var _loc15_:int = !!§_-U2J§ ? -_loc9_ : _loc9_;
@@ -2005,6 +2036,7 @@ package
             {
                 _loc16_ |= §_-K1R§.§_-43f§;
             }
+            // target position. default to owner center
             var _loc17_:Point = §_-T3m§;
             if(_loc17_ == null)
             {
@@ -2012,6 +2044,7 @@ package
                 §_-th§.§_-C5x§.y = param5;
                 _loc17_ = §_-th§.§_-C5x§;
             }
+            // CanDamageEveryone
             if(§_-F2V§.§_-d2q§)
             {
                 _loc16_ = 0;
@@ -2025,10 +2058,12 @@ package
                 case 9:
                 case 10:
                 case 14:
+                    // hitboxes relative to source entity
                     §_-l3D§.§_-z1N§(param1,§_-D2f§,Number(param4 + _loc15_),Number(param5 + _loc10_),_loc11_,_loc12_,_loc16_,param6);
                     break;
                 case 2:
                 case 11:
+                    // no hitboxes, just hit
                     if(int(param6.length) != 0)
                     {
                         param6.length = 0;
@@ -2039,9 +2074,11 @@ package
                     }
                     break;
                 case 3:
+                    // hitbox at target position, default to source entity
                     §_-l3D§.§_-z1N§(param1,§_-D2f§,_loc17_.x,_loc17_.y,_loc11_,_loc12_,_loc16_,param6);
                     break;
                 case 4:
+                    // no hitboxes, just hit
                     if(int(param6.length) != 0)
                     {
                         param6.length = 0;
@@ -2049,18 +2086,21 @@ package
                     param6.push(§_-D2f§);
                     break;
                 case 5:
+                    // hitbox relative to target position, default to source entity
                     §_-l3D§.§_-z1N§(param1,§_-D2f§,Number(_loc17_.x + _loc15_),Number(_loc17_.y + _loc10_),_loc11_,_loc12_,_loc16_,param6);
                     break;
                 case 13:
+                    // Collider
                     if(int(param6.length) != 0)
                     {
                         param6.length = 0;
                     }
+                    // get first hitbox
                     _loc19_ = uint(§_-F2V§.§_-C2R§(param2));
                     if(_loc19_ != param3)
                     {
-                        _loc20_ = !!§_-U2J§ ? Number(-int(§_-F2V§.§_-B1V§[_loc19_])) : Number(int(§_-F2V§.§_-B1V§[_loc19_]));
-                        _loc21_ = int(§_-F2V§.§_-1Y§[_loc19_]);
+                        _loc20_ = !!§_-U2J§ ? Number(-int(§_-F2V§.§_-B1V§[_loc19_])) : Number(int(§_-F2V§.§_-B1V§[_loc19_]));// center offset x
+                        _loc21_ = int(§_-F2V§.§_-1Y§[_loc19_]);// center offset y
                         §_-l3D§.§_-z1N§(param1,§_-D2f§,_loc17_.x + _loc15_ - _loc20_,_loc17_.y + _loc10_ - _loc21_,_loc11_,_loc12_,_loc16_,param6);
                         break;
                     }
@@ -2248,6 +2288,7 @@ package
             {
                 §_-T3m§ = new Point(§_-U3s§.x,§_-U3s§.y);
             }
+            // first cast
             else if(§_-U1T§ == 0)
             {
                 //ComboUseSameTargetPos X
@@ -2482,6 +2523,7 @@ package
                     _loc9_.§_-JQ§();
                     return;
                 }
+                //                              FireAnimSource
                 _loc5_.§_-V1X§(§_-F2V§,_loc9_,§_-F2V§.§_-j2w§,§_-D2f§,§_-T3m§,§_-U1T§);
                 if(!§_-F2V§.§_-73h§)
                 {
@@ -2589,7 +2631,7 @@ package
             {
                 return;
             }
-            //stance and (aerial and IsAirPower or )
+            //stance and (aerial and not IsAirPower or no direction override)
             if(§_-F2V§.§_-h14§ == uint(14) && (§_-D2f§.§_-go§() && !§_-F2V§.§_-qs§ || int(§_-F2V§.§_-n3K§(§_-D2f§.§_-k4k§.§_-e7§,§_-U2J§)) < 0))
             {
                 §_-Q23§ = false;
@@ -2597,7 +2639,7 @@ package
             }
             §_-W2B§ = true;
             §_-Ks§ = true;
-            §_-25N§ = 0;
+            §_-25N§ = 0;// this makes it end?
             §_-N2C§();
         }
         
@@ -2669,6 +2711,7 @@ package
             §_-k2C§ = false;
         }
         
+        // should stance be cancelled?
         //                      time        htime           dtime       jump           dodge           light            heavy           throw            ?
         public function §_-o1j§(param1:uint, param2:uint, param3:uint, param4:Boolean, param5:Boolean, param6:Boolean, param7:Boolean, param8:Boolean, param9:Boolean) : Boolean
         {
@@ -2698,8 +2741,9 @@ package
             {
                 return false;
             }
-            //                                              MinCancelTime < 99
+            //                                     hit      MinCancelTime < 99
             var _loc13_:Boolean = !!_loc10_ && §_-j4i§ && §_-F2V§.§_-z4h§ < 99;
+            // not loc13 = not jump/dodge/heavy/throw, or missed, or MinCancelTime is 99
             //              MinCancelTime
             if(!_loc13_ && §_-F2V§.§_-z4h§ != 0 && _loc11_ < uint(§_-G2L§ + §_-F2V§.§_-z4h§))
             {
@@ -2710,6 +2754,7 @@ package
             {
                 param9 = false;
             }
+            // heavy and    (facing left and holding right, or facing right and holding left)
             if(!!param7 && (!!§_-U2J§ && (param2 & uint(8)) != 0 || !§_-U2J§ && (param2 & uint(4)) != 0))
             {
                 param8 = false;
@@ -2728,6 +2773,7 @@ package
             //no dodge, no jump, no heavy, no throw
             if(!(param5 || param4 || param7 || param8))
             {
+                // holding rightwards for long enough
                 return param9;
             }
             return true;
@@ -2750,6 +2796,7 @@ package
             var _loc26_:int = 0;
             var _loc27_:Number = NaN;
             var _loc1_:uint = 0;
+            // is release
             var _loc2_:Boolean = §_-F2V§.§_-lp§ || §_-t2B§.§_-g2z§ == null;
             if(§_-K3W§ == 0)
             {
@@ -2919,6 +2966,7 @@ package
         
         public function §_-Z2q§(param1:§_-Ej§) : void
         {
+            // not team taunt
             if(!§_-F2V§.§_-X3z§)
             {
                 return;

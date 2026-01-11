@@ -1746,7 +1746,20 @@ package
             return null;
         }
         
-        //                          entity                                      power        hitidx                                     velx           helddir
+        /*
+        function GetImpulseUnitVector
+        param1: Entity targetEnt
+        param2: Point sourcePos
+        param3: Point targetPos
+        param4: PowerType sourcePower
+        param5: uint castIndex
+        param6: Point overrideVector
+        param7: Boolean bFiringLeft
+        param8: Number velocityX*
+        param9: uint heldInput*
+        param10: uint unknown*
+        param11: out Point impulseToPointResult*
+        */
         public function §_-P1b§(param1:§_-Ej§, param2:Point, param3:Point, param4:§_-Y3o§, param5:uint, param6:Point, param7:Boolean, param8:Number, param9:uint, param10:uint, param11:Point) : Point
         {
             var _loc14_:int = 0;
@@ -1936,23 +1949,28 @@ package
         public function §_-H4z§(param1:uint, param2:§_-th§, param3:§_-Y3o§, param4:Boolean) : String
         {
             var _loc5_:int = 0;
-            //                                             (!IgnoreButtonOnMiss || hit)       && (!hasH           || ??)
+            // H = heavy
+            //                         released charge    (!IgnoreButtonOnMiss || hit)       && (!hasH           || did heavy input)
             if(param3.§_-k4§ != null && param2.§_-Q23§ && (!param3.§_-25i§ || param2.§_-j4i§) && (!param3.§_-d2o§ || param2.§_-W1N§))
             {
                 return param3.§_-k4§;//ComboOverrideIfButton H
             }
-            //                     !mbWasReleaseCancelled  (!IgnoreButtonOnMiss || hit)        && (!IgnoreButtonOnHit|| !hit)
+            // MAX = charged
+            //                     !mbWasReleaseCancelled  (!IgnoreButtonOnMiss || hit)  && (!IgnoreButtonOnHit|| !hit)
             if(param3.§_-N2y§ != null && !param4 && (!param3.§_-25i§ || param2.§_-j4i§) && (!param3.§_-Y40§ || !param2.§_-j4i§))
             {
                 return param3.§_-N2y§;//ComboOverrideIfButton MAX
             }
-            //                 !mbWasReleaseCancelled                                     (!IgnoreButtonOnMiss||hit)          && (!IgnoreButtonOnHit|| !hit)
+            // MIN = release
+            //                 !mbWasReleaseCancelled       minChargeTime ok          (!IgnoreButtonOnMiss||hit)          && (!IgnoreButtonOnHit|| !hit)
             if(param3.§_-728§ != null && param4 && Boolean(param2.§_-43G§(param1)) && (!param3.§_-25i§ || param2.§_-j4i§) && (!param3.§_-Y40§ || !param2.§_-j4i§))
             {
                 return param3.§_-728§;//ComboOverrideIfButton MIN
             }
+            // ComboOverrideIfDir       (!IgnoreButtonOnMiss || hit)         && (!IgnoreButtonOnHit|| !hit)          && (not stance || (mbWasReleaseCancelled && !heavyinput))
             if(param3.§_-S1F§ != null && (!param3.§_-25i§ || param2.§_-j4i§) && (!param3.§_-Y40§ || !param2.§_-j4i§) && (param3.§_-h14§ != uint(14) || !!param4 && !param2.§_-W1N§))
             {
+                // get chosen override
                 _loc5_ = int(param3.§_-n3K§(§_-M4U§.§_-k4k§.§_-e7§,param2.§_-U2J§));
                 if(_loc5_ >= 0)
                 {
@@ -1975,6 +1993,7 @@ package
             return param3.§_-SI§;//ComboName
         }
         
+        // used in lessons
         public function §_-gX§(param1:String) : int
         {
             var _loc5_:* = null as §_-Y3o§;
@@ -2002,6 +2021,7 @@ package
                 //stance
                 if(§_-y44§ != null && §_-y44§.§_-F2V§.§_-h14§ == uint(14) && §_-y44§.§_-F2V§.§_-S1F§ != null)
                 {
+                    // ComboOverrideIfDir
                     _loc6_ = int(§_-y44§.§_-F2V§.§_-S1F§.indexOf(param1));
                     if(_loc6_ != -1)
                     {
@@ -2020,6 +2040,7 @@ package
                         }
                     }
                 }
+                // exhausted
                 if(_loc5_ != null && (_loc5_.§_-k1Y§ & uint(2097152)) != 0)
                 {
                     return uint(12);
@@ -2110,6 +2131,7 @@ package
                         _loc28_ = Number(_loc22_.§_-Q2P§());
                         //centerY + hurtbox OffsetY
                         §_-xP§.§_-J3P§.y = Number(_loc28_ + §_-xP§.§_-l1Q§.§_-22Q§);
+                        // GetImpulseUnitVector
                         //              entity                          power  hitidx                 velx    helddir
                         _loc29_ = §_-P1b§(_loc22_,param5,§_-xP§.§_-J3P§,param3,param8,_loc26_,param11,param14,param15,param17,§_-xP§.§_-Y29§);
                         if(_loc29_ == null || _loc29_.length == 0)
@@ -2246,6 +2268,7 @@ package
                             {
                                 param9[_loc22_.§_-j3U§] = param2;
                             }
+                            //HitTargetEntity
                             //                      hitter hitee  power                              knockback  hitidx holdtime?        item idx                                                                                            force   heavy softdrop hitwhenstunned?2:1
                             §_-l3D§.§_-D3Q§.§_-MX§(§_-M4U§,_loc22_,param3,param4.§_-t2B§,param4.§_-v1n§,_loc29_,param8,param10,param4.§_-S1l§ != 0 ? param4.§_-S1l§ : (§_-y1j§ != null ? §_-y1j§.§_-04R§ : uint(0)),param12,param4.§_-G1p§,_loc25_,param16,_loc37_,param4.§_-h12§,param4.§_-p3j§);
                             param4.§_-j4i§ = true;
@@ -2629,6 +2652,7 @@ package
             // is background power?
             var _loc4_:Boolean = param2.§_-2f§;
             var _loc5_:Boolean = Boolean(param2.§_-g46§(param1));
+            // no longer active
             if(!_loc5_)
             {
                 //power
@@ -2782,6 +2806,7 @@ package
                     }
                     else
                     {
+                        // QueueItemCollisionPower
                         _loc39_ = §_-91v§(param1,_loc36_,_loc7_,_loc12_,_loc15_,_loc16_,_loc32_,_loc18_,_loc20_,_loc17_,_loc28_);
                     }
                     if(_loc39_ != null)
@@ -2820,14 +2845,17 @@ package
                                 §_-l3D§.§_-1F§.§_-LL§.§_-92R§(param1,§_-M4U§.§_-j3U§,_loc36_);
                             }
                         }
+                        //ComboUseTargetAsSource
                         if(_loc36_.§_-j32§)
                         {
                             _loc39_.§_-U3s§ = new Point(_loc15_.x,_loc15_.y);
                         }
+                        //ComboUseSameSourcePos
                         else if(_loc36_.§_-d2z§)
                         {
                             _loc39_.§_-U3s§ = new Point(_loc16_.x,_loc16_.y);
                         }
+                        // ComboUseSameTargetPos
                         if(_loc36_.§_-C5s§ != uint(0) && _loc15_ != null)
                         {
                             // mTargetPos
@@ -2856,6 +2884,7 @@ package
                         {
                             _loc39_.§_-E4x§ = _loc23_;
                         }
+                        // inherit already hit or not stance
                         if(_loc36_.§_-d17§ || _loc6_.§_-h14§ != uint(14))
                         {
                             _loc39_.§_-j4i§ = _loc26_;
